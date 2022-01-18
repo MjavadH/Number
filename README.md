@@ -1,9 +1,8 @@
-<header style="text-align: center">
+<p align="center">
 <img src="https://github.com/MjavadH/Number/blob/master/Number/Resources/numbers.png" with="200px" height="200px">
-
-# Number | شمارنده
-
-</header>
+  
+  <h1 align="center">Number | شمارنده</h1>
+</p>
 
 <b>  نرم افزار شمارنده مخصوص ویندوز ورژن 1.7.0 </b>
 
@@ -24,7 +23,14 @@
 
 <b>نکته: برای اجرای برنامه به .net framework 4.5 نیاز است</b>
 
-<hr>
+<h2>
+  تصویر از برنامه
+</h2>
+
+<p align="center">
+<img center src="https://github.com/MjavadH/Number/blob/master/Number/Resources/ScreenShot.png">
+</p>
+<br><br>
 <h3>
 طراح و برنامه نویس: MjavadH
 </h3>
