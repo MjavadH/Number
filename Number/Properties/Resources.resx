@@ -1,0 +1,350 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="paint palette" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\paint palette1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="delete row" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\delete row1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="exit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\exit1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="subtract" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\subtract1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="insert row" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\insert row1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="undo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\undo1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="checkmark" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\checkmark1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HelpText" xml:space="preserve">
+    <value>&lt;!DOCTYPE html&gt;
+&lt;html lang="fa"&gt;
+&lt;head&gt;
+	&lt;title&gt;HelpPage&lt;/title&gt;
+&lt;/head&gt;
+&lt;body dir="rtl" style="width: 480px;"&gt;
+    &lt;h3&gt;
+         نرم افزار شمارنده کامل ترین نرم افزار شمارش در ویندوز
+    &lt;/h3&gt;
+    &lt;p&gt;
+        این نرم افزار توسط MjavadH طراحی شده است
+        &lt;br&gt;
+        آیدی تلگرام:
+        &lt;a href="https://t.me/rvyrbyhrc"&gt;https://t.me/rvyrbyhrc&lt;/a&gt;
+        &lt;br&gt;
+        شما هم اکنون در حال استفاده از نسخه 1.7.0 نرم افزار هستید
+        &lt;br&gt;
+        در ادامه شما را با ویژگی های این نرم افزار آشنا میکنیم
+    &lt;/p&gt;
+    &lt;hr&gt;
+    &lt;h4&gt;لیست ویژگی ها&lt;/h4&gt;
+    &lt;p&gt;
+        • افزودن و حذف کردن شمارنده
+        &lt;br&gt;
+        • اضافه کردن شمارنده با تعداد نامحدود
+        &lt;br&gt;
+        • پاک کردن شمارش های انجام شده
+        &lt;br&gt;
+        • شمارش خودکار
+        &lt;br&gt;
+        • حالت فشرده کردن
+        &lt;br&gt;
+        • تغییر فونت
+        &lt;br&gt;
+        • شخصی سازی رنگ پس زمینه
+        &lt;br&gt;
+        • شخصی سازی میانبر ها
+        &lt;br&gt;
+        • نمایش پیغام هنگام تمام شدن شمارش
+        &lt;br&gt;
+        • ذخیره شدن اطلاعات برای ورود بعدی
+        &lt;br&gt;
+        • اجرا شدن در هر ویندوزی
+    &lt;/p&gt;
+    &lt;hr&gt;
+    &lt;h3&gt;توضیحات صفحه اصلی&lt;/h3&gt;
+    &lt;p&gt;
+        بخش اصلی برنامه جایی که شما شروع به شمارش می کنید.
+        &lt;br&gt;
+        در بالای این صفحه یک کادر قرار دارد با کلیک روی آن لیست شمارنده ها به نمایش در می آیند.
+        &lt;br&gt;
+        در پایین صفحه 3 دکمه وجود دارد که عبارتند از:
+        &lt;br&gt;&lt;br&gt;
+        &lt;b&gt;دکمه خروج&lt;/b&gt;&lt;br&gt;
+        &lt;b&gt;دکمه کوچک کردن&lt;/b&gt;&lt;br&gt;
+        &lt;b&gt;دکمه منو&lt;/b&gt;&lt;br&gt;
+        &lt;br&gt;
+        بعد از کلیک روی دکمه منو منوی نرم افزار برای شما به نمایش در می آید که عبارتند از:
+        &lt;br&gt;&lt;br&gt;
+        &lt;b&gt;دکمه افزودن شمارنده&lt;/b&gt;
+        &lt;br&gt;
+        این دکمه صفحه افزودن شمارنده را باز می کند(برای دریافت اطلاعات بیشتر به بخش توضیحات صفحه افزودن شمارنده مراجعه کنید)
+        &lt;br&gt;&lt;br&gt;
+        &lt;b&gt;دکمه پاکسازی&lt;/b&gt;
+        &lt;br&gt;
+        با کلیک روی این دکمه مقدار شمارنده ای که فعال است 0 می شود.
+        &lt;br&gt;&lt;br&gt;
+        &lt;b&gt;دکمه راهنما&lt;/b&gt;
+        &lt;br&gt;
+        راهنمای برنامه را نشان می دهد.
+        &lt;br&gt;&lt;br&gt;
+        &lt;b&gt;دکمه تنظیمات&lt;/b&gt;
+        این دکمه صفحه تنظیمات را باز می کند(برای دریافت اطلاعات بیشتر به بخش توضیحات صفحه تنظیمات مراجعه کنید)
+        &lt;br&gt;&lt;br&gt;
+        &lt;b&gt;دکمه فشرده کردن&lt;/b&gt;
+        &lt;br&gt;
+        با کلیک روی این دکمه اندازه نرم افزار به حداقل ترین شکل ممکن در می آید.
+        &lt;br&gt;
+        نکته: برای برگشت به حالت قبل روی نرم افزار دوباره کلیک کنید.
+        &lt;br&gt;&lt;br&gt;
+        &lt;b&gt;دکمه شمارش خودکار&lt;/b&gt;
+        &lt;br&gt;
+        با کلیک روی این دکمه در صورت فعال بودن یک شمارنده نرم افزار به صورت خودکار و با سرعتی که در تنظیمات تعیین شده شروع به شمارش می کند.
+        &lt;br&gt;
+        نکته: نقطه کنار دکمه، وضعیت روشن و یا خاموش بودن شمارش خودکار را نشان می دهد.
+    &lt;/p&gt;
+    &lt;hr&gt;
+    &lt;h3&gt;توضیحات صفحه افزودن شمارنده&lt;/h3&gt;
+    &lt;p&gt;
+        در این صفحه شما قادر خواهید بود که شمارنده مورد نظر خود را بسازید 
+        &lt;br&gt; 
+        و یا حذف کنید. ۳ کادر برای شما وجود دارد که شما در آن بااید نام
+        &lt;br&gt;
+        شمارنده،متن شمارنده و تعداد انتخاب کنید. شما این قابلیت دارید که تعداد شمارنده را نامحدود هم بکنید.
+        &lt;br&gt;
+        بعد از پر کردن کادر ها روی دکمه افزودن کلیک کنید تا شمارنده شما در جدول به نمایش در بیاید.برای حذف یک شمارنده شما یک ردیف را انتخاب میکنید و از کیبورد خود دکمه delete را فشار دهید تا شمارنده حذف شود.
+        &lt;br&gt;
+        در آخر برای ذخیره تغییرات روی دکمه ذخیره کلیک کنید.
+    &lt;/p&gt;
+    &lt;hr&gt;
+    &lt;h3&gt;توضیحات صفحه تنظیمات&lt;/h3&gt;
+    &lt;p&gt;
+        &lt;b&gt;
+            صفحه تنظیمات محل اصلی شخصی سازی برنامه
+        &lt;/b&gt;
+        &lt;br&gt;
+        در صفحه تنظیمات شما قادر به انجام 5 کار هستید که عبارتنداز:
+        &lt;br&gt;&lt;br&gt;
+        &lt;b&gt;همیشه بالا بودن&lt;/b&gt;
+        &lt;br&gt;
+        باعث میشود اگر نرم افزاری درحال اجرا باشد روی نرم افزار شمارده نیاید و نرم افزار شمارنده همیشه روی تمام نرم افزار ها باشد.
+        &lt;br&gt;&lt;br&gt;
+        &lt;b&gt;پس زمینه پیش فرض&lt;/b&gt;
+        &lt;br&gt;
+        شما می توانید تعیین کنید زمینه برنامه به رنگ پیش فرض باشد یا میخواهید رنگ دلخواه خود را انتخاب کنید.اگر گزینه پس زمینه پیش فرض غیر فعال باشد دکمه تنظیم رنگ به نمایش در می آید و با کلیک روی آن به صفحه تنظیم رنگ می روید.
+        &lt;br&gt;&lt;br&gt;
+        &lt;b&gt;شمارش خودکار&lt;/b&gt;
+        &lt;br&gt;
+        شما می توانید تعیین کنید هر چند ثانیه یک واحد به شمارنده اضافه شود.
+        &lt;br&gt;
+        نکته:حداکثر زمان 60 ثانیه می باشد.
+        &lt;br&gt;&lt;br&gt;
+        &lt;b&gt;فونت&lt;/b&gt;
+        &lt;br&gt;
+        در این قسمت شما با کلیک روی دکمه تغییر فونت می توانید فونت برنامه از فونت های داخل سیستم خود انتخاب کنید
+        &lt;br&gt;
+        نکته۱:احتمال خرابی چیدمان برنامه هنگام انخاب فونت های غیر استاندارد وجود دارد در صورت خرابی روی دکمه حذف تغییرات فونت کلیک کنید تا به حالت عادی برگردد.
+        &lt;br&gt;
+        نکته۲: اگر میخواهید قبل از اعمال فونت پیش نمایشی از آن ببینید در قسمت انتخاب فونت روی دکمه Apply کلیک کنید و بعد دکمه OK را بزنید.
+        &lt;br&gt;&lt;br&gt;
+        &lt;b&gt;دکمه های میانبر&lt;/b&gt;
+        &lt;br&gt;
+        بعد از کلیک روی دکمه صفحه میانبرها برای شما باز می شود(توضیحات بیشتر در قسمت توضیحات صفحه میانبرها)
+        &lt;br&gt;
+    &lt;/p&gt;
+    &lt;hr&gt;
+    &lt;h3&gt;صفحه تنظیم رنگ&lt;/h3&gt;
+    &lt;p&gt;
+        در این صفحه ۳ اهرم وجود دارد که شما با کشیدن هر کدام میزان رنگ قرمز،سبز و آبی بودن پس زمینه را مشخص می کنید.
+        رنگ و میزان هنگام کشیدن هر اهرم برای شما به نمایش در می آید
+    &lt;/p&gt;
+    &lt;hr&gt;
+    &lt;h3&gt;صفحه میانبر ها&lt;/h3&gt;
+    &lt;p&gt;
+        در این صفحه یک جدول با ۲ ستون وجود دارد ستون سمت راست عملیات و ستون سمت چپ میانبر آن می باشد
+        برای تغییر میانبر یک عملیات شما روی آن میانبر کلیک میکنید سپس یکی از دکمه های کیبورد خود را فشار میدهید
+        با فشردن دکمه کیبور خود مقدار میانبر آن عملیات تغییر می کند.
+        &lt;br&gt;
+        وقتی تغییرات دلخواه خود را اعمال کردید روی دکمه ذخیره کلیک کنید.
+        &lt;br&gt;
+        نکته: برای برگرداندن به حالت پیش فرض روی دکمه حالت پیش فرض کلیک کنید
+    &lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</value>
+    <comment>Html Text for HelpPage</comment>
+  </data>
+  <data name="question mark" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\question mark1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="counter" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\counter1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="clear formatting" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\clear formatting1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="save" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\save1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="delete" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\delete1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="font style formatting" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\font style formatting1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="multiply" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\multiply1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="edit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\edit1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="keyboard" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\keyboard1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="erase" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\erase1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="add list" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\add list1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="settings" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\settings1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cancel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cancel1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="menu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\menu1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="numbers" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\numbers1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="compress" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\compress1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="help" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\help1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+</root>

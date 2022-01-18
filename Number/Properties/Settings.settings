@@ -1,0 +1,45 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Number.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="AlwaysOT" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="DefaultColor" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="AppFont" Type="System.Drawing.Font" Scope="User">
+      <Value Profile="(Default)">Vazir, 12pt</Value>
+    </Setting>
+    <Setting Name="DFont" Type="System.Drawing.Font" Scope="User">
+      <Value Profile="(Default)">Vazir, 12pt</Value>
+    </Setting>
+    <Setting Name="LightTheme" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">11, 10, 27</Value>
+    </Setting>
+    <Setting Name="Counter" Type="System.String" Scope="User">
+      <Value Profile="(Default)">3</Value>
+    </Setting>
+    <Setting Name="ShortKey_Add" Type="System.Windows.Forms.Keys" Scope="User">
+      <Value Profile="(Default)">Add</Value>
+    </Setting>
+    <Setting Name="ShortKey_Clear" Type="System.Windows.Forms.Keys" Scope="User">
+      <Value Profile="(Default)">Alt+C</Value>
+    </Setting>
+    <Setting Name="ShortKey_Setting" Type="System.Windows.Forms.Keys" Scope="User">
+      <Value Profile="(Default)">Shift+S</Value>
+    </Setting>
+    <Setting Name="ShortKey_AddN" Type="System.Windows.Forms.Keys" Scope="User">
+      <Value Profile="(Default)">Shift+A</Value>
+    </Setting>
+    <Setting Name="ShortKey_Compress" Type="System.Windows.Forms.Keys" Scope="User">
+      <Value Profile="(Default)">Shift+C</Value>
+    </Setting>
+    <Setting Name="ShortKey_Counter" Type="System.Windows.Forms.Keys" Scope="User">
+      <Value Profile="(Default)">Shift+T</Value>
+    </Setting>
+    <Setting Name="UpdateData" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
