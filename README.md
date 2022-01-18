@@ -1,4 +1,9 @@
+<header style="text-align: center">
+<img src="https://github.com/MjavadH/Number/blob/master/Number/Resources/numbers.png" with="200px" height="200px">
+
 # Number | شمارنده
+
+</header>
 
 <b>  نرم افزار شمارنده مخصوص ویندوز ورژن 1.7.0 </b>
 
