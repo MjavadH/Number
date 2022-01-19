@@ -24,11 +24,17 @@
 <b>نکته: برای اجرای برنامه به .net framework 4.5 نیاز است</b>
 
 <h2>
-  تصویر از برنامه
+  تصاویری از محیط برنامه
 </h2>
 
 <p align="center">
-<img center src="https://github.com/MjavadH/Number/blob/master/Number/Resources/ScreenShot.png">
+  <img with="250px" height="250px" center src="https://github.com/MjavadH/Number/blob/master/ScreenShot/SplashPage.png">
+  <img with="250px" height="250px" center src="https://github.com/MjavadH/Number/blob/master/ScreenShot/MainPage.png">
+  <img with="250px" height="250px" center src="https://github.com/MjavadH/Number/blob/master/ScreenShot/AddPage.png">
+  <img with="250px" height="250px" center src="https://github.com/MjavadH/Number/blob/master/ScreenShot/HelpPage.png">
+  <img with="250px" height="250px" center src="https://github.com/MjavadH/Number/blob/master/ScreenShot/SettingPage.png">
+  <img with="250px" height="250px" center src="https://github.com/MjavadH/Number/blob/master/ScreenShot/ShortKeyPage.png">
+  <img with="250px" height="250px" center src="https://github.com/MjavadH/Number/blob/master/ScreenShot/ChangeColorPage.png">
 </p>
 <br><br>
 <h3>
