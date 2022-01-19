@@ -179,13 +179,14 @@ namespace Number
             Check_DropDown();
             NumberT.Text = Cdata.Clear(DropDown.Text);
         }
+        /*--------- ShowDialog Start ---------*/
         private void add_Click(object sender, EventArgs e)
         {new DataBase().ShowDialog();}
         private void Help_Click(object sender, EventArgs e)
         {new HelpPage().ShowDialog();}
         private void Setting_Click(object sender, EventArgs e)
         {new SettingPage().ShowDialog();}
-
+        /*--------- ShowDialog End ---------*/
         /*--------- Compress Start ---------*/
         private void Compressbtn_Click(object sender, EventArgs e)
         {
