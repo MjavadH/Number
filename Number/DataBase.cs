@@ -3,6 +3,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using System.Xml;
 using Number.Properties;
+using static Number.Cdata;
 
 namespace Number
 {
@@ -28,6 +29,11 @@ namespace Number
         {
             DeleteBTN.Visible = false;
             EditeBTN.Visible = false;
+        }
+        public void Alert(string msg)
+        {
+            AlertBox frm = new AlertBox();
+            frm.showAlert(msg);
         }
         /*------------------ func End ------------------*/
         private void DataBase_Load(object sender, EventArgs e)
@@ -222,6 +228,34 @@ namespace Number
         }
         /*------------------  Add Data End ------------------*/
         /*------------------  BTN Start ------------------*/
+        public void SaveData_Click(object sender, EventArgs e)
+        {
+            if (sender.Equals("Save"))
+            {
+                try
+                {
+                    DataXML.Load("Data.xml");
+                    XmlNodeList NumberNodes = DataXML.SelectNodes("//Numbers/Number");
+                    foreach (XmlNode NumberNode in NumberNodes)
+                    {
+                        dataGridView1.Rows.Add(NumberNode.Attributes["Name"].Value, NumberNode.Attributes["Len"].Value, NumberNode.Attributes["Text"].Value, NumberNode.InnerText);
+                    }
+                }
+                catch (Exception) { }
+            }
+            Save_Click(SaveNumbers, EventArgs.Empty);
+            string result = Cdata.saveData();
+            switch (result)
+            {
+                case "Suscess":
+                    Alert("شمارنده ها ذخیره شدند");
+                    break;
+                case "Error":
+                    Alert("مشکلی در ذخیره کردن پیش آمد لطفا مجدد تلاش کنید");
+                    break;
+            }
+        }
+
         private void Save_Click(object sender, EventArgs e)
         {
             try
@@ -257,7 +291,10 @@ namespace Number
                 
             }
             xmlDoc.Save("Data.xml");
-            this.Close();
+            if (sender != SaveNumbers)
+            {
+                this.Close();
+            }
         }
 
         private void Cancel_Click(object sender, EventArgs e)

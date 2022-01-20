@@ -302,21 +302,20 @@ namespace Number
         /*------------------ Short Key Start ------------------*/
         private void ShortKey_KeyDown(object sender, KeyEventArgs e)
         {            
-            if (e.KeyData == Settings.Default.ShortKey_Add)
-            {
-                Check_DropDown();
-            }
-            else if (e.KeyData == Settings.Default.ShortKey_Clear)
+            if (e.KeyData == Settings.Default.ShortKey_Clear)
             {
                 NumberT.Text = Cdata.Clear(DropDown.Text);
             }
-            else if (e.KeyData == Settings.Default.ShortKey_Setting)
+            else if (e.KeyData == Settings.Default.ShortKey_SaveData)
             {
-                Setting_Click(Setting, EventArgs.Empty);
+                DataBase frm = new DataBase();
+                frm.SaveData_Click("Save", EventArgs.Empty); 
+
             }
-            else if (e.KeyData == Settings.Default.ShortKey_AddN)
+            else if (e.KeyData == Settings.Default.ShortKey_LoadData)
             {
-                add_Click(add, EventArgs.Empty);
+                SettingPage frm = new SettingPage();
+                frm.ReturnBTN_Click(sender,EventArgs.Empty);
             }
             else if (e.KeyData == Settings.Default.ShortKey_Compress)
             {
@@ -325,6 +324,13 @@ namespace Number
             else if (e.KeyData == Settings.Default.ShortKey_Counter)
             {
                 counter_Click(counter, EventArgs.Empty);
+            }
+        }
+        private void NumberForm_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Settings.Default.ShortKey_Add)
+            {
+                Check_DropDown();
             }
         }
         /*------------------ Short End ------------------*/

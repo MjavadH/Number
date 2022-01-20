@@ -1,7 +1,5 @@
 <Numbers>
-  <Number Name="قابلیت ویرایش" Len="نامحدود" Text="ویرایش شمارنده">999</Number>
-  <Number Name="انیمیشن برای باز شدن منو" Len="نامحدود" Text="بهبود تجربه کاربری">110</Number>
-  <Number Name="نام تکراری" Len="نامحدود" Text="نمیشه نام تکراری قرار داد">0</Number>
-  <Number Name="تغییر حداکثر مقدار تعداد" Len="100000000" Text="هرچقدر که میخواهی بشمار">100000000</Number>
-  <Number Name="مشکلات گزارش شده" Len="نامحدود" Text="همشون حل شدن">0</Number>
+  <Number Name="asdasd" Len="10" Text="asdad">0</Number>
+  <Number Name="aasdsdasd" Len="10" Text="asdad">0</Number>
+  <Number Name="aasdsdasdasd" Len="10" Text="asdad">0</Number>
 </Numbers>

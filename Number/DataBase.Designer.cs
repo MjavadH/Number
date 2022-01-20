@@ -30,8 +30,8 @@ namespace Number
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            Guna.UI2.AnimatorNS.Animation animation1 = new Guna.UI2.AnimatorNS.Animation();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            Guna.UI2.AnimatorNS.Animation animation2 = new Guna.UI2.AnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DataBase));
             this.AddTitle = new System.Windows.Forms.Label();
             this.addName = new System.Windows.Forms.Label();
@@ -53,9 +53,9 @@ namespace Number
             this.Cancel = new Guna.UI2.WinForms.Guna2Button();
             this.DeleteBTN = new Guna.UI2.WinForms.Guna2Button();
             this.EditeBTN = new Guna.UI2.WinForms.Guna2Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.Time = new System.Windows.Forms.Timer(this.components);
             this.Animation = new Guna.UI2.WinForms.Guna2Transition();
+            this.SaveNumbers = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.lenTB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -156,8 +156,8 @@ namespace Number
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -244,7 +244,7 @@ namespace Number
             this.AddBTN.ForeColor = System.Drawing.Color.White;
             this.AddBTN.HoverState.Parent = this.AddBTN;
             this.AddBTN.Image = global::Number.Properties.Resources.insert_row;
-            this.AddBTN.Location = new System.Drawing.Point(449, 142);
+            this.AddBTN.Location = new System.Drawing.Point(455, 131);
             this.AddBTN.Name = "AddBTN";
             this.AddBTN.ShadowDecoration.Parent = this.AddBTN;
             this.AddBTN.Size = new System.Drawing.Size(119, 47);
@@ -354,18 +354,6 @@ namespace Number
             this.EditeBTN.Visible = false;
             this.EditeBTN.Click += new System.EventHandler(this.EditeBTN_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.Animation.SetDecoration(this.label1, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.label1.Font = new System.Drawing.Font("Vazir", 14F);
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(378, 206);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(199, 30);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "لیست شمارنده های شما:";
-            // 
             // Time
             // 
             this.Time.Interval = 5000;
@@ -375,22 +363,45 @@ namespace Number
             // 
             this.Animation.AnimationType = Guna.UI2.AnimatorNS.AnimationType.Transparent;
             this.Animation.Cursor = null;
-            animation1.AnimateOnlyDifferences = true;
-            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
-            animation1.LeafCoeff = 0F;
-            animation1.MaxTime = 1F;
-            animation1.MinTime = 0F;
-            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
-            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
-            animation1.MosaicSize = 0;
-            animation1.Padding = new System.Windows.Forms.Padding(0);
-            animation1.RotateCoeff = 0F;
-            animation1.RotateLimit = 0F;
-            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
-            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
-            animation1.TimeCoeff = 0F;
-            animation1.TransparencyCoeff = 1F;
-            this.Animation.DefaultAnimation = animation1;
+            animation2.AnimateOnlyDifferences = true;
+            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
+            animation2.LeafCoeff = 0F;
+            animation2.MaxTime = 1F;
+            animation2.MinTime = 0F;
+            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
+            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
+            animation2.MosaicSize = 0;
+            animation2.Padding = new System.Windows.Forms.Padding(0);
+            animation2.RotateCoeff = 0F;
+            animation2.RotateLimit = 0F;
+            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
+            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
+            animation2.TimeCoeff = 0F;
+            animation2.TransparencyCoeff = 1F;
+            this.Animation.DefaultAnimation = animation2;
+            // 
+            // SaveNumbers
+            // 
+            this.SaveNumbers.AutoRoundedCorners = true;
+            this.SaveNumbers.BackColor = System.Drawing.Color.Transparent;
+            this.SaveNumbers.BorderColor = System.Drawing.Color.White;
+            this.SaveNumbers.BorderRadius = 22;
+            this.SaveNumbers.BorderThickness = 2;
+            this.SaveNumbers.CheckedState.Parent = this.SaveNumbers;
+            this.SaveNumbers.CustomImages.Parent = this.SaveNumbers;
+            this.Animation.SetDecoration(this.SaveNumbers, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.SaveNumbers.FillColor = System.Drawing.Color.Empty;
+            this.SaveNumbers.Font = new System.Drawing.Font("Vazir", 12F);
+            this.SaveNumbers.ForeColor = System.Drawing.Color.White;
+            this.SaveNumbers.HoverState.Parent = this.SaveNumbers;
+            this.SaveNumbers.Image = global::Number.Properties.Resources.save_as;
+            this.SaveNumbers.Location = new System.Drawing.Point(412, 186);
+            this.SaveNumbers.Name = "SaveNumbers";
+            this.SaveNumbers.ShadowDecoration.Parent = this.SaveNumbers;
+            this.SaveNumbers.Size = new System.Drawing.Size(162, 47);
+            this.SaveNumbers.TabIndex = 5;
+            this.SaveNumbers.Text = "ذخیره شمارنده ها";
+            this.SaveNumbers.Click += new System.EventHandler(this.SaveData_Click);
             // 
             // DataBase
             // 
@@ -401,6 +412,7 @@ namespace Number
             this.Controls.Add(this.Save);
             this.Controls.Add(this.EditeBTN);
             this.Controls.Add(this.DeleteBTN);
+            this.Controls.Add(this.SaveNumbers);
             this.Controls.Add(this.AddBTN);
             this.Controls.Add(this.infBox);
             this.Controls.Add(this.dataGridView1);
@@ -411,7 +423,6 @@ namespace Number
             this.Controls.Add(this.addName);
             this.Controls.Add(this.NameTB);
             this.Controls.Add(this.TextTB);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.AddTitle);
             this.Animation.SetDecoration(this, Guna.UI2.AnimatorNS.DecorationType.None);
             this.Font = new System.Drawing.Font("Vazir", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -447,7 +458,6 @@ namespace Number
         private Guna.UI2.WinForms.Guna2Button Save;
         private Guna.UI2.WinForms.Guna2Button DeleteBTN;
         private Guna.UI2.WinForms.Guna2Button EditeBTN;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private Guna.UI2.WinForms.Guna2Transition Animation;
         private System.Windows.Forms.Timer Time;
@@ -455,5 +465,6 @@ namespace Number
         private System.Windows.Forms.DataGridViewTextBoxColumn lenDB;
         private System.Windows.Forms.DataGridViewTextBoxColumn TextDB;
         private System.Windows.Forms.DataGridViewTextBoxColumn ValueDB;
+        private Guna.UI2.WinForms.Guna2Button SaveNumbers;
     }
 }

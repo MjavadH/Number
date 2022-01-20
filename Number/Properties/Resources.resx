@@ -143,11 +143,11 @@
     <value>&lt;!DOCTYPE html&gt;
 &lt;html lang="fa"&gt;
 &lt;head&gt;
-	&lt;title&gt;HelpPage&lt;/title&gt;
+    &lt;title&gt;HelpPage&lt;/title&gt;
 &lt;/head&gt;
 &lt;body dir="rtl" style="width: 480px;"&gt;
     &lt;h3&gt;
-         نرم افزار شمارنده کامل ترین نرم افزار شمارش در ویندوز
+        نرم افزار شمارنده کامل ترین نرم افزار شمارش در ویندوز
     &lt;/h3&gt;
     &lt;p&gt;
         این نرم افزار توسط MjavadH طراحی شده است
@@ -155,7 +155,7 @@
         آیدی تلگرام:
         &lt;a href="https://t.me/rvyrbyhrc"&gt;https://t.me/rvyrbyhrc&lt;/a&gt;
         &lt;br&gt;
-        شما هم اکنون در حال استفاده از نسخه 1.7.0 نرم افزار هستید
+        شما هم اکنون در حال استفاده از نسخه 1.8.0 نرم افزار هستید
         &lt;br&gt;
         در ادامه شما را با ویژگی های این نرم افزار آشنا میکنیم
     &lt;/p&gt;
@@ -229,15 +229,31 @@
     &lt;hr&gt;
     &lt;h3&gt;توضیحات صفحه افزودن شمارنده&lt;/h3&gt;
     &lt;p&gt;
-        در این صفحه شما قادر خواهید بود که شمارنده مورد نظر خود را بسازید 
-        &lt;br&gt; 
+        در این صفحه شما قادر خواهید بود که شمارنده مورد نظر خود را بسازید
+        &lt;br&gt;
         و یا حذف کنید. ۳ کادر برای شما وجود دارد که شما در آن بااید نام
         &lt;br&gt;
         شمارنده،متن شمارنده و تعداد انتخاب کنید. شما این قابلیت دارید که تعداد شمارنده را نامحدود هم بکنید.
         &lt;br&gt;
-        بعد از پر کردن کادر ها روی دکمه افزودن کلیک کنید تا شمارنده شما در جدول به نمایش در بیاید.برای حذف یک شمارنده شما یک ردیف را انتخاب میکنید و از کیبورد خود دکمه delete را فشار دهید تا شمارنده حذف شود.
+        ور در نهایت برای اضافه شدن روی دکمه افزودن کلیک کنید.
         &lt;br&gt;
-        در آخر برای ذخیره تغییرات روی دکمه ذخیره کلیک کنید.
+        &lt;big&gt;&lt;b&gt;شرح دکمه ها&lt;/b&gt;&lt;/big&gt;
+        &lt;br&gt;&lt;br&gt;
+        &lt;b&gt;ذخیره شمارنده ها &lt;/b&gt;
+        &lt;br&gt;
+        روی این دکمه کلیک کنید تا اطلاعات شمارنده ها در حافظه پنهان برنامه ذخیره شود تا در صورت نیاز از طریق دکمه بازگردانی در صفحه تنظیمات شمارنده هارا مجددا برگردانید
+        &lt;br&gt;&lt;br&gt;
+        &lt;b&gt;ویرایش&lt;/b&gt;
+        &lt;br&gt;
+        اگر هنگام افزودن شمارنده چیزی اشتباه وارد کردید و یا میخواستید مقدار را تغییر دهید از این دکمه استفاده کنید
+        &lt;br&gt;
+        نکته: این دکمه در صورتی به نمایش در می آید که شما یک خانه در جدوا شمارنده ها انتخاب کرده باشید
+        &lt;br&gt;&lt;br&gt;
+        &lt;b&gt;حذف&lt;/b&gt;
+        &lt;br&gt;
+        یکی از خانه های شمارنده ای که می خواهید حذف کنید انتخاب کنید و روی دکمه حذف بزنید
+        &lt;br&gt;&lt;br&gt;
+
     &lt;/p&gt;
     &lt;hr&gt;
     &lt;h3&gt;توضیحات صفحه تنظیمات&lt;/h3&gt;
@@ -273,7 +289,11 @@
         &lt;b&gt;دکمه های میانبر&lt;/b&gt;
         &lt;br&gt;
         بعد از کلیک روی دکمه صفحه میانبرها برای شما باز می شود(توضیحات بیشتر در قسمت توضیحات صفحه میانبرها)
+        &lt;br&gt;&lt;br&gt;
+            &lt;b&gt;برگرداندن شمارنده ها&lt;/b&gt;
         &lt;br&gt;
+        اگر به اشتباه یکی از شمارنده هارا پاک کردید با کلیک بر روی این دکمه شمارنده هایی که ذخیره کرده بودید برمیگردد
+        &lt;br&gt;&lt;br&gt;
     &lt;/p&gt;
     &lt;hr&gt;
     &lt;h3&gt;صفحه تنظیم رنگ&lt;/h3&gt;
@@ -292,6 +312,8 @@
         &lt;br&gt;
         نکته: برای برگرداندن به حالت پیش فرض روی دکمه حالت پیش فرض کلیک کنید
     &lt;/p&gt;
+
+    &lt;h3 align="center"&gt;برای تعجیل در ظهور آقا امام زمان صلوات بفرستید ♥&lt;/h3&gt;
 &lt;/body&gt;
 &lt;/html&gt;</value>
     <comment>Html Text for HelpPage</comment>
@@ -346,5 +368,11 @@
   </data>
   <data name="help" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\help1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_return" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\return.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="save_as" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\save as.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

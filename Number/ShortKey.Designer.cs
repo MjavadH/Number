@@ -40,9 +40,9 @@ namespace Number
             this.Save_BTN = new Guna.UI2.WinForms.Guna2Button();
             this.table = new System.Windows.Forms.TableLayoutPanel();
             this.AddPage_Key = new Guna.UI2.WinForms.Guna2Button();
-            this.AddPage_Text = new System.Windows.Forms.Label();
+            this.LoadData_Text = new System.Windows.Forms.Label();
             this.SettingPage_Key = new Guna.UI2.WinForms.Guna2Button();
-            this.SettingPage_Text = new System.Windows.Forms.Label();
+            this.SaveData_Text = new System.Windows.Forms.Label();
             this.AutoCounter_Key = new Guna.UI2.WinForms.Guna2Button();
             this.AutoCounter_Text = new System.Windows.Forms.Label();
             this.Compress_Key = new Guna.UI2.WinForms.Guna2Button();
@@ -147,12 +147,12 @@ namespace Number
             // 
             this.table.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.table.ColumnCount = 2;
-            this.table.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.table.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75F));
+            this.table.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.table.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
             this.table.Controls.Add(this.AddPage_Key, 1, 5);
-            this.table.Controls.Add(this.AddPage_Text, 0, 5);
+            this.table.Controls.Add(this.LoadData_Text, 0, 5);
             this.table.Controls.Add(this.SettingPage_Key, 1, 4);
-            this.table.Controls.Add(this.SettingPage_Text, 0, 4);
+            this.table.Controls.Add(this.SaveData_Text, 0, 4);
             this.table.Controls.Add(this.AutoCounter_Key, 1, 3);
             this.table.Controls.Add(this.AutoCounter_Text, 0, 3);
             this.table.Controls.Add(this.Compress_Key, 1, 2);
@@ -190,21 +190,21 @@ namespace Number
             this.AddPage_Key.Name = "AddPage_Key";
             this.AddPage_Key.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.AddPage_Key.ShadowDecoration.Parent = this.AddPage_Key;
-            this.AddPage_Key.Size = new System.Drawing.Size(386, 46);
+            this.AddPage_Key.Size = new System.Drawing.Size(360, 46);
             this.AddPage_Key.TabIndex = 11;
-            this.AddPage_Key.Text = "Shift,A";
+            this.AddPage_Key.Text = "Ctrl,O";
             this.AddPage_Key.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Short_KeyDown);
             // 
-            // AddPage_Text
+            // LoadData_Text
             // 
-            this.AddPage_Text.AutoSize = true;
-            this.AddPage_Text.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.AddPage_Text.Location = new System.Drawing.Point(397, 236);
-            this.AddPage_Text.Name = "AddPage_Text";
-            this.AddPage_Text.Size = new System.Drawing.Size(124, 52);
-            this.AddPage_Text.TabIndex = 10;
-            this.AddPage_Text.Text = "صفحه افزودن:";
-            this.AddPage_Text.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadData_Text.AutoSize = true;
+            this.LoadData_Text.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.LoadData_Text.Location = new System.Drawing.Point(371, 236);
+            this.LoadData_Text.Name = "LoadData_Text";
+            this.LoadData_Text.Size = new System.Drawing.Size(150, 52);
+            this.LoadData_Text.TabIndex = 10;
+            this.LoadData_Text.Text = "برگرداندن شمارنده ها:";
+            this.LoadData_Text.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // SettingPage_Key
             // 
@@ -220,21 +220,21 @@ namespace Number
             this.SettingPage_Key.Name = "SettingPage_Key";
             this.SettingPage_Key.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.SettingPage_Key.ShadowDecoration.Parent = this.SettingPage_Key;
-            this.SettingPage_Key.Size = new System.Drawing.Size(386, 40);
+            this.SettingPage_Key.Size = new System.Drawing.Size(360, 40);
             this.SettingPage_Key.TabIndex = 9;
-            this.SettingPage_Key.Text = "Shift,S";
+            this.SettingPage_Key.Text = "ctrl,S";
             this.SettingPage_Key.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Short_KeyDown);
             // 
-            // SettingPage_Text
+            // SaveData_Text
             // 
-            this.SettingPage_Text.AutoSize = true;
-            this.SettingPage_Text.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.SettingPage_Text.Location = new System.Drawing.Point(397, 189);
-            this.SettingPage_Text.Name = "SettingPage_Text";
-            this.SettingPage_Text.Size = new System.Drawing.Size(124, 46);
-            this.SettingPage_Text.TabIndex = 8;
-            this.SettingPage_Text.Text = "صفحه تنظیمات:";
-            this.SettingPage_Text.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.SaveData_Text.AutoSize = true;
+            this.SaveData_Text.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.SaveData_Text.Location = new System.Drawing.Point(371, 189);
+            this.SaveData_Text.Name = "SaveData_Text";
+            this.SaveData_Text.Size = new System.Drawing.Size(150, 46);
+            this.SaveData_Text.TabIndex = 8;
+            this.SaveData_Text.Text = "ذخیره شمارنده ها:";
+            this.SaveData_Text.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // AutoCounter_Key
             // 
@@ -250,7 +250,7 @@ namespace Number
             this.AutoCounter_Key.Name = "AutoCounter_Key";
             this.AutoCounter_Key.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.AutoCounter_Key.ShadowDecoration.Parent = this.AutoCounter_Key;
-            this.AutoCounter_Key.Size = new System.Drawing.Size(386, 40);
+            this.AutoCounter_Key.Size = new System.Drawing.Size(360, 40);
             this.AutoCounter_Key.TabIndex = 7;
             this.AutoCounter_Key.Text = "Shift,T";
             this.AutoCounter_Key.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Short_KeyDown);
@@ -259,9 +259,9 @@ namespace Number
             // 
             this.AutoCounter_Text.AutoSize = true;
             this.AutoCounter_Text.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.AutoCounter_Text.Location = new System.Drawing.Point(397, 142);
+            this.AutoCounter_Text.Location = new System.Drawing.Point(371, 142);
             this.AutoCounter_Text.Name = "AutoCounter_Text";
-            this.AutoCounter_Text.Size = new System.Drawing.Size(124, 46);
+            this.AutoCounter_Text.Size = new System.Drawing.Size(150, 46);
             this.AutoCounter_Text.TabIndex = 6;
             this.AutoCounter_Text.Text = "شمارش خودکار:";
             this.AutoCounter_Text.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -280,7 +280,7 @@ namespace Number
             this.Compress_Key.Name = "Compress_Key";
             this.Compress_Key.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Compress_Key.ShadowDecoration.Parent = this.Compress_Key;
-            this.Compress_Key.Size = new System.Drawing.Size(386, 40);
+            this.Compress_Key.Size = new System.Drawing.Size(360, 40);
             this.Compress_Key.TabIndex = 5;
             this.Compress_Key.Text = "Shift,C";
             this.Compress_Key.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Short_KeyDown);
@@ -289,9 +289,9 @@ namespace Number
             // 
             this.Compress_Text.AutoSize = true;
             this.Compress_Text.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Compress_Text.Location = new System.Drawing.Point(397, 95);
+            this.Compress_Text.Location = new System.Drawing.Point(371, 95);
             this.Compress_Text.Name = "Compress_Text";
-            this.Compress_Text.Size = new System.Drawing.Size(124, 46);
+            this.Compress_Text.Size = new System.Drawing.Size(150, 46);
             this.Compress_Text.TabIndex = 4;
             this.Compress_Text.Text = "فشرده سازی:";
             this.Compress_Text.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -310,7 +310,7 @@ namespace Number
             this.Clear_Key.Name = "Clear_Key";
             this.Clear_Key.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Clear_Key.ShadowDecoration.Parent = this.Clear_Key;
-            this.Clear_Key.Size = new System.Drawing.Size(386, 40);
+            this.Clear_Key.Size = new System.Drawing.Size(360, 40);
             this.Clear_Key.TabIndex = 3;
             this.Clear_Key.Text = "Alt,C";
             this.Clear_Key.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Short_KeyDown);
@@ -319,9 +319,9 @@ namespace Number
             // 
             this.Clear_Text.AutoSize = true;
             this.Clear_Text.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Clear_Text.Location = new System.Drawing.Point(397, 48);
+            this.Clear_Text.Location = new System.Drawing.Point(371, 48);
             this.Clear_Text.Name = "Clear_Text";
-            this.Clear_Text.Size = new System.Drawing.Size(124, 46);
+            this.Clear_Text.Size = new System.Drawing.Size(150, 46);
             this.Clear_Text.TabIndex = 2;
             this.Clear_Text.Text = "پاک کردن:";
             this.Clear_Text.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -330,9 +330,9 @@ namespace Number
             // 
             this.Add_Text.AutoSize = true;
             this.Add_Text.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Add_Text.Location = new System.Drawing.Point(397, 1);
+            this.Add_Text.Location = new System.Drawing.Point(371, 1);
             this.Add_Text.Name = "Add_Text";
-            this.Add_Text.Size = new System.Drawing.Size(124, 46);
+            this.Add_Text.Size = new System.Drawing.Size(150, 46);
             this.Add_Text.TabIndex = 0;
             this.Add_Text.Text = "افزودن:";
             this.Add_Text.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -351,7 +351,7 @@ namespace Number
             this.Add_Key.Name = "Add_Key";
             this.Add_Key.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Add_Key.ShadowDecoration.Parent = this.Add_Key;
-            this.Add_Key.Size = new System.Drawing.Size(386, 40);
+            this.Add_Key.Size = new System.Drawing.Size(360, 40);
             this.Add_Key.TabIndex = 1;
             this.Add_Key.Text = "Add";
             this.Add_Key.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Short_KeyDown);
@@ -393,8 +393,8 @@ namespace Number
         private System.Windows.Forms.Label Compress_Text;
         private System.Windows.Forms.Label Clear_Text;
         private System.Windows.Forms.Label Add_Text;
-        private System.Windows.Forms.Label SettingPage_Text;
-        private System.Windows.Forms.Label AddPage_Text;
+        private System.Windows.Forms.Label SaveData_Text;
+        private System.Windows.Forms.Label LoadData_Text;
         private Guna.UI2.WinForms.Guna2Button AddPage_Key;
         private Guna.UI2.WinForms.Guna2Button SettingPage_Key;
         private Guna.UI2.WinForms.Guna2Button AutoCounter_Key;

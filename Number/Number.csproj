@@ -218,6 +218,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icons8_numbers.ico" />
+    <None Include="Resources\save as.png" />
+    <None Include="Resources\return.png" />
     <None Include="Resources\compress.png" />
     <None Include="Resources\clear formatting.png" />
     <None Include="Resources\checkmark.png" />

@@ -49,8 +49,11 @@ namespace Number
             this.Counter_Value = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.label7 = new System.Windows.Forms.Label();
             this.ShortKeyBTN = new Guna.UI2.WinForms.Guna2Button();
+            this.Fontpanel = new System.Windows.Forms.Panel();
+            this.ReturnBTN = new Guna.UI2.WinForms.Guna2Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Counter_Value)).BeginInit();
+            this.Fontpanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -98,11 +101,10 @@ namespace Number
             // 
             // label4
             // 
-            this.label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label4.Location = new System.Drawing.Point(0, 278);
+            this.label4.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label4.Location = new System.Drawing.Point(0, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(565, 90);
+            this.label4.Size = new System.Drawing.Size(387, 98);
             this.label4.TabIndex = 8;
             this.label4.Text = "متن نمونه تست فونت\r\n123456789";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -192,7 +194,7 @@ namespace Number
             this.FontBTN.ForeColor = System.Drawing.Color.White;
             this.FontBTN.HoverState.Parent = this.FontBTN;
             this.FontBTN.Image = global::Number.Properties.Resources.font_style_formatting;
-            this.FontBTN.Location = new System.Drawing.Point(430, 225);
+            this.FontBTN.Location = new System.Drawing.Point(444, 3);
             this.FontBTN.Name = "FontBTN";
             this.FontBTN.ShadowDecoration.Parent = this.FontBTN;
             this.FontBTN.Size = new System.Drawing.Size(118, 41);
@@ -214,7 +216,7 @@ namespace Number
             this.FontCBTN.ForeColor = System.Drawing.Color.White;
             this.FontCBTN.HoverState.Parent = this.FontCBTN;
             this.FontCBTN.Image = global::Number.Properties.Resources.clear_formatting;
-            this.FontCBTN.Location = new System.Drawing.Point(12, 225);
+            this.FontCBTN.Location = new System.Drawing.Point(393, 53);
             this.FontCBTN.Name = "FontCBTN";
             this.FontCBTN.ShadowDecoration.Parent = this.FontCBTN;
             this.FontCBTN.Size = new System.Drawing.Size(169, 41);
@@ -362,20 +364,53 @@ namespace Number
             this.ShortKeyBTN.Text = "دکمه های میانبر";
             this.ShortKeyBTN.Click += new System.EventHandler(this.ShortKeyBTN_Click);
             // 
+            // Fontpanel
+            // 
+            this.Fontpanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Fontpanel.Controls.Add(this.label4);
+            this.Fontpanel.Controls.Add(this.FontBTN);
+            this.Fontpanel.Controls.Add(this.FontCBTN);
+            this.Fontpanel.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.Fontpanel.Location = new System.Drawing.Point(0, 268);
+            this.Fontpanel.Name = "Fontpanel";
+            this.Fontpanel.Size = new System.Drawing.Size(565, 100);
+            this.Fontpanel.TabIndex = 17;
+            // 
+            // ReturnBTN
+            // 
+            this.ReturnBTN.AutoRoundedCorners = true;
+            this.ReturnBTN.BackColor = System.Drawing.Color.Transparent;
+            this.ReturnBTN.BorderColor = System.Drawing.Color.White;
+            this.ReturnBTN.BorderRadius = 19;
+            this.ReturnBTN.BorderThickness = 1;
+            this.ReturnBTN.CheckedState.Parent = this.ReturnBTN;
+            this.ReturnBTN.CustomImages.Parent = this.ReturnBTN;
+            this.ReturnBTN.FillColor = System.Drawing.Color.Empty;
+            this.ReturnBTN.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.ReturnBTN.ForeColor = System.Drawing.Color.White;
+            this.ReturnBTN.HoverState.Parent = this.ReturnBTN;
+            this.ReturnBTN.Image = global::Number.Properties.Resources._return;
+            this.ReturnBTN.Location = new System.Drawing.Point(12, 212);
+            this.ReturnBTN.Name = "ReturnBTN";
+            this.ReturnBTN.ShadowDecoration.Parent = this.ReturnBTN;
+            this.ReturnBTN.Size = new System.Drawing.Size(169, 41);
+            this.ReturnBTN.TabIndex = 16;
+            this.ReturnBTN.Text = "برگرداندن شمارنده ها";
+            this.ReturnBTN.Click += new System.EventHandler(this.ReturnBTN_Click);
+            // 
             // SettingPage
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(10)))), ((int)(((byte)(27)))));
             this.ClientSize = new System.Drawing.Size(565, 444);
+            this.Controls.Add(this.Fontpanel);
+            this.Controls.Add(this.ReturnBTN);
             this.Controls.Add(this.ShortKeyBTN);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.Counter_Value);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.FontCBTN);
-            this.Controls.Add(this.FontBTN);
             this.Controls.Add(this.ColorCh);
             this.Controls.Add(this.DarkMode);
             this.Controls.Add(this.OnTopBTN);
@@ -395,6 +430,7 @@ namespace Number
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.NumberForm_MouseMove);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Counter_Value)).EndInit();
+            this.Fontpanel.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -420,5 +456,7 @@ namespace Number
         private Guna.UI2.WinForms.Guna2Button ShortKeyBTN;
         private Guna.UI2.WinForms.Guna2Button Save_BTN;
         private Guna.UI2.WinForms.Guna2Button CancelBTN;
+        private System.Windows.Forms.Panel Fontpanel;
+        private Guna.UI2.WinForms.Guna2Button ReturnBTN;
     }
 }

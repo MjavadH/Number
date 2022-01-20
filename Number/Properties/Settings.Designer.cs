@@ -121,25 +121,25 @@ namespace Number.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Shift+S")]
-        public global::System.Windows.Forms.Keys ShortKey_Setting {
+        [global::System.Configuration.DefaultSettingValueAttribute("Ctrl+S")]
+        public global::System.Windows.Forms.Keys ShortKey_SaveData {
             get {
-                return ((global::System.Windows.Forms.Keys)(this["ShortKey_Setting"]));
+                return ((global::System.Windows.Forms.Keys)(this["ShortKey_SaveData"]));
             }
             set {
-                this["ShortKey_Setting"] = value;
+                this["ShortKey_SaveData"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Shift+A")]
-        public global::System.Windows.Forms.Keys ShortKey_AddN {
+        [global::System.Configuration.DefaultSettingValueAttribute("Ctrl+O")]
+        public global::System.Windows.Forms.Keys ShortKey_LoadData {
             get {
-                return ((global::System.Windows.Forms.Keys)(this["ShortKey_AddN"]));
+                return ((global::System.Windows.Forms.Keys)(this["ShortKey_LoadData"]));
             }
             set {
-                this["ShortKey_AddN"] = value;
+                this["ShortKey_LoadData"] = value;
             }
         }
         
@@ -169,13 +169,25 @@ namespace Number.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
         public bool UpdateData {
             get {
                 return ((bool)(this["UpdateData"]));
             }
             set {
                 this["UpdateData"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string DataBase {
+            get {
+                return ((string)(this["DataBase"]));
+            }
+            set {
+                this["DataBase"] = value;
             }
         }
     }

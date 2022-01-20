@@ -1,4 +1,6 @@
 ﻿using System;
+using System.IO;
+using Number.Properties;
 using System.Xml;
 
 namespace Number
@@ -7,7 +9,7 @@ namespace Number
     {
 
         public static XmlDocument DataXML = new XmlDocument();
-
+        /*------------------ Create Data ------------------*/
         public static void CreateNew()
         {
 
@@ -114,6 +116,7 @@ namespace Number
                 DataXML.Save("Data.xml");
             }
         }
+        /*------------------ Clear Data ------------------*/
         public static string Clear(string DText)
         {
             string Text = "0";
@@ -133,6 +136,37 @@ namespace Number
             }
             catch (Exception) { }
             return Text;
+        }
+        /*------------------ Save Data ------------------*/
+        public static string saveData()
+        {
+            try
+            {
+                Settings.Default.DataBase = File.ReadAllText("Data.xml");
+                Settings.Default.Save();
+                return "Suscess";
+            }
+            catch (Exception)
+            {
+                return "Error";
+            }
+        }
+        /*------------------ Load Data ------------------*/
+        public static string LoadData()
+        {
+            try
+            {
+                if (Settings.Default.DataBase != "")
+                {
+                    File.WriteAllText("Data.xml", Settings.Default.DataBase);
+                    return "Suscess";
+                }
+                else return "Data Empty";
+            }
+            catch (Exception)
+            {
+                return "Error";
+            }
         }
     }
 }

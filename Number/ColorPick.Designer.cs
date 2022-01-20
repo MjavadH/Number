@@ -51,6 +51,7 @@ namespace Number
             this.label1.TabIndex = 10;
             this.label1.Text = " رنگی که دوست دارید بسازید!";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.NumberForm_MouseMove);
             // 
             // RT
             // 
@@ -60,6 +61,7 @@ namespace Number
             this.RT.TabIndex = 14;
             this.RT.Text = "مقدار رنگ قرمز:";
             this.RT.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.RT.MouseMove += new System.Windows.Forms.MouseEventHandler(this.NumberForm_MouseMove);
             // 
             // GT
             // 
@@ -69,6 +71,7 @@ namespace Number
             this.GT.TabIndex = 14;
             this.GT.Text = "مقدار رنگ سبز:";
             this.GT.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.GT.MouseMove += new System.Windows.Forms.MouseEventHandler(this.NumberForm_MouseMove);
             // 
             // BT
             // 
@@ -78,6 +81,7 @@ namespace Number
             this.BT.TabIndex = 14;
             this.BT.Text = "مقدار رنگ آبی:";
             this.BT.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.BT.MouseMove += new System.Windows.Forms.MouseEventHandler(this.NumberForm_MouseMove);
             // 
             // RC
             // 

@@ -63,6 +63,16 @@ namespace Number.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _return {
+            get {
+                object obj = ResourceManager.GetObject("_return", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap add_list {
             get {
                 object obj = ResourceManager.GetObject("add list", resourceCulture);
@@ -194,11 +204,11 @@ namespace Number.Properties {
         ///   Looks up a localized string similar to &lt;!DOCTYPE html&gt;
         ///&lt;html lang=&quot;fa&quot;&gt;
         ///&lt;head&gt;
-        ///	&lt;title&gt;HelpPage&lt;/title&gt;
+        ///    &lt;title&gt;HelpPage&lt;/title&gt;
         ///&lt;/head&gt;
         ///&lt;body dir=&quot;rtl&quot; style=&quot;width: 480px;&quot;&gt;
         ///    &lt;h3&gt;
-        ///         نرم افزار شمارنده کامل ترین نرم افزار شمارش در ویندوز
+        ///        نرم افزار شمارنده کامل ترین نرم افزار شمارش در ویندوز
         ///    &lt;/h3&gt;
         ///    &lt;p&gt;
         ///        این نرم افزار توسط MjavadH طراحی شده است
@@ -206,9 +216,9 @@ namespace Number.Properties {
         ///        آیدی تلگرام:
         ///        &lt;a href=&quot;https://t.me/rvyrbyhrc&quot;&gt;https://t.me/rvyrbyhrc&lt;/a&gt;
         ///        &lt;br&gt;
-        ///        شما هم اکنون در حال استفاده از نسخه 1.7.0 نرم افزار هستید
+        ///        شما هم اکنون در حال استفاده از نسخه 1.8.0 نرم افزار هستید
         ///        &lt;br&gt;
-        ///        در ادامه شما را با ویژگی های این نرم افزار [rest of string was truncated]&quot;;.
+        ///        در ادامه شما را با ویژگی های این نرم افز [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string HelpText {
             get {
@@ -292,6 +302,16 @@ namespace Number.Properties {
         internal static System.Drawing.Bitmap save {
             get {
                 object obj = ResourceManager.GetObject("save", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap save_as {
+            get {
+                object obj = ResourceManager.GetObject("save_as", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

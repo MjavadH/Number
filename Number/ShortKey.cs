@@ -26,8 +26,8 @@ namespace Number
             Settings.Default.ShortKey_Clear = (Keys)Enum.Parse(typeof(Keys), "Alt,C");
             Settings.Default.ShortKey_Compress = (Keys)Enum.Parse(typeof(Keys), "Shift,C");
             Settings.Default.ShortKey_Counter = (Keys)Enum.Parse(typeof(Keys), "Shift,T");
-            Settings.Default.ShortKey_Setting = (Keys)Enum.Parse(typeof(Keys), "Shift,S");
-            Settings.Default.ShortKey_AddN = (Keys)Enum.Parse(typeof(Keys), "Shift,A");
+            Settings.Default.ShortKey_SaveData = (Keys)Enum.Parse(typeof(Keys), "Ctrl,S");
+            Settings.Default.ShortKey_LoadData = (Keys)Enum.Parse(typeof(Keys), "Ctrl,O");
             Settings.Default.Save();
             Short_key_set();
         } 
@@ -37,8 +37,8 @@ namespace Number
             Clear_Key.Text = Settings.Default.ShortKey_Clear.ToString();
             Compress_Key.Text = Settings.Default.ShortKey_Compress.ToString();
             AutoCounter_Key.Text = Settings.Default.ShortKey_Counter.ToString();
-            AddPage_Key.Text = Settings.Default.ShortKey_AddN.ToString();
-            SettingPage_Key.Text = Settings.Default.ShortKey_Setting.ToString();
+            AddPage_Key.Text = Settings.Default.ShortKey_LoadData.ToString();
+            SettingPage_Key.Text = Settings.Default.ShortKey_SaveData.ToString();
         }
         /*------------------ func End ------------------*/
         /*------------------ Move Form Start ------------------*/
@@ -106,8 +106,8 @@ namespace Number
                 Settings.Default.ShortKey_Clear = (Keys)Enum.Parse(typeof(Keys), Clear_Key.Text);
                 Settings.Default.ShortKey_Compress = (Keys)Enum.Parse(typeof(Keys), Compress_Key.Text);
                 Settings.Default.ShortKey_Counter = (Keys)Enum.Parse(typeof(Keys), AutoCounter_Key.Text);
-                Settings.Default.ShortKey_Setting = (Keys)Enum.Parse(typeof(Keys), SettingPage_Key.Text);
-                Settings.Default.ShortKey_AddN = (Keys)Enum.Parse(typeof(Keys), AddPage_Key.Text);
+                Settings.Default.ShortKey_SaveData = (Keys)Enum.Parse(typeof(Keys), SettingPage_Key.Text);
+                Settings.Default.ShortKey_LoadData = (Keys)Enum.Parse(typeof(Keys), AddPage_Key.Text);
                 Settings.Default.Save();
                 this.Close();
             }

@@ -357,6 +357,7 @@ namespace Number
             this.Load += new System.EventHandler(this.Form1_Load);
             this.DoubleClick += new System.EventHandler(this.NumberT_DoubleClick);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ShortKey_KeyDown);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.NumberForm_KeyUp);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.NumberForm_MouseMove);
             this.MenuBar.ResumeLayout(false);
             this.MenuBar.PerformLayout();

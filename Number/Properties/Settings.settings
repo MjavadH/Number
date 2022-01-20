@@ -26,11 +26,11 @@
     <Setting Name="ShortKey_Clear" Type="System.Windows.Forms.Keys" Scope="User">
       <Value Profile="(Default)">Alt+C</Value>
     </Setting>
-    <Setting Name="ShortKey_Setting" Type="System.Windows.Forms.Keys" Scope="User">
-      <Value Profile="(Default)">Shift+S</Value>
+    <Setting Name="ShortKey_SaveData" Type="System.Windows.Forms.Keys" Scope="User">
+      <Value Profile="(Default)">Ctrl+S</Value>
     </Setting>
-    <Setting Name="ShortKey_AddN" Type="System.Windows.Forms.Keys" Scope="User">
-      <Value Profile="(Default)">Shift+A</Value>
+    <Setting Name="ShortKey_LoadData" Type="System.Windows.Forms.Keys" Scope="User">
+      <Value Profile="(Default)">Ctrl+O</Value>
     </Setting>
     <Setting Name="ShortKey_Compress" Type="System.Windows.Forms.Keys" Scope="User">
       <Value Profile="(Default)">Shift+C</Value>
@@ -39,7 +39,10 @@
       <Value Profile="(Default)">Shift+T</Value>
     </Setting>
     <Setting Name="UpdateData" Type="System.Boolean" Scope="User">
-      <Value Profile="(Default)">True</Value>
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="DataBase" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
     </Setting>
   </Settings>
 </SettingsFile>

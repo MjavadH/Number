@@ -2,7 +2,7 @@
 using System.Drawing;
 using System.Windows.Forms;
 using Number.Properties;
-
+using static Number.Cdata;
 
 
 namespace Number
@@ -11,6 +11,11 @@ namespace Number
     {
         public SettingPage()
         {InitializeComponent();}
+        public void Alert(string msg)
+        {
+            AlertBox frm = new AlertBox();
+            frm.showAlert(msg);
+        }
         private void SettingPage_Load(object sender, EventArgs e)
         {
             if (Settings.Default.DefaultColor == false)
@@ -94,6 +99,23 @@ namespace Number
         private void ShortKeyBTN_Click(object sender, EventArgs e)
         {
             new ShortKey().ShowDialog();
+        }
+
+        public void ReturnBTN_Click(object sender, EventArgs e)
+        {
+            string result = Cdata.LoadData();
+            switch (result)
+            {
+                case "Suscess":
+                    Alert("عملیات با موفقیت انجام شد");
+                    break;
+                case "Data Empty":
+                    Alert("چیزی ذخیره نشده که بازگردانی شود");
+                    break;
+                case "Error":
+                    Alert("مشکلی پیش آمد مجدد تلاش کنید");
+                    break;
+            }
         }
     }
 }
