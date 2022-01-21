@@ -309,7 +309,7 @@ namespace Number
             else if (e.KeyData == Settings.Default.ShortKey_SaveData)
             {
                 DataBase frm = new DataBase();
-                frm.SaveData_Click("Save", EventArgs.Empty); 
+                frm.SaveData_Click("Save", EventArgs.Empty);
 
             }
             else if (e.KeyData == Settings.Default.ShortKey_LoadData)

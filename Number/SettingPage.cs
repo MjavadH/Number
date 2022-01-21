@@ -63,7 +63,7 @@ namespace Number
             label4.Font = Settings.Default.DFont;
             fontDialog1.Font = Settings.Default.DFont;
         }
-        /*------------------ BTN ------------------*/
+        /*------------------ BTN Start ------------------*/
         private void button1_Click(object sender, EventArgs e)
         {
             Settings.Default.AlwaysOT = OnTopBTN.Checked;
@@ -117,5 +117,23 @@ namespace Number
                     break;
             }
         }
+        /*--------- Reset Start ---------*/
+        private void ResetBTN_Click(object sender, EventArgs e)
+        {
+            ResetNAni.AddToQueue(Reset_YN_Panel, Guna.UI2.AnimatorNS.AnimateMode.Show);
+        }
+
+        private void Yes_Reset_Click(object sender, EventArgs e)
+        {
+            Cdata.Delete();
+            Alert("شمارنده ها بازنشانی شدند");
+            ResetNAni.AddToQueue(Reset_YN_Panel, Guna.UI2.AnimatorNS.AnimateMode.Hide);
+        }
+        private void No_Reset_Click(object sender, EventArgs e)
+        {
+            ResetNAni.AddToQueue(Reset_YN_Panel, Guna.UI2.AnimatorNS.AnimateMode.Hide);
+        }
+        /*--------- Reset End ---------*/
+        /*------------------ BTN End ------------------*/
     }
 }

@@ -137,6 +137,19 @@ namespace Number
             catch (Exception) { }
             return Text;
         }
+        /*------------------ Delete Data ------------------*/
+        public static void Delete()
+        {
+            try
+            {
+                File.Delete("Data.xml");
+                CreateNew();
+            }
+            catch (Exception)
+            {
+                CreateNew();
+            }
+        }
         /*------------------ Save Data ------------------*/
         public static string saveData()
         {

@@ -20,17 +20,21 @@ namespace Number
             AlertBox frm = new AlertBox();
             frm.showAlert(msg);
         }
+        /*--------- back to Default Keys ---------*/
+
         private void Default()
         {
             Settings.Default.ShortKey_Add = Keys.Add;
             Settings.Default.ShortKey_Clear = (Keys)Enum.Parse(typeof(Keys), "Alt,C");
             Settings.Default.ShortKey_Compress = (Keys)Enum.Parse(typeof(Keys), "Shift,C");
             Settings.Default.ShortKey_Counter = (Keys)Enum.Parse(typeof(Keys), "Shift,T");
-            Settings.Default.ShortKey_SaveData = (Keys)Enum.Parse(typeof(Keys), "Ctrl,S");
-            Settings.Default.ShortKey_LoadData = (Keys)Enum.Parse(typeof(Keys), "Ctrl,O");
+            Settings.Default.ShortKey_SaveData = (Keys)Enum.Parse(typeof(Keys), "Control,S");
+            Settings.Default.ShortKey_LoadData = (Keys)Enum.Parse(typeof(Keys), "Control,O");
             Settings.Default.Save();
             Short_key_set();
-        } 
+        }
+
+        /*--------- Change Keys ---------*/
         private void Short_key_set()
         {
             Add_Key.Text = Settings.Default.ShortKey_Add.ToString();
@@ -69,6 +73,7 @@ namespace Number
             this.Font = Settings.Default.AppFont;
             Short_key_set();
         }
+        /*------------------ Set Key ------------------*/
         private void Short_KeyDown(object sender, KeyEventArgs e)
         {
             Guna2Button key = (Guna2Button)sender;
@@ -82,14 +87,10 @@ namespace Number
         private void Cancel_BTN_MouseLeave(object sender, EventArgs e)
         { Cancel_BTN.FillColor = Color.Empty; }
         private void Cancel_BTN_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+        {this.Close();}
 
         private void Defult_BTN_Click(object sender, EventArgs e)
-        {
-            Default();
-        }
+        {Default();}
 
         private void Save_BTN_Click(object sender, EventArgs e)
         {

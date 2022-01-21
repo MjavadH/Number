@@ -30,6 +30,7 @@ namespace Number
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            Guna.UI2.AnimatorNS.Animation animation1 = new Guna.UI2.AnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SettingPage));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -49,20 +50,26 @@ namespace Number
             this.Counter_Value = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.label7 = new System.Windows.Forms.Label();
             this.ShortKeyBTN = new Guna.UI2.WinForms.Guna2Button();
-            this.Fontpanel = new System.Windows.Forms.Panel();
             this.ReturnBTN = new Guna.UI2.WinForms.Guna2Button();
+            this.ResetBTN = new Guna.UI2.WinForms.Guna2Button();
+            this.Reset_YN_Panel = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.Yes_Reset = new Guna.UI2.WinForms.Guna2Button();
+            this.No_Reset = new Guna.UI2.WinForms.Guna2Button();
+            this.ResetNAni = new Guna.UI2.WinForms.Guna2Transition();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Counter_Value)).BeginInit();
-            this.Fontpanel.SuspendLayout();
+            this.Reset_YN_Panel.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
+            this.ResetNAni.SetDecoration(this.label1, Guna.UI2.AnimatorNS.DecorationType.None);
             this.label1.Dock = System.Windows.Forms.DockStyle.Top;
             this.label1.Font = new System.Drawing.Font("Vazir", 20F);
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(565, 52);
+            this.label1.Size = new System.Drawing.Size(564, 52);
             this.label1.TabIndex = 0;
             this.label1.Text = "صفحه تنظیمات";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -71,6 +78,7 @@ namespace Number
             // label2
             // 
             this.label2.AutoSize = true;
+            this.ResetNAni.SetDecoration(this.label2, Guna.UI2.AnimatorNS.DecorationType.None);
             this.label2.Location = new System.Drawing.Point(437, 80);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(116, 26);
@@ -81,7 +89,8 @@ namespace Number
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(409, 134);
+            this.ResetNAni.SetDecoration(this.label3, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.label3.Location = new System.Drawing.Point(409, 125);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(144, 26);
             this.label3.TabIndex = 2;
@@ -101,10 +110,12 @@ namespace Number
             // 
             // label4
             // 
-            this.label4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label4.Location = new System.Drawing.Point(0, 0);
+            this.label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ResetNAni.SetDecoration(this.label4, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.label4.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.label4.Location = new System.Drawing.Point(0, 270);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(387, 98);
+            this.label4.Size = new System.Drawing.Size(564, 98);
             this.label4.TabIndex = 8;
             this.label4.Text = "متن نمونه تست فونت\r\n123456789";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -120,6 +131,7 @@ namespace Number
             this.OnTopBTN.CheckedState.InnerBorderRadius = 8;
             this.OnTopBTN.CheckedState.InnerColor = System.Drawing.Color.White;
             this.OnTopBTN.CheckedState.Parent = this.OnTopBTN;
+            this.ResetNAni.SetDecoration(this.OnTopBTN, Guna.UI2.AnimatorNS.DecorationType.None);
             this.OnTopBTN.Location = new System.Drawing.Point(378, 80);
             this.OnTopBTN.Name = "OnTopBTN";
             this.OnTopBTN.ShadowDecoration.Parent = this.OnTopBTN;
@@ -144,7 +156,8 @@ namespace Number
             this.DarkMode.CheckedState.InnerBorderRadius = 8;
             this.DarkMode.CheckedState.InnerColor = System.Drawing.Color.White;
             this.DarkMode.CheckedState.Parent = this.DarkMode;
-            this.DarkMode.Location = new System.Drawing.Point(349, 134);
+            this.ResetNAni.SetDecoration(this.DarkMode, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.DarkMode.Location = new System.Drawing.Point(346, 125);
             this.DarkMode.Name = "DarkMode";
             this.DarkMode.ShadowDecoration.Parent = this.DarkMode;
             this.DarkMode.Size = new System.Drawing.Size(57, 26);
@@ -167,12 +180,13 @@ namespace Number
             this.ColorCh.BorderThickness = 1;
             this.ColorCh.CheckedState.Parent = this.ColorCh;
             this.ColorCh.CustomImages.Parent = this.ColorCh;
+            this.ResetNAni.SetDecoration(this.ColorCh, Guna.UI2.AnimatorNS.DecorationType.None);
             this.ColorCh.FillColor = System.Drawing.Color.Empty;
             this.ColorCh.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.ColorCh.ForeColor = System.Drawing.Color.White;
             this.ColorCh.HoverState.Parent = this.ColorCh;
             this.ColorCh.Image = global::Number.Properties.Resources.paint_palette;
-            this.ColorCh.Location = new System.Drawing.Point(222, 125);
+            this.ColorCh.Location = new System.Drawing.Point(222, 115);
             this.ColorCh.Name = "ColorCh";
             this.ColorCh.ShadowDecoration.Parent = this.ColorCh;
             this.ColorCh.Size = new System.Drawing.Size(118, 41);
@@ -189,12 +203,13 @@ namespace Number
             this.FontBTN.BorderThickness = 1;
             this.FontBTN.CheckedState.Parent = this.FontBTN;
             this.FontBTN.CustomImages.Parent = this.FontBTN;
+            this.ResetNAni.SetDecoration(this.FontBTN, Guna.UI2.AnimatorNS.DecorationType.None);
             this.FontBTN.FillColor = System.Drawing.Color.Empty;
             this.FontBTN.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.FontBTN.ForeColor = System.Drawing.Color.White;
             this.FontBTN.HoverState.Parent = this.FontBTN;
             this.FontBTN.Image = global::Number.Properties.Resources.font_style_formatting;
-            this.FontBTN.Location = new System.Drawing.Point(444, 3);
+            this.FontBTN.Location = new System.Drawing.Point(438, 212);
             this.FontBTN.Name = "FontBTN";
             this.FontBTN.ShadowDecoration.Parent = this.FontBTN;
             this.FontBTN.Size = new System.Drawing.Size(118, 41);
@@ -211,12 +226,13 @@ namespace Number
             this.FontCBTN.BorderThickness = 1;
             this.FontCBTN.CheckedState.Parent = this.FontCBTN;
             this.FontCBTN.CustomImages.Parent = this.FontCBTN;
+            this.ResetNAni.SetDecoration(this.FontCBTN, Guna.UI2.AnimatorNS.DecorationType.None);
             this.FontCBTN.FillColor = System.Drawing.Color.Empty;
             this.FontCBTN.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.FontCBTN.ForeColor = System.Drawing.Color.White;
             this.FontCBTN.HoverState.Parent = this.FontCBTN;
             this.FontCBTN.Image = global::Number.Properties.Resources.clear_formatting;
-            this.FontCBTN.Location = new System.Drawing.Point(393, 53);
+            this.FontCBTN.Location = new System.Drawing.Point(263, 212);
             this.FontCBTN.Name = "FontCBTN";
             this.FontCBTN.ShadowDecoration.Parent = this.FontCBTN;
             this.FontCBTN.Size = new System.Drawing.Size(169, 41);
@@ -232,7 +248,8 @@ namespace Number
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(426, 179);
+            this.ResetNAni.SetDecoration(this.label6, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.label6.Location = new System.Drawing.Point(426, 169);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(127, 26);
             this.label6.TabIndex = 12;
@@ -242,10 +259,11 @@ namespace Number
             // 
             this.panel1.Controls.Add(this.CancelBTN);
             this.panel1.Controls.Add(this.Save_BTN);
+            this.ResetNAni.SetDecoration(this.panel1, Guna.UI2.AnimatorNS.DecorationType.None);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 368);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(565, 76);
+            this.panel1.Size = new System.Drawing.Size(564, 76);
             this.panel1.TabIndex = 13;
             // 
             // CancelBTN
@@ -253,13 +271,14 @@ namespace Number
             this.CancelBTN.BackColor = System.Drawing.Color.Transparent;
             this.CancelBTN.CheckedState.Parent = this.CancelBTN;
             this.CancelBTN.CustomImages.Parent = this.CancelBTN;
+            this.ResetNAni.SetDecoration(this.CancelBTN, Guna.UI2.AnimatorNS.DecorationType.None);
             this.CancelBTN.Dock = System.Windows.Forms.DockStyle.Right;
             this.CancelBTN.FillColor = System.Drawing.Color.Empty;
             this.CancelBTN.Font = new System.Drawing.Font("Vazir", 12F);
             this.CancelBTN.ForeColor = System.Drawing.Color.White;
             this.CancelBTN.HoverState.Parent = this.CancelBTN;
             this.CancelBTN.Image = global::Number.Properties.Resources.cancel;
-            this.CancelBTN.Location = new System.Drawing.Point(0, 0);
+            this.CancelBTN.Location = new System.Drawing.Point(-1, 0);
             this.CancelBTN.Name = "CancelBTN";
             this.CancelBTN.ShadowDecoration.Parent = this.CancelBTN;
             this.CancelBTN.Size = new System.Drawing.Size(287, 76);
@@ -276,13 +295,14 @@ namespace Number
             this.Save_BTN.BackColor = System.Drawing.Color.Transparent;
             this.Save_BTN.CheckedState.Parent = this.Save_BTN;
             this.Save_BTN.CustomImages.Parent = this.Save_BTN;
+            this.ResetNAni.SetDecoration(this.Save_BTN, Guna.UI2.AnimatorNS.DecorationType.None);
             this.Save_BTN.Dock = System.Windows.Forms.DockStyle.Right;
             this.Save_BTN.FillColor = System.Drawing.Color.Empty;
             this.Save_BTN.Font = new System.Drawing.Font("Vazir", 12F);
             this.Save_BTN.ForeColor = System.Drawing.Color.White;
             this.Save_BTN.HoverState.Parent = this.Save_BTN;
             this.Save_BTN.Image = global::Number.Properties.Resources.save;
-            this.Save_BTN.Location = new System.Drawing.Point(287, 0);
+            this.Save_BTN.Location = new System.Drawing.Point(286, 0);
             this.Save_BTN.Name = "Save_BTN";
             this.Save_BTN.ShadowDecoration.Parent = this.Save_BTN;
             this.Save_BTN.Size = new System.Drawing.Size(278, 76);
@@ -299,6 +319,7 @@ namespace Number
             this.Counter_Value.BorderRadius = 14;
             this.Counter_Value.BorderThickness = 0;
             this.Counter_Value.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.ResetNAni.SetDecoration(this.Counter_Value, Guna.UI2.AnimatorNS.DecorationType.None);
             this.Counter_Value.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.Counter_Value.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.Counter_Value.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -309,7 +330,7 @@ namespace Number
             this.Counter_Value.FocusedState.Parent = this.Counter_Value;
             this.Counter_Value.Font = new System.Drawing.Font("Vazir", 12F);
             this.Counter_Value.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(126)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.Counter_Value.Location = new System.Drawing.Point(344, 177);
+            this.Counter_Value.Location = new System.Drawing.Point(344, 167);
             this.Counter_Value.Margin = new System.Windows.Forms.Padding(0);
             this.Counter_Value.Maximum = new decimal(new int[] {
             60,
@@ -336,7 +357,8 @@ namespace Number
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(227, 179);
+            this.ResetNAni.SetDecoration(this.label7, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.label7.Location = new System.Drawing.Point(227, 169);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(114, 26);
             this.label7.TabIndex = 15;
@@ -351,6 +373,7 @@ namespace Number
             this.ShortKeyBTN.BorderThickness = 1;
             this.ShortKeyBTN.CheckedState.Parent = this.ShortKeyBTN;
             this.ShortKeyBTN.CustomImages.Parent = this.ShortKeyBTN;
+            this.ResetNAni.SetDecoration(this.ShortKeyBTN, Guna.UI2.AnimatorNS.DecorationType.None);
             this.ShortKeyBTN.FillColor = System.Drawing.Color.Empty;
             this.ShortKeyBTN.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.ShortKeyBTN.ForeColor = System.Drawing.Color.White;
@@ -364,18 +387,6 @@ namespace Number
             this.ShortKeyBTN.Text = "دکمه های میانبر";
             this.ShortKeyBTN.Click += new System.EventHandler(this.ShortKeyBTN_Click);
             // 
-            // Fontpanel
-            // 
-            this.Fontpanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Fontpanel.Controls.Add(this.label4);
-            this.Fontpanel.Controls.Add(this.FontBTN);
-            this.Fontpanel.Controls.Add(this.FontCBTN);
-            this.Fontpanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.Fontpanel.Location = new System.Drawing.Point(0, 268);
-            this.Fontpanel.Name = "Fontpanel";
-            this.Fontpanel.Size = new System.Drawing.Size(565, 100);
-            this.Fontpanel.TabIndex = 17;
-            // 
             // ReturnBTN
             // 
             this.ReturnBTN.AutoRoundedCorners = true;
@@ -385,12 +396,13 @@ namespace Number
             this.ReturnBTN.BorderThickness = 1;
             this.ReturnBTN.CheckedState.Parent = this.ReturnBTN;
             this.ReturnBTN.CustomImages.Parent = this.ReturnBTN;
+            this.ResetNAni.SetDecoration(this.ReturnBTN, Guna.UI2.AnimatorNS.DecorationType.None);
             this.ReturnBTN.FillColor = System.Drawing.Color.Empty;
             this.ReturnBTN.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.ReturnBTN.ForeColor = System.Drawing.Color.White;
             this.ReturnBTN.HoverState.Parent = this.ReturnBTN;
             this.ReturnBTN.Image = global::Number.Properties.Resources._return;
-            this.ReturnBTN.Location = new System.Drawing.Point(12, 212);
+            this.ReturnBTN.Location = new System.Drawing.Point(12, 125);
             this.ReturnBTN.Name = "ReturnBTN";
             this.ReturnBTN.ShadowDecoration.Parent = this.ReturnBTN;
             this.ReturnBTN.Size = new System.Drawing.Size(169, 41);
@@ -398,13 +410,133 @@ namespace Number
             this.ReturnBTN.Text = "برگرداندن شمارنده ها";
             this.ReturnBTN.Click += new System.EventHandler(this.ReturnBTN_Click);
             // 
+            // ResetBTN
+            // 
+            this.ResetBTN.AutoRoundedCorners = true;
+            this.ResetBTN.BackColor = System.Drawing.Color.Transparent;
+            this.ResetBTN.BorderColor = System.Drawing.Color.Red;
+            this.ResetBTN.BorderRadius = 19;
+            this.ResetBTN.BorderThickness = 1;
+            this.ResetBTN.CheckedState.Parent = this.ResetBTN;
+            this.ResetBTN.CustomImages.Parent = this.ResetBTN;
+            this.ResetNAni.SetDecoration(this.ResetBTN, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.ResetBTN.FillColor = System.Drawing.Color.Empty;
+            this.ResetBTN.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.ResetBTN.ForeColor = System.Drawing.Color.White;
+            this.ResetBTN.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.ResetBTN.HoverState.Parent = this.ResetBTN;
+            this.ResetBTN.Image = global::Number.Properties.Resources._return;
+            this.ResetBTN.Location = new System.Drawing.Point(12, 212);
+            this.ResetBTN.Name = "ResetBTN";
+            this.ResetBTN.ShadowDecoration.Parent = this.ResetBTN;
+            this.ResetBTN.Size = new System.Drawing.Size(169, 41);
+            this.ResetBTN.TabIndex = 16;
+            this.ResetBTN.Text = "بازنشانی شمارنده ها";
+            this.ResetBTN.Click += new System.EventHandler(this.ResetBTN_Click);
+            // 
+            // Reset_YN_Panel
+            // 
+            this.Reset_YN_Panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Reset_YN_Panel.Controls.Add(this.label5);
+            this.Reset_YN_Panel.Controls.Add(this.Yes_Reset);
+            this.Reset_YN_Panel.Controls.Add(this.No_Reset);
+            this.ResetNAni.SetDecoration(this.Reset_YN_Panel, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.Reset_YN_Panel.Location = new System.Drawing.Point(1, 270);
+            this.Reset_YN_Panel.Name = "Reset_YN_Panel";
+            this.Reset_YN_Panel.Size = new System.Drawing.Size(563, 98);
+            this.Reset_YN_Panel.TabIndex = 17;
+            this.Reset_YN_Panel.Visible = false;
+            // 
+            // label5
+            // 
+            this.ResetNAni.SetDecoration(this.label5, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.label5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label5.Location = new System.Drawing.Point(0, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(561, 39);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "آیا از کار خود اطمینان دارید؟";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // Yes_Reset
+            // 
+            this.Yes_Reset.AutoRoundedCorners = true;
+            this.Yes_Reset.BackColor = System.Drawing.Color.Transparent;
+            this.Yes_Reset.BorderColor = System.Drawing.Color.Red;
+            this.Yes_Reset.BorderRadius = 19;
+            this.Yes_Reset.BorderThickness = 1;
+            this.Yes_Reset.CheckedState.Parent = this.Yes_Reset;
+            this.Yes_Reset.CustomImages.Parent = this.Yes_Reset;
+            this.ResetNAni.SetDecoration(this.Yes_Reset, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.Yes_Reset.FillColor = System.Drawing.Color.Empty;
+            this.Yes_Reset.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.Yes_Reset.ForeColor = System.Drawing.Color.White;
+            this.Yes_Reset.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.Yes_Reset.HoverState.Parent = this.Yes_Reset;
+            this.Yes_Reset.Image = global::Number.Properties.Resources.checkmark;
+            this.Yes_Reset.Location = new System.Drawing.Point(134, 42);
+            this.Yes_Reset.Name = "Yes_Reset";
+            this.Yes_Reset.ShadowDecoration.Parent = this.Yes_Reset;
+            this.Yes_Reset.Size = new System.Drawing.Size(114, 41);
+            this.Yes_Reset.TabIndex = 16;
+            this.Yes_Reset.Text = "بله";
+            this.Yes_Reset.Click += new System.EventHandler(this.Yes_Reset_Click);
+            // 
+            // No_Reset
+            // 
+            this.No_Reset.AutoRoundedCorners = true;
+            this.No_Reset.BackColor = System.Drawing.Color.Transparent;
+            this.No_Reset.BorderColor = System.Drawing.Color.White;
+            this.No_Reset.BorderRadius = 19;
+            this.No_Reset.BorderThickness = 1;
+            this.No_Reset.CheckedState.Parent = this.No_Reset;
+            this.No_Reset.CustomImages.Parent = this.No_Reset;
+            this.ResetNAni.SetDecoration(this.No_Reset, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.No_Reset.FillColor = System.Drawing.Color.Empty;
+            this.No_Reset.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.No_Reset.ForeColor = System.Drawing.Color.White;
+            this.No_Reset.HoverState.Parent = this.No_Reset;
+            this.No_Reset.Image = global::Number.Properties.Resources.delete;
+            this.No_Reset.Location = new System.Drawing.Point(306, 42);
+            this.No_Reset.Name = "No_Reset";
+            this.No_Reset.ShadowDecoration.Parent = this.No_Reset;
+            this.No_Reset.Size = new System.Drawing.Size(118, 41);
+            this.No_Reset.TabIndex = 11;
+            this.No_Reset.Text = "خیر";
+            this.No_Reset.Click += new System.EventHandler(this.No_Reset_Click);
+            // 
+            // ResetNAni
+            // 
+            this.ResetNAni.AnimationType = Guna.UI2.AnimatorNS.AnimationType.Leaf;
+            this.ResetNAni.Cursor = null;
+            animation1.AnimateOnlyDifferences = true;
+            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
+            animation1.LeafCoeff = 1F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
+            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
+            animation1.MosaicSize = 0;
+            animation1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            animation1.RotateCoeff = 0F;
+            animation1.RotateLimit = 0F;
+            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
+            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
+            animation1.TimeCoeff = 0F;
+            animation1.TransparencyCoeff = 0F;
+            this.ResetNAni.DefaultAnimation = animation1;
+            // 
             // SettingPage
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(10)))), ((int)(((byte)(27)))));
             this.ClientSize = new System.Drawing.Size(565, 444);
-            this.Controls.Add(this.Fontpanel);
+            this.Controls.Add(this.Reset_YN_Panel);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.FontCBTN);
+            this.Controls.Add(this.FontBTN);
+            this.Controls.Add(this.ResetBTN);
             this.Controls.Add(this.ReturnBTN);
             this.Controls.Add(this.ShortKeyBTN);
             this.Controls.Add(this.label7);
@@ -417,12 +549,14 @@ namespace Number
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.ResetNAni.SetDecoration(this, Guna.UI2.AnimatorNS.DecorationType.None);
             this.Font = new System.Drawing.Font("Vazir", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.Name = "SettingPage";
+            this.Padding = new System.Windows.Forms.Padding(0, 0, 1, 0);
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.ShowInTaskbar = false;
             this.Text = "تنظیمات";
@@ -430,7 +564,7 @@ namespace Number
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.NumberForm_MouseMove);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Counter_Value)).EndInit();
-            this.Fontpanel.ResumeLayout(false);
+            this.Reset_YN_Panel.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -456,7 +590,12 @@ namespace Number
         private Guna.UI2.WinForms.Guna2Button ShortKeyBTN;
         private Guna.UI2.WinForms.Guna2Button Save_BTN;
         private Guna.UI2.WinForms.Guna2Button CancelBTN;
-        private System.Windows.Forms.Panel Fontpanel;
         private Guna.UI2.WinForms.Guna2Button ReturnBTN;
+        private Guna.UI2.WinForms.Guna2Button ResetBTN;
+        private Guna.UI2.WinForms.Guna2Transition ResetNAni;
+        private System.Windows.Forms.Panel Reset_YN_Panel;
+        private System.Windows.Forms.Label label5;
+        private Guna.UI2.WinForms.Guna2Button Yes_Reset;
+        private Guna.UI2.WinForms.Guna2Button No_Reset;
     }
 }

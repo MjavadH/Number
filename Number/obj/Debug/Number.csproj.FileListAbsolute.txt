@@ -43,3 +43,4 @@ C:\Users\MyPC\دسکتاپ\C# Code\Number\Number\obj\Debug\Number.csproj.CoreCom
 C:\Users\MyPC\دسکتاپ\C# Code\Number\Number\obj\Debug\Number.csproj.CopyComplete
 C:\Users\MyPC\دسکتاپ\C# Code\Number\Number\obj\Debug\Number.exe
 C:\Users\MyPC\دسکتاپ\C# Code\Number\Number\obj\Debug\Number.pdb
+C:\Users\MyPC\دسکتاپ\C# Code\Number\Number\obj\Debug\Number.csproj.AssemblyReference.cache
