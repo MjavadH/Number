@@ -173,7 +173,7 @@
       <DependentUpon>HelpPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
@@ -218,33 +218,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icons8_numbers.ico" />
+    <None Include="Resources\delete_red.png" />
+    <None Include="Resources\checkmark_Green.png" />
+    <None Include="Resources\reset.png" />
     <None Include="Resources\save as.png" />
     <None Include="Resources\return.png" />
-    <None Include="Resources\compress.png" />
-    <None Include="Resources\clear formatting.png" />
-    <None Include="Resources\checkmark.png" />
-    <None Include="Resources\cancel.png" />
-    <None Include="Resources\add list.png" />
-    <None Include="Resources\undo.png" />
-    <None Include="Resources\subtract.png" />
-    <None Include="Resources\settings.png" />
-    <None Include="Resources\save.png" />
-    <None Include="Resources\question mark.png" />
-    <None Include="Resources\paint palette.png" />
-    <None Include="Resources\numbers.png" />
     <None Include="Resources\numbers.ico" />
-    <None Include="Resources\multiply.png" />
-    <None Include="Resources\menu.png" />
-    <None Include="Resources\keyboard.png" />
-    <None Include="Resources\insert row.png" />
-    <None Include="Resources\help.png" />
-    <None Include="Resources\font style formatting.png" />
-    <None Include="Resources\exit.png" />
-    <None Include="Resources\erase.png" />
-    <None Include="Resources\edit.png" />
-    <None Include="Resources\delete.png" />
-    <None Include="Resources\delete row.png" />
-    <None Include="Resources\counter.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

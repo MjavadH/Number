@@ -30,14 +30,10 @@ namespace Number
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            Guna.UI2.AnimatorNS.Animation animation2 = new Guna.UI2.AnimatorNS.Animation();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            Guna.UI2.AnimatorNS.Animation animation3 = new Guna.UI2.AnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DataBase));
             this.AddTitle = new System.Windows.Forms.Label();
-            this.addName = new System.Windows.Forms.Label();
-            this.TextTB = new System.Windows.Forms.TextBox();
-            this.AddText = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.ErrorText = new System.Windows.Forms.Label();
             this.lenTB = new System.Windows.Forms.NumericUpDown();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -45,10 +41,8 @@ namespace Number
             this.lenDB = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TextDB = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ValueDB = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.infBox = new System.Windows.Forms.CheckBox();
             this.AddBTN = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.NameTB = new System.Windows.Forms.TextBox();
             this.Save = new Guna.UI2.WinForms.Guna2Button();
             this.Cancel = new Guna.UI2.WinForms.Guna2Button();
             this.DeleteBTN = new Guna.UI2.WinForms.Guna2Button();
@@ -56,6 +50,9 @@ namespace Number
             this.Time = new System.Windows.Forms.Timer(this.components);
             this.Animation = new Guna.UI2.WinForms.Guna2Transition();
             this.SaveNumbers = new Guna.UI2.WinForms.Guna2Button();
+            this.NameTB = new Guna.UI2.WinForms.Guna2TextBox();
+            this.TextTB = new Guna.UI2.WinForms.Guna2TextBox();
+            this.infBox = new Guna.UI2.WinForms.Guna2CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.lenTB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -74,48 +71,6 @@ namespace Number
             this.AddTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.AddTitle.MouseMove += new System.Windows.Forms.MouseEventHandler(this.NumberForm_MouseMove);
             // 
-            // addName
-            // 
-            this.addName.AutoSize = true;
-            this.Animation.SetDecoration(this.addName, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.addName.ForeColor = System.Drawing.Color.White;
-            this.addName.Location = new System.Drawing.Point(530, 46);
-            this.addName.Name = "addName";
-            this.addName.Size = new System.Drawing.Size(36, 26);
-            this.addName.TabIndex = 8;
-            this.addName.Text = "نام:";
-            // 
-            // TextTB
-            // 
-            this.TextTB.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Animation.SetDecoration(this.TextTB, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.TextTB.Location = new System.Drawing.Point(154, 85);
-            this.TextTB.Name = "TextTB";
-            this.TextTB.Size = new System.Drawing.Size(192, 33);
-            this.TextTB.TabIndex = 2;
-            // 
-            // AddText
-            // 
-            this.AddText.AutoSize = true;
-            this.Animation.SetDecoration(this.AddText, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.AddText.ForeColor = System.Drawing.Color.White;
-            this.AddText.Location = new System.Drawing.Point(308, 46);
-            this.AddText.Name = "AddText";
-            this.AddText.Size = new System.Drawing.Size(43, 26);
-            this.AddText.TabIndex = 8;
-            this.AddText.Text = "متن:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.Animation.SetDecoration(this.label2, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(87, 46);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(50, 26);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "تعداد:";
-            // 
             // ErrorText
             // 
             this.Animation.SetDecoration(this.ErrorText, Guna.UI2.AnimatorNS.DecorationType.None);
@@ -131,7 +86,7 @@ namespace Number
             // lenTB
             // 
             this.Animation.SetDecoration(this.lenTB, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.lenTB.Location = new System.Drawing.Point(12, 85);
+            this.lenTB.Location = new System.Drawing.Point(12, 60);
             this.lenTB.Maximum = new decimal(new int[] {
             100000000,
             0,
@@ -156,8 +111,8 @@ namespace Number
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AllowUserToResizeRows = false;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -196,15 +151,17 @@ namespace Number
             // 
             this.lenDB.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.lenDB.HeaderText = "تعداد";
+            this.lenDB.MinimumWidth = 95;
             this.lenDB.Name = "lenDB";
             this.lenDB.ReadOnly = true;
             this.lenDB.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.lenDB.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.lenDB.Width = 135;
+            this.lenDB.Width = 95;
             // 
             // TextDB
             // 
             this.TextDB.HeaderText = "متن";
+            this.TextDB.MinimumWidth = 210;
             this.TextDB.Name = "TextDB";
             this.TextDB.ReadOnly = true;
             this.TextDB.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
@@ -215,19 +172,6 @@ namespace Number
             this.ValueDB.Name = "ValueDB";
             this.ValueDB.ReadOnly = true;
             this.ValueDB.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // infBox
-            // 
-            this.infBox.AutoSize = true;
-            this.Animation.SetDecoration(this.infBox, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.infBox.ForeColor = System.Drawing.Color.White;
-            this.infBox.Location = new System.Drawing.Point(4, 124);
-            this.infBox.Name = "infBox";
-            this.infBox.Size = new System.Drawing.Size(128, 30);
-            this.infBox.TabIndex = 4;
-            this.infBox.Text = "بدون محدودیت";
-            this.infBox.UseVisualStyleBackColor = true;
-            this.infBox.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // AddBTN
             // 
@@ -244,7 +188,7 @@ namespace Number
             this.AddBTN.ForeColor = System.Drawing.Color.White;
             this.AddBTN.HoverState.Parent = this.AddBTN;
             this.AddBTN.Image = global::Number.Properties.Resources.insert_row;
-            this.AddBTN.Location = new System.Drawing.Point(455, 131);
+            this.AddBTN.Location = new System.Drawing.Point(455, 102);
             this.AddBTN.Name = "AddBTN";
             this.AddBTN.ShadowDecoration.Parent = this.AddBTN;
             this.AddBTN.Size = new System.Drawing.Size(119, 47);
@@ -256,15 +200,6 @@ namespace Number
             // 
             this.guna2Elipse1.BorderRadius = 18;
             this.guna2Elipse1.TargetControl = this;
-            // 
-            // NameTB
-            // 
-            this.NameTB.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Animation.SetDecoration(this.NameTB, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.NameTB.Location = new System.Drawing.Point(369, 85);
-            this.NameTB.Name = "NameTB";
-            this.NameTB.Size = new System.Drawing.Size(192, 33);
-            this.NameTB.TabIndex = 2;
             // 
             // Save
             // 
@@ -363,22 +298,22 @@ namespace Number
             // 
             this.Animation.AnimationType = Guna.UI2.AnimatorNS.AnimationType.Transparent;
             this.Animation.Cursor = null;
-            animation2.AnimateOnlyDifferences = true;
-            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
-            animation2.LeafCoeff = 0F;
-            animation2.MaxTime = 1F;
-            animation2.MinTime = 0F;
-            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
-            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
-            animation2.MosaicSize = 0;
-            animation2.Padding = new System.Windows.Forms.Padding(0);
-            animation2.RotateCoeff = 0F;
-            animation2.RotateLimit = 0F;
-            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
-            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
-            animation2.TimeCoeff = 0F;
-            animation2.TransparencyCoeff = 1F;
-            this.Animation.DefaultAnimation = animation2;
+            animation3.AnimateOnlyDifferences = true;
+            animation3.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.BlindCoeff")));
+            animation3.LeafCoeff = 0F;
+            animation3.MaxTime = 1F;
+            animation3.MinTime = 0F;
+            animation3.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicCoeff")));
+            animation3.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicShift")));
+            animation3.MosaicSize = 0;
+            animation3.Padding = new System.Windows.Forms.Padding(0);
+            animation3.RotateCoeff = 0F;
+            animation3.RotateLimit = 0F;
+            animation3.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.ScaleCoeff")));
+            animation3.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.SlideCoeff")));
+            animation3.TimeCoeff = 0F;
+            animation3.TransparencyCoeff = 1F;
+            this.Animation.DefaultAnimation = animation3;
             // 
             // SaveNumbers
             // 
@@ -395,7 +330,7 @@ namespace Number
             this.SaveNumbers.ForeColor = System.Drawing.Color.White;
             this.SaveNumbers.HoverState.Parent = this.SaveNumbers;
             this.SaveNumbers.Image = global::Number.Properties.Resources.save_as;
-            this.SaveNumbers.Location = new System.Drawing.Point(412, 186);
+            this.SaveNumbers.Location = new System.Drawing.Point(406, 186);
             this.SaveNumbers.Name = "SaveNumbers";
             this.SaveNumbers.ShadowDecoration.Parent = this.SaveNumbers;
             this.SaveNumbers.Size = new System.Drawing.Size(162, 47);
@@ -403,26 +338,107 @@ namespace Number
             this.SaveNumbers.Text = "ذخیره شمارنده ها";
             this.SaveNumbers.Click += new System.EventHandler(this.SaveData_Click);
             // 
+            // NameTB
+            // 
+            this.NameTB.AutoSize = true;
+            this.NameTB.BorderColor = System.Drawing.Color.White;
+            this.NameTB.BorderRadius = 3;
+            this.NameTB.BorderThickness = 2;
+            this.NameTB.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Animation.SetDecoration(this.NameTB, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.NameTB.DefaultText = "";
+            this.NameTB.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.NameTB.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.NameTB.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.NameTB.DisabledState.Parent = this.NameTB;
+            this.NameTB.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.NameTB.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.NameTB.FocusedState.Parent = this.NameTB;
+            this.NameTB.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.NameTB.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
+            this.NameTB.HoverState.Parent = this.NameTB;
+            this.NameTB.Location = new System.Drawing.Point(372, 55);
+            this.NameTB.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.NameTB.Name = "NameTB";
+            this.NameTB.PasswordChar = '\0';
+            this.NameTB.PlaceholderText = "نام شمارنده";
+            this.NameTB.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.NameTB.SelectedText = "";
+            this.NameTB.ShadowDecoration.Parent = this.NameTB;
+            this.NameTB.Size = new System.Drawing.Size(195, 38);
+            this.NameTB.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
+            this.NameTB.TabIndex = 14;
+            this.NameTB.TextChanged += new System.EventHandler(this.NameTB_TextChanged);
+            // 
+            // TextTB
+            // 
+            this.TextTB.AutoSize = true;
+            this.TextTB.BorderColor = System.Drawing.Color.White;
+            this.TextTB.BorderRadius = 3;
+            this.TextTB.BorderThickness = 2;
+            this.TextTB.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Animation.SetDecoration(this.TextTB, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.TextTB.DefaultText = "";
+            this.TextTB.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.TextTB.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.TextTB.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.TextTB.DisabledState.Parent = this.TextTB;
+            this.TextTB.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.TextTB.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.TextTB.FocusedState.Parent = this.TextTB;
+            this.TextTB.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.TextTB.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
+            this.TextTB.HoverState.Parent = this.TextTB;
+            this.TextTB.Location = new System.Drawing.Point(155, 55);
+            this.TextTB.Margin = new System.Windows.Forms.Padding(6, 12, 6, 12);
+            this.TextTB.Name = "TextTB";
+            this.TextTB.PasswordChar = '\0';
+            this.TextTB.PlaceholderText = "متن شمارنده";
+            this.TextTB.SelectedText = "";
+            this.TextTB.ShadowDecoration.Parent = this.TextTB;
+            this.TextTB.Size = new System.Drawing.Size(205, 38);
+            this.TextTB.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
+            this.TextTB.TabIndex = 14;
+            // 
+            // infBox
+            // 
+            this.infBox.Animated = true;
+            this.infBox.AutoSize = true;
+            this.infBox.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
+            this.infBox.CheckedState.BorderRadius = 0;
+            this.infBox.CheckedState.BorderThickness = 0;
+            this.infBox.CheckedState.FillColor = System.Drawing.Color.White;
+            this.infBox.CheckMarkColor = System.Drawing.Color.Black;
+            this.Animation.SetDecoration(this.infBox, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.infBox.ForeColor = System.Drawing.Color.White;
+            this.infBox.Location = new System.Drawing.Point(4, 102);
+            this.infBox.Name = "infBox";
+            this.infBox.Size = new System.Drawing.Size(128, 30);
+            this.infBox.TabIndex = 15;
+            this.infBox.Text = "بدون محدودیت";
+            this.infBox.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.infBox.UncheckedState.BorderRadius = 0;
+            this.infBox.UncheckedState.BorderThickness = 0;
+            this.infBox.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.infBox.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
             // DataBase
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(10)))), ((int)(((byte)(27)))));
             this.ClientSize = new System.Drawing.Size(580, 519);
+            this.Controls.Add(this.infBox);
+            this.Controls.Add(this.TextTB);
+            this.Controls.Add(this.NameTB);
             this.Controls.Add(this.Cancel);
             this.Controls.Add(this.Save);
             this.Controls.Add(this.EditeBTN);
             this.Controls.Add(this.DeleteBTN);
             this.Controls.Add(this.SaveNumbers);
             this.Controls.Add(this.AddBTN);
-            this.Controls.Add(this.infBox);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.lenTB);
             this.Controls.Add(this.ErrorText);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.AddText);
-            this.Controls.Add(this.addName);
-            this.Controls.Add(this.NameTB);
-            this.Controls.Add(this.TextTB);
             this.Controls.Add(this.AddTitle);
             this.Animation.SetDecoration(this, Guna.UI2.AnimatorNS.DecorationType.None);
             this.Font = new System.Drawing.Font("Vazir", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -444,16 +460,10 @@ namespace Number
 
         #endregion
         private System.Windows.Forms.Label AddTitle;
-        private System.Windows.Forms.Label addName;
-        private System.Windows.Forms.TextBox TextTB;
-        private System.Windows.Forms.Label AddText;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label ErrorText;
         private System.Windows.Forms.NumericUpDown lenTB;
-        private System.Windows.Forms.CheckBox infBox;
         private Guna.UI2.WinForms.Guna2Button AddBTN;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
-        private System.Windows.Forms.TextBox NameTB;
         private Guna.UI2.WinForms.Guna2Button Cancel;
         private Guna.UI2.WinForms.Guna2Button Save;
         private Guna.UI2.WinForms.Guna2Button DeleteBTN;
@@ -461,10 +471,13 @@ namespace Number
         private System.Windows.Forms.DataGridView dataGridView1;
         private Guna.UI2.WinForms.Guna2Transition Animation;
         private System.Windows.Forms.Timer Time;
+        private Guna.UI2.WinForms.Guna2Button SaveNumbers;
+        private Guna.UI2.WinForms.Guna2TextBox TextTB;
+        private Guna.UI2.WinForms.Guna2TextBox NameTB;
         private System.Windows.Forms.DataGridViewTextBoxColumn NameDB;
         private System.Windows.Forms.DataGridViewTextBoxColumn lenDB;
         private System.Windows.Forms.DataGridViewTextBoxColumn TextDB;
         private System.Windows.Forms.DataGridViewTextBoxColumn ValueDB;
-        private Guna.UI2.WinForms.Guna2Button SaveNumbers;
+        private Guna.UI2.WinForms.Guna2CheckBox infBox;
     }
 }

@@ -13,7 +13,20 @@ namespace Number
         public DataBase()
         {InitializeComponent();}
         /*------------------ func Start ------------------*/
-        private void dataClear()
+        void DataGridSet()
+        {
+            try
+            {
+                DataXML.Load("Data.xml");
+                XmlNodeList NumberNodes = DataXML.SelectNodes("//Numbers/Number");
+                foreach (XmlNode NumberNode in NumberNodes)
+                {
+                    dataGridView1.Rows.Add(NumberNode.Attributes["Name"].Value, NumberNode.Attributes["Len"].Value, NumberNode.Attributes["Text"].Value, NumberNode.InnerText);
+                }
+            }
+            catch (Exception) { }
+        }
+        void dataClear()
         {
             dataGridView1.ReadOnly = true;
             dataGridView1.ClearSelection();
@@ -30,10 +43,27 @@ namespace Number
             DeleteBTN.Visible = false;
             EditeBTN.Visible = false;
         }
-        public void Alert(string msg)
+        void Alert(string msg)
         {
             AlertBox frm = new AlertBox();
             frm.showAlert(msg);
+        }
+        bool ResultT;
+        void NameCheck()
+        {
+            ResultT = false;
+            for (int i = 0; i < dataGridView1.Rows.Count; i++)
+            {
+                if ((string)dataGridView1.Rows[i].Cells[0].Value == NameTB.Text)
+                {
+                    ResultT = true;
+                    break;
+                }
+                else
+                {
+                    continue;
+                }
+            }
         }
         /*------------------ func End ------------------*/
         private void DataBase_Load(object sender, EventArgs e)
@@ -43,16 +73,9 @@ namespace Number
             else this.BackColor = Color.FromArgb(11, 10, 27);
             this.TopMost = Settings.Default.AlwaysOT;
             this.Font = Settings.Default.AppFont;
-            try
-            {
-                DataXML.Load("Data.xml");
-                XmlNodeList NumberNodes = DataXML.SelectNodes("//Numbers/Number");
-                foreach (XmlNode NumberNode in NumberNodes)
-                {
-                    dataGridView1.Rows.Add(NumberNode.Attributes["Name"].Value, NumberNode.Attributes["Len"].Value, NumberNode.Attributes["Text"].Value, NumberNode.InnerText);
-                }
-            }
-            catch (Exception){}
+            NameTB.Width = 195;
+            TextTB.Width = 195;
+            DataGridSet();
             dataClear();
         }
         /*------------------ Move Form Start ------------------*/
@@ -72,6 +95,13 @@ namespace Number
         }
         /*------------------ Move Form End ------------------*/
         /*------------------ DataBase Start ------------------*/
+        private void NameTB_TextChanged(object sender, EventArgs e)
+        {
+            NameCheck();
+            if (!ResultT) NameTB.IconLeft = Resources.checkmark_Green;
+            else NameTB.IconLeft = Resources.delete_red;
+
+        }
         /*--------- Var ---------*/
         int indexC;
         int indexR;
@@ -189,19 +219,7 @@ namespace Number
             }
             else
             {
-                bool ResultT = false;
-                for (int i = 0; i < dataGridView1.Rows.Count; i++)
-                {
-                    if ((string)dataGridView1.Rows[i].Cells[0].Value == NameTB.Text)
-                    {
-                        ResultT = true;
-                        break;
-                    }
-                    else
-                    {
-                        continue;
-                    }
-                }
+                NameCheck();
                 dataClear();
                 if (!ResultT)
                 {

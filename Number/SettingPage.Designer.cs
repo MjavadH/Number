@@ -425,7 +425,7 @@ namespace Number
             this.ResetBTN.ForeColor = System.Drawing.Color.White;
             this.ResetBTN.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.ResetBTN.HoverState.Parent = this.ResetBTN;
-            this.ResetBTN.Image = global::Number.Properties.Resources._return;
+            this.ResetBTN.Image = global::Number.Properties.Resources.reset;
             this.ResetBTN.Location = new System.Drawing.Point(12, 212);
             this.ResetBTN.Name = "ResetBTN";
             this.ResetBTN.ShadowDecoration.Parent = this.ResetBTN;
@@ -517,7 +517,7 @@ namespace Number
             animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
             animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
             animation1.MosaicSize = 0;
-            animation1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            animation1.Padding = new System.Windows.Forms.Padding(0);
             animation1.RotateCoeff = 0F;
             animation1.RotateLimit = 0F;
             animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
