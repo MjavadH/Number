@@ -30,8 +30,8 @@ namespace Number
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            Guna.UI2.AnimatorNS.Animation animation3 = new Guna.UI2.AnimatorNS.Animation();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            Guna.UI2.AnimatorNS.Animation animation1 = new Guna.UI2.AnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DataBase));
             this.AddTitle = new System.Windows.Forms.Label();
             this.ErrorText = new System.Windows.Forms.Label();
@@ -65,7 +65,7 @@ namespace Number
             this.AddTitle.ForeColor = System.Drawing.Color.White;
             this.AddTitle.Location = new System.Drawing.Point(0, 0);
             this.AddTitle.Name = "AddTitle";
-            this.AddTitle.Size = new System.Drawing.Size(580, 32);
+            this.AddTitle.Size = new System.Drawing.Size(580, 44);
             this.AddTitle.TabIndex = 3;
             this.AddTitle.Text = "اضافه کردن شمارنده";
             this.AddTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -86,7 +86,7 @@ namespace Number
             // lenTB
             // 
             this.Animation.SetDecoration(this.lenTB, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.lenTB.Location = new System.Drawing.Point(12, 60);
+            this.lenTB.Location = new System.Drawing.Point(12, 47);
             this.lenTB.Maximum = new decimal(new int[] {
             100000000,
             0,
@@ -111,9 +111,10 @@ namespace Number
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AllowUserToResizeRows = false;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -188,7 +189,7 @@ namespace Number
             this.AddBTN.ForeColor = System.Drawing.Color.White;
             this.AddBTN.HoverState.Parent = this.AddBTN;
             this.AddBTN.Image = global::Number.Properties.Resources.insert_row;
-            this.AddBTN.Location = new System.Drawing.Point(455, 102);
+            this.AddBTN.Location = new System.Drawing.Point(455, 96);
             this.AddBTN.Name = "AddBTN";
             this.AddBTN.ShadowDecoration.Parent = this.AddBTN;
             this.AddBTN.Size = new System.Drawing.Size(119, 47);
@@ -256,7 +257,7 @@ namespace Number
             this.DeleteBTN.ForeColor = System.Drawing.Color.White;
             this.DeleteBTN.HoverState.Parent = this.DeleteBTN;
             this.DeleteBTN.Image = global::Number.Properties.Resources.delete_row;
-            this.DeleteBTN.Location = new System.Drawing.Point(12, 186);
+            this.DeleteBTN.Location = new System.Drawing.Point(4, 186);
             this.DeleteBTN.Name = "DeleteBTN";
             this.DeleteBTN.ShadowDecoration.Parent = this.DeleteBTN;
             this.DeleteBTN.Size = new System.Drawing.Size(119, 47);
@@ -280,7 +281,7 @@ namespace Number
             this.EditeBTN.ForeColor = System.Drawing.Color.White;
             this.EditeBTN.HoverState.Parent = this.EditeBTN;
             this.EditeBTN.Image = global::Number.Properties.Resources.edit;
-            this.EditeBTN.Location = new System.Drawing.Point(137, 186);
+            this.EditeBTN.Location = new System.Drawing.Point(129, 186);
             this.EditeBTN.Name = "EditeBTN";
             this.EditeBTN.ShadowDecoration.Parent = this.EditeBTN;
             this.EditeBTN.Size = new System.Drawing.Size(119, 47);
@@ -298,22 +299,22 @@ namespace Number
             // 
             this.Animation.AnimationType = Guna.UI2.AnimatorNS.AnimationType.Transparent;
             this.Animation.Cursor = null;
-            animation3.AnimateOnlyDifferences = true;
-            animation3.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.BlindCoeff")));
-            animation3.LeafCoeff = 0F;
-            animation3.MaxTime = 1F;
-            animation3.MinTime = 0F;
-            animation3.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicCoeff")));
-            animation3.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicShift")));
-            animation3.MosaicSize = 0;
-            animation3.Padding = new System.Windows.Forms.Padding(0);
-            animation3.RotateCoeff = 0F;
-            animation3.RotateLimit = 0F;
-            animation3.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.ScaleCoeff")));
-            animation3.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.SlideCoeff")));
-            animation3.TimeCoeff = 0F;
-            animation3.TransparencyCoeff = 1F;
-            this.Animation.DefaultAnimation = animation3;
+            animation1.AnimateOnlyDifferences = true;
+            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
+            animation1.LeafCoeff = 0F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
+            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
+            animation1.MosaicSize = 0;
+            animation1.Padding = new System.Windows.Forms.Padding(0);
+            animation1.RotateCoeff = 0F;
+            animation1.RotateLimit = 0F;
+            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
+            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
+            animation1.TimeCoeff = 0F;
+            animation1.TransparencyCoeff = 1F;
+            this.Animation.DefaultAnimation = animation1;
             // 
             // SaveNumbers
             // 
@@ -330,7 +331,7 @@ namespace Number
             this.SaveNumbers.ForeColor = System.Drawing.Color.White;
             this.SaveNumbers.HoverState.Parent = this.SaveNumbers;
             this.SaveNumbers.Image = global::Number.Properties.Resources.save_as;
-            this.SaveNumbers.Location = new System.Drawing.Point(406, 186);
+            this.SaveNumbers.Location = new System.Drawing.Point(412, 186);
             this.SaveNumbers.Name = "SaveNumbers";
             this.SaveNumbers.ShadowDecoration.Parent = this.SaveNumbers;
             this.SaveNumbers.Size = new System.Drawing.Size(162, 47);
@@ -357,7 +358,7 @@ namespace Number
             this.NameTB.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
             this.NameTB.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
             this.NameTB.HoverState.Parent = this.NameTB;
-            this.NameTB.Location = new System.Drawing.Point(372, 55);
+            this.NameTB.Location = new System.Drawing.Point(372, 47);
             this.NameTB.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.NameTB.Name = "NameTB";
             this.NameTB.PasswordChar = '\0';
@@ -389,14 +390,14 @@ namespace Number
             this.TextTB.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
             this.TextTB.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
             this.TextTB.HoverState.Parent = this.TextTB;
-            this.TextTB.Location = new System.Drawing.Point(155, 55);
+            this.TextTB.Location = new System.Drawing.Point(153, 47);
             this.TextTB.Margin = new System.Windows.Forms.Padding(6, 12, 6, 12);
             this.TextTB.Name = "TextTB";
             this.TextTB.PasswordChar = '\0';
             this.TextTB.PlaceholderText = "متن شمارنده";
             this.TextTB.SelectedText = "";
             this.TextTB.ShadowDecoration.Parent = this.TextTB;
-            this.TextTB.Size = new System.Drawing.Size(205, 38);
+            this.TextTB.Size = new System.Drawing.Size(195, 38);
             this.TextTB.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.TextTB.TabIndex = 14;
             // 
@@ -411,7 +412,7 @@ namespace Number
             this.infBox.CheckMarkColor = System.Drawing.Color.Black;
             this.Animation.SetDecoration(this.infBox, Guna.UI2.AnimatorNS.DecorationType.None);
             this.infBox.ForeColor = System.Drawing.Color.White;
-            this.infBox.Location = new System.Drawing.Point(4, 102);
+            this.infBox.Location = new System.Drawing.Point(4, 86);
             this.infBox.Name = "infBox";
             this.infBox.Size = new System.Drawing.Size(128, 30);
             this.infBox.TabIndex = 15;
