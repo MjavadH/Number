@@ -1,10 +1,10 @@
 <p align="center">
-<img src="https://github.com/MjavadH/Number/blob/master/Number/Resources/numbers.png" with="200px" height="200px">
+<img src="https://github.com/MjavadH/Number/blob/master/Number/Resources/numbers1.png" with="200px" height="200px">
   
   <h1 align="center">Number | شمارنده</h1>
 </p>
 
-<b>  نرم افزار شمارنده مخصوص ویندوز ورژن 1.7.0 </b>
+<b>  نرم افزار شمارنده مخصوص ویندوز ورژن 1.8.0 </b>
 
 <h4>
 ویژگی ها
@@ -18,6 +18,7 @@
 - حالت فشرده
 - کلیک میانبر و تنظیمات برای تنظیم میانبر دلخواه کاربر
 - ذخیره مقدار برای ورود بعدی کاربر
+- ذخیره و بازگردانی شمارنده
 - نمایش پیغام هنگام تمام شدن شمارش
 - بهینه شده برای ویندوز های 7, 8, 8.1, 10, 11
 
