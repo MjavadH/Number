@@ -25,8 +25,11 @@ namespace Number
             }
             else this.BackColor = Color.FromArgb(11, 10, 27);
         }
+        /*------------------ Animation Start ------------------*/
+        /*--------- var ---------*/
         Label TextChar = new Label();
         int CharL = 0;
+        /*--------- Start ---------*/
         private void Main_Tick(object sender, EventArgs e)
         {
             Label[] CharT = { NText, UText, MText, BText, EText, RText, fakeText };
@@ -53,11 +56,13 @@ namespace Number
             }
         }
 
+
         private void StartApp_Tick(object sender, EventArgs e)
         {
             this.Hide();
             StartApp.Stop();
         }
+        /*------------------ Animation End ------------------*/
 
     }
 }
