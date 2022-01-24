@@ -276,6 +276,7 @@ namespace Number
             // 
             // DropDown
             // 
+            this.DropDown.Animated = true;
             this.DropDown.BackColor = System.Drawing.Color.Transparent;
             this.AnimationMenu.SetDecoration(this.DropDown, Guna.UI2.AnimatorNS.DecorationType.None);
             resources.ApplyResources(this.DropDown, "DropDown");

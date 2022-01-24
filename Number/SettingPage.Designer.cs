@@ -30,7 +30,7 @@ namespace Number
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Guna.UI2.AnimatorNS.Animation animation2 = new Guna.UI2.AnimatorNS.Animation();
+            Guna.UI2.AnimatorNS.Animation animation1 = new Guna.UI2.AnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SettingPage));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -60,12 +60,11 @@ namespace Number
             this.SoundPlay = new Guna.UI2.WinForms.Guna2ToggleSwitch();
             this.SoundSetting_BTN = new Guna.UI2.WinForms.Guna2Button();
             this.panelSound = new System.Windows.Forms.Panel();
-            this.label10 = new System.Windows.Forms.Label();
             this.Sound1 = new Guna.UI2.WinForms.Guna2RadioButton();
             this.Sound2 = new Guna.UI2.WinForms.Guna2RadioButton();
+            this.Sound4 = new Guna.UI2.WinForms.Guna2RadioButton();
             this.Sound3 = new Guna.UI2.WinForms.Guna2RadioButton();
             this.label9 = new System.Windows.Forms.Label();
-            this.Sound4 = new Guna.UI2.WinForms.Guna2RadioButton();
             this.panelReset.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Counter_Value)).BeginInit();
             this.Reset_YN_Panel.SuspendLayout();
@@ -496,22 +495,22 @@ namespace Number
             // 
             this.ResetNAni.AnimationType = Guna.UI2.AnimatorNS.AnimationType.Leaf;
             this.ResetNAni.Cursor = null;
-            animation2.AnimateOnlyDifferences = true;
-            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
-            animation2.LeafCoeff = 1F;
-            animation2.MaxTime = 1F;
-            animation2.MinTime = 0F;
-            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
-            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
-            animation2.MosaicSize = 0;
-            animation2.Padding = new System.Windows.Forms.Padding(0);
-            animation2.RotateCoeff = 0F;
-            animation2.RotateLimit = 0F;
-            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
-            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
-            animation2.TimeCoeff = 0F;
-            animation2.TransparencyCoeff = 0F;
-            this.ResetNAni.DefaultAnimation = animation2;
+            animation1.AnimateOnlyDifferences = true;
+            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
+            animation1.LeafCoeff = 1F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
+            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
+            animation1.MosaicSize = 0;
+            animation1.Padding = new System.Windows.Forms.Padding(0);
+            animation1.RotateCoeff = 0F;
+            animation1.RotateLimit = 0F;
+            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
+            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
+            animation1.TimeCoeff = 0F;
+            animation1.TransparencyCoeff = 0F;
+            this.ResetNAni.DefaultAnimation = animation1;
             // 
             // label8
             // 
@@ -569,14 +568,13 @@ namespace Number
             this.SoundSetting_BTN.ShadowDecoration.Parent = this.SoundSetting_BTN;
             this.SoundSetting_BTN.Size = new System.Drawing.Size(118, 41);
             this.SoundSetting_BTN.TabIndex = 11;
-            this.SoundSetting_BTN.Text = "تنظیمات صدا";
+            this.SoundSetting_BTN.Text = "انتخاب صدا";
             this.SoundSetting_BTN.Visible = false;
             this.SoundSetting_BTN.Click += new System.EventHandler(this.SoundSetting_BTN_Click);
             // 
             // panelSound
             // 
             this.panelSound.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelSound.Controls.Add(this.label10);
             this.panelSound.Controls.Add(this.Sound1);
             this.panelSound.Controls.Add(this.Sound2);
             this.panelSound.Controls.Add(this.Sound4);
@@ -589,16 +587,6 @@ namespace Number
             this.panelSound.TabIndex = 18;
             this.panelSound.Visible = false;
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.ResetNAni.SetDecoration(this.label10, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.label10.Location = new System.Drawing.Point(435, 50);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(85, 26);
-            this.label10.TabIndex = 4;
-            this.label10.Text = "انتخاب صدا";
-            // 
             // Sound1
             // 
             this.Sound1.Animated = true;
@@ -609,7 +597,7 @@ namespace Number
             this.Sound1.CheckedState.InnerColor = System.Drawing.Color.White;
             this.Sound1.CheckedState.InnerOffset = -4;
             this.ResetNAni.SetDecoration(this.Sound1, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.Sound1.Location = new System.Drawing.Point(324, 46);
+            this.Sound1.Location = new System.Drawing.Point(465, 43);
             this.Sound1.Name = "Sound1";
             this.Sound1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.Sound1.Size = new System.Drawing.Size(80, 30);
@@ -631,7 +619,7 @@ namespace Number
             this.Sound2.CheckedState.InnerColor = System.Drawing.Color.White;
             this.Sound2.CheckedState.InnerOffset = -4;
             this.ResetNAni.SetDecoration(this.Sound2, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.Sound2.Location = new System.Drawing.Point(224, 46);
+            this.Sound2.Location = new System.Drawing.Point(365, 43);
             this.Sound2.Name = "Sound2";
             this.Sound2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.Sound2.Size = new System.Drawing.Size(80, 30);
@@ -643,6 +631,28 @@ namespace Number
             this.Sound2.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
             this.Sound2.Click += new System.EventHandler(this.Sounds);
             // 
+            // Sound4
+            // 
+            this.Sound4.Animated = true;
+            this.Sound4.AutoSize = true;
+            this.Sound4.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Sound4.CheckedState.BorderThickness = 0;
+            this.Sound4.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Sound4.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.Sound4.CheckedState.InnerOffset = -4;
+            this.ResetNAni.SetDecoration(this.Sound4, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.Sound4.Location = new System.Drawing.Point(165, 43);
+            this.Sound4.Name = "Sound4";
+            this.Sound4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.Sound4.Size = new System.Drawing.Size(80, 30);
+            this.Sound4.TabIndex = 3;
+            this.Sound4.Text = "صدای 4";
+            this.Sound4.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.Sound4.UncheckedState.BorderThickness = 2;
+            this.Sound4.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.Sound4.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.Sound4.Click += new System.EventHandler(this.Sounds);
+            // 
             // Sound3
             // 
             this.Sound3.Animated = true;
@@ -653,7 +663,7 @@ namespace Number
             this.Sound3.CheckedState.InnerColor = System.Drawing.Color.White;
             this.Sound3.CheckedState.InnerOffset = -4;
             this.ResetNAni.SetDecoration(this.Sound3, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.Sound3.Location = new System.Drawing.Point(124, 46);
+            this.Sound3.Location = new System.Drawing.Point(265, 43);
             this.Sound3.Name = "Sound3";
             this.Sound3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.Sound3.Size = new System.Drawing.Size(80, 30);
@@ -673,30 +683,8 @@ namespace Number
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(561, 39);
             this.label9.TabIndex = 0;
-            this.label9.Text = "تنظیمات جلوه های صوتی";
+            this.label9.Text = "انتخاب جلوه های صوتی";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // Sound4
-            // 
-            this.Sound4.Animated = true;
-            this.Sound4.AutoSize = true;
-            this.Sound4.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Sound4.CheckedState.BorderThickness = 0;
-            this.Sound4.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Sound4.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.Sound4.CheckedState.InnerOffset = -4;
-            this.ResetNAni.SetDecoration(this.Sound4, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.Sound4.Location = new System.Drawing.Point(24, 46);
-            this.Sound4.Name = "Sound4";
-            this.Sound4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Sound4.Size = new System.Drawing.Size(80, 30);
-            this.Sound4.TabIndex = 3;
-            this.Sound4.Text = "صدای 4";
-            this.Sound4.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.Sound4.UncheckedState.BorderThickness = 2;
-            this.Sound4.UncheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.Sound4.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
-            this.Sound4.Click += new System.EventHandler(this.Sounds);
             // 
             // SettingPage
             // 
@@ -778,7 +766,6 @@ namespace Number
         private Guna.UI2.WinForms.Guna2Button SoundSetting_BTN;
         private System.Windows.Forms.Panel panelSound;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
         private Guna.UI2.WinForms.Guna2RadioButton Sound3;
         private Guna.UI2.WinForms.Guna2RadioButton Sound1;
         private Guna.UI2.WinForms.Guna2RadioButton Sound2;
