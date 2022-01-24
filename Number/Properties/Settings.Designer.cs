@@ -190,5 +190,29 @@ namespace Number.Properties {
                 this["DataBase"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool Sound_EFX {
+            get {
+                return ((bool)(this["Sound_EFX"]));
+            }
+            set {
+                this["Sound_EFX"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("1")]
+        public int Sound_Num {
+            get {
+                return ((int)(this["Sound_Num"]));
+            }
+            set {
+                this["Sound_Num"] = value;
+            }
+        }
     }
 }

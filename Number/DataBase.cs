@@ -321,6 +321,28 @@ namespace Number
         { Cancel.FillColor = Color.FromArgb(249, 75, 66); }
         private void button_MouseLeave(object sender, EventArgs e)
         { Cancel.FillColor = Color.Empty; }
+
+        public void ReturnBTN_Click(object sender, EventArgs e)
+        {
+            string result = Cdata.LoadData();
+            switch (result)
+            {
+                case "Suscess":
+                    Alert("عملیات با موفقیت انجام شد");
+                    for (int i = 0; i < dataGridView1.Rows.Count;)
+                    {
+                        dataGridView1.Rows.Remove(dataGridView1.Rows[i]);
+                    }
+                    DataGridSet();
+                    break;
+                case "Data Empty":
+                    Alert("چیزی ذخیره نشده که بازگردانی شود");
+                    break;
+                case "Error":
+                    Alert("مشکلی پیش آمد مجدد تلاش کنید");
+                    break;
+            }
+        }
         /*------------------  BTN End ------------------*/
     }
 }

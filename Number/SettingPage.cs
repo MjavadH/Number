@@ -9,6 +9,7 @@ namespace Number
 {
     public partial class SettingPage : Form
     {
+        /*------------------ Func Start ------------------*/
         public SettingPage()
         {InitializeComponent();}
         public void Alert(string msg)
@@ -16,6 +17,29 @@ namespace Number
             AlertBox frm = new AlertBox();
             frm.showAlert(msg);
         }
+        int SN;
+        void Soundplay(int numberS)
+        {
+            System.Media.SoundPlayer player = new System.Media.SoundPlayer();
+            switch (numberS)
+            {
+                case 1:
+                    player.Stream = Resources.mixkit_alert_quick_chime_766;
+                    break;
+                case 2:
+                    player.Stream = Resources.mixkit_software_interface_start_2574;
+                    break;
+                case 3:
+                    player.Stream = Resources.mixkit_tile_game_reveal_960;
+                    break;
+                case 4:
+                    player.Stream = Resources.mixkit_bonus_earned_in_video_game_2058;
+                    break;
+            }
+            SN = numberS;
+            player.Play();
+        }
+        /*------------------ Func End ------------------*/
         private void SettingPage_Load(object sender, EventArgs e)
         {
             if (Settings.Default.DefaultColor == false)
@@ -30,6 +54,23 @@ namespace Number
             OnTopBTN.Checked = Settings.Default.AlwaysOT;
             DarkMode.Checked = Settings.Default.DefaultColor;
             fontDialog1.Font = Settings.Default.AppFont;
+            SoundPlay.Checked = Settings.Default.Sound_EFX;
+            if (Settings.Default.Sound_EFX)
+            {
+                SoundSetting_BTN.Visible = true;
+            }
+            switch (Settings.Default.Sound_Num)
+            {
+                case 1:
+                    Sound1.Checked = true;
+                    break;
+                case 2:
+                    Sound2.Checked = true;
+                    break;
+                case 3:
+                    Sound3.Checked = true;
+                    break;
+            }
             if (this.Font == Settings.Default.DFont)
             {
                 FontCBTN.Visible = false;
@@ -70,6 +111,8 @@ namespace Number
             Settings.Default.DefaultColor = DarkMode.Checked;
             Settings.Default.AppFont = fontDialog1.Font;
             Settings.Default.Counter = Counter_Value.Value.ToString();
+            Settings.Default.Sound_EFX = SoundPlay.Checked;
+            Settings.Default.Sound_Num = SN;
             Settings.Default.Save();
             this.Close();
         }
@@ -100,27 +143,20 @@ namespace Number
         {
             new ShortKey().ShowDialog();
         }
-
-        public void ReturnBTN_Click(object sender, EventArgs e)
+        private void SoundPlay_CheckedChanged(object sender, EventArgs e)
         {
-            string result = Cdata.LoadData();
-            switch (result)
+            if (SoundPlay.Checked)
             {
-                case "Suscess":
-                    Alert("عملیات با موفقیت انجام شد");
-                    break;
-                case "Data Empty":
-                    Alert("چیزی ذخیره نشده که بازگردانی شود");
-                    break;
-                case "Error":
-                    Alert("مشکلی پیش آمد مجدد تلاش کنید");
-                    break;
+                SoundSetting_BTN.Visible = true;
             }
+            else SoundSetting_BTN.Visible = false;
         }
         /*--------- Reset Start ---------*/
         private void ResetBTN_Click(object sender, EventArgs e)
         {
+            Reset_YN_Panel.BringToFront();
             ResetNAni.AddToQueue(Reset_YN_Panel, Guna.UI2.AnimatorNS.AnimateMode.Show);
+            
         }
 
         private void Yes_Reset_Click(object sender, EventArgs e)
@@ -134,6 +170,19 @@ namespace Number
             ResetNAni.AddToQueue(Reset_YN_Panel, Guna.UI2.AnimatorNS.AnimateMode.Hide);
         }
         /*--------- Reset End ---------*/
+        /*--------- Sound Start ---------*/
+        private void SoundSetting_BTN_Click(object sender, EventArgs e)
+        {
+            Reset_YN_Panel.BringToFront();
+            ResetNAni.AddToQueue(panelSound, Guna.UI2.AnimatorNS.AnimateMode.Show);
+        }
+
+        private void Sounds(object sender, EventArgs e)
+        {
+            Guna.UI2.WinForms.Guna2RadioButton SR = (Guna.UI2.WinForms.Guna2RadioButton)sender;
+            Soundplay(int.Parse(SR.Text.Substring(SR.Text.Length - 1)));
+        }
+        /*--------- Sound End ---------*/
         /*------------------ BTN End ------------------*/
     }
 }

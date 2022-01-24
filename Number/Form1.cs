@@ -314,7 +314,7 @@ namespace Number
             }
             else if (e.KeyData == Settings.Default.ShortKey_LoadData)
             {
-                SettingPage frm = new SettingPage();
+                DataBase frm = new DataBase();
                 frm.ReturnBTN_Click(sender,EventArgs.Empty);
             }
             else if (e.KeyData == Settings.Default.ShortKey_Compress)

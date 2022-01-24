@@ -218,6 +218,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icons8_numbers.ico" />
+    <None Include="Resources\mixkit-bonus-earned-in-video-game-2058.wav" />
+    <None Include="Resources\music.png" />
+    <None Include="Resources\mixkit-alert-quick-chime-766.wav" />
+    <None Include="Resources\mixkit-tile-game-reveal-960.wav" />
+    <None Include="Resources\mixkit-software-interface-start-2574.wav" />
     <None Include="Resources\delete_red.png" />
     <None Include="Resources\checkmark_Green.png" />
     <None Include="Resources\reset.png" />
