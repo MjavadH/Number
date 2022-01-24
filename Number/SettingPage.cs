@@ -37,6 +37,8 @@ namespace Number
                     break;
             }
             SN = numberS;
+            Settings.Default.Sound_Num = SN;
+            Settings.Default.Save();
             player.Play();
         }
         /*------------------ Func End ------------------*/
@@ -112,7 +114,6 @@ namespace Number
             Settings.Default.AppFont = fontDialog1.Font;
             Settings.Default.Counter = Counter_Value.Value.ToString();
             Settings.Default.Sound_EFX = SoundPlay.Checked;
-            Settings.Default.Sound_Num = SN;
             Settings.Default.Save();
             this.Close();
         }

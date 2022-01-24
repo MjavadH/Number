@@ -205,7 +205,7 @@ namespace Number.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("1")]
+        [global::System.Configuration.DefaultSettingValueAttribute("4")]
         public int Sound_Num {
             get {
                 return ((int)(this["Sound_Num"]));
