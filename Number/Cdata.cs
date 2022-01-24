@@ -150,7 +150,7 @@ namespace Number
                 CreateNew();
             }
         }
-        /*------------------ Save Data ------------------*/
+        /*------------------ Save Data to setting ------------------*/
         public static string saveData()
         {
             try
@@ -164,7 +164,7 @@ namespace Number
                 return "Error";
             }
         }
-        /*------------------ Load Data ------------------*/
+        /*------------------ Return Data from setting ------------------*/
         public static string LoadData()
         {
             try

@@ -35,6 +35,9 @@ namespace Number
                 case 4:
                     player.Stream = Resources.mixkit_bonus_earned_in_video_game_2058;
                     break;
+                case 5:
+                    player.Stream = Resources.mixkit_doorbell_tone_2864;
+                    break;
             }
             SN = numberS;
             Settings.Default.Sound_Num = SN;
@@ -95,6 +98,8 @@ namespace Number
             }
         }
         /*------------------ Move Form End ------------------*/
+        /*------------------ BTN Start ------------------*/
+        /*--------- Font Start ---------*/
         private void FontBTN_Click(object sender, EventArgs e)
         {fontDialog1.ShowDialog();}
         private void fontDialog1_Apply(object sender, EventArgs e)
@@ -106,8 +111,9 @@ namespace Number
             label4.Font = Settings.Default.DFont;
             fontDialog1.Font = Settings.Default.DFont;
         }
-        /*------------------ BTN Start ------------------*/
-        private void button1_Click(object sender, EventArgs e)
+        /*--------- Font End ---------*/
+        /*--------- SaveBTN ---------*/
+        private void Save_Click(object sender, EventArgs e)
         {
             Settings.Default.AlwaysOT = OnTopBTN.Checked;
             Settings.Default.DefaultColor = DarkMode.Checked;
@@ -117,6 +123,7 @@ namespace Number
             Settings.Default.Save();
             this.Close();
         }
+        /*--------- CancelBTN ---------*/
         private void CancelBTN_Click(object sender, EventArgs e)
         {this.Close();}
         private void CancelBTN_MouseEnter(object sender, EventArgs e)
@@ -127,7 +134,8 @@ namespace Number
         {
             CancelBTN.FillColor = Color.Empty;
         }
-        private void DarkMode_CheckedChanged(object sender, EventArgs e)
+        /*--------- Background ---------*/
+        private void BackgroundMode_CheckedChanged(object sender, EventArgs e)
         {
             if (DarkMode.Checked == false)
             {
@@ -139,18 +147,10 @@ namespace Number
         {
             new ColorPick().ShowDialog();
         }
-
+        /*--------- Short key ---------*/
         private void ShortKeyBTN_Click(object sender, EventArgs e)
         {
             new ShortKey().ShowDialog();
-        }
-        private void SoundPlay_CheckedChanged(object sender, EventArgs e)
-        {
-            if (SoundPlay.Checked)
-            {
-                SoundSetting_BTN.Visible = true;
-            }
-            else SoundSetting_BTN.Visible = false;
         }
         /*--------- Reset Start ---------*/
         private void ResetBTN_Click(object sender, EventArgs e)
@@ -172,6 +172,14 @@ namespace Number
         }
         /*--------- Reset End ---------*/
         /*--------- Sound Start ---------*/
+        private void SoundPlay_CheckedChanged(object sender, EventArgs e)
+        {
+            if (SoundPlay.Checked)
+            {
+                SoundSetting_BTN.Visible = true;
+            }
+            else SoundSetting_BTN.Visible = false;
+        }
         private void SoundSetting_BTN_Click(object sender, EventArgs e)
         {
             Reset_YN_Panel.BringToFront();

@@ -12,6 +12,7 @@ namespace Number
 {
     public partial class NumberForm : Form
     {
+        /*--------- Create var XmlDoc ---------*/
         XmlDocument DataXML = new XmlDocument();
         public NumberForm()
         {
@@ -159,8 +160,10 @@ namespace Number
         }
         /*------------------ Add Text End ------------------*/
         /*------------------ Button Start ------------------*/
+        /*--------- Exit app ---------*/
         private void exit_Click(object sender, EventArgs e)
         {this.Close();}
+        /*--------- Menu Show&Hide ---------*/
         private void Menu_Click(object sender, EventArgs e)
         {
             if (MenuBar.Visible == false)
@@ -172,8 +175,10 @@ namespace Number
                 AnimationMenu.AddToQueue(MenuBar, Guna.UI2.AnimatorNS.AnimateMode.Hide);
             }
         }
+        /*--------- Minimize app ---------*/
         private void min_Click(object sender, EventArgs e)
         {this.WindowState = FormWindowState.Minimized;}
+        /*--------- Clear Number ---------*/
         private void Clear_Click(object sender, EventArgs e)
         {
             Check_DropDown();

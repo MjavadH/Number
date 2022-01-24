@@ -42,13 +42,14 @@ namespace Number
             }
         }
         /*------------------ Move Form End ------------------*/
+        /*--------- Exit ---------*/
         private void CancelBTN_Click(object sender, EventArgs e)
         {
             Settings.Default.LightTheme = this.BackColor;
             Settings.Default.Save();
             this.Close();
         }
-
+        /*--------- Set Color ---------*/
         private void RC_Scroll(object sender, ScrollEventArgs e)
         {
             this.BackColor = Color.FromArgb(RC.Value, GC.Value, BC.Value);

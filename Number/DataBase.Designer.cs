@@ -367,7 +367,7 @@ namespace Number
             this.NameTB.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.NameTB.SelectedText = "";
             this.NameTB.ShadowDecoration.Parent = this.NameTB;
-            this.NameTB.Size = new System.Drawing.Size(292, 38);
+            this.NameTB.Size = new System.Drawing.Size(472, 38);
             this.NameTB.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.NameTB.TabIndex = 14;
             this.NameTB.TextChanged += new System.EventHandler(this.NameTB_TextChanged);
@@ -398,7 +398,7 @@ namespace Number
             this.TextTB.PlaceholderText = "متن شمارنده";
             this.TextTB.SelectedText = "";
             this.TextTB.ShadowDecoration.Parent = this.TextTB;
-            this.TextTB.Size = new System.Drawing.Size(292, 38);
+            this.TextTB.Size = new System.Drawing.Size(472, 38);
             this.TextTB.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.TextTB.TabIndex = 14;
             // 

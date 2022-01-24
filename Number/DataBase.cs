@@ -246,6 +246,7 @@ namespace Number
         }
         /*------------------  Add Data End ------------------*/
         /*------------------  BTN Start ------------------*/
+        /*--------- Save Number to setting ---------*/
         public void SaveData_Click(object sender, EventArgs e)
         {
             if (sender.Equals("Save"))
@@ -273,7 +274,7 @@ namespace Number
                     break;
             }
         }
-
+        /*--------- Save ---------*/
         private void Save_Click(object sender, EventArgs e)
         {
             try
@@ -314,14 +315,14 @@ namespace Number
                 this.Close();
             }
         }
-
+        /*--------- Cancel ---------*/
         private void Cancel_Click(object sender, EventArgs e)
         { this.Close(); }
         private void button_MouseEnter(object sender, EventArgs e)
         { Cancel.FillColor = Color.FromArgb(249, 75, 66); }
         private void button_MouseLeave(object sender, EventArgs e)
         { Cancel.FillColor = Color.Empty; }
-
+        /*--------- Return Number from setting ---------*/
         public void ReturnBTN_Click(object sender, EventArgs e)
         {
             string result = Cdata.LoadData();

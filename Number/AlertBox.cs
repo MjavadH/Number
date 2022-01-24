@@ -8,6 +8,7 @@ namespace Number
 {
     public partial class AlertBox : Form
     {
+        /*------------------ Rounding form Start ------------------*/
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
             (
@@ -23,6 +24,8 @@ namespace Number
             InitializeComponent();
             this.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 10, 10));
         }
+        /*------------------ Rounding form End ------------------*/
+        /*------------------ Enum & Var Start  ------------------*/
         public enum enmAction
         {
             wait,
@@ -32,13 +35,14 @@ namespace Number
         private AlertBox.enmAction action;
 
         private int x, y;
-
+        /*------------------ Enum & Var End  ------------------*/
+        /*--------- Close  ---------*/
         private void closebtn_Click(object sender, EventArgs e)
         {
             timer1.Interval = 1;
             action = enmAction.close;
         }
-
+        /*--------- Start Timer  ---------*/
         private void timer1_Tick(object sender, EventArgs e)
         {
             switch (this.action)
@@ -85,8 +89,10 @@ namespace Number
             this.Font = Settings.Default.AppFont;
         }
 
+        /*--------- Show  ---------*/
         public void showAlert(string msg)
         {
+            /*----- Setting form -----*/
             this.Opacity = 0.0;
             this.StartPosition = FormStartPosition.Manual;
             string fname;
@@ -109,11 +115,12 @@ namespace Number
 
 
             this.AlertText.Text = msg;
-
+            /*----- Start Show -----*/
             this.Show();
             this.action = enmAction.start;
             this.timer1.Interval = 1;
             timer1.Start();
+            /*----- Sound -----*/
             if (Settings.Default.Sound_EFX)
             {
                 System.Media.SoundPlayer player = new System.Media.SoundPlayer();
@@ -130,6 +137,9 @@ namespace Number
                         break;
                     case 4:
                         player.Stream = Resources.mixkit_bonus_earned_in_video_game_2058;
+                        break;
+                    case 5:
+                        player.Stream = Resources.mixkit_doorbell_tone_2864;
                         break;
                 }
                 player.Play();

@@ -297,6 +297,15 @@ namespace Number.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
+        public static System.IO.UnmanagedMemoryStream mixkit_doorbell_tone_2864 {
+            get {
+                return ResourceManager.GetStream("mixkit_doorbell_tone_2864", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
         public static System.IO.UnmanagedMemoryStream mixkit_software_interface_start_2574 {
             get {
                 return ResourceManager.GetStream("mixkit_software_interface_start_2574", resourceCulture);

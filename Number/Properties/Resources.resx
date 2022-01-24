@@ -423,4 +423,7 @@
   <data name="mixkit_bonus_earned_in_video_game_2058" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\mixkit-bonus-earned-in-video-game-2058.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="mixkit_doorbell_tone_2864" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mixkit-doorbell-tone-2864.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

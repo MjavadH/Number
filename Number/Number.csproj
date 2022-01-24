@@ -218,6 +218,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icons8_numbers.ico" />
+    <None Include="Resources\mixkit-doorbell-tone-2864.wav" />
     <None Include="Resources\mixkit-bonus-earned-in-video-game-2058.wav" />
     <None Include="Resources\music.png" />
     <None Include="Resources\mixkit-alert-quick-chime-766.wav" />

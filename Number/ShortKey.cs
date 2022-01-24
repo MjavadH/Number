@@ -81,6 +81,7 @@ namespace Number
 
         }
         /*------------------ Button Start ------------------*/
+        /*--------- Cancel ---------*/
         private void Cancel_BTN_MouseEnter(object sender, EventArgs e)
         { Cancel_BTN.FillColor = Color.FromArgb(249, 75, 66); }
 
@@ -88,10 +89,10 @@ namespace Number
         { Cancel_BTN.FillColor = Color.Empty; }
         private void Cancel_BTN_Click(object sender, EventArgs e)
         {this.Close();}
-
+        /*--------- Defult ---------*/
         private void Defult_BTN_Click(object sender, EventArgs e)
         {Default();}
-
+        /*--------- Save ---------*/
         private void Save_BTN_Click(object sender, EventArgs e)
         {
             IList<string> list = new List<string> {Add_Key.Text, Clear_Key.Text, Compress_Key.Text,
