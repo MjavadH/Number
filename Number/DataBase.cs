@@ -143,29 +143,38 @@ namespace Number
             dataClear();
             if (indexC == 3)
             {
-                try
-                {
-                    int.Parse((string)dataGridView1.Rows[indexR].Cells[indexC].Value);
-                    if (int.Parse((string)dataGridView1.Rows[indexR].Cells[indexC].Value) > 100000000)
-                    {
-                        dataGridView1[indexC, indexR].Value = oldVal;
-                        Error("مقداری که وارد کردید بیشتر از حد مجاز است");
-                    }
-                    else if ((string)dataGridView1.Rows[indexR].Cells[1].Value == "نامحدود")
-                    {
-
-                    }
-                    else if (int.Parse((string)dataGridView1.Rows[indexR].Cells[1].Value) < int.Parse((string)dataGridView1.Rows[indexR].Cells[indexC].Value))
-                    {
-                        dataGridView1[indexC, indexR].Value = oldVal;
-                        Error("مقداری که وارد کردید از تعداد بیشتر است");
-                    }
-                }
-                catch (Exception)
+                if (((string)dataGridView1.Rows[indexR].Cells[indexC].Value).StartsWith("-"))
                 {
                     dataGridView1[indexC, indexR].Value = oldVal;
-                    Error("مقدار وارد شده غیر عادی میباشد");
+                    Error("مقدار وارد شده صحیح نمی باشد");
                 }
+                else
+                {
+                    try
+                    {
+                        int.Parse((string)dataGridView1.Rows[indexR].Cells[indexC].Value);
+                        if ((string)dataGridView1.Rows[indexR].Cells[1].Value == "نامحدود")
+                        {
+
+                        }
+                        else if (int.Parse((string)dataGridView1.Rows[indexR].Cells[indexC].Value) > 2147483646)
+                        {
+                            dataGridView1[indexC, indexR].Value = oldVal;
+                            Error("مقداری که وارد کردید بیشتر از حد مجاز است");
+                        }
+                        else if (int.Parse((string)dataGridView1.Rows[indexR].Cells[1].Value) < int.Parse((string)dataGridView1.Rows[indexR].Cells[indexC].Value))
+                        {
+                            dataGridView1[indexC, indexR].Value = oldVal;
+                            Error("مقداری که وارد کردید از تعداد بیشتر است");
+                        }
+                    }
+                    catch (Exception)
+                    {
+                        dataGridView1[indexC, indexR].Value = oldVal;
+                        Error("مقدار وارد شده غیر عادی میباشد");
+                    }
+                }
+
             }
             else if (indexC == 0)
             {
