@@ -113,13 +113,6 @@ XmlDocument DataXML = new XmlDocument();
                             NumberT.Text = NumberNode.InnerText;
                             this.Alert("شمارش " + DropDown.Text + " " + "به پایان رسید");
                         }
-                        if (NumberT.Text == 2147483647.ToString())
-                        {
-                            NumberNode.InnerText = "0";
-                            DataXML.Save("Data.xml");
-                            NumberT.Text = NumberNode.InnerText;
-                            this.Alert("شمارش " + DropDown.Text + " " + "به حد نهایی رسید!");
-                        }
                     }
                 }
             }
@@ -133,7 +126,7 @@ XmlDocument DataXML = new XmlDocument();
                     {
                         if (NumberNode.Attributes["Name"].Value == DropDown.Text)
                         {
-                            NumberNode.InnerText = (Int64.Parse(NumberNode.InnerText) + 1).ToString();
+                            NumberNode.InnerText = (UInt64.Parse(NumberNode.InnerText) + 1).ToString();
                             this.Text = "باقی مانده: بدون محدودیت | شمارنده";
                             DataXML.Save("Data.xml");
                             NumberT.Text = NumberNode.InnerText;

@@ -143,7 +143,12 @@ namespace Number
             dataClear();
             if (indexC == 3)
             {
-                if (((string)dataGridView1.Rows[indexR].Cells[indexC].Value).StartsWith("-"))
+                if (string.IsNullOrEmpty((string)dataGridView1.Rows[indexR].Cells[indexC].Value))
+                {
+                    dataGridView1[indexC, indexR].Value = oldVal;
+                    Error("مقدار نباید خالی باشد");
+                }
+                else if (((string)dataGridView1.Rows[indexR].Cells[indexC].Value).StartsWith("-"))
                 {
                     dataGridView1[indexC, indexR].Value = oldVal;
                     Error("مقدار وارد شده صحیح نمی باشد");
@@ -157,7 +162,7 @@ namespace Number
                         {
 
                         }
-                        else if (int.Parse((string)dataGridView1.Rows[indexR].Cells[indexC].Value) > 2147483646)
+                        else if (int.Parse((string)dataGridView1.Rows[indexR].Cells[indexC].Value) > 2147483647)
                         {
                             dataGridView1[indexC, indexR].Value = oldVal;
                             Error("مقداری که وارد کردید بیشتر از حد مجاز است");
