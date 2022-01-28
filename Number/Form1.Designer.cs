@@ -341,6 +341,7 @@ namespace Number
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             resources.ApplyResources(this, "$this");
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(10)))), ((int)(((byte)(27)))));
+            this.ControlBox = false;
             this.Controls.Add(this.splashScreen1);
             this.Controls.Add(this.DropDown);
             this.Controls.Add(this.TextLen);
