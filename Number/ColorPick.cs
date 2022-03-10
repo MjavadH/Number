@@ -15,11 +15,13 @@ namespace Number
             if (Settings.Default.LightColor)
             {
                 this.ForeColor = Color.Black;
+                CancelBTN.ForeColor = Color.Black;
                 CancelBTN.Image = Resources.exit_black;
             }
             else
             {
                 this.ForeColor = Color.White;
+                CancelBTN.ForeColor = Color.White;
                 CancelBTN.Image = Resources.exit;
             }
         }
@@ -70,7 +72,7 @@ namespace Number
             RT.Text = "مقدار رنگ قرمز: " + RC.Value;
             GT.Text = "مقدار رنگ سبز: " + GC.Value;
             BT.Text = "مقدار رنگ آبی: " + BC.Value;
-            if (RC.Value >= 210 && GC.Value >= 210 && BC.Value >= 210)
+            if (RC.Value >= 127 && GC.Value >= 127 && BC.Value >= 127)
             {
                 Settings.Default.LightColor = true;
                 CkeckSettings();

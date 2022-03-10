@@ -69,6 +69,41 @@ namespace Number
                 this.BackColor = Settings.Default.LightTheme;
             }
             else this.BackColor = Color.FromArgb(11, 10, 27);
+            if (Settings.Default.LightColor)
+            {
+                this.ForeColor = Color.Black;
+                Cancel_BTN.ForeColor = Color.Black;
+                Cancel_BTN.Image = Resources.cancel_black;
+                Default_BTN.ForeColor = Color.Black;
+                Default_BTN.Image = Resources.undo_black;
+                Save_BTN.ForeColor = Color.Black;
+                Save_BTN.Image = Resources.save_black;
+
+                Add_Key.ForeColor = Color.Black;
+                Clear_Key.ForeColor = Color.Black;
+                Compress_Key.ForeColor = Color.Black;
+                AutoCounter_Key.ForeColor = Color.Black;
+                SettingPage_Key.ForeColor = Color.Black;
+                AddPage_Key.ForeColor = Color.Black;
+            }
+            else
+            {
+                this.ForeColor = Color.White;
+                Cancel_BTN.ForeColor = Color.White;
+                Cancel_BTN.Image = Resources.cancel;
+                Default_BTN.ForeColor = Color.White;
+                Default_BTN.Image = Resources.undo;
+                Save_BTN.ForeColor = Color.White;
+                Save_BTN.Image = Resources.save;
+
+                Add_Key.ForeColor = Color.White;
+                Clear_Key.ForeColor = Color.White;
+                Compress_Key.ForeColor = Color.White;
+                AutoCounter_Key.ForeColor = Color.White;
+                SettingPage_Key.ForeColor = Color.White;
+                AddPage_Key.ForeColor = Color.White;
+
+            }
             this.TopMost = Settings.Default.AlwaysOT;
             this.Font = Settings.Default.AppFont;
             Short_key_set();

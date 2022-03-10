@@ -24,6 +24,15 @@ namespace Number
                 this.BackColor = Settings.Default.LightTheme;
             }
             else this.BackColor = Color.FromArgb(11, 10, 27);
+            if (Settings.Default.LightColor)
+            {
+                this.ForeColor = Color.Black;
+            }
+            else
+            {
+                this.ForeColor = Color.White;
+            }
+
         }
         /*------------------ Animation Start ------------------*/
         /*--------- var ---------*/

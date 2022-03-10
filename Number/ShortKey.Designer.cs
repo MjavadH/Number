@@ -64,7 +64,6 @@ namespace Number
             // 
             this.Title_ShortKey.Dock = System.Windows.Forms.DockStyle.Top;
             this.Title_ShortKey.Font = new System.Drawing.Font("Vazir", 20F);
-            this.Title_ShortKey.ForeColor = System.Drawing.Color.White;
             this.Title_ShortKey.Location = new System.Drawing.Point(0, 0);
             this.Title_ShortKey.Name = "Title_ShortKey";
             this.Title_ShortKey.Size = new System.Drawing.Size(525, 53);
@@ -184,7 +183,6 @@ namespace Number
             this.AddPage_Key.Dock = System.Windows.Forms.DockStyle.Fill;
             this.AddPage_Key.FillColor = System.Drawing.Color.Empty;
             this.AddPage_Key.Font = new System.Drawing.Font("Vazir", 11F);
-            this.AddPage_Key.ForeColor = System.Drawing.Color.White;
             this.AddPage_Key.HoverState.Parent = this.AddPage_Key;
             this.AddPage_Key.Location = new System.Drawing.Point(4, 239);
             this.AddPage_Key.Name = "AddPage_Key";
@@ -214,7 +212,6 @@ namespace Number
             this.SettingPage_Key.Dock = System.Windows.Forms.DockStyle.Fill;
             this.SettingPage_Key.FillColor = System.Drawing.Color.Empty;
             this.SettingPage_Key.Font = new System.Drawing.Font("Vazir", 11F);
-            this.SettingPage_Key.ForeColor = System.Drawing.Color.White;
             this.SettingPage_Key.HoverState.Parent = this.SettingPage_Key;
             this.SettingPage_Key.Location = new System.Drawing.Point(4, 192);
             this.SettingPage_Key.Name = "SettingPage_Key";
@@ -244,7 +241,6 @@ namespace Number
             this.AutoCounter_Key.Dock = System.Windows.Forms.DockStyle.Fill;
             this.AutoCounter_Key.FillColor = System.Drawing.Color.Empty;
             this.AutoCounter_Key.Font = new System.Drawing.Font("Vazir", 11F);
-            this.AutoCounter_Key.ForeColor = System.Drawing.Color.White;
             this.AutoCounter_Key.HoverState.Parent = this.AutoCounter_Key;
             this.AutoCounter_Key.Location = new System.Drawing.Point(4, 145);
             this.AutoCounter_Key.Name = "AutoCounter_Key";
@@ -274,7 +270,6 @@ namespace Number
             this.Compress_Key.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Compress_Key.FillColor = System.Drawing.Color.Empty;
             this.Compress_Key.Font = new System.Drawing.Font("Vazir", 11F);
-            this.Compress_Key.ForeColor = System.Drawing.Color.White;
             this.Compress_Key.HoverState.Parent = this.Compress_Key;
             this.Compress_Key.Location = new System.Drawing.Point(4, 98);
             this.Compress_Key.Name = "Compress_Key";
@@ -304,7 +299,6 @@ namespace Number
             this.Clear_Key.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Clear_Key.FillColor = System.Drawing.Color.Empty;
             this.Clear_Key.Font = new System.Drawing.Font("Vazir", 11F);
-            this.Clear_Key.ForeColor = System.Drawing.Color.White;
             this.Clear_Key.HoverState.Parent = this.Clear_Key;
             this.Clear_Key.Location = new System.Drawing.Point(4, 51);
             this.Clear_Key.Name = "Clear_Key";
@@ -345,7 +339,6 @@ namespace Number
             this.Add_Key.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Add_Key.FillColor = System.Drawing.Color.Empty;
             this.Add_Key.Font = new System.Drawing.Font("Vazir", 11F);
-            this.Add_Key.ForeColor = System.Drawing.Color.White;
             this.Add_Key.HoverState.Parent = this.Add_Key;
             this.Add_Key.Location = new System.Drawing.Point(4, 4);
             this.Add_Key.Name = "Add_Key";
