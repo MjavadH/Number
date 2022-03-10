@@ -16,6 +16,12 @@ namespace Number
                 this.BackColor = Settings.Default.LightTheme;
             }
             else this.BackColor = Color.FromArgb(11, 10, 27);
+            if (Settings.Default.LightColor)
+            {
+                this.ForeColor = Color.Black;
+                ExitBTN.ForeColor = Color.Black;
+                ExitBTN.Image = Resources.exit_black;
+            }
             this.TopMost = Settings.Default.AlwaysOT;
             this.Font = Settings.Default.AppFont;
             try
