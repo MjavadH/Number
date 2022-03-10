@@ -74,12 +74,12 @@ namespace Number.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("11, 10, 27")]
-        public global::System.Drawing.Color LightTheme {
+        public global::System.Drawing.Color Theme {
             get {
-                return ((global::System.Drawing.Color)(this["LightTheme"]));
+                return ((global::System.Drawing.Color)(this["Theme"]));
             }
             set {
-                this["LightTheme"] = value;
+                this["Theme"] = value;
             }
         }
         

@@ -29,14 +29,14 @@ namespace Number
         {
             if (Settings.Default.DefaultColor == false)
             {
-                this.BackColor = Settings.Default.LightTheme;
+                this.BackColor = Settings.Default.Theme;
             }
             else this.BackColor = Color.FromArgb(11, 10, 27);
             this.TopMost = Settings.Default.AlwaysOT;
             this.Font = Settings.Default.AppFont;
-            RC.Value = Settings.Default.LightTheme.R;
-            GC.Value = Settings.Default.LightTheme.G;
-            BC.Value = Settings.Default.LightTheme.B;
+            RC.Value = Settings.Default.Theme.R;
+            GC.Value = Settings.Default.Theme.G;
+            BC.Value = Settings.Default.Theme.B;
             RT.Text = "مقدار رنگ قرمز: " + RC.Value;
             GT.Text = "مقدار رنگ سبز: " + GC.Value;
             BT.Text = "مقدار رنگ آبی: " + BC.Value;
@@ -61,7 +61,7 @@ namespace Number
         /*--------- Exit ---------*/
         private void CancelBTN_Click(object sender, EventArgs e)
         {
-            Settings.Default.LightTheme = this.BackColor;
+            Settings.Default.Theme = this.BackColor;
             Settings.Default.Save();
             this.Close();
         }

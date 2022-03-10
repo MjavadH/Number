@@ -69,7 +69,7 @@ namespace Number
         private void DataBase_Load(object sender, EventArgs e)
         {
             if (Settings.Default.DefaultColor == false)
-            {this.BackColor = Settings.Default.LightTheme;}
+            {this.BackColor = Settings.Default.Theme;}
             else this.BackColor = Color.FromArgb(11, 10, 27);
             if (Settings.Default.LightColor)
             {

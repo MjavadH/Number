@@ -83,7 +83,7 @@ namespace Number
         {
             if (Settings.Default.DefaultColor == false)
             {
-                this.BackColor = Settings.Default.LightTheme;
+                this.BackColor = Settings.Default.Theme;
             }
             if (Settings.Default.LightColor)
             {
@@ -128,26 +128,28 @@ namespace Number
             /*----- Sound -----*/
             if (Settings.Default.Sound_EFX)
             {
-                System.Media.SoundPlayer player = new System.Media.SoundPlayer();
-                switch (Settings.Default.Sound_Num)
+                using (var player = new System.Media.SoundPlayer())
                 {
-                    case 1:
-                        player.Stream = Resources.mixkit_alert_quick_chime_766;
-                        break;
-                    case 2:
-                        player.Stream = Resources.mixkit_software_interface_start_2574;
-                        break;
-                    case 3:
-                        player.Stream = Resources.mixkit_tile_game_reveal_960;
-                        break;
-                    case 4:
-                        player.Stream = Resources.mixkit_bonus_earned_in_video_game_2058;
-                        break;
-                    case 5:
-                        player.Stream = Resources.mixkit_doorbell_tone_2864;
-                        break;
+                    switch (Settings.Default.Sound_Num)
+                    {
+                        case 1:
+                            player.Stream = Resources.mixkit_alert_quick_chime_766;
+                            break;
+                        case 2:
+                            player.Stream = Resources.mixkit_software_interface_start_2574;
+                            break;
+                        case 3:
+                            player.Stream = Resources.mixkit_tile_game_reveal_960;
+                            break;
+                        case 4:
+                            player.Stream = Resources.mixkit_bonus_earned_in_video_game_2058;
+                            break;
+                        case 5:
+                            player.Stream = Resources.mixkit_doorbell_tone_2864;
+                            break;
+                    }
+                    player.Play();
                 }
-                player.Play();
             }
         }
     }

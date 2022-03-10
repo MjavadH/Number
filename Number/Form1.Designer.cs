@@ -332,6 +332,7 @@ namespace Number
             this.splashScreen1.ForeColor = System.Drawing.Color.White;
             this.splashScreen1.Name = "splashScreen1";
             this.splashScreen1.DoubleClick += new System.EventHandler(this.NumberT_DoubleClick);
+            this.splashScreen1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.NumberForm_MouseMove);
             // 
             // NumberForm
             // 
@@ -355,6 +356,7 @@ namespace Number
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.Activated += new System.EventHandler(this.NumberForm_Activated);
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.Click += new System.EventHandler(this.AddT_Click);
             this.DoubleClick += new System.EventHandler(this.NumberT_DoubleClick);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ShortKey_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.NumberForm_KeyUp);

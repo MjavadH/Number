@@ -14,7 +14,7 @@
     <Setting Name="DFont" Type="System.Drawing.Font" Scope="User">
       <Value Profile="(Default)">Vazir, 12pt</Value>
     </Setting>
-    <Setting Name="LightTheme" Type="System.Drawing.Color" Scope="User">
+    <Setting Name="Theme" Type="System.Drawing.Color" Scope="User">
       <Value Profile="(Default)">11, 10, 27</Value>
     </Setting>
     <Setting Name="Counter" Type="System.String" Scope="User">

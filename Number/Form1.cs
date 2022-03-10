@@ -72,7 +72,7 @@ XmlDocument DataXML = new XmlDocument();
         {
             if (Settings.Default.DefaultColor == false)
             {
-                this.BackColor = Settings.Default.LightTheme;
+                this.BackColor = Settings.Default.Theme;
             }
             else this.BackColor = Color.FromArgb(11, 10, 27);
             if (Settings.Default.LightColor)
@@ -117,27 +117,29 @@ XmlDocument DataXML = new XmlDocument();
             try
             {
                 DataXML.Load("Data.xml");
-                XmlNodeList NumberNodes = DataXML.SelectNodes("//Numbers/Number");
-                foreach (XmlNode NumberNode in NumberNodes)
+                using (var NumberNodes = DataXML.SelectNodes("//Numbers/Number"))
                 {
-                    if (NumberNode.Attributes["Name"].Value == DropDown.Text)
+                    foreach (XmlNode NumberNode in NumberNodes)
                     {
-                        NumberNode.InnerText = (int.Parse(NumberNode.InnerText) + 1).ToString();
-
-                        NumberLeftP.Maximum = int.Parse(NumberNode.Attributes["Len"].Value) + 1;
-                        NumberLeftP.Value = int.Parse(NumberNode.InnerText);
-                        TaskbarManager.Instance.SetProgressValue(NumberLeftP.Value, NumberLeftP.Maximum);
-
-                        int Leftnum = int.Parse(NumberNode.Attributes["Len"].Value) - int.Parse(NumberNode.InnerText);
-                        this.Text = "باقیمانده: " + Leftnum.ToString() + " | شمارنده";
-                        DataXML.Save("Data.xml");
-                        NumberT.Text = NumberNode.InnerText;
-                        if (int.Parse(NumberT.Text) > int.Parse(NumberNode.Attributes["Len"].Value))
+                        if (NumberNode.Attributes["Name"].Value == DropDown.Text)
                         {
-                            NumberNode.InnerText = "0";
+                            NumberNode.InnerText = (int.Parse(NumberNode.InnerText) + 1).ToString();
+
+                            NumberLeftP.Maximum = int.Parse(NumberNode.Attributes["Len"].Value) + 1;
+                            NumberLeftP.Value = int.Parse(NumberNode.InnerText);
+                            TaskbarManager.Instance.SetProgressValue(NumberLeftP.Value, NumberLeftP.Maximum);
+
+                            int Leftnum = int.Parse(NumberNode.Attributes["Len"].Value) - int.Parse(NumberNode.InnerText);
+                            this.Text = "باقیمانده: " + Leftnum.ToString() + " | شمارنده";
                             DataXML.Save("Data.xml");
                             NumberT.Text = NumberNode.InnerText;
-                            this.Alert("شمارش " + DropDown.Text + " " + "به پایان رسید");
+                            if (int.Parse(NumberT.Text) > int.Parse(NumberNode.Attributes["Len"].Value))
+                            {
+                                NumberNode.InnerText = "0";
+                                DataXML.Save("Data.xml");
+                                NumberT.Text = NumberNode.InnerText;
+                                this.Alert("شمارش " + DropDown.Text + " " + "به پایان رسید");
+                            }
                         }
                     }
                 }
@@ -147,15 +149,17 @@ XmlDocument DataXML = new XmlDocument();
                 try
                 {
                     DataXML.Load("Data.xml");
-                    XmlNodeList NumberUNodes = DataXML.SelectNodes("//Numbers/Number");
-                    foreach (XmlNode NumberNode in NumberUNodes)
+                    using (var NumberUNodes = DataXML.SelectNodes("//Numbers/Number")) 
                     {
-                        if (NumberNode.Attributes["Name"].Value == DropDown.Text)
+                        foreach (XmlNode NumberNode in NumberUNodes)
                         {
-                            NumberNode.InnerText = (UInt64.Parse(NumberNode.InnerText) + 1).ToString();
-                            this.Text = "باقی مانده: بدون محدودیت | شمارنده";
-                            DataXML.Save("Data.xml");
-                            NumberT.Text = NumberNode.InnerText;
+                            if (NumberNode.Attributes["Name"].Value == DropDown.Text)
+                            {
+                                NumberNode.InnerText = (UInt64.Parse(NumberNode.InnerText) + 1).ToString();
+                                this.Text = "باقی مانده: بدون محدودیت | شمارنده";
+                                DataXML.Save("Data.xml");
+                                NumberT.Text = NumberNode.InnerText;
+                            }
                         }
                     }
                 }

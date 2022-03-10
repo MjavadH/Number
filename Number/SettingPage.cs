@@ -20,36 +20,39 @@ namespace Number
         int SN;
         void Soundplay(int numberS)
         {
-            System.Media.SoundPlayer player = new System.Media.SoundPlayer();
-            switch (numberS)
+            using (var player = new System.Media.SoundPlayer())
             {
-                case 1:
-                    player.Stream = Resources.mixkit_alert_quick_chime_766;
-                    break;
-                case 2:
-                    player.Stream = Resources.mixkit_software_interface_start_2574;
-                    break;
-                case 3:
-                    player.Stream = Resources.mixkit_tile_game_reveal_960;
-                    break;
-                case 4:
-                    player.Stream = Resources.mixkit_bonus_earned_in_video_game_2058;
-                    break;
-                case 5:
-                    player.Stream = Resources.mixkit_doorbell_tone_2864;
-                    break;
+                switch (numberS)
+                {
+                    case 1:
+                        player.Stream = Resources.mixkit_alert_quick_chime_766;
+                        break;
+                    case 2:
+                        player.Stream = Resources.mixkit_software_interface_start_2574;
+                        break;
+                    case 3:
+                        player.Stream = Resources.mixkit_tile_game_reveal_960;
+                        break;
+                    case 4:
+                        player.Stream = Resources.mixkit_bonus_earned_in_video_game_2058;
+                        break;
+                    case 5:
+                        player.Stream = Resources.mixkit_doorbell_tone_2864;
+                        break;
+                }
+                SN = numberS;
+                Settings.Default.Sound_Num = SN;
+                Settings.Default.Save();
+                player.Play();
             }
-            SN = numberS;
-            Settings.Default.Sound_Num = SN;
-            Settings.Default.Save();
-            player.Play();
+
         }
         /*------------------ Func End ------------------*/
         private void SettingPage_Load(object sender, EventArgs e)
         {
             if (Settings.Default.DefaultColor == false)
             {
-                this.BackColor = Settings.Default.LightTheme;
+                this.BackColor = Settings.Default.Theme;
                 ColorCh.Visible = true;
             }
             else this.BackColor = Color.FromArgb(11, 10, 27);
@@ -171,8 +174,17 @@ namespace Number
             if (DarkMode.Checked == false)
             {
                 ColorCh.Visible = true;
+                if (Settings.Default.Theme.R >= 180 && Settings.Default.Theme.G >= 180 && Settings.Default.Theme.B >= 180)
+                {
+                    Settings.Default.LightColor = true;
+                }
+                else Settings.Default.LightColor = false;
             }
-            else ColorCh.Visible = false;
+            else 
+            { 
+                ColorCh.Visible = false;
+                Settings.Default.LightColor = false;
+            }
         }
         private void ColorCh_Click(object sender, EventArgs e)
         {
@@ -221,6 +233,11 @@ namespace Number
         {
             Guna.UI2.WinForms.Guna2RadioButton SR = (Guna.UI2.WinForms.Guna2RadioButton)sender;
             Soundplay(int.Parse(SR.Text.Substring(SR.Text.Length - 1)));
+        }
+
+        private void close_music_btn_Click(object sender, EventArgs e)
+        {
+            ResetNAni.AddToQueue(panelSound, Guna.UI2.AnimatorNS.AnimateMode.Hide);
         }
         /*--------- Sound End ---------*/
         /*------------------ BTN End ------------------*/
