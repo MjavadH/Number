@@ -63,7 +63,6 @@ namespace Number
             this.NumberT.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.AnimationMenu.SetDecoration(this.NumberT, Guna.UI2.AnimatorNS.DecorationType.None);
             resources.ApplyResources(this.NumberT, "NumberT");
-            this.NumberT.ForeColor = System.Drawing.Color.White;
             this.NumberT.Name = "NumberT";
             this.NumberT.SizeChanged += new System.EventHandler(this.NumberT_SizeChanged);
             this.NumberT.Click += new System.EventHandler(this.AddT_Click);
@@ -245,7 +244,6 @@ namespace Number
             // 
             this.AnimationMenu.SetDecoration(this.TextBox, Guna.UI2.AnimatorNS.DecorationType.None);
             resources.ApplyResources(this.TextBox, "TextBox");
-            this.TextBox.ForeColor = System.Drawing.Color.White;
             this.TextBox.Name = "TextBox";
             this.TextBox.MouseMove += new System.Windows.Forms.MouseEventHandler(this.NumberForm_MouseMove);
             // 
@@ -253,7 +251,6 @@ namespace Number
             // 
             this.AnimationMenu.SetDecoration(this.TextLen, Guna.UI2.AnimatorNS.DecorationType.None);
             resources.ApplyResources(this.TextLen, "TextLen");
-            this.TextLen.ForeColor = System.Drawing.Color.White;
             this.TextLen.Name = "TextLen";
             this.TextLen.MouseMove += new System.Windows.Forms.MouseEventHandler(this.NumberForm_MouseMove);
             // 
@@ -350,6 +347,7 @@ namespace Number
             this.Controls.Add(this.MenuListP);
             this.Controls.Add(this.NumberLeftP);
             this.AnimationMenu.SetDecoration(this, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.KeyPreview = true;
             this.MaximizeBox = false;

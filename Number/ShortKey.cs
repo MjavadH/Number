@@ -86,24 +86,6 @@ namespace Number
                 SettingPage_Key.ForeColor = Color.Black;
                 AddPage_Key.ForeColor = Color.Black;
             }
-            else
-            {
-                this.ForeColor = Color.White;
-                Cancel_BTN.ForeColor = Color.White;
-                Cancel_BTN.Image = Resources.cancel;
-                Default_BTN.ForeColor = Color.White;
-                Default_BTN.Image = Resources.undo;
-                Save_BTN.ForeColor = Color.White;
-                Save_BTN.Image = Resources.save;
-
-                Add_Key.ForeColor = Color.White;
-                Clear_Key.ForeColor = Color.White;
-                Compress_Key.ForeColor = Color.White;
-                AutoCounter_Key.ForeColor = Color.White;
-                SettingPage_Key.ForeColor = Color.White;
-                AddPage_Key.ForeColor = Color.White;
-
-            }
             this.TopMost = Settings.Default.AlwaysOT;
             this.Font = Settings.Default.AppFont;
             Short_key_set();

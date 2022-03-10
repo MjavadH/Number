@@ -63,7 +63,7 @@ XmlDocument DataXML = new XmlDocument();
             }
             else
             {
-                TextBox.ForeColor = Color.White;
+                TextBox.ForeColor = Color.Empty;
                 TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Normal);
                 AddT();
             }
@@ -75,6 +75,32 @@ XmlDocument DataXML = new XmlDocument();
                 this.BackColor = Settings.Default.LightTheme;
             }
             else this.BackColor = Color.FromArgb(11, 10, 27);
+            if (Settings.Default.LightColor)
+            {
+                this.ForeColor = Color.Black;
+                MenuBTN.Image = Resources.menu_black;
+                add.Image = Resources.add_list_black;
+                Clear.Image = Resources.erase_black;
+                Help.Image = Resources.question_mark_black;
+                Setting.Image = Resources.settings_black;
+                Compressbtn.Image = Resources.compress_black;
+                counter.Image = Resources.counter_black;
+                min.Image = Resources.subtract_black;
+                exit.Image = Resources.delete_black;
+            }
+            else
+            {
+                this.ForeColor = Color.White;
+                MenuBTN.Image = Resources.menu;
+                add.Image = Resources.add_list;
+                Clear.Image = Resources.erase;
+                Help.Image = Resources.question_mark;
+                Setting.Image = Resources.settings;
+                Compressbtn.Image = Resources.compress;
+                counter.Image = Resources.counter;
+                min.Image = Resources.subtract;
+                exit.Image = Resources.delete;
+            }
             this.TopMost = Settings.Default.AlwaysOT;
             this.Font = Settings.Default.AppFont;
             counter_Timer.Interval = Convert.ToInt32(Settings.Default.Counter + "000");
