@@ -426,4 +426,82 @@
   <data name="mixkit_doorbell_tone_2864" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\mixkit-doorbell-tone-2864.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="add_list_black" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\add_list-black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cancel_black" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cancel-black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="checkmark_black" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\checkmark-black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="clear_formatting_black" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\clear_formatting-black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="compress_black" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\compress-black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="counter_black" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\counter-black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="delete_black" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\delete-black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="delete_row_black" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\delete_row-black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="edit_black" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\edit-black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="erase_black" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\erase-black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="exit_black" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\exit-black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="font_style_formatting_black" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\font_style_formatting-black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="insert_row_black" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\insert_row-black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="keyboard_black" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\keyboard-black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="menu_black" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\menu-black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="multiply_black" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\multiply-black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="music_black" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\music-black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="paint_palette_black" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\paint_palette-black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="question_mark_black" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\question_mark-black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="reset_black" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\reset-black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="return_black" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\return-black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="save_as_black" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\save_as-black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="save_black" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\save-black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="settings_black" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\settings-black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="subtract_black" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\subtract-black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="undo_black" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\undo-black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

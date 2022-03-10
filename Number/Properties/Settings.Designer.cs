@@ -214,5 +214,17 @@ namespace Number.Properties {
                 this["Sound_Num"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool LightColor {
+            get {
+                return ((bool)(this["LightColor"]));
+            }
+            set {
+                this["LightColor"] = value;
+            }
+        }
     }
 }

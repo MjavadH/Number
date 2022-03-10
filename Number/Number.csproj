@@ -65,6 +65,7 @@
   <PropertyGroup>
     <StartupObject>Number.Program</StartupObject>
   </PropertyGroup>
+  <PropertyGroup />
   <ItemGroup>
     <Reference Include="Guna.UI2">
       <HintPath>..\..\Advanced Lock\Advanced Lock\bin\Debug\Guna.UI2.dll</HintPath>
@@ -218,6 +219,32 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icons8_numbers.ico" />
+    <None Include="Resources\cancel-black.png" />
+    <None Include="Resources\add_list-black.png" />
+    <None Include="Resources\undo-black.png" />
+    <None Include="Resources\subtract-black.png" />
+    <None Include="Resources\settings-black.png" />
+    <None Include="Resources\save-black.png" />
+    <None Include="Resources\save_as-black.png" />
+    <None Include="Resources\return-black.png" />
+    <None Include="Resources\reset-black.png" />
+    <None Include="Resources\question_mark-black.png" />
+    <None Include="Resources\paint_palette-black.png" />
+    <None Include="Resources\music-black.png" />
+    <None Include="Resources\multiply-black.png" />
+    <None Include="Resources\menu-black.png" />
+    <None Include="Resources\keyboard-black.png" />
+    <None Include="Resources\insert_row-black.png" />
+    <None Include="Resources\font_style_formatting-black.png" />
+    <None Include="Resources\exit-black.png" />
+    <None Include="Resources\erase-black.png" />
+    <None Include="Resources\edit-black.png" />
+    <None Include="Resources\delete-black.png" />
+    <None Include="Resources\delete_row-black.png" />
+    <None Include="Resources\counter-black.png" />
+    <None Include="Resources\compress-black.png" />
+    <None Include="Resources\clear_formatting-black.png" />
+    <None Include="Resources\checkmark-black.png" />
     <None Include="Resources\mixkit-doorbell-tone-2864.wav" />
     <None Include="Resources\mixkit-bonus-earned-in-video-game-2058.wav" />
     <None Include="Resources\music.png" />

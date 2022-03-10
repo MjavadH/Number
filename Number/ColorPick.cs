@@ -10,6 +10,19 @@ namespace Number
     {
         public ColorPick()
         {InitializeComponent();}
+        void CkeckSettings()
+        {
+            if (Settings.Default.LightColor)
+            {
+                this.ForeColor = Color.Black;
+                CancelBTN.Image = Resources.exit_black;
+            }
+            else
+            {
+                this.ForeColor = Color.White;
+                CancelBTN.Image = Resources.exit;
+            }
+        }
         private void ColorPick_Load(object sender, EventArgs e)
         {
             if (Settings.Default.DefaultColor == false)
@@ -25,6 +38,7 @@ namespace Number
             RT.Text = "مقدار رنگ قرمز: " + RC.Value;
             GT.Text = "مقدار رنگ سبز: " + GC.Value;
             BT.Text = "مقدار رنگ آبی: " + BC.Value;
+            CkeckSettings();
         }
         /*------------------ Move Form Start ------------------*/
         public const int WM_NCLBUTTONDOWN = 0xA1;
@@ -56,6 +70,12 @@ namespace Number
             RT.Text = "مقدار رنگ قرمز: " + RC.Value;
             GT.Text = "مقدار رنگ سبز: " + GC.Value;
             BT.Text = "مقدار رنگ آبی: " + BC.Value;
+            if (RC.Value >= 210 && GC.Value >= 210 && BC.Value >= 210)
+            {
+                Settings.Default.LightColor = true;
+                CkeckSettings();
+            }
+            else Settings.Default.LightColor = false; CkeckSettings();
         }
     }
 }

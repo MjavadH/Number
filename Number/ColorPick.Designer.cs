@@ -89,13 +89,13 @@ namespace Number
             this.RC.HoverState.Parent = this.RC;
             this.RC.IndicateFocus = false;
             this.RC.Location = new System.Drawing.Point(23, 44);
-            this.RC.Maximum = 165;
+            this.RC.Maximum = 255;
             this.RC.Minimum = 1;
             this.RC.Name = "RC";
             this.RC.Size = new System.Drawing.Size(341, 23);
             this.RC.TabIndex = 15;
             this.RC.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(113)))), ((int)(((byte)(255)))));
-            this.RC.Value = 83;
+            this.RC.Value = 127;
             this.RC.Scroll += new System.Windows.Forms.ScrollEventHandler(this.RC_Scroll);
             // 
             // GC
@@ -104,13 +104,13 @@ namespace Number
             this.GC.HoverState.Parent = this.GC;
             this.GC.IndicateFocus = false;
             this.GC.Location = new System.Drawing.Point(23, 124);
-            this.GC.Maximum = 165;
+            this.GC.Maximum = 255;
             this.GC.Minimum = 1;
             this.GC.Name = "GC";
             this.GC.Size = new System.Drawing.Size(341, 23);
             this.GC.TabIndex = 15;
             this.GC.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(113)))), ((int)(((byte)(255)))));
-            this.GC.Value = 83;
+            this.GC.Value = 127;
             this.GC.Scroll += new System.Windows.Forms.ScrollEventHandler(this.RC_Scroll);
             // 
             // BC
@@ -119,13 +119,13 @@ namespace Number
             this.BC.HoverState.Parent = this.BC;
             this.BC.IndicateFocus = false;
             this.BC.Location = new System.Drawing.Point(23, 199);
-            this.BC.Maximum = 165;
+            this.BC.Maximum = 255;
             this.BC.Minimum = 1;
             this.BC.Name = "BC";
             this.BC.Size = new System.Drawing.Size(341, 23);
             this.BC.TabIndex = 15;
             this.BC.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(113)))), ((int)(((byte)(255)))));
-            this.BC.Value = 83;
+            this.BC.Value = 127;
             this.BC.Scroll += new System.Windows.Forms.ScrollEventHandler(this.RC_Scroll);
             // 
             // guna2Elipse1
@@ -140,7 +140,6 @@ namespace Number
             this.CancelBTN.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.CancelBTN.FillColor = System.Drawing.Color.Empty;
             this.CancelBTN.Font = new System.Drawing.Font("Vazir", 12F);
-            this.CancelBTN.ForeColor = System.Drawing.Color.White;
             this.CancelBTN.HoverState.Parent = this.CancelBTN;
             this.CancelBTN.Image = global::Number.Properties.Resources.exit;
             this.CancelBTN.Location = new System.Drawing.Point(0, 274);
