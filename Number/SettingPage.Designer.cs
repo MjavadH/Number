@@ -66,7 +66,6 @@ namespace Number
             this.Sound4 = new Guna.UI2.WinForms.Guna2RadioButton();
             this.Sound3 = new Guna.UI2.WinForms.Guna2RadioButton();
             this.label9 = new System.Windows.Forms.Label();
-            this.close_music_btn = new System.Windows.Forms.Button();
             this.panelReset.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Counter_Value)).BeginInit();
             this.Reset_YN_Panel.SuspendLayout();
@@ -577,7 +576,6 @@ namespace Number
             // panelSound
             // 
             this.panelSound.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelSound.Controls.Add(this.close_music_btn);
             this.panelSound.Controls.Add(this.Sound5);
             this.panelSound.Controls.Add(this.Sound1);
             this.panelSound.Controls.Add(this.Sound2);
@@ -712,20 +710,6 @@ namespace Number
             this.label9.Text = "انتخاب جلوه های صوتی";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // close_music_btn
-            // 
-            this.close_music_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ResetNAni.SetDecoration(this.close_music_btn, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.close_music_btn.FlatAppearance.BorderSize = 0;
-            this.close_music_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.close_music_btn.Image = global::Number.Properties.Resources.delete;
-            this.close_music_btn.Location = new System.Drawing.Point(529, -1);
-            this.close_music_btn.Name = "close_music_btn";
-            this.close_music_btn.Size = new System.Drawing.Size(33, 35);
-            this.close_music_btn.TabIndex = 5;
-            this.close_music_btn.UseVisualStyleBackColor = false;
-            this.close_music_btn.Click += new System.EventHandler(this.close_music_btn_Click);
-            // 
             // SettingPage
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -811,6 +795,5 @@ namespace Number
         private Guna.UI2.WinForms.Guna2RadioButton Sound2;
         private Guna.UI2.WinForms.Guna2RadioButton Sound4;
         private Guna.UI2.WinForms.Guna2RadioButton Sound5;
-        private System.Windows.Forms.Button close_music_btn;
     }
 }

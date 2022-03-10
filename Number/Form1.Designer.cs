@@ -53,6 +53,7 @@ namespace Number
             this.Elipse = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.counter_Timer = new System.Windows.Forms.Timer(this.components);
             this.AnimationMenu = new Guna.UI2.WinForms.Guna2Transition();
+            this.Show_Text_BTN = new Guna.UI2.WinForms.Guna2TileButton();
             this.splashScreen1 = new Number.SplashScreen();
             this.MenuBar.SuspendLayout();
             this.MenuListP.SuspendLayout();
@@ -324,6 +325,21 @@ namespace Number
             this.AnimationMenu.DefaultAnimation = animation1;
             this.AnimationMenu.MaxAnimationTime = 1000;
             // 
+            // Show_Text_BTN
+            // 
+            this.Show_Text_BTN.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
+            this.Show_Text_BTN.CheckedState.Parent = this.Show_Text_BTN;
+            this.Show_Text_BTN.CustomImages.Parent = this.Show_Text_BTN;
+            this.AnimationMenu.SetDecoration(this.Show_Text_BTN, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.Show_Text_BTN.FillColor = System.Drawing.Color.Empty;
+            resources.ApplyResources(this.Show_Text_BTN, "Show_Text_BTN");
+            this.Show_Text_BTN.ForeColor = System.Drawing.Color.White;
+            this.Show_Text_BTN.HoverState.Parent = this.Show_Text_BTN;
+            this.Show_Text_BTN.Image = global::Number.Properties.Resources.expand_arrow;
+            this.Show_Text_BTN.Name = "Show_Text_BTN";
+            this.Show_Text_BTN.ShadowDecoration.Parent = this.Show_Text_BTN;
+            this.Show_Text_BTN.Click += new System.EventHandler(this.Show_Text_BTN_Click);
+            // 
             // splashScreen1
             // 
             this.splashScreen1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(10)))), ((int)(((byte)(27)))));
@@ -340,13 +356,14 @@ namespace Number
             resources.ApplyResources(this, "$this");
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(10)))), ((int)(((byte)(27)))));
             this.ControlBox = false;
-            this.Controls.Add(this.splashScreen1);
+            this.Controls.Add(this.Show_Text_BTN);
             this.Controls.Add(this.DropDown);
             this.Controls.Add(this.TextLen);
             this.Controls.Add(this.NumberT);
             this.Controls.Add(this.TextBox);
             this.Controls.Add(this.MenuListP);
             this.Controls.Add(this.NumberLeftP);
+            this.Controls.Add(this.splashScreen1);
             this.AnimationMenu.SetDecoration(this, Guna.UI2.AnimatorNS.DecorationType.None);
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -392,6 +409,7 @@ namespace Number
         private Guna.UI2.WinForms.Guna2Button exit;
         private SplashScreen splashScreen1;
         private Guna.UI2.WinForms.Guna2Transition AnimationMenu;
+        private Guna.UI2.WinForms.Guna2TileButton Show_Text_BTN;
     }
 }
 

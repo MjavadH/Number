@@ -504,4 +504,16 @@
   <data name="undo_black" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\undo-black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="expand_arrow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\expand arrow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="expand_arrow_black" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\expand_arrow-black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="collapse_arrow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\collapse arrow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="collapse_arrow_black" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\collapse_arrow-black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

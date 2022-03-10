@@ -234,11 +234,6 @@ namespace Number
             Guna.UI2.WinForms.Guna2RadioButton SR = (Guna.UI2.WinForms.Guna2RadioButton)sender;
             Soundplay(int.Parse(SR.Text.Substring(SR.Text.Length - 1)));
         }
-
-        private void close_music_btn_Click(object sender, EventArgs e)
-        {
-            ResetNAni.AddToQueue(panelSound, Guna.UI2.AnimatorNS.AnimateMode.Hide);
-        }
         /*--------- Sound End ---------*/
         /*------------------ BTN End ------------------*/
     }

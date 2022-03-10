@@ -85,6 +85,8 @@ XmlDocument DataXML = new XmlDocument();
                 Setting.Image = Resources.settings_black;
                 Compressbtn.Image = Resources.compress_black;
                 counter.Image = Resources.counter_black;
+                Show_Text_BTN.Image = Resources.expand_arrow_black;
+                Show_Text_BTN.ForeColor = Color.Black;
                 min.Image = Resources.subtract_black;
                 exit.Image = Resources.delete_black;
             }
@@ -98,6 +100,8 @@ XmlDocument DataXML = new XmlDocument();
                 Setting.Image = Resources.settings;
                 Compressbtn.Image = Resources.compress;
                 counter.Image = Resources.counter;
+                Show_Text_BTN.Image = Resources.expand_arrow;
+                Show_Text_BTN.ForeColor = Color.White;
                 min.Image = Resources.subtract;
                 exit.Image = Resources.delete;
             }
@@ -188,7 +192,7 @@ XmlDocument DataXML = new XmlDocument();
         }
         private void CH_Size()
         {
-            this.Size = NumberT.Size;
+            this.Size = new Size(NumberT.Size.Width, NumberT.Size.Height + Show_Text_BTN.Height);
         }
         /*------------------ func End ------------------*/
         private void Form1_Load(object sender, EventArgs e)
@@ -260,8 +264,12 @@ XmlDocument DataXML = new XmlDocument();
         {
             if (NumberT.Dock != DockStyle.Fill)
             {
+                Show_Text_BTN.Visible = true;
+                Show_Text_BTN.Dock = DockStyle.Bottom;
+                Show_Text_BTN.SendToBack();
                 NumberT.AutoSize = true;
                 NumberT.Dock = DockStyle.Fill;
+                NumberT.Font = new Font(Settings.Default.AppFont.Name, 25);
                 DropDown.Visible = false;
                 TextBox.Visible = false;
                 MenuBar.Visible = false;
@@ -270,7 +278,6 @@ XmlDocument DataXML = new XmlDocument();
                 exit.Visible = false;
                 TextLen.Visible = false;
                 Compressbtn.Visible = false;
-                this.Size = NumberT.Size;
                 ToolTips.SetToolTip(NumberT, "برای بزرگ نمایی از کلید میانبر" + " ( " + Settings.Default.ShortKey_Compress.ToString() + " ) " + "استفاده کنید");
                 CH_Size();
             }
@@ -279,8 +286,11 @@ XmlDocument DataXML = new XmlDocument();
         /*----- Decompress -----*/
         private void NumberT_DoubleClick(object sender, EventArgs e)
         {
+            Show_Text_BTN.Visible = false;
+            Show_Text_BTN.Dock = DockStyle.None;
             NumberT.AutoSize = false;
             NumberT.Dock = DockStyle.Bottom;
+            NumberT.Font = new Font(Settings.Default.AppFont.Name, 35);
             DropDown.Visible = true;
             TextBox.Visible = true;
             MenuBTN.Visible = true;
@@ -297,6 +307,46 @@ XmlDocument DataXML = new XmlDocument();
         {
             if (NumberT.Dock == DockStyle.Fill) CH_Size();
         }
+        /*----- Show text box text btn -----*/
+        private void Show_Text_BTN_Click(object sender, EventArgs e)
+        {
+            if (DropDown.Text == "")
+            {
+                Alert("شمارنده ای انتخاب نشده!");
+            }
+            else
+            {
+                if (Show_Text_BTN.Checked)
+                {
+                    if (Settings.Default.LightColor)
+                    {
+                        Show_Text_BTN.Image = Resources.collapse_arrow_black;
+                    }
+                    else
+                    {
+                        Show_Text_BTN.Image = Resources.collapse_arrow;
+                    }
+                    Show_Text_BTN.Text = TextBox.Text;
+                    Show_Text_BTN.Height = 55;
+                    this.Size = new Size(150, NumberT.Size.Height + Show_Text_BTN.Height);
+                }
+                else
+                {
+                    if (Settings.Default.LightColor)
+                    {
+                        Show_Text_BTN.Image = Resources.expand_arrow_black;
+                    }
+                    else
+                    {
+                        Show_Text_BTN.Image = Resources.expand_arrow;
+                    }
+                    Show_Text_BTN.Text = "";
+                    Show_Text_BTN.Height = 20;
+                    CH_Size();
+                }
+            }
+        }
+
         /*--------- Compress End ---------*/
         /*--------- Counter Start ---------*/
         string counterT;

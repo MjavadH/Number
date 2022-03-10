@@ -219,6 +219,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icons8_numbers.ico" />
+    <None Include="Resources\collapse_arrow-black.png" />
+    <None Include="Resources\collapse arrow.png" />
+    <None Include="Resources\expand_arrow-black.png" />
+    <None Include="Resources\expand arrow.png" />
     <None Include="Resources\cancel-black.png" />
     <None Include="Resources\add_list-black.png" />
     <None Include="Resources\undo-black.png" />
