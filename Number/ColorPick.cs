@@ -72,7 +72,7 @@ namespace Number
             RT.Text = "مقدار رنگ قرمز: " + RC.Value;
             GT.Text = "مقدار رنگ سبز: " + GC.Value;
             BT.Text = "مقدار رنگ آبی: " + BC.Value;
-            if (RC.Value >= 127 && GC.Value >= 127 && BC.Value >= 127)
+            if (RC.Value >= 180 && GC.Value >= 180 && BC.Value >= 180)
             {
                 Settings.Default.LightColor = true;
                 CkeckSettings();

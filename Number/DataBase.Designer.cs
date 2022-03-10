@@ -30,8 +30,8 @@ namespace Number
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            Guna.UI2.AnimatorNS.Animation animation1 = new Guna.UI2.AnimatorNS.Animation();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            Guna.UI2.AnimatorNS.Animation animation2 = new Guna.UI2.AnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DataBase));
             this.AddTitle = new System.Windows.Forms.Label();
             this.ErrorText = new System.Windows.Forms.Label();
@@ -63,7 +63,6 @@ namespace Number
             this.Animation.SetDecoration(this.AddTitle, Guna.UI2.AnimatorNS.DecorationType.None);
             this.AddTitle.Dock = System.Windows.Forms.DockStyle.Top;
             this.AddTitle.Font = new System.Drawing.Font("Vazir", 15F);
-            this.AddTitle.ForeColor = System.Drawing.Color.White;
             this.AddTitle.Location = new System.Drawing.Point(0, 0);
             this.AddTitle.Name = "AddTitle";
             this.AddTitle.Size = new System.Drawing.Size(580, 44);
@@ -112,8 +111,8 @@ namespace Number
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -300,22 +299,22 @@ namespace Number
             // 
             this.Animation.AnimationType = Guna.UI2.AnimatorNS.AnimationType.Transparent;
             this.Animation.Cursor = null;
-            animation1.AnimateOnlyDifferences = true;
-            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
-            animation1.LeafCoeff = 0F;
-            animation1.MaxTime = 1F;
-            animation1.MinTime = 0F;
-            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
-            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
-            animation1.MosaicSize = 0;
-            animation1.Padding = new System.Windows.Forms.Padding(0);
-            animation1.RotateCoeff = 0F;
-            animation1.RotateLimit = 0F;
-            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
-            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
-            animation1.TimeCoeff = 0F;
-            animation1.TransparencyCoeff = 1F;
-            this.Animation.DefaultAnimation = animation1;
+            animation2.AnimateOnlyDifferences = true;
+            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
+            animation2.LeafCoeff = 0F;
+            animation2.MaxTime = 1F;
+            animation2.MinTime = 0F;
+            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
+            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
+            animation2.MosaicSize = 0;
+            animation2.Padding = new System.Windows.Forms.Padding(0);
+            animation2.RotateCoeff = 0F;
+            animation2.RotateLimit = 0F;
+            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
+            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
+            animation2.TimeCoeff = 0F;
+            animation2.TransparencyCoeff = 1F;
+            this.Animation.DefaultAnimation = animation2;
             // 
             // SaveNumbers
             // 
@@ -367,7 +366,7 @@ namespace Number
             this.NameTB.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.NameTB.SelectedText = "";
             this.NameTB.ShadowDecoration.Parent = this.NameTB;
-            this.NameTB.Size = new System.Drawing.Size(389, 38);
+            this.NameTB.Size = new System.Drawing.Size(509, 38);
             this.NameTB.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.NameTB.TabIndex = 14;
             this.NameTB.TextChanged += new System.EventHandler(this.NameTB_TextChanged);
@@ -398,7 +397,7 @@ namespace Number
             this.TextTB.PlaceholderText = "متن شمارنده";
             this.TextTB.SelectedText = "";
             this.TextTB.ShadowDecoration.Parent = this.TextTB;
-            this.TextTB.Size = new System.Drawing.Size(389, 38);
+            this.TextTB.Size = new System.Drawing.Size(509, 38);
             this.TextTB.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.TextTB.TabIndex = 14;
             // 
@@ -412,7 +411,6 @@ namespace Number
             this.infBox.CheckedState.FillColor = System.Drawing.Color.White;
             this.infBox.CheckMarkColor = System.Drawing.Color.Black;
             this.Animation.SetDecoration(this.infBox, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.infBox.ForeColor = System.Drawing.Color.White;
             this.infBox.Location = new System.Drawing.Point(9, 86);
             this.infBox.Name = "infBox";
             this.infBox.Size = new System.Drawing.Size(128, 30);
@@ -468,6 +466,7 @@ namespace Number
             this.Controls.Add(this.AddTitle);
             this.Animation.SetDecoration(this, Guna.UI2.AnimatorNS.DecorationType.None);
             this.Font = new System.Drawing.Font("Vazir", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);

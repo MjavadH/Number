@@ -88,7 +88,7 @@ namespace Number
             if (Settings.Default.LightColor)
             {
                 this.ForeColor = Color.Black;
-                closebtn.Image = Resources.delete;
+                closebtn.Image = Resources.delete_black;
             }
             else this.BackColor = Color.FromArgb(11, 10, 27);
             this.Font = Settings.Default.AppFont;

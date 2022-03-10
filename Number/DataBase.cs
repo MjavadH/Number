@@ -71,6 +71,29 @@ namespace Number
             if (Settings.Default.DefaultColor == false)
             {this.BackColor = Settings.Default.LightTheme;}
             else this.BackColor = Color.FromArgb(11, 10, 27);
+            if (Settings.Default.LightColor)
+            {
+                this.ForeColor = Color.Black;
+                AddBTN.ForeColor = Color.Black;
+                AddBTN.BorderColor = Color.Black;
+                AddBTN.Image = Resources.insert_row_black;
+                SaveNumbers.ForeColor = Color.Black;
+                SaveNumbers.BorderColor = Color.Black;
+                SaveNumbers.Image = Resources.save_as_black;
+                ReturnBTN.ForeColor = Color.Black;
+                ReturnBTN.BorderColor = Color.Black;
+                ReturnBTN.Image = Resources.return_black;
+                DeleteBTN.ForeColor = Color.Black;
+                DeleteBTN.BorderColor = Color.Black;
+                DeleteBTN.Image = Resources.delete_row_black;
+                EditeBTN.ForeColor = Color.Black;
+                EditeBTN.BorderColor = Color.Black;
+                EditeBTN.Image = Resources.edit_black;
+                Cancel.ForeColor = Color.Black;
+                Cancel.Image = Resources.cancel_black;
+                Save.ForeColor = Color.Black;
+                Save.Image = Resources.save_black;
+            }
             this.TopMost = Settings.Default.AlwaysOT;
             this.Font = Settings.Default.AppFont;
             NameTB.Width = 195;
