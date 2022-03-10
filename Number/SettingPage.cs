@@ -53,6 +53,37 @@ namespace Number
                 ColorCh.Visible = true;
             }
             else this.BackColor = Color.FromArgb(11, 10, 27);
+            if (Settings.Default.LightColor)
+            {
+                this.ForeColor = Color.Black;
+                CancelBTN.ForeColor = Color.Black;
+                CancelBTN.Image = Resources.cancel_black;
+                Save_BTN.ForeColor = Color.Black;
+                Save_BTN.Image = Resources.save_black;
+
+                ColorCh.ForeColor = Color.Black;
+                ColorCh.BorderColor = Color.Black;
+                ColorCh.Image = Resources.paint_palette_black;
+                SoundSetting_BTN.ForeColor = Color.Black;
+                SoundSetting_BTN.BorderColor = Color.Black;
+                SoundSetting_BTN.Image = Resources.music_black;
+                ShortKeyBTN.ForeColor = Color.Black;
+                ShortKeyBTN.BorderColor = Color.Black;
+                ShortKeyBTN.Image = Resources.keyboard_black;
+                FontCBTN.ForeColor = Color.Black;
+                FontCBTN.BorderColor = Color.Black;
+                FontCBTN.Image = Resources.clear_formatting_black;
+                FontBTN.ForeColor = Color.Black;
+                FontBTN.BorderColor = Color.Black;
+                FontBTN.Image = Resources.font_style_formatting_black;
+                No_Reset.ForeColor = Color.Black;
+                No_Reset.BorderColor = Color.Black;
+                No_Reset.Image = Resources.delete_black;
+                ResetBTN.ForeColor = Color.Black;
+                ResetBTN.Image = Resources.reset_black;
+                Yes_Reset.ForeColor = Color.Black;
+                Yes_Reset.Image = Resources.checkmark_black;
+            }
             this.TopMost = Settings.Default.AlwaysOT;
             this.Font = Settings.Default.AppFont;
             Counter_Value.Value = Convert.ToDecimal(Settings.Default.Counter);
