@@ -108,7 +108,10 @@ XmlDocument DataXML = new XmlDocument();
             this.TopMost = Settings.Default.AlwaysOT;
             this.Font = Settings.Default.AppFont;
             counter_Timer.Interval = Convert.ToInt32(Settings.Default.Counter + "000");
-            NumberT.Font = new Font(Settings.Default.AppFont.Name, 35);
+            if (NumberT.Dock != DockStyle.Fill)
+            {
+                NumberT.Font = new Font(Settings.Default.AppFont.Name, 35);
+            }
             if (Settings.Default.UpdateData)
             {
                 Settings.Default.UpdateData = false;
@@ -328,7 +331,7 @@ XmlDocument DataXML = new XmlDocument();
                     }
                     Show_Text_BTN.Text = TextBox.Text;
                     Show_Text_BTN.Height = 55;
-                    this.Size = new Size(150, NumberT.Size.Height + Show_Text_BTN.Height);
+                    this.Size = new Size(Show_Text_BTN.Text.Length * 4 + 25, NumberT.Size.Height + Show_Text_BTN.Height);
                 }
                 else
                 {
