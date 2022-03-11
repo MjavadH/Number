@@ -46,7 +46,7 @@ namespace Number
     public partial class NumberForm : Form
     {
         /*--------- Create var XmlDoc ---------*/
-XmlDocument DataXML = new XmlDocument();
+        XmlDocument DataXML = new XmlDocument();
         public NumberForm()
         {
             InitializeComponent();
@@ -387,17 +387,21 @@ XmlDocument DataXML = new XmlDocument();
             try
             {
                 DataXML.Load("Data.xml");
-                XmlNodeList NumberNodes = DataXML.SelectNodes("//Numbers/Number");
-                foreach (XmlNode NumberNode in NumberNodes)
+                using (var NumberNodes = DataXML.SelectNodes("//Numbers/Number"))
                 {
-                    if (NumberNode.Attributes["Name"].Value == DropDown.Text)
+
+                    foreach (XmlNode NumberNode in NumberNodes)
                     {
-                        string XMLText = (string)NumberNode.Attributes["Text"].Value;
-                        string XMLLen = (string)NumberNode.Attributes["Len"].Value;
-                        TextBox.Text = XMLText;
-                        TextLen.Text = "تعداد: " + XMLLen;
-                        NumberT.Text = NumberNode.InnerText;
+                        if (NumberNode.Attributes["Name"].Value == DropDown.Text)
+                        {
+                            string XMLText = (string)NumberNode.Attributes["Text"].Value;
+                            string XMLLen = (string)NumberNode.Attributes["Len"].Value;
+                            TextBox.Text = XMLText;
+                            TextLen.Text = "تعداد: " + XMLLen;
+                            NumberT.Text = NumberNode.InnerText;
+                        }
                     }
+
                 }
             }
             catch (Exception){ Alert("خطا:لطفا برنامه را بسته و مجدد باز نمایید!"); }
@@ -409,11 +413,13 @@ XmlDocument DataXML = new XmlDocument();
             try
             {
                 DataXML.Load("Data.xml");
-                XmlNodeList NumberNodes = DataXML.SelectNodes("//Numbers/Number");
-                foreach (XmlNode NumberNode in NumberNodes)
+                using (var NumberNodes = DataXML.SelectNodes("//Numbers/Number"))
                 {
-                    string Name = NumberNode.Attributes["Name"].Value;
-                    DropDown.Items.Add(Name);
+                    foreach (XmlNode NumberNode in NumberNodes)
+                    {
+                        string Name = NumberNode.Attributes["Name"].Value;
+                        DropDown.Items.Add(Name);
+                    }
                 }
             }
             catch (Exception){ Alert("خطا:لطفا برنامه را بسته و مجدد باز نمایید!"); }
