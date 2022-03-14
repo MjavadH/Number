@@ -162,6 +162,7 @@ namespace Number
                         {
                             if (NumberNode.Attributes["Name"].Value == DropDown.Text)
                             {
+                                NumberLeftP.Value = 0;
                                 NumberNode.InnerText = (UInt64.Parse(NumberNode.InnerText) + 1).ToString();
                                 this.Text = "باقی مانده: بدون محدودیت | شمارنده";
                                 DataXML.Save("Data.xml");

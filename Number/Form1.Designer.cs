@@ -344,11 +344,9 @@ namespace Number
             // 
             this.splashScreen1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(10)))), ((int)(((byte)(27)))));
             this.AnimationMenu.SetDecoration(this.splashScreen1, Guna.UI2.AnimatorNS.DecorationType.None);
-            resources.ApplyResources(this.splashScreen1, "splashScreen1");
             this.splashScreen1.ForeColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.splashScreen1, "splashScreen1");
             this.splashScreen1.Name = "splashScreen1";
-            this.splashScreen1.DoubleClick += new System.EventHandler(this.NumberT_DoubleClick);
-            this.splashScreen1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.NumberForm_MouseMove);
             // 
             // NumberForm
             // 
@@ -356,14 +354,14 @@ namespace Number
             resources.ApplyResources(this, "$this");
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(10)))), ((int)(((byte)(27)))));
             this.ControlBox = false;
-            this.Controls.Add(this.Show_Text_BTN);
+            this.Controls.Add(this.splashScreen1);
             this.Controls.Add(this.DropDown);
             this.Controls.Add(this.TextLen);
             this.Controls.Add(this.NumberT);
             this.Controls.Add(this.TextBox);
             this.Controls.Add(this.MenuListP);
             this.Controls.Add(this.NumberLeftP);
-            this.Controls.Add(this.splashScreen1);
+            this.Controls.Add(this.Show_Text_BTN);
             this.AnimationMenu.SetDecoration(this, Guna.UI2.AnimatorNS.DecorationType.None);
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -407,9 +405,9 @@ namespace Number
         private Guna.UI2.WinForms.Guna2Button Clear;
         private Guna.UI2.WinForms.Guna2Button min;
         private Guna.UI2.WinForms.Guna2Button exit;
-        private SplashScreen splashScreen1;
         private Guna.UI2.WinForms.Guna2Transition AnimationMenu;
         private Guna.UI2.WinForms.Guna2TileButton Show_Text_BTN;
+        private SplashScreen splashScreen1;
     }
 }
 

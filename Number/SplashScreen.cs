@@ -69,7 +69,6 @@ namespace Number
         private void StartApp_Tick(object sender, EventArgs e)
         {
             this.Hide();
-            this.SendToBack();
             StartApp.Stop();
         }
         /*------------------ Animation End ------------------*/

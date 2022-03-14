@@ -52,7 +52,6 @@ C:\Users\MyPC\Desktop\C# Code\Number\Number\bin\Debug\Microsoft.WindowsAPICodePa
 C:\Users\MyPC\Desktop\C# Code\Number\Number\bin\Debug\Microsoft.WindowsAPICodePack.Shell.dll
 C:\Users\MyPC\Desktop\C# Code\Number\Number\bin\Debug\Microsoft.WindowsAPICodePack.xml
 C:\Users\MyPC\Desktop\C# Code\Number\Number\bin\Debug\Microsoft.WindowsAPICodePack.Shell.xml
-C:\Users\MyPC\Desktop\C# Code\Number\Number\obj\Debug\Number.csproj.AssemblyReference.cache
 C:\Users\MyPC\Desktop\C# Code\Number\Number\obj\Debug\Number.AlertBox.resources
 C:\Users\MyPC\Desktop\C# Code\Number\Number\obj\Debug\Number.ColorPick.resources
 C:\Users\MyPC\Desktop\C# Code\Number\Number\obj\Debug\Number.DataBase.resources
