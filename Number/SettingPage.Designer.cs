@@ -593,13 +593,14 @@ namespace Number
             // 
             this.Sound5.Animated = true;
             this.Sound5.AutoSize = true;
+            this.Sound5.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Sound5.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Sound5.CheckedState.BorderThickness = 0;
             this.Sound5.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Sound5.CheckedState.InnerColor = System.Drawing.Color.White;
             this.Sound5.CheckedState.InnerOffset = -4;
             this.ResetNAni.SetDecoration(this.Sound5, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.Sound5.Location = new System.Drawing.Point(50, 43);
+            this.Sound5.Location = new System.Drawing.Point(40, 43);
             this.Sound5.Name = "Sound5";
             this.Sound5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.Sound5.Size = new System.Drawing.Size(80, 30);
@@ -615,13 +616,14 @@ namespace Number
             // 
             this.Sound1.Animated = true;
             this.Sound1.AutoSize = true;
+            this.Sound1.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Sound1.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Sound1.CheckedState.BorderThickness = 0;
             this.Sound1.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Sound1.CheckedState.InnerColor = System.Drawing.Color.White;
             this.Sound1.CheckedState.InnerOffset = -4;
             this.ResetNAni.SetDecoration(this.Sound1, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.Sound1.Location = new System.Drawing.Point(450, 43);
+            this.Sound1.Location = new System.Drawing.Point(440, 43);
             this.Sound1.Name = "Sound1";
             this.Sound1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.Sound1.Size = new System.Drawing.Size(80, 30);
@@ -637,13 +639,14 @@ namespace Number
             // 
             this.Sound2.Animated = true;
             this.Sound2.AutoSize = true;
+            this.Sound2.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Sound2.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Sound2.CheckedState.BorderThickness = 0;
             this.Sound2.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Sound2.CheckedState.InnerColor = System.Drawing.Color.White;
             this.Sound2.CheckedState.InnerOffset = -4;
             this.ResetNAni.SetDecoration(this.Sound2, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.Sound2.Location = new System.Drawing.Point(350, 43);
+            this.Sound2.Location = new System.Drawing.Point(340, 43);
             this.Sound2.Name = "Sound2";
             this.Sound2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.Sound2.Size = new System.Drawing.Size(80, 30);
@@ -659,13 +662,14 @@ namespace Number
             // 
             this.Sound4.Animated = true;
             this.Sound4.AutoSize = true;
+            this.Sound4.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Sound4.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Sound4.CheckedState.BorderThickness = 0;
             this.Sound4.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Sound4.CheckedState.InnerColor = System.Drawing.Color.White;
             this.Sound4.CheckedState.InnerOffset = -4;
             this.ResetNAni.SetDecoration(this.Sound4, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.Sound4.Location = new System.Drawing.Point(150, 43);
+            this.Sound4.Location = new System.Drawing.Point(140, 43);
             this.Sound4.Name = "Sound4";
             this.Sound4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.Sound4.Size = new System.Drawing.Size(80, 30);
@@ -681,13 +685,14 @@ namespace Number
             // 
             this.Sound3.Animated = true;
             this.Sound3.AutoSize = true;
+            this.Sound3.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Sound3.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Sound3.CheckedState.BorderThickness = 0;
             this.Sound3.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Sound3.CheckedState.InnerColor = System.Drawing.Color.White;
             this.Sound3.CheckedState.InnerOffset = -4;
             this.ResetNAni.SetDecoration(this.Sound3, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.Sound3.Location = new System.Drawing.Point(250, 43);
+            this.Sound3.Location = new System.Drawing.Point(240, 43);
             this.Sound3.Name = "Sound3";
             this.Sound3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.Sound3.Size = new System.Drawing.Size(80, 30);
