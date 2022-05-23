@@ -396,7 +396,7 @@ namespace Number.Properties {
         ///        آیدی تلگرام:
         ///        &lt;a href=&quot;https://t.me/rvyrbyhrc&quot;&gt;https://t.me/rvyrbyhrc&lt;/a&gt;
         ///        &lt;br&gt;
-        ///        شما هم اکنون در حال استفاده از نسخه 2.0.0 نرم افزار هستید
+        ///        شما هم اکنون در حال استفاده از نسخه 3.0.0 نرم افزار هستید
         ///        &lt;br&gt;
         ///        در ادامه شما را با ویژگی های این نرم افز [rest of string was truncated]&quot;;.
         /// </summary>
@@ -687,6 +687,46 @@ namespace Number.Properties {
         public static System.Drawing.Bitmap settings_black {
             get {
                 object obj = ResourceManager.GetObject("settings_black", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap slide_down {
+            get {
+                object obj = ResourceManager.GetObject("slide_down", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap slide_down_black {
+            get {
+                object obj = ResourceManager.GetObject("slide_down_black", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap slide_up {
+            get {
+                object obj = ResourceManager.GetObject("slide_up", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap slide_up_black {
+            get {
+                object obj = ResourceManager.GetObject("slide_up_black", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

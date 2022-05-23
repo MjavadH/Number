@@ -87,7 +87,6 @@ namespace Number
             // 
             this.RC.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
             this.RC.HoverState.Parent = this.RC;
-            this.RC.IndicateFocus = false;
             this.RC.Location = new System.Drawing.Point(23, 44);
             this.RC.Maximum = 255;
             this.RC.Minimum = 1;
@@ -102,7 +101,6 @@ namespace Number
             // 
             this.GC.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
             this.GC.HoverState.Parent = this.GC;
-            this.GC.IndicateFocus = false;
             this.GC.Location = new System.Drawing.Point(23, 124);
             this.GC.Maximum = 255;
             this.GC.Minimum = 1;
@@ -117,7 +115,6 @@ namespace Number
             // 
             this.BC.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
             this.BC.HoverState.Parent = this.BC;
-            this.BC.IndicateFocus = false;
             this.BC.Location = new System.Drawing.Point(23, 199);
             this.BC.Maximum = 255;
             this.BC.Minimum = 1;

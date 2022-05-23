@@ -271,6 +271,7 @@ namespace Number
                 Show_Text_BTN.Visible = true;
                 Show_Text_BTN.Dock = DockStyle.Bottom;
                 Show_Text_BTN.SendToBack();
+                Show_Text_BTN.Select();
                 NumberT.AutoSize = true;
                 NumberT.Dock = DockStyle.Fill;
                 NumberT.Font = new Font(Settings.Default.AppFont.Name, 25);
@@ -292,6 +293,7 @@ namespace Number
         {
             Show_Text_BTN.Visible = false;
             Show_Text_BTN.Dock = DockStyle.None;
+            NumberT.Select();
             NumberT.AutoSize = false;
             NumberT.Dock = DockStyle.Bottom;
             NumberT.Font = new Font(Settings.Default.AppFont.Name, 35);
@@ -429,7 +431,7 @@ namespace Number
         /*------------------ DropDown End ------------------*/
         /*------------------ Short Key Start ------------------*/
         private void ShortKey_KeyDown(object sender, KeyEventArgs e)
-        {            
+        {
             if (e.KeyData == Settings.Default.ShortKey_Clear)
             {
                 NumberT.Text = Cdata.Clear(DropDown.Text);

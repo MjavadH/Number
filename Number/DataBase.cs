@@ -21,15 +21,15 @@ namespace Number
                 XmlNodeList NumberNodes = DataXML.SelectNodes("//Numbers/Number");
                 foreach (XmlNode NumberNode in NumberNodes)
                 {
-                    dataGridView1.Rows.Add(NumberNode.Attributes["Name"].Value, NumberNode.Attributes["Len"].Value, NumberNode.Attributes["Text"].Value, NumberNode.InnerText);
+                    Number_data.Rows.Add(NumberNode.Attributes["Name"].Value, NumberNode.Attributes["Len"].Value, NumberNode.Attributes["Text"].Value, NumberNode.InnerText);
                 }
             }
             catch (Exception) { }
         }
         void dataClear()
         {
-            dataGridView1.ReadOnly = true;
-            dataGridView1.ClearSelection();
+            Number_data.ReadOnly = true;
+            Number_data.ClearSelection();
             btnClear();
         }
         void Error(string ErText)
@@ -42,6 +42,7 @@ namespace Number
         {
             DeleteBTN.Visible = false;
             EditeBTN.Visible = false;
+            panel_UpDown.Visible = false;
         }
         void Alert(string msg)
         {
@@ -52,9 +53,9 @@ namespace Number
         void NameCheck()
         {
             ResultT = false;
-            for (int i = 0; i < dataGridView1.Rows.Count; i++)
+            for (int i = 0; i < Number_data.Rows.Count; i++)
             {
-                if ((string)dataGridView1.Rows[i].Cells[0].Value == NameTB.Text)
+                if ((string)Number_data.Rows[i].Cells[0].Value == NameTB.Text)
                 {
                     ResultT = true;
                     break;
@@ -93,6 +94,8 @@ namespace Number
                 Cancel.Image = Resources.cancel_black;
                 Save.ForeColor = Color.Black;
                 Save.Image = Resources.save_black;
+                button_up.Image = Resources.slide_up_black;
+                button_down.Image = Resources.slide_down_black;
             }
             this.TopMost = Settings.Default.AlwaysOT;
             this.Font = Settings.Default.AppFont;
@@ -134,29 +137,30 @@ namespace Number
         {
             DeleteBTN.Visible = true;
             EditeBTN.Visible = true;
+            panel_UpDown.Visible = true;
             Save.Enabled = true;
         }
         /*--------- Delete ---------*/
         private void DeleteBTN_Click(object sender, EventArgs e)
         {
-            dataGridView1.Rows.Remove(dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex]);
+            Number_data.Rows.Remove(Number_data.Rows[Number_data.CurrentCell.RowIndex]);
             dataClear();
         }
         /*--------- Edit Start ---------*/
         private void EditeBTN_Click(object sender, EventArgs e)
         {
-            indexR = dataGridView1.CurrentCell.RowIndex;
-            indexC = dataGridView1.CurrentCell.ColumnIndex;
+            indexR = Number_data.CurrentCell.RowIndex;
+            indexC = Number_data.CurrentCell.ColumnIndex;
             if (indexC == 1)
             {
                 Error("قسمت تعداد قابل ویرایش نیست!");
             }
             else
             {
-                dataGridView1.ReadOnly = false;
-                dataGridView1.BeginEdit(true);
+                Number_data.ReadOnly = false;
+                Number_data.BeginEdit(true);
                 Save.Enabled = false;
-                oldVal = (string)dataGridView1[indexC, indexR].Value;
+                oldVal = (string)Number_data[indexC, indexR].Value;
                 btnClear();
             }
         }
@@ -166,39 +170,39 @@ namespace Number
             dataClear();
             if (indexC == 3)
             {
-                if (string.IsNullOrEmpty((string)dataGridView1.Rows[indexR].Cells[indexC].Value))
+                if (string.IsNullOrEmpty((string)Number_data.Rows[indexR].Cells[indexC].Value))
                 {
-                    dataGridView1[indexC, indexR].Value = oldVal;
+                    Number_data[indexC, indexR].Value = oldVal;
                     Error("مقدار نباید خالی باشد");
                 }
-                else if (((string)dataGridView1.Rows[indexR].Cells[indexC].Value).StartsWith("-"))
+                else if (((string)Number_data.Rows[indexR].Cells[indexC].Value).StartsWith("-"))
                 {
-                    dataGridView1[indexC, indexR].Value = oldVal;
+                    Number_data[indexC, indexR].Value = oldVal;
                     Error("مقدار وارد شده صحیح نمی باشد");
                 }
                 else
                 {
                     try
                     {
-                        int.Parse((string)dataGridView1.Rows[indexR].Cells[indexC].Value);
-                        if ((string)dataGridView1.Rows[indexR].Cells[1].Value == "نامحدود")
+                        int.Parse((string)Number_data.Rows[indexR].Cells[indexC].Value);
+                        if ((string)Number_data.Rows[indexR].Cells[1].Value == "نامحدود")
                         {
 
                         }
-                        else if (int.Parse((string)dataGridView1.Rows[indexR].Cells[indexC].Value) > 2147483647)
+                        else if (int.Parse((string)Number_data.Rows[indexR].Cells[indexC].Value) > 2147483647)
                         {
-                            dataGridView1[indexC, indexR].Value = oldVal;
+                            Number_data[indexC, indexR].Value = oldVal;
                             Error("مقداری که وارد کردید بیشتر از حد مجاز است");
                         }
-                        else if (int.Parse((string)dataGridView1.Rows[indexR].Cells[1].Value) < int.Parse((string)dataGridView1.Rows[indexR].Cells[indexC].Value))
+                        else if (int.Parse((string)Number_data.Rows[indexR].Cells[1].Value) < int.Parse((string)Number_data.Rows[indexR].Cells[indexC].Value))
                         {
-                            dataGridView1[indexC, indexR].Value = oldVal;
+                            Number_data[indexC, indexR].Value = oldVal;
                             Error("مقداری که وارد کردید از تعداد بیشتر است");
                         }
                     }
                     catch (Exception)
                     {
-                        dataGridView1[indexC, indexR].Value = oldVal;
+                        Number_data[indexC, indexR].Value = oldVal;
                         Error("مقدار وارد شده غیر عادی میباشد");
                     }
                 }
@@ -208,19 +212,19 @@ namespace Number
             {
                 try
                 {
-                    if (string.IsNullOrEmpty((string)dataGridView1.Rows[indexR].Cells[indexC].Value))
+                    if (string.IsNullOrEmpty((string)Number_data.Rows[indexR].Cells[indexC].Value))
                     {
-                        dataGridView1[indexC, indexR].Value = oldVal;
+                        Number_data[indexC, indexR].Value = oldVal;
                         Error("مقدار نام نباید خالی باشد");
                     }
                     else
                     {
                         bool ResultT = false;
-                        for (int i = 0; i < dataGridView1.Rows.Count; i++)
+                        for (int i = 0; i < Number_data.Rows.Count; i++)
                         {
-                            if ((string)dataGridView1[0, i].Value == (string)dataGridView1[0, indexR].Value)
+                            if ((string)Number_data[0, i].Value == (string)Number_data[0, indexR].Value)
                             {
-                                if (dataGridView1[0, i] == dataGridView1[0, indexR]) continue;
+                                if (Number_data[0, i] == Number_data[0, indexR]) continue;
                                 else
                                 {
                                     ResultT = true;
@@ -231,7 +235,7 @@ namespace Number
                         }
                         if (ResultT == true)
                         {
-                            dataGridView1[0, indexR].Value = oldVal;
+                            Number_data[0, indexR].Value = oldVal;
                             Error("نام تکراری قابل قبول نیست");
                         }
                     }
@@ -260,11 +264,11 @@ namespace Number
                 dataClear();
                 if (!ResultT)
                 {
-                    if (infBox.Checked)
+                    if (button_limit.Checked)
                     {
-                        dataGridView1.Rows.Add(NameTB.Text, "نامحدود", TextTB.Text, "0");
+                        Number_data.Rows.Add(NameTB.Text, "نامحدود", TextTB.Text, "0");
                     }
-                    else dataGridView1.Rows.Add(NameTB.Text, lenTB.Text, TextTB.Text, "0");
+                    else Number_data.Rows.Add(NameTB.Text, lenTB.Text, TextTB.Text, "0");
                 }
                 else
                 {
@@ -275,7 +279,7 @@ namespace Number
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
 
-            if (infBox.Checked)
+            if (button_limit.Checked)
             {
                 lenTB.Enabled = false;
             }
@@ -294,7 +298,7 @@ namespace Number
                     XmlNodeList NumberNodes = DataXML.SelectNodes("//Numbers/Number");
                     foreach (XmlNode NumberNode in NumberNodes)
                     {
-                        dataGridView1.Rows.Add(NumberNode.Attributes["Name"].Value, NumberNode.Attributes["Len"].Value, NumberNode.Attributes["Text"].Value, NumberNode.InnerText);
+                        Number_data.Rows.Add(NumberNode.Attributes["Name"].Value, NumberNode.Attributes["Len"].Value, NumberNode.Attributes["Text"].Value, NumberNode.InnerText);
                     }
                 }
                 catch (Exception) { }
@@ -322,22 +326,22 @@ namespace Number
             XmlDocument xmlDoc = new XmlDocument();
             XmlNode rootNode = xmlDoc.CreateElement("Numbers");
             xmlDoc.AppendChild(rootNode);
-            for (int i = 0; i < dataGridView1.Rows.Count; i++)
+            for (int i = 0; i < Number_data.Rows.Count; i++)
             {
                 try
                 {
                     /*افزودن*/
                     XmlNode NumberNode = xmlDoc.CreateElement("Number");
                     XmlAttribute attribute = xmlDoc.CreateAttribute("Name");
-                    attribute.Value = (string)dataGridView1.Rows[i].Cells[0].Value;
+                    attribute.Value = (string)Number_data.Rows[i].Cells[0].Value;
                     XmlAttribute attribute2 = xmlDoc.CreateAttribute("Len");
-                    attribute2.Value = (string)dataGridView1.Rows[i].Cells[1].Value;
+                    attribute2.Value = (string)Number_data.Rows[i].Cells[1].Value;
                     XmlAttribute attribute3 = xmlDoc.CreateAttribute("Text");
-                    attribute3.Value = (string)dataGridView1.Rows[i].Cells[2].Value;
+                    attribute3.Value = (string)Number_data.Rows[i].Cells[2].Value;
                     NumberNode.Attributes.Append(attribute);
                     NumberNode.Attributes.Append(attribute2);
                     NumberNode.Attributes.Append(attribute3);
-                    NumberNode.InnerText = (string)dataGridView1.Rows[i].Cells[3].Value;
+                    NumberNode.InnerText = (string)Number_data.Rows[i].Cells[3].Value;
                     rootNode.AppendChild(NumberNode);
                 }
                 catch (Exception)
@@ -367,9 +371,9 @@ namespace Number
             {
                 case "Suscess":
                     Alert("عملیات با موفقیت انجام شد");
-                    for (int i = 0; i < dataGridView1.Rows.Count;)
+                    for (int i = 0; i < Number_data.Rows.Count;)
                     {
-                        dataGridView1.Rows.Remove(dataGridView1.Rows[i]);
+                        Number_data.Rows.Remove(Number_data.Rows[i]);
                     }
                     DataGridSet();
                     break;
@@ -380,6 +384,16 @@ namespace Number
                     Alert("مشکلی پیش آمد مجدد تلاش کنید");
                     break;
             }
+        }
+        /*--------- Move up & down btn  ---------*/
+        private void button_up_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button_down_Click(object sender, EventArgs e)
+        {
+
         }
         /*------------------  BTN End ------------------*/
     }

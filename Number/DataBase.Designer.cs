@@ -30,13 +30,13 @@ namespace Number
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            Guna.UI2.AnimatorNS.Animation animation2 = new Guna.UI2.AnimatorNS.Animation();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            Guna.UI2.AnimatorNS.Animation animation4 = new Guna.UI2.AnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DataBase));
             this.AddTitle = new System.Windows.Forms.Label();
             this.ErrorText = new System.Windows.Forms.Label();
             this.lenTB = new System.Windows.Forms.NumericUpDown();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Number_data = new System.Windows.Forms.DataGridView();
             this.NameDB = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lenDB = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TextDB = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -52,10 +52,16 @@ namespace Number
             this.SaveNumbers = new Guna.UI2.WinForms.Guna2Button();
             this.NameTB = new Guna.UI2.WinForms.Guna2TextBox();
             this.TextTB = new Guna.UI2.WinForms.Guna2TextBox();
-            this.infBox = new Guna.UI2.WinForms.Guna2CheckBox();
             this.ReturnBTN = new Guna.UI2.WinForms.Guna2Button();
+            this.panel_Down = new System.Windows.Forms.Panel();
+            this.panel_UpDown = new System.Windows.Forms.Panel();
+            this.button_down = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.button_up = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.button_limit = new Guna.UI2.WinForms.Guna2CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.lenTB)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Number_data)).BeginInit();
+            this.panel_Down.SuspendLayout();
+            this.panel_UpDown.SuspendLayout();
             this.SuspendLayout();
             // 
             // AddTitle
@@ -74,12 +80,14 @@ namespace Number
             // ErrorText
             // 
             this.Animation.SetDecoration(this.ErrorText, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.ErrorText.Dock = System.Windows.Forms.DockStyle.Right;
             this.ErrorText.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.ErrorText.ForeColor = System.Drawing.Color.Red;
-            this.ErrorText.Location = new System.Drawing.Point(0, 444);
+            this.ErrorText.Location = new System.Drawing.Point(41, 0);
             this.ErrorText.Name = "ErrorText";
-            this.ErrorText.Size = new System.Drawing.Size(302, 75);
+            this.ErrorText.Size = new System.Drawing.Size(273, 77);
             this.ErrorText.TabIndex = 10;
+            this.ErrorText.Text = "خطایی رخ داد لطفا مجدد تلاش کنید";
             this.ErrorText.Visible = false;
             this.ErrorText.MouseMove += new System.Windows.Forms.MouseEventHandler(this.NumberForm_MouseMove);
             // 
@@ -106,38 +114,38 @@ namespace Number
             0,
             0});
             // 
-            // dataGridView1
+            // Number_data
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AllowUserToResizeRows = false;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Number_data.AllowUserToAddRows = false;
+            this.Number_data.AllowUserToDeleteRows = false;
+            this.Number_data.AllowUserToResizeRows = false;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.Number_data.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.Number_data.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.Number_data.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.Number_data.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Number_data.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Number_data.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.NameDB,
             this.lenDB,
             this.TextDB,
             this.ValueDB});
-            this.Animation.SetDecoration(this.dataGridView1, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.dataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 239);
-            this.dataGridView1.MultiSelect = false;
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.RowHeadersWidth = 34;
-            this.dataGridView1.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.dataGridView1.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.Blue;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(581, 202);
-            this.dataGridView1.TabIndex = 12;
-            this.dataGridView1.CellValidated += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellValidated);
-            this.dataGridView1.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellValueChanged);
+            this.Animation.SetDecoration(this.Number_data, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.Number_data.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.Number_data.Location = new System.Drawing.Point(0, 239);
+            this.Number_data.MultiSelect = false;
+            this.Number_data.Name = "Number_data";
+            this.Number_data.ReadOnly = true;
+            this.Number_data.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.Number_data.RowHeadersVisible = false;
+            this.Number_data.RowHeadersWidth = 34;
+            this.Number_data.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.Number_data.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.Blue;
+            this.Number_data.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.Number_data.Size = new System.Drawing.Size(581, 202);
+            this.Number_data.TabIndex = 12;
+            this.Number_data.CellValidated += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellValidated);
+            this.Number_data.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellValueChanged);
             // 
             // NameDB
             // 
@@ -207,15 +215,16 @@ namespace Number
             this.Save.CheckedState.Parent = this.Save;
             this.Save.CustomImages.Parent = this.Save;
             this.Animation.SetDecoration(this.Save, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.Save.Dock = System.Windows.Forms.DockStyle.Right;
             this.Save.FillColor = System.Drawing.Color.Empty;
             this.Save.Font = new System.Drawing.Font("Vazir", 12F);
             this.Save.ForeColor = System.Drawing.Color.White;
             this.Save.HoverState.Parent = this.Save;
             this.Save.Image = global::Number.Properties.Resources.save;
-            this.Save.Location = new System.Drawing.Point(448, 441);
+            this.Save.Location = new System.Drawing.Point(447, 0);
             this.Save.Name = "Save";
             this.Save.ShadowDecoration.Parent = this.Save;
-            this.Save.Size = new System.Drawing.Size(133, 78);
+            this.Save.Size = new System.Drawing.Size(133, 77);
             this.Save.TabIndex = 13;
             this.Save.Text = "ذخیره";
             this.Save.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAliasGridFit;
@@ -226,15 +235,16 @@ namespace Number
             this.Cancel.CheckedState.Parent = this.Cancel;
             this.Cancel.CustomImages.Parent = this.Cancel;
             this.Animation.SetDecoration(this.Cancel, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.Cancel.Dock = System.Windows.Forms.DockStyle.Right;
             this.Cancel.FillColor = System.Drawing.Color.Empty;
             this.Cancel.Font = new System.Drawing.Font("Vazir", 12F);
             this.Cancel.ForeColor = System.Drawing.Color.White;
             this.Cancel.HoverState.Parent = this.Cancel;
             this.Cancel.Image = global::Number.Properties.Resources.cancel;
-            this.Cancel.Location = new System.Drawing.Point(309, 441);
+            this.Cancel.Location = new System.Drawing.Point(314, 0);
             this.Cancel.Name = "Cancel";
             this.Cancel.ShadowDecoration.Parent = this.Cancel;
-            this.Cancel.Size = new System.Drawing.Size(133, 78);
+            this.Cancel.Size = new System.Drawing.Size(133, 77);
             this.Cancel.TabIndex = 13;
             this.Cancel.Text = "انصراف";
             this.Cancel.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAliasGridFit;
@@ -299,22 +309,22 @@ namespace Number
             // 
             this.Animation.AnimationType = Guna.UI2.AnimatorNS.AnimationType.Transparent;
             this.Animation.Cursor = null;
-            animation2.AnimateOnlyDifferences = true;
-            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
-            animation2.LeafCoeff = 0F;
-            animation2.MaxTime = 1F;
-            animation2.MinTime = 0F;
-            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
-            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
-            animation2.MosaicSize = 0;
-            animation2.Padding = new System.Windows.Forms.Padding(0);
-            animation2.RotateCoeff = 0F;
-            animation2.RotateLimit = 0F;
-            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
-            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
-            animation2.TimeCoeff = 0F;
-            animation2.TransparencyCoeff = 1F;
-            this.Animation.DefaultAnimation = animation2;
+            animation4.AnimateOnlyDifferences = true;
+            animation4.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.BlindCoeff")));
+            animation4.LeafCoeff = 0F;
+            animation4.MaxTime = 1F;
+            animation4.MinTime = 0F;
+            animation4.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicCoeff")));
+            animation4.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicShift")));
+            animation4.MosaicSize = 0;
+            animation4.Padding = new System.Windows.Forms.Padding(0);
+            animation4.RotateCoeff = 0F;
+            animation4.RotateLimit = 0F;
+            animation4.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.ScaleCoeff")));
+            animation4.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.SlideCoeff")));
+            animation4.TimeCoeff = 0F;
+            animation4.TransparencyCoeff = 1F;
+            this.Animation.DefaultAnimation = animation4;
             // 
             // SaveNumbers
             // 
@@ -366,7 +376,7 @@ namespace Number
             this.NameTB.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.NameTB.SelectedText = "";
             this.NameTB.ShadowDecoration.Parent = this.NameTB;
-            this.NameTB.Size = new System.Drawing.Size(509, 38);
+            this.NameTB.Size = new System.Drawing.Size(1374, 38);
             this.NameTB.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.NameTB.TabIndex = 14;
             this.NameTB.TextChanged += new System.EventHandler(this.NameTB_TextChanged);
@@ -397,30 +407,9 @@ namespace Number
             this.TextTB.PlaceholderText = "متن شمارنده";
             this.TextTB.SelectedText = "";
             this.TextTB.ShadowDecoration.Parent = this.TextTB;
-            this.TextTB.Size = new System.Drawing.Size(509, 38);
+            this.TextTB.Size = new System.Drawing.Size(1374, 38);
             this.TextTB.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.TextTB.TabIndex = 14;
-            // 
-            // infBox
-            // 
-            this.infBox.Animated = true;
-            this.infBox.AutoSize = true;
-            this.infBox.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
-            this.infBox.CheckedState.BorderRadius = 0;
-            this.infBox.CheckedState.BorderThickness = 0;
-            this.infBox.CheckedState.FillColor = System.Drawing.Color.White;
-            this.infBox.CheckMarkColor = System.Drawing.Color.Black;
-            this.Animation.SetDecoration(this.infBox, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.infBox.Location = new System.Drawing.Point(9, 86);
-            this.infBox.Name = "infBox";
-            this.infBox.Size = new System.Drawing.Size(128, 30);
-            this.infBox.TabIndex = 15;
-            this.infBox.Text = "بدون محدودیت";
-            this.infBox.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.infBox.UncheckedState.BorderRadius = 0;
-            this.infBox.UncheckedState.BorderThickness = 0;
-            this.infBox.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.infBox.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // ReturnBTN
             // 
@@ -445,24 +434,97 @@ namespace Number
             this.ReturnBTN.Text = "برگرداندن شمارنده ها";
             this.ReturnBTN.Click += new System.EventHandler(this.ReturnBTN_Click);
             // 
+            // panel_Down
+            // 
+            this.panel_Down.Controls.Add(this.panel_UpDown);
+            this.panel_Down.Controls.Add(this.ErrorText);
+            this.panel_Down.Controls.Add(this.Cancel);
+            this.panel_Down.Controls.Add(this.Save);
+            this.Animation.SetDecoration(this.panel_Down, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.panel_Down.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel_Down.Location = new System.Drawing.Point(0, 442);
+            this.panel_Down.Name = "panel_Down";
+            this.panel_Down.Size = new System.Drawing.Size(580, 77);
+            this.panel_Down.TabIndex = 18;
+            // 
+            // panel_UpDown
+            // 
+            this.panel_UpDown.Controls.Add(this.button_down);
+            this.panel_UpDown.Controls.Add(this.button_up);
+            this.Animation.SetDecoration(this.panel_UpDown, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.panel_UpDown.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel_UpDown.Location = new System.Drawing.Point(0, 0);
+            this.panel_UpDown.Name = "panel_UpDown";
+            this.panel_UpDown.Size = new System.Drawing.Size(40, 77);
+            this.panel_UpDown.TabIndex = 15;
+            this.panel_UpDown.Visible = false;
+            // 
+            // button_down
+            // 
+            this.button_down.CheckedState.Parent = this.button_down;
+            this.button_down.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Animation.SetDecoration(this.button_down, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.button_down.HoverState.Parent = this.button_down;
+            this.button_down.Image = global::Number.Properties.Resources.slide_down;
+            this.button_down.Location = new System.Drawing.Point(5, 41);
+            this.button_down.Name = "button_down";
+            this.button_down.PressedState.Parent = this.button_down;
+            this.button_down.Size = new System.Drawing.Size(30, 30);
+            this.button_down.TabIndex = 14;
+            this.button_down.Click += new System.EventHandler(this.button_down_Click);
+            // 
+            // button_up
+            // 
+            this.button_up.CheckedState.Parent = this.button_up;
+            this.button_up.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Animation.SetDecoration(this.button_up, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.button_up.HoverState.Parent = this.button_up;
+            this.button_up.Image = global::Number.Properties.Resources.slide_up;
+            this.button_up.Location = new System.Drawing.Point(5, 5);
+            this.button_up.Name = "button_up";
+            this.button_up.PressedState.Parent = this.button_up;
+            this.button_up.Size = new System.Drawing.Size(30, 30);
+            this.button_up.TabIndex = 14;
+            this.button_up.Click += new System.EventHandler(this.button_up_Click);
+            // 
+            // button_limit
+            // 
+            this.button_limit.Animated = true;
+            this.button_limit.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button_limit.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.button_limit.CheckedState.BorderRadius = 2;
+            this.button_limit.CheckedState.BorderThickness = 0;
+            this.button_limit.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Animation.SetDecoration(this.button_limit, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.button_limit.Location = new System.Drawing.Point(17, 86);
+            this.button_limit.Name = "button_limit";
+            this.button_limit.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.button_limit.Size = new System.Drawing.Size(132, 31);
+            this.button_limit.TabIndex = 19;
+            this.button_limit.Text = "بدون محدودیت";
+            this.button_limit.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.button_limit.UncheckedState.BorderRadius = 2;
+            this.button_limit.UncheckedState.BorderThickness = 0;
+            this.button_limit.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.button_limit.UseVisualStyleBackColor = true;
+            this.button_limit.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
             // DataBase
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(10)))), ((int)(((byte)(27)))));
             this.ClientSize = new System.Drawing.Size(580, 519);
+            this.Controls.Add(this.button_limit);
+            this.Controls.Add(this.panel_Down);
             this.Controls.Add(this.ReturnBTN);
-            this.Controls.Add(this.infBox);
             this.Controls.Add(this.TextTB);
             this.Controls.Add(this.NameTB);
-            this.Controls.Add(this.Cancel);
-            this.Controls.Add(this.Save);
             this.Controls.Add(this.EditeBTN);
             this.Controls.Add(this.DeleteBTN);
             this.Controls.Add(this.SaveNumbers);
             this.Controls.Add(this.AddBTN);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.Number_data);
             this.Controls.Add(this.lenTB);
-            this.Controls.Add(this.ErrorText);
             this.Controls.Add(this.AddTitle);
             this.Animation.SetDecoration(this, Guna.UI2.AnimatorNS.DecorationType.None);
             this.Font = new System.Drawing.Font("Vazir", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -477,7 +539,9 @@ namespace Number
             this.Load += new System.EventHandler(this.DataBase_Load);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.NumberForm_MouseMove);
             ((System.ComponentModel.ISupportInitialize)(this.lenTB)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Number_data)).EndInit();
+            this.panel_Down.ResumeLayout(false);
+            this.panel_UpDown.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -493,7 +557,7 @@ namespace Number
         private Guna.UI2.WinForms.Guna2Button Save;
         private Guna.UI2.WinForms.Guna2Button DeleteBTN;
         private Guna.UI2.WinForms.Guna2Button EditeBTN;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView Number_data;
         private Guna.UI2.WinForms.Guna2Transition Animation;
         private System.Windows.Forms.Timer Time;
         private Guna.UI2.WinForms.Guna2Button SaveNumbers;
@@ -503,7 +567,11 @@ namespace Number
         private System.Windows.Forms.DataGridViewTextBoxColumn lenDB;
         private System.Windows.Forms.DataGridViewTextBoxColumn TextDB;
         private System.Windows.Forms.DataGridViewTextBoxColumn ValueDB;
-        private Guna.UI2.WinForms.Guna2CheckBox infBox;
         private Guna.UI2.WinForms.Guna2Button ReturnBTN;
+        private System.Windows.Forms.Panel panel_Down;
+        private Guna.UI2.WinForms.Guna2ImageButton button_up;
+        private Guna.UI2.WinForms.Guna2ImageButton button_down;
+        private System.Windows.Forms.Panel panel_UpDown;
+        private Guna.UI2.WinForms.Guna2CheckBox button_limit;
     }
 }

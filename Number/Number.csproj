@@ -67,8 +67,9 @@
   </PropertyGroup>
   <PropertyGroup />
   <ItemGroup>
-    <Reference Include="Guna.UI2">
-      <HintPath>..\..\Advanced Lock\Advanced Lock\bin\Debug\Guna.UI2.dll</HintPath>
+    <Reference Include="Guna.UI2, Version=2.0.0.6, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\Program\Library\Guna_UI_Framework_Ultimate_2.0.0.1_Downloadly.ir\Guna UI Framework Ultimate 2.0.0.1\Guna UI Framework Ultimate v2.0.0.1 Lib-Master\Guna.UI2 WinForms\.net 4.0\Guna.UI2.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="Microsoft.WindowsAPICodePack, Version=1.1.2.0, Culture=neutral, processorArchitecture=MSIL">
@@ -219,6 +220,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icons8_numbers.ico" />
+    <None Include="Resources\slide_up-black.png" />
+    <None Include="Resources\slide_down-black.png" />
+    <None Include="Resources\slide_down.png" />
+    <None Include="Resources\slide_up.png" />
     <None Include="Resources\collapse_arrow-black.png" />
     <None Include="Resources\collapse arrow.png" />
     <None Include="Resources\expand_arrow-black.png" />

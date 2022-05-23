@@ -155,7 +155,7 @@
         آیدی تلگرام:
         &lt;a href="https://t.me/rvyrbyhrc"&gt;https://t.me/rvyrbyhrc&lt;/a&gt;
         &lt;br&gt;
-        شما هم اکنون در حال استفاده از نسخه 2.0.0 نرم افزار هستید
+        شما هم اکنون در حال استفاده از نسخه 3.0.0 نرم افزار هستید
         &lt;br&gt;
         در ادامه شما را با ویژگی های این نرم افزار آشنا میکنیم
     &lt;/p&gt;
@@ -515,5 +515,17 @@
   </data>
   <data name="collapse_arrow_black" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\collapse_arrow-black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="slide_down" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\slide_down.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="slide_down_black" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\slide_down-black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="slide_up" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\slide_up.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="slide_up_black" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\slide_up-black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
