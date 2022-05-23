@@ -100,7 +100,9 @@ namespace Number
             this.TopMost = Settings.Default.AlwaysOT;
             this.Font = Settings.Default.AppFont;
             NameTB.Width = 195;
+            NameTB.PlaceholderText = "نام شمارنده";
             TextTB.Width = 195;
+            TextTB.PlaceholderText = "متن شمارنده";
             DataGridSet();
             dataClear();
         }
@@ -269,6 +271,7 @@ namespace Number
                         Number_data.Rows.Add(NameTB.Text, "نامحدود", TextTB.Text, "0");
                     }
                     else Number_data.Rows.Add(NameTB.Text, lenTB.Text, TextTB.Text, "0");
+                    NameTB.IconLeft = Resources.delete_red;
                 }
                 else
                 {
