@@ -77,6 +77,18 @@ namespace Number
                 Settings.Default.LightColor = true;
                 CkeckSettings();
             }
+            else if (RC.Value == 160 && GC.Value == 113 && BC.Value == 255)
+            {
+                RC.ThumbColor = Color.FromArgb(112, 79, 178);
+                GC.ThumbColor = Color.FromArgb(112, 79, 178);
+                BC.ThumbColor = Color.FromArgb(112, 79, 178);
+            }
+            else if (RC.Value == 112 && GC.Value == 79 && BC.Value == 178)
+            {
+                RC.ThumbColor = Color.FromArgb(160, 113, 255);
+                GC.ThumbColor = Color.FromArgb(160, 113, 255);
+                BC.ThumbColor = Color.FromArgb(160, 113, 255);
+            }
             else Settings.Default.LightColor = false; CkeckSettings();
         }
     }

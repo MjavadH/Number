@@ -1,7 +1,7 @@
-﻿using System;
+﻿using Number.Properties;
+using System;
 using System.Drawing;
 using System.Windows.Forms;
-using Number.Properties;
 
 namespace Number
 {
@@ -35,6 +35,6 @@ namespace Number
         }
         /*--------- Exit ---------*/
         private void button1_Click(object sender, EventArgs e)
-        {this.Close();}
+        { this.Close(); }
     }
 }
