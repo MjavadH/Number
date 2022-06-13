@@ -66,5 +66,4 @@ C:\Users\MyPC\Desktop\C# Code\Number\Number\obj\Release\Number.csproj.CoreCompil
 C:\Users\MyPC\Desktop\C# Code\Number\Number\obj\Release\Number.csproj.CopyComplete
 C:\Users\MyPC\Desktop\C# Code\Number\Number\obj\Release\Number.exe
 C:\Users\MyPC\Desktop\C# Code\Number\Number\obj\Release\Number.pdb
-C:\Users\MyPC\Desktop\C# Code\Number\Number\obj\Release\Number.csproj.AssemblyReference.cache
 C:\Users\MyPC\Desktop\C# Code\Number\Number\obj\Release\Number.ResetBox.resources
