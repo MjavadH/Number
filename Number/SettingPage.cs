@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
+using System.Xml;
 using Number.Properties;
 using static Number.Cdata;
 
@@ -46,6 +47,24 @@ namespace Number
                 player.Play();
             }
 
+        }
+
+        void Fill_ComboBox()
+        {
+            ComboBox_DefaultNum.Items.Clear();
+            try
+            {
+                DataXML.Load("Data.xml");
+                using (var NumberNodes = DataXML.SelectNodes("//Numbers/Number"))
+                {
+                    foreach (XmlNode NumberNode in NumberNodes)
+                    {
+                        string Name = NumberNode.Attributes["Name"].Value;
+                        ComboBox_DefaultNum.Items.Add(Name);
+                    }
+                }
+            }
+            catch (Exception) { Alert("خطا:فایل شمارنده ها حذف شده است!"); }
         }
         /*------------------ Func End ------------------*/
         private void SettingPage_Load(object sender, EventArgs e)
@@ -94,6 +113,8 @@ namespace Number
             DarkMode.Checked = Settings.Default.DefaultColor;
             fontDialog1.Font = Settings.Default.AppFont;
             SoundPlay.Checked = Settings.Default.Sound_EFX;
+            Fill_ComboBox();
+            ComboBox_DefaultNum.Text = Settings.Default.DefaultNumber;
             if (Settings.Default.Sound_EFX)
             {
                 SoundSetting_BTN.Visible = true;
@@ -154,6 +175,7 @@ namespace Number
             Settings.Default.AppFont = fontDialog1.Font;
             Settings.Default.Counter = Counter_Value.Value.ToString();
             Settings.Default.Sound_EFX = SoundPlay.Checked;
+            Settings.Default.DefaultNumber = ComboBox_DefaultNum.Text;
             Settings.Default.Save();
             this.Close();
         }

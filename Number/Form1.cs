@@ -118,6 +118,11 @@ namespace Number
                 Settings.Default.Save();
                 Alert("به علت خطای غیر منتظره شمارنده ها به حالت اولیه برگشتند");
             }
+            else
+            {
+                Fill_Number_combo();
+                DropDown.Text = Settings.Default.DefaultNumber;
+            }
         }
         private void AddT() 
         {
@@ -198,11 +203,29 @@ namespace Number
         {
             this.Size = new Size(NumberT.Size.Width, NumberT.Size.Height + Show_Text_BTN.Height);
         }
+        private void Fill_Number_combo()
+        {
+            DropDown.Items.Clear();
+            try
+            {
+                DataXML.Load("Data.xml");
+                using (var NumberNodes = DataXML.SelectNodes("//Numbers/Number"))
+                {
+                    foreach (XmlNode NumberNode in NumberNodes)
+                    {
+                        string Name = NumberNode.Attributes["Name"].Value;
+                        DropDown.Items.Add(Name);
+                    }
+                }
+            }
+            catch (Exception) { Alert("خطا:فایل شمارنده ها بارگذاری نشد!"); }
+        }
         /*------------------ func End ------------------*/
         private void Form1_Load(object sender, EventArgs e)
         {
             setting_check();
             Cdata.CreateNew();
+            File.Exists("Data.xml");
         }
         private void NumberForm_Activated(object sender, EventArgs e)
         {
@@ -412,20 +435,7 @@ namespace Number
         private void DropDown_Click(object sender, EventArgs e)
         {
             string lastD = DropDown.Text;
-            DropDown.Items.Clear();
-            try
-            {
-                DataXML.Load("Data.xml");
-                using (var NumberNodes = DataXML.SelectNodes("//Numbers/Number"))
-                {
-                    foreach (XmlNode NumberNode in NumberNodes)
-                    {
-                        string Name = NumberNode.Attributes["Name"].Value;
-                        DropDown.Items.Add(Name);
-                    }
-                }
-            }
-            catch (Exception){ Alert("خطا:لطفا برنامه را بسته و مجدد باز نمایید!"); }
+            Fill_Number_combo();
             DropDown.Text = lastD;
         }
         /*------------------ DropDown End ------------------*/

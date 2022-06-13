@@ -37,7 +37,6 @@ namespace Number
             this.guna2ResizeForm1 = new Guna.UI2.WinForms.Guna2ResizeForm(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.HelpText = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.ScrollBar_Help = new Guna.UI2.WinForms.Guna2VScrollBar();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -79,7 +78,6 @@ namespace Number
             // panel1
             // 
             this.panel1.AutoScroll = true;
-            this.panel1.Controls.Add(this.ScrollBar_Help);
             this.panel1.Controls.Add(this.HelpText);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 35);
@@ -102,21 +100,6 @@ namespace Number
             this.HelpText.Text = resources.GetString("HelpText.Text");
             this.HelpText.TextAlignment = System.Drawing.ContentAlignment.TopRight;
             this.HelpText.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAliasGridFit;
-            // 
-            // ScrollBar_Help
-            // 
-            this.ScrollBar_Help.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
-            this.ScrollBar_Help.HoverState.Parent = null;
-            this.ScrollBar_Help.LargeChange = 10;
-            this.ScrollBar_Help.Location = new System.Drawing.Point(13, 32);
-            this.ScrollBar_Help.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.ScrollBar_Help.MouseWheelBarPartitions = 10;
-            this.ScrollBar_Help.Name = "ScrollBar_Help";
-            this.ScrollBar_Help.PressedState.Parent = this.ScrollBar_Help;
-            this.ScrollBar_Help.ScrollbarSize = 18;
-            this.ScrollBar_Help.Size = new System.Drawing.Size(18, 300);
-            this.ScrollBar_Help.TabIndex = 16;
-            this.ScrollBar_Help.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(152)))), ((int)(((byte)(166)))));
             // 
             // HelpPage
             // 
@@ -149,6 +132,5 @@ namespace Number
         private Guna.UI2.WinForms.Guna2ResizeForm guna2ResizeForm1;
         private System.Windows.Forms.Panel panel1;
         private Guna.UI2.WinForms.Guna2HtmlLabel HelpText;
-        private Guna.UI2.WinForms.Guna2VScrollBar ScrollBar_Help;
     }
 }

@@ -226,5 +226,17 @@ namespace Number.Properties {
                 this["LightColor"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string DefaultNumber {
+            get {
+                return ((string)(this["DefaultNumber"]));
+            }
+            set {
+                this["DefaultNumber"] = value;
+            }
+        }
     }
 }

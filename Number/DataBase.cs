@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
 using System.Xml;
@@ -391,12 +392,39 @@ namespace Number
         /*--------- Move up & down btn  ---------*/
         private void button_up_Click(object sender, EventArgs e)
         {
+            indexR = Number_data.CurrentCell.RowIndex;
+            if (indexR > 0)
+            {
+                Number_data.Rows.InsertCopy(indexR, indexR - 1);
+
+                Number_data.Rows[indexR - 1].Cells[0].Value = Number_data.Rows[indexR + 1].Cells[0].Value;
+                Number_data.Rows[indexR - 1].Cells[1].Value = Number_data.Rows[indexR + 1].Cells[1].Value;
+                Number_data.Rows[indexR - 1].Cells[2].Value = Number_data.Rows[indexR + 1].Cells[2].Value;
+                Number_data.Rows[indexR - 1].Cells[3].Value = Number_data.Rows[indexR + 1].Cells[3].Value;
+
+                Number_data.Rows.RemoveAt(indexR + 1);
+                Number_data.ClearSelection();
+                Error("");
+            }
 
         }
 
         private void button_down_Click(object sender, EventArgs e)
         {
+            indexR = Number_data.CurrentCell.RowIndex;
+            if (indexR < Number_data.Rows.Count -1)
+            {
+                Number_data.Rows.InsertCopy(indexR, indexR + 2);
 
+                Number_data.Rows[indexR + 2].Cells[0].Value = Number_data.Rows[indexR].Cells[0].Value;
+                Number_data.Rows[indexR + 2].Cells[1].Value = Number_data.Rows[indexR].Cells[1].Value;
+                Number_data.Rows[indexR + 2].Cells[2].Value = Number_data.Rows[indexR].Cells[2].Value;
+                Number_data.Rows[indexR + 2].Cells[3].Value = Number_data.Rows[indexR].Cells[3].Value;
+
+                Number_data.Rows.RemoveAt(indexR);
+                Number_data.ClearSelection();
+                Error("");
+            }
         }
         /*------------------  BTN End ------------------*/
     }

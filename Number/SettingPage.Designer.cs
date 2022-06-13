@@ -30,7 +30,7 @@ namespace Number
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Guna.UI2.AnimatorNS.Animation animation1 = new Guna.UI2.AnimatorNS.Animation();
+            Guna.UI2.AnimatorNS.Animation animation5 = new Guna.UI2.AnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SettingPage));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -66,6 +66,8 @@ namespace Number
             this.Sound4 = new Guna.UI2.WinForms.Guna2RadioButton();
             this.Sound3 = new Guna.UI2.WinForms.Guna2RadioButton();
             this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.ComboBox_DefaultNum = new Guna.UI2.WinForms.Guna2ComboBox();
             this.panelReset.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Counter_Value)).BeginInit();
             this.Reset_YN_Panel.SuspendLayout();
@@ -123,9 +125,9 @@ namespace Number
             this.label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ResetNAni.SetDecoration(this.label4, Guna.UI2.AnimatorNS.DecorationType.None);
             this.label4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label4.Location = new System.Drawing.Point(0, 270);
+            this.label4.Location = new System.Drawing.Point(0, 287);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(564, 98);
+            this.label4.Size = new System.Drawing.Size(564, 81);
             this.label4.TabIndex = 8;
             this.label4.Text = "متن نمونه تست فونت\r\n123456789";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -428,9 +430,9 @@ namespace Number
             this.Reset_YN_Panel.Controls.Add(this.Yes_Reset);
             this.Reset_YN_Panel.Controls.Add(this.No_Reset);
             this.ResetNAni.SetDecoration(this.Reset_YN_Panel, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.Reset_YN_Panel.Location = new System.Drawing.Point(1, 270);
+            this.Reset_YN_Panel.Location = new System.Drawing.Point(1, 287);
             this.Reset_YN_Panel.Name = "Reset_YN_Panel";
-            this.Reset_YN_Panel.Size = new System.Drawing.Size(563, 98);
+            this.Reset_YN_Panel.Size = new System.Drawing.Size(563, 81);
             this.Reset_YN_Panel.TabIndex = 17;
             this.Reset_YN_Panel.Visible = false;
             // 
@@ -496,22 +498,22 @@ namespace Number
             // 
             this.ResetNAni.AnimationType = Guna.UI2.AnimatorNS.AnimationType.Leaf;
             this.ResetNAni.Cursor = null;
-            animation1.AnimateOnlyDifferences = true;
-            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
-            animation1.LeafCoeff = 1F;
-            animation1.MaxTime = 1F;
-            animation1.MinTime = 0F;
-            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
-            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
-            animation1.MosaicSize = 0;
-            animation1.Padding = new System.Windows.Forms.Padding(0);
-            animation1.RotateCoeff = 0F;
-            animation1.RotateLimit = 0F;
-            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
-            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
-            animation1.TimeCoeff = 0F;
-            animation1.TransparencyCoeff = 0F;
-            this.ResetNAni.DefaultAnimation = animation1;
+            animation5.AnimateOnlyDifferences = true;
+            animation5.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.BlindCoeff")));
+            animation5.LeafCoeff = 1F;
+            animation5.MaxTime = 1F;
+            animation5.MinTime = 0F;
+            animation5.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.MosaicCoeff")));
+            animation5.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation5.MosaicShift")));
+            animation5.MosaicSize = 0;
+            animation5.Padding = new System.Windows.Forms.Padding(0);
+            animation5.RotateCoeff = 0F;
+            animation5.RotateLimit = 0F;
+            animation5.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.ScaleCoeff")));
+            animation5.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.SlideCoeff")));
+            animation5.TimeCoeff = 0F;
+            animation5.TransparencyCoeff = 0F;
+            this.ResetNAni.DefaultAnimation = animation5;
             // 
             // label8
             // 
@@ -583,9 +585,9 @@ namespace Number
             this.panelSound.Controls.Add(this.Sound3);
             this.panelSound.Controls.Add(this.label9);
             this.ResetNAni.SetDecoration(this.panelSound, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.panelSound.Location = new System.Drawing.Point(1, 269);
+            this.panelSound.Location = new System.Drawing.Point(1, 286);
             this.panelSound.Name = "panelSound";
-            this.panelSound.Size = new System.Drawing.Size(563, 98);
+            this.panelSound.Size = new System.Drawing.Size(563, 81);
             this.panelSound.TabIndex = 18;
             this.panelSound.Visible = false;
             // 
@@ -715,14 +717,49 @@ namespace Number
             this.label9.Text = "انتخاب جلوه های صوتی";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.ResetNAni.SetDecoration(this.label10, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.label10.Location = new System.Drawing.Point(430, 252);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(123, 26);
+            this.label10.TabIndex = 18;
+            this.label10.Text = "شمارنده پیشفرض";
+            // 
+            // ComboBox_DefaultNum
+            // 
+            this.ComboBox_DefaultNum.Animated = true;
+            this.ComboBox_DefaultNum.AutoRoundedCorners = true;
+            this.ComboBox_DefaultNum.BackColor = System.Drawing.Color.Transparent;
+            this.ComboBox_DefaultNum.BorderRadius = 17;
+            this.ResetNAni.SetDecoration(this.ComboBox_DefaultNum, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.ComboBox_DefaultNum.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.ComboBox_DefaultNum.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ComboBox_DefaultNum.FocusedColor = System.Drawing.Color.Empty;
+            this.ComboBox_DefaultNum.FocusedState.Parent = this.ComboBox_DefaultNum;
+            this.ComboBox_DefaultNum.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.ComboBox_DefaultNum.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.ComboBox_DefaultNum.FormattingEnabled = true;
+            this.ComboBox_DefaultNum.HoverState.Parent = this.ComboBox_DefaultNum;
+            this.ComboBox_DefaultNum.ItemHeight = 30;
+            this.ComboBox_DefaultNum.ItemsAppearance.Parent = this.ComboBox_DefaultNum;
+            this.ComboBox_DefaultNum.Location = new System.Drawing.Point(286, 248);
+            this.ComboBox_DefaultNum.Name = "ComboBox_DefaultNum";
+            this.ComboBox_DefaultNum.ShadowDecoration.Parent = this.ComboBox_DefaultNum;
+            this.ComboBox_DefaultNum.Size = new System.Drawing.Size(140, 36);
+            this.ComboBox_DefaultNum.TabIndex = 19;
+            // 
             // SettingPage
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(10)))), ((int)(((byte)(27)))));
             this.ClientSize = new System.Drawing.Size(565, 444);
+            this.Controls.Add(this.ComboBox_DefaultNum);
             this.Controls.Add(this.panelSound);
             this.Controls.Add(this.Reset_YN_Panel);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.FontCBTN);
@@ -800,5 +837,7 @@ namespace Number
         private Guna.UI2.WinForms.Guna2RadioButton Sound2;
         private Guna.UI2.WinForms.Guna2RadioButton Sound4;
         private Guna.UI2.WinForms.Guna2RadioButton Sound5;
+        private Guna.UI2.WinForms.Guna2ComboBox ComboBox_DefaultNum;
+        private System.Windows.Forms.Label label10;
     }
 }

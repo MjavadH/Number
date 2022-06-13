@@ -30,8 +30,8 @@ namespace Number
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            Guna.UI2.AnimatorNS.Animation animation5 = new Guna.UI2.AnimatorNS.Animation();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            Guna.UI2.AnimatorNS.Animation animation1 = new Guna.UI2.AnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DataBase));
             this.AddTitle = new System.Windows.Forms.Label();
             this.ErrorText = new System.Windows.Forms.Label();
@@ -119,8 +119,8 @@ namespace Number
             this.Number_data.AllowUserToAddRows = false;
             this.Number_data.AllowUserToDeleteRows = false;
             this.Number_data.AllowUserToResizeRows = false;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.Number_data.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.Number_data.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.Number_data.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.Number_data.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.Number_data.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -309,22 +309,22 @@ namespace Number
             // 
             this.Animation.AnimationType = Guna.UI2.AnimatorNS.AnimationType.Transparent;
             this.Animation.Cursor = null;
-            animation5.AnimateOnlyDifferences = true;
-            animation5.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.BlindCoeff")));
-            animation5.LeafCoeff = 0F;
-            animation5.MaxTime = 1F;
-            animation5.MinTime = 0F;
-            animation5.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.MosaicCoeff")));
-            animation5.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation5.MosaicShift")));
-            animation5.MosaicSize = 0;
-            animation5.Padding = new System.Windows.Forms.Padding(0);
-            animation5.RotateCoeff = 0F;
-            animation5.RotateLimit = 0F;
-            animation5.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.ScaleCoeff")));
-            animation5.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.SlideCoeff")));
-            animation5.TimeCoeff = 0F;
-            animation5.TransparencyCoeff = 1F;
-            this.Animation.DefaultAnimation = animation5;
+            animation1.AnimateOnlyDifferences = true;
+            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
+            animation1.LeafCoeff = 0F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
+            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
+            animation1.MosaicSize = 0;
+            animation1.Padding = new System.Windows.Forms.Padding(0);
+            animation1.RotateCoeff = 0F;
+            animation1.RotateLimit = 0F;
+            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
+            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
+            animation1.TimeCoeff = 0F;
+            animation1.TransparencyCoeff = 1F;
+            this.Animation.DefaultAnimation = animation1;
             // 
             // SaveNumbers
             // 
@@ -376,7 +376,7 @@ namespace Number
             this.NameTB.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.NameTB.SelectedText = "";
             this.NameTB.ShadowDecoration.Parent = this.NameTB;
-            this.NameTB.Size = new System.Drawing.Size(1374, 38);
+            this.NameTB.Size = new System.Drawing.Size(1992, 38);
             this.NameTB.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.NameTB.TabIndex = 14;
             this.NameTB.TextChanged += new System.EventHandler(this.NameTB_TextChanged);
@@ -407,7 +407,7 @@ namespace Number
             this.TextTB.PlaceholderText = "متن شمارنده";
             this.TextTB.SelectedText = "";
             this.TextTB.ShadowDecoration.Parent = this.TextTB;
-            this.TextTB.Size = new System.Drawing.Size(1374, 38);
+            this.TextTB.Size = new System.Drawing.Size(1992, 38);
             this.TextTB.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.TextTB.TabIndex = 14;
             // 
