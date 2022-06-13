@@ -112,17 +112,6 @@ namespace Number
             {
                 NumberT.Font = new Font(Settings.Default.AppFont.Name, 35);
             }
-            if (Settings.Default.UpdateData)
-            {
-                Settings.Default.UpdateData = false;
-                Settings.Default.Save();
-                Alert("به علت خطای غیر منتظره شمارنده ها به حالت اولیه برگشتند");
-            }
-            else
-            {
-                Fill_Number_combo();
-                DropDown.Text = Settings.Default.DefaultNumber;
-            }
         }
         private void AddT() 
         {
@@ -178,16 +167,13 @@ namespace Number
                 }
                 catch (Exception)
                 {
-                    Alert("خطا:امکان شمارش وجود ندارد لطفا برنامه را بسته و مجدد باز نمایید");
                     if (counter_Timer.Enabled)
                     {
                         counter_Timer.Stop();
                     }
                     try
                     {
-                        File.Delete("Data.xml");
-                        Settings.Default.UpdateData = true;
-                        Settings.Default.Save();
+                        new ResetBox().ShowDialog();
                     }
                     catch (Exception)
                     {}
@@ -218,14 +204,18 @@ namespace Number
                     }
                 }
             }
-            catch (Exception) { Alert("خطا:فایل شمارنده ها بارگذاری نشد!"); }
+            catch (Exception) { new ResetBox().ShowDialog(); }
         }
         /*------------------ func End ------------------*/
         private void Form1_Load(object sender, EventArgs e)
         {
             setting_check();
             Cdata.CreateNew();
-            File.Exists("Data.xml");
+            Fill_Number_combo();
+            if (!string.IsNullOrEmpty(Settings.Default.DefaultNumber))
+            {
+                DropDown.Text = Settings.Default.DefaultNumber;
+            }
         }
         private void NumberForm_Activated(object sender, EventArgs e)
         {
@@ -430,7 +420,7 @@ namespace Number
 
                 }
             }
-            catch (Exception){ Alert("خطا:لطفا برنامه را بسته و مجدد باز نمایید!"); }
+            catch (Exception){ new ResetBox().ShowDialog(); }
         }
         private void DropDown_Click(object sender, EventArgs e)
         {

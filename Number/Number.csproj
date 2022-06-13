@@ -141,12 +141,19 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="ResetBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ResetBox.Designer.cs">
+      <DependentUpon>ResetBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="SettingPage.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="SettingPage.Designer.cs">
       <DependentUpon>SettingPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="Settings.cs" />
     <Compile Include="ShortKey.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -178,6 +185,9 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResetBox.resx">
+      <DependentUpon>ResetBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SettingPage.resx">
       <DependentUpon>SettingPage.cs</DependentUpon>

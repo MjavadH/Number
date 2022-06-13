@@ -58,6 +58,7 @@ C:\Users\MyPC\Desktop\C# Code\Number\Number\obj\Debug\Number.DataBase.resources
 C:\Users\MyPC\Desktop\C# Code\Number\Number\obj\Debug\Number.NumberForm.resources
 C:\Users\MyPC\Desktop\C# Code\Number\Number\obj\Debug\Number.HelpPage.resources
 C:\Users\MyPC\Desktop\C# Code\Number\Number\obj\Debug\Number.Properties.Resources.resources
+C:\Users\MyPC\Desktop\C# Code\Number\Number\obj\Debug\Number.ResetBox.resources
 C:\Users\MyPC\Desktop\C# Code\Number\Number\obj\Debug\Number.SettingPage.resources
 C:\Users\MyPC\Desktop\C# Code\Number\Number\obj\Debug\Number.ShortKey.resources
 C:\Users\MyPC\Desktop\C# Code\Number\Number\obj\Debug\Number.SplashScreen.resources
