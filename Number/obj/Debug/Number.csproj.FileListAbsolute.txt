@@ -67,3 +67,4 @@ C:\Users\MyPC\Desktop\C# Code\Number\Number\obj\Debug\Number.csproj.CoreCompileI
 C:\Users\MyPC\Desktop\C# Code\Number\Number\obj\Debug\Number.csproj.CopyComplete
 C:\Users\MyPC\Desktop\C# Code\Number\Number\obj\Debug\Number.exe
 C:\Users\MyPC\Desktop\C# Code\Number\Number\obj\Debug\Number.pdb
+C:\Users\MyPC\Desktop\C# Code\Number\Number\obj\Debug\Number.csproj.AssemblyReference.cache
