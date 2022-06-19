@@ -30,7 +30,7 @@ namespace Number
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Guna.UI2.AnimatorNS.Animation animation5 = new Guna.UI2.AnimatorNS.Animation();
+            Guna.UI2.AnimatorNS.Animation animation1 = new Guna.UI2.AnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SettingPage));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -439,10 +439,10 @@ namespace Number
             // label5
             // 
             this.ResetNAni.SetDecoration(this.label5, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.label5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label5.Location = new System.Drawing.Point(0, 0);
+            this.label5.Dock = System.Windows.Forms.DockStyle.Right;
+            this.label5.Location = new System.Drawing.Point(277, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(561, 39);
+            this.label5.Size = new System.Drawing.Size(284, 79);
             this.label5.TabIndex = 0;
             this.label5.Text = "آیا از کار خود اطمینان دارید؟";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -463,7 +463,7 @@ namespace Number
             this.Yes_Reset.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.Yes_Reset.HoverState.Parent = this.Yes_Reset;
             this.Yes_Reset.Image = global::Number.Properties.Resources.checkmark;
-            this.Yes_Reset.Location = new System.Drawing.Point(134, 42);
+            this.Yes_Reset.Location = new System.Drawing.Point(6, 22);
             this.Yes_Reset.Name = "Yes_Reset";
             this.Yes_Reset.ShadowDecoration.Parent = this.Yes_Reset;
             this.Yes_Reset.Size = new System.Drawing.Size(114, 41);
@@ -486,7 +486,7 @@ namespace Number
             this.No_Reset.ForeColor = System.Drawing.Color.White;
             this.No_Reset.HoverState.Parent = this.No_Reset;
             this.No_Reset.Image = global::Number.Properties.Resources.delete;
-            this.No_Reset.Location = new System.Drawing.Point(306, 42);
+            this.No_Reset.Location = new System.Drawing.Point(153, 22);
             this.No_Reset.Name = "No_Reset";
             this.No_Reset.ShadowDecoration.Parent = this.No_Reset;
             this.No_Reset.Size = new System.Drawing.Size(118, 41);
@@ -498,22 +498,22 @@ namespace Number
             // 
             this.ResetNAni.AnimationType = Guna.UI2.AnimatorNS.AnimationType.Leaf;
             this.ResetNAni.Cursor = null;
-            animation5.AnimateOnlyDifferences = true;
-            animation5.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.BlindCoeff")));
-            animation5.LeafCoeff = 1F;
-            animation5.MaxTime = 1F;
-            animation5.MinTime = 0F;
-            animation5.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.MosaicCoeff")));
-            animation5.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation5.MosaicShift")));
-            animation5.MosaicSize = 0;
-            animation5.Padding = new System.Windows.Forms.Padding(0);
-            animation5.RotateCoeff = 0F;
-            animation5.RotateLimit = 0F;
-            animation5.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.ScaleCoeff")));
-            animation5.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.SlideCoeff")));
-            animation5.TimeCoeff = 0F;
-            animation5.TransparencyCoeff = 0F;
-            this.ResetNAni.DefaultAnimation = animation5;
+            animation1.AnimateOnlyDifferences = true;
+            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
+            animation1.LeafCoeff = 1F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
+            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
+            animation1.MosaicSize = 0;
+            animation1.Padding = new System.Windows.Forms.Padding(0);
+            animation1.RotateCoeff = 0F;
+            animation1.RotateLimit = 0F;
+            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
+            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
+            animation1.TimeCoeff = 0F;
+            animation1.TransparencyCoeff = 0F;
+            this.ResetNAni.DefaultAnimation = animation1;
             // 
             // label8
             // 
@@ -758,7 +758,6 @@ namespace Number
             this.ClientSize = new System.Drawing.Size(565, 444);
             this.Controls.Add(this.ComboBox_DefaultNum);
             this.Controls.Add(this.panelSound);
-            this.Controls.Add(this.Reset_YN_Panel);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label4);
@@ -778,6 +777,7 @@ namespace Number
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.Reset_YN_Panel);
             this.ResetNAni.SetDecoration(this, Guna.UI2.AnimatorNS.DecorationType.None);
             this.Font = new System.Drawing.Font("Vazir", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.White;
