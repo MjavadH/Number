@@ -30,6 +30,7 @@ namespace Number
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AlertBox));
             this.AlertText = new System.Windows.Forms.Label();
             this.closebtn = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
@@ -72,11 +73,13 @@ namespace Number
             this.Font = new System.Drawing.Font("Vazir", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.Name = "AlertBox";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.ShowInTaskbar = false;
             this.Text = "AlertBox";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.AlertBox_Load);
             this.ResumeLayout(false);
 
