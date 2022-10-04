@@ -238,5 +238,17 @@ namespace Number.Properties {
                 this["DefaultNumber"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string Color_History {
+            get {
+                return ((string)(this["Color_History"]));
+            }
+            set {
+                this["Color_History"] = value;
+            }
+        }
     }
 }

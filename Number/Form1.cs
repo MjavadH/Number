@@ -304,8 +304,15 @@ namespace Number
         /*----- Decompress -----*/
         private void NumberT_DoubleClick(object sender, EventArgs e)
         {
+
             Show_Text_BTN.Visible = false;
+            Show_Text_BTN.Checked = false;
+            if (Settings.Default.LightColor) Show_Text_BTN.Image = Resources.expand_arrow_black;
+            else Show_Text_BTN.Image = Resources.expand_arrow;
+            Show_Text_BTN.Text = "";
+            Show_Text_BTN.Height = 20;
             Show_Text_BTN.Dock = DockStyle.None;
+
             NumberT.Select();
             NumberT.AutoSize = false;
             NumberT.Dock = DockStyle.Bottom;

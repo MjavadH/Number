@@ -97,6 +97,18 @@ namespace Number
                 Save.Image = Resources.save_black;
                 button_up.Image = Resources.slide_up_black;
                 button_down.Image = Resources.slide_down_black;
+                if (this.BackColor.R >= 250 && this.BackColor.G >= 250 && this.BackColor.B >= 250)
+                {
+                    TextTB.FillColor = Color.FromArgb(20, 25, 33);
+                    TextTB.ForeColor = Color.FromArgb(250, 250, 250);
+                    TextTB.BorderColor = Color.Black;
+                    NameTB.FillColor = Color.FromArgb(20, 25, 33);
+                    NameTB.ForeColor = Color.FromArgb(250, 250, 250);
+                    NameTB.BorderColor = Color.Black;
+                    lenTB.BackColor = Color.FromArgb(20, 25, 33);
+                    lenTB.ForeColor = Color.White;
+                }
+                
             }
             this.TopMost = Settings.Default.AlwaysOT;
             this.Font = Settings.Default.AppFont;

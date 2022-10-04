@@ -2,7 +2,9 @@
 using System.Drawing;
 using System.Windows.Forms;
 using Number.Properties;
-
+using Guna.UI2.WinForms;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Number
 {
@@ -12,17 +14,31 @@ namespace Number
         {InitializeComponent();}
         void CkeckSettings()
         {
+            Guna2CircleButton[] BTN_Color_list = { BTN_Color_1, BTN_Color_2, BTN_Color_3, BTN_Color_4, BTN_Color_5, BTN_Color_6, BTN_Color_7, BTN_Color_8 };
+
+            if (RC.Value >= 180 && GC.Value >= 180 && BC.Value >= 180) Settings.Default.LightColor = true;
+            else Settings.Default.LightColor = false;
+
             if (Settings.Default.LightColor)
             {
                 this.ForeColor = Color.Black;
                 CancelBTN.ForeColor = Color.Black;
                 CancelBTN.Image = Resources.exit_black;
+                foreach (var BTN in BTN_Color_list)
+                {
+                    BTN.BorderColor = Color.Black;
+                }
+
             }
             else
             {
                 this.ForeColor = Color.White;
                 CancelBTN.ForeColor = Color.White;
                 CancelBTN.Image = Resources.exit;
+                foreach (var BTN in BTN_Color_list)
+                {
+                    BTN.BorderColor = Color.White;
+                }
             }
         }
         private void ColorPick_Load(object sender, EventArgs e)
@@ -40,6 +56,38 @@ namespace Number
             RT.Text = "مقدار رنگ قرمز: " + RC.Value;
             GT.Text = "مقدار رنگ سبز: " + GC.Value;
             BT.Text = "مقدار رنگ آبی: " + BC.Value;
+
+            if (!string.IsNullOrEmpty(Settings.Default.Color_History))
+            {
+                IList<string> Color_History = new List<string> { };
+                string[] Colors = Settings.Default.Color_History.Split('\n');
+
+                for (int i = 0; i < Colors.Length -1; i++)
+                {
+                    Color_History.Add(Colors[i]);
+                }
+
+                Color_History = Color_History.Distinct(StringComparer.InvariantCultureIgnoreCase).ToList();
+
+                foreach (var color in Color_History)
+                {
+                   
+                    Guna2CircleButton circleButton = new Guna2CircleButton();
+                    circleButton.Name = "BTN_" + new Random().Next();
+                    circleButton.Size = new Size(25, 25);
+                    circleButton.FillColor = Color.FromArgb(int.Parse(color.Split(',')[0]), int.Parse(color.Split(',')[1]), int.Parse(color.Split(',')[2]));
+                    circleButton.Text = "";
+                    circleButton.Click += BTN_Color_Click;
+                    Panel_History_Colors.Controls.Add(circleButton);
+                }
+
+            }
+
+            CkeckSettings();
+        }
+        void Refresh_Color()
+        {
+            this.BackColor = Color.FromArgb(RC.Value, GC.Value, BC.Value);
             CkeckSettings();
         }
         /*------------------ Move Form Start ------------------*/
@@ -59,16 +107,33 @@ namespace Number
         }
         /*------------------ Move Form End ------------------*/
         /*--------- Exit ---------*/
-        private void CancelBTN_Click(object sender, EventArgs e)
+        private void ExitBTN_Click(object sender, EventArgs e)
         {
             Settings.Default.Theme = this.BackColor;
+            Settings.Default.Color_History += this.BackColor.R +"," + this.BackColor.G + "," + this.BackColor.B + "\n";
+            if (!string.IsNullOrEmpty(Settings.Default.Color_History))
+            {
+                IList<string> Color_History = new List<string> { };
+                string[] Colors = Settings.Default.Color_History.Split('\n');
+
+                for (int i = 0; i < Colors.Length - 1; i++)
+                {
+                    Color_History.Add(Colors[i]);
+                }
+                Color_History = Color_History.Distinct(StringComparer.InvariantCultureIgnoreCase).ToList();
+                Settings.Default.Color_History = "";
+                foreach (var item in Color_History)
+                {
+                    Settings.Default.Color_History += item + "\n";
+                }
+            }
             Settings.Default.Save();
             this.Close();
         }
         /*--------- Set Color ---------*/
         private void RC_Scroll(object sender, ScrollEventArgs e)
         {
-            this.BackColor = Color.FromArgb(RC.Value, GC.Value, BC.Value);
+            Refresh_Color();
             RT.Text = "مقدار رنگ قرمز: " + RC.Value;
             GT.Text = "مقدار رنگ سبز: " + GC.Value;
             BT.Text = "مقدار رنگ آبی: " + BC.Value;
@@ -90,6 +155,15 @@ namespace Number
                 BC.ThumbColor = Color.FromArgb(160, 113, 255);
             }
             else Settings.Default.LightColor = false; CkeckSettings();
+        }
+
+        private void BTN_Color_Click(object sender, EventArgs e)
+        {
+            Guna2CircleButton ColorBTN = (Guna2CircleButton)sender;
+            RC.Value = ColorBTN.FillColor.R;
+            GC.Value = ColorBTN.FillColor.G;
+            BC.Value = ColorBTN.FillColor.B;
+            Refresh_Color();
         }
     }
 }
