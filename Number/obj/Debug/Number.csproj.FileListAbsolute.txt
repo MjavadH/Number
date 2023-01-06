@@ -92,3 +92,5 @@ E:\Program\C# Code\Number\Number\obj\Debug\Number.csproj.CoreCompileInputs.cache
 E:\Program\C# Code\Number\Number\obj\Debug\Number.csproj.CopyComplete
 E:\Program\C# Code\Number\Number\obj\Debug\Number.exe
 E:\Program\C# Code\Number\Number\obj\Debug\Number.pdb
+E:\Program\C# Code\Number\Number\obj\Debug\Number.ColorPickerBox.resources
+E:\Program\C# Code\Number\Number\obj\Debug\Number.ColorPicker.ColorPicker.resources

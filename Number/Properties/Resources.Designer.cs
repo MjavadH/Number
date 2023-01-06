@@ -183,6 +183,26 @@ namespace Number.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap color_dropper {
+            get {
+                object obj = ResourceManager.GetObject("color_dropper", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap color_dropper_black {
+            get {
+                object obj = ResourceManager.GetObject("color_dropper_black", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap compress {
             get {
                 object obj = ResourceManager.GetObject("compress", resourceCulture);
@@ -767,6 +787,26 @@ namespace Number.Properties {
         public static System.Drawing.Bitmap undo_black {
             get {
                 object obj = ResourceManager.GetObject("undo_black", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap wallpaper {
+            get {
+                object obj = ResourceManager.GetObject("wallpaper", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap wallpaper_black {
+            get {
+                object obj = ResourceManager.GetObject("wallpaper_black", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

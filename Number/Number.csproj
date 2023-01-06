@@ -116,6 +116,18 @@
     <Compile Include="ColorPick.Designer.cs">
       <DependentUpon>ColorPick.cs</DependentUpon>
     </Compile>
+    <Compile Include="ColorPicker\ColorPickerBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ColorPicker\ColorPickerBox.Designer.cs">
+      <DependentUpon>ColorPickerBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ColorPicker\ColorPicker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ColorPicker\ColorPicker.Designer.cs">
+      <DependentUpon>ColorPicker.cs</DependentUpon>
+    </Compile>
     <Compile Include="DataBase.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -153,7 +165,6 @@
     <Compile Include="SettingPage.Designer.cs">
       <DependentUpon>SettingPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="Settings.cs" />
     <Compile Include="ShortKey.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -171,6 +182,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ColorPick.resx">
       <DependentUpon>ColorPick.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ColorPicker\ColorPickerBox.resx">
+      <DependentUpon>ColorPickerBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ColorPicker\ColorPicker.resx">
+      <DependentUpon>ColorPicker.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DataBase.resx">
       <DependentUpon>DataBase.cs</DependentUpon>
@@ -230,6 +247,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icons8_numbers.ico" />
+    <None Include="Resources\wallpaper_black.png" />
+    <None Include="Resources\wallpaper.png" />
+    <None Include="Resources\color dropper.png" />
+    <None Include="Resources\color dropper_black.png" />
     <None Include="Resources\slide_up-black.png" />
     <None Include="Resources\slide_down-black.png" />
     <None Include="Resources\slide_down.png" />
@@ -277,5 +298,6 @@
     <None Include="Resources\return.png" />
     <None Include="Resources\numbers.ico" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

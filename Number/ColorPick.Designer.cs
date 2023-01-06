@@ -31,31 +31,175 @@ namespace Number
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ColorPick));
+            this.Border_radius = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.Panel_History_Colors = new System.Windows.Forms.FlowLayoutPanel();
+            this.BTN_ColorPicker = new Guna.UI2.WinForms.Guna2Button();
+            this.TextBox_ColorHex = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label_Sharp = new System.Windows.Forms.Label();
+            this.Panel_Exit = new System.Windows.Forms.Panel();
+            this.Save_BTN = new Guna.UI2.WinForms.Guna2Button();
+            this.Cancel_BTN = new Guna.UI2.WinForms.Guna2Button();
+            this.panel_ColorBox = new System.Windows.Forms.Panel();
             this.RT = new System.Windows.Forms.Label();
             this.GT = new System.Windows.Forms.Label();
             this.BT = new System.Windows.Forms.Label();
             this.RC = new Guna.UI2.WinForms.Guna2TrackBar();
             this.GC = new Guna.UI2.WinForms.Guna2TrackBar();
             this.BC = new Guna.UI2.WinForms.Guna2TrackBar();
-            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.CancelBTN = new Guna.UI2.WinForms.Guna2Button();
-            this.Panel_color = new System.Windows.Forms.Panel();
-            this.label_SColor = new System.Windows.Forms.Label();
-            this.BTN_Color_2 = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.BTN_Color_1 = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.Panel_History_Colors = new System.Windows.Forms.FlowLayoutPanel();
-            this.BTN_Color_3 = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.BTN_Color_4 = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.BTN_Color_5 = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.BTN_Color_6 = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.BTN_Color_7 = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.BTN_Color_8 = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.Panel_color.SuspendLayout();
+            this.Panel_Options = new System.Windows.Forms.Panel();
+            this.Automatic_BTN = new Guna.UI2.WinForms.Guna2Button();
+            this.Optionbtn_toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.Panel_Exit.SuspendLayout();
+            this.panel_ColorBox.SuspendLayout();
+            this.Panel_Options.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // Border_radius
+            // 
+            this.Border_radius.BorderRadius = 20;
+            this.Border_radius.TargetControl = this;
+            // 
+            // Panel_History_Colors
+            // 
+            this.Panel_History_Colors.Dock = System.Windows.Forms.DockStyle.Left;
+            this.Panel_History_Colors.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.Panel_History_Colors.Location = new System.Drawing.Point(0, 0);
+            this.Panel_History_Colors.Name = "Panel_History_Colors";
+            this.Panel_History_Colors.Size = new System.Drawing.Size(51, 298);
+            this.Panel_History_Colors.TabIndex = 18;
+            this.Panel_History_Colors.WrapContents = false;
+            // 
+            // BTN_ColorPicker
+            // 
+            this.BTN_ColorPicker.CheckedState.Parent = this.BTN_ColorPicker;
+            this.BTN_ColorPicker.CustomImages.Parent = this.BTN_ColorPicker;
+            this.BTN_ColorPicker.Dock = System.Windows.Forms.DockStyle.Right;
+            this.BTN_ColorPicker.FillColor = System.Drawing.Color.Empty;
+            this.BTN_ColorPicker.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.BTN_ColorPicker.ForeColor = System.Drawing.Color.White;
+            this.BTN_ColorPicker.HoverState.Parent = this.BTN_ColorPicker;
+            this.BTN_ColorPicker.Image = global::Number.Properties.Resources.color_dropper;
+            this.BTN_ColorPicker.ImageSize = new System.Drawing.Size(32, 32);
+            this.BTN_ColorPicker.Location = new System.Drawing.Point(307, 0);
+            this.BTN_ColorPicker.Name = "BTN_ColorPicker";
+            this.BTN_ColorPicker.ShadowDecoration.Parent = this.BTN_ColorPicker;
+            this.BTN_ColorPicker.Size = new System.Drawing.Size(48, 48);
+            this.BTN_ColorPicker.TabIndex = 19;
+            this.Optionbtn_toolTip.SetToolTip(this.BTN_ColorPicker, "انتخاب از صفحه");
+            this.BTN_ColorPicker.Click += new System.EventHandler(this.BTN_ColorPicker_Click);
+            // 
+            // TextBox_ColorHex
+            // 
+            this.TextBox_ColorHex.BorderRadius = 5;
+            this.TextBox_ColorHex.BorderThickness = 0;
+            this.TextBox_ColorHex.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.TextBox_ColorHex.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.TextBox_ColorHex.DefaultText = "";
+            this.TextBox_ColorHex.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.TextBox_ColorHex.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.TextBox_ColorHex.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.TextBox_ColorHex.DisabledState.Parent = this.TextBox_ColorHex;
+            this.TextBox_ColorHex.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.TextBox_ColorHex.FillColor = System.Drawing.Color.Empty;
+            this.TextBox_ColorHex.FocusedState.Parent = this.TextBox_ColorHex;
+            this.TextBox_ColorHex.Font = new System.Drawing.Font("Segoe UI", 15F);
+            this.TextBox_ColorHex.ForeColor = System.Drawing.Color.White;
+            this.TextBox_ColorHex.HoverState.Parent = this.TextBox_ColorHex;
+            this.TextBox_ColorHex.Location = new System.Drawing.Point(27, 204);
+            this.TextBox_ColorHex.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.TextBox_ColorHex.Name = "TextBox_ColorHex";
+            this.TextBox_ColorHex.PasswordChar = '\0';
+            this.TextBox_ColorHex.PlaceholderText = "";
+            this.TextBox_ColorHex.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.TextBox_ColorHex.SelectedText = "";
+            this.TextBox_ColorHex.ShadowDecoration.Parent = this.TextBox_ColorHex;
+            this.TextBox_ColorHex.Size = new System.Drawing.Size(200, 36);
+            this.TextBox_ColorHex.TabIndex = 22;
+            this.TextBox_ColorHex.TextOffset = new System.Drawing.Point(0, -4);
+            this.TextBox_ColorHex.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Enter_Hex_ChengeColor);
+            this.TextBox_ColorHex.Leave += new System.EventHandler(this.Hex_ChengeColor);
+            // 
+            // label_Sharp
+            // 
+            this.label_Sharp.AutoSize = true;
+            this.label_Sharp.Font = new System.Drawing.Font("Vazir", 18F);
+            this.label_Sharp.Location = new System.Drawing.Point(4, 203);
+            this.label_Sharp.Name = "label_Sharp";
+            this.label_Sharp.Size = new System.Drawing.Size(32, 39);
+            this.label_Sharp.TabIndex = 23;
+            this.label_Sharp.Text = "#";
+            // 
+            // Panel_Exit
+            // 
+            this.Panel_Exit.Controls.Add(this.Save_BTN);
+            this.Panel_Exit.Controls.Add(this.Cancel_BTN);
+            this.Panel_Exit.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.Panel_Exit.Location = new System.Drawing.Point(0, 298);
+            this.Panel_Exit.Name = "Panel_Exit";
+            this.Panel_Exit.Size = new System.Drawing.Size(406, 55);
+            this.Panel_Exit.TabIndex = 24;
+            // 
+            // Save_BTN
+            // 
+            this.Save_BTN.CheckedState.Parent = this.Save_BTN;
+            this.Save_BTN.CustomImages.Parent = this.Save_BTN;
+            this.Save_BTN.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Save_BTN.FillColor = System.Drawing.Color.Empty;
+            this.Save_BTN.Font = new System.Drawing.Font("Vazir", 12F);
+            this.Save_BTN.ForeColor = System.Drawing.Color.White;
+            this.Save_BTN.HoverState.Parent = this.Save_BTN;
+            this.Save_BTN.Image = global::Number.Properties.Resources.exit;
+            this.Save_BTN.Location = new System.Drawing.Point(151, 0);
+            this.Save_BTN.Name = "Save_BTN";
+            this.Save_BTN.ShadowDecoration.Parent = this.Save_BTN;
+            this.Save_BTN.Size = new System.Drawing.Size(255, 55);
+            this.Save_BTN.TabIndex = 17;
+            this.Save_BTN.Text = "ذخیره و خروج";
+            this.Save_BTN.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAlias;
+            this.Save_BTN.Click += new System.EventHandler(this.Save_BTN_Click);
+            // 
+            // Cancel_BTN
+            // 
+            this.Cancel_BTN.BackColor = System.Drawing.Color.Transparent;
+            this.Cancel_BTN.CheckedState.Parent = this.Cancel_BTN;
+            this.Cancel_BTN.CustomImages.Parent = this.Cancel_BTN;
+            this.Cancel_BTN.Dock = System.Windows.Forms.DockStyle.Left;
+            this.Cancel_BTN.FillColor = System.Drawing.Color.Empty;
+            this.Cancel_BTN.Font = new System.Drawing.Font("Vazir", 12F);
+            this.Cancel_BTN.ForeColor = System.Drawing.Color.White;
+            this.Cancel_BTN.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(75)))), ((int)(((byte)(66)))));
+            this.Cancel_BTN.HoverState.Parent = this.Cancel_BTN;
+            this.Cancel_BTN.Image = global::Number.Properties.Resources.cancel;
+            this.Cancel_BTN.Location = new System.Drawing.Point(0, 0);
+            this.Cancel_BTN.Name = "Cancel_BTN";
+            this.Cancel_BTN.ShadowDecoration.Parent = this.Cancel_BTN;
+            this.Cancel_BTN.Size = new System.Drawing.Size(151, 55);
+            this.Cancel_BTN.TabIndex = 9;
+            this.Cancel_BTN.Text = "انصراف";
+            this.Cancel_BTN.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAliasGridFit;
+            this.Cancel_BTN.UseTransparentBackground = true;
+            this.Cancel_BTN.Click += new System.EventHandler(this.Cancel_BTN_Click);
+            // 
+            // panel_ColorBox
+            // 
+            this.panel_ColorBox.Controls.Add(this.RT);
+            this.panel_ColorBox.Controls.Add(this.TextBox_ColorHex);
+            this.panel_ColorBox.Controls.Add(this.label_Sharp);
+            this.panel_ColorBox.Controls.Add(this.GT);
+            this.panel_ColorBox.Controls.Add(this.BT);
+            this.panel_ColorBox.Controls.Add(this.RC);
+            this.panel_ColorBox.Controls.Add(this.GC);
+            this.panel_ColorBox.Controls.Add(this.BC);
+            this.panel_ColorBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_ColorBox.Location = new System.Drawing.Point(51, 0);
+            this.panel_ColorBox.Name = "panel_ColorBox";
+            this.panel_ColorBox.Size = new System.Drawing.Size(355, 250);
+            this.panel_ColorBox.TabIndex = 25;
+            this.panel_ColorBox.MouseMove += new System.Windows.Forms.MouseEventHandler(this.NumberForm_MouseMove);
             // 
             // RT
             // 
-            this.RT.Location = new System.Drawing.Point(76, 22);
+            this.RT.Location = new System.Drawing.Point(27, 9);
             this.RT.Name = "RT";
             this.RT.Size = new System.Drawing.Size(300, 23);
             this.RT.TabIndex = 14;
@@ -65,7 +209,7 @@ namespace Number
             // 
             // GT
             // 
-            this.GT.Location = new System.Drawing.Point(76, 84);
+            this.GT.Location = new System.Drawing.Point(27, 71);
             this.GT.Name = "GT";
             this.GT.Size = new System.Drawing.Size(300, 23);
             this.GT.TabIndex = 14;
@@ -75,7 +219,7 @@ namespace Number
             // 
             // BT
             // 
-            this.BT.Location = new System.Drawing.Point(76, 146);
+            this.BT.Location = new System.Drawing.Point(27, 133);
             this.BT.Name = "BT";
             this.BT.Size = new System.Drawing.Size(300, 23);
             this.BT.TabIndex = 14;
@@ -87,9 +231,8 @@ namespace Number
             // 
             this.RC.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
             this.RC.HoverState.Parent = this.RC;
-            this.RC.Location = new System.Drawing.Point(76, 53);
+            this.RC.Location = new System.Drawing.Point(27, 40);
             this.RC.Maximum = 255;
-            this.RC.Minimum = 1;
             this.RC.Name = "RC";
             this.RC.Size = new System.Drawing.Size(300, 23);
             this.RC.TabIndex = 15;
@@ -101,9 +244,8 @@ namespace Number
             // 
             this.GC.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
             this.GC.HoverState.Parent = this.GC;
-            this.GC.Location = new System.Drawing.Point(76, 115);
+            this.GC.Location = new System.Drawing.Point(27, 102);
             this.GC.Maximum = 255;
-            this.GC.Minimum = 1;
             this.GC.Name = "GC";
             this.GC.Size = new System.Drawing.Size(300, 23);
             this.GC.TabIndex = 15;
@@ -115,9 +257,8 @@ namespace Number
             // 
             this.BC.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
             this.BC.HoverState.Parent = this.BC;
-            this.BC.Location = new System.Drawing.Point(76, 177);
+            this.BC.Location = new System.Drawing.Point(27, 164);
             this.BC.Maximum = 255;
-            this.BC.Minimum = 1;
             this.BC.Name = "BC";
             this.BC.Size = new System.Drawing.Size(300, 23);
             this.BC.TabIndex = 15;
@@ -125,227 +266,44 @@ namespace Number
             this.BC.Value = 127;
             this.BC.Scroll += new System.Windows.Forms.ScrollEventHandler(this.RC_Scroll);
             // 
-            // guna2Elipse1
+            // Panel_Options
             // 
-            this.guna2Elipse1.BorderRadius = 20;
-            this.guna2Elipse1.TargetControl = this;
+            this.Panel_Options.Controls.Add(this.Automatic_BTN);
+            this.Panel_Options.Controls.Add(this.BTN_ColorPicker);
+            this.Panel_Options.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.Panel_Options.Location = new System.Drawing.Point(51, 250);
+            this.Panel_Options.Name = "Panel_Options";
+            this.Panel_Options.Size = new System.Drawing.Size(355, 48);
+            this.Panel_Options.TabIndex = 26;
             // 
-            // CancelBTN
+            // Automatic_BTN
             // 
-            this.CancelBTN.CheckedState.Parent = this.CancelBTN;
-            this.CancelBTN.CustomImages.Parent = this.CancelBTN;
-            this.CancelBTN.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.CancelBTN.FillColor = System.Drawing.Color.Empty;
-            this.CancelBTN.Font = new System.Drawing.Font("Vazir", 12F);
-            this.CancelBTN.ForeColor = System.Drawing.Color.White;
-            this.CancelBTN.HoverState.Parent = this.CancelBTN;
-            this.CancelBTN.Image = global::Number.Properties.Resources.exit;
-            this.CancelBTN.Location = new System.Drawing.Point(0, 274);
-            this.CancelBTN.Name = "CancelBTN";
-            this.CancelBTN.ShadowDecoration.Parent = this.CancelBTN;
-            this.CancelBTN.Size = new System.Drawing.Size(388, 59);
-            this.CancelBTN.TabIndex = 16;
-            this.CancelBTN.Text = "خروج";
-            this.CancelBTN.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAlias;
-            this.CancelBTN.Click += new System.EventHandler(this.ExitBTN_Click);
-            // 
-            // Panel_color
-            // 
-            this.Panel_color.Controls.Add(this.label_SColor);
-            this.Panel_color.Controls.Add(this.BTN_Color_8);
-            this.Panel_color.Controls.Add(this.BTN_Color_7);
-            this.Panel_color.Controls.Add(this.BTN_Color_6);
-            this.Panel_color.Controls.Add(this.BTN_Color_5);
-            this.Panel_color.Controls.Add(this.BTN_Color_4);
-            this.Panel_color.Controls.Add(this.BTN_Color_3);
-            this.Panel_color.Controls.Add(this.BTN_Color_2);
-            this.Panel_color.Controls.Add(this.BTN_Color_1);
-            this.Panel_color.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.Panel_color.Location = new System.Drawing.Point(0, 234);
-            this.Panel_color.Name = "Panel_color";
-            this.Panel_color.Size = new System.Drawing.Size(388, 40);
-            this.Panel_color.TabIndex = 17;
-            // 
-            // label_SColor
-            // 
-            this.label_SColor.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label_SColor.Font = new System.Drawing.Font("Vazir", 10F);
-            this.label_SColor.Location = new System.Drawing.Point(268, 0);
-            this.label_SColor.Name = "label_SColor";
-            this.label_SColor.Size = new System.Drawing.Size(120, 40);
-            this.label_SColor.TabIndex = 1;
-            this.label_SColor.Text = "رنگ های پیشنهادی:";
-            this.label_SColor.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // BTN_Color_2
-            // 
-            this.BTN_Color_2.BorderThickness = 1;
-            this.BTN_Color_2.CheckedState.Parent = this.BTN_Color_2;
-            this.BTN_Color_2.CustomImages.Parent = this.BTN_Color_2;
-            this.BTN_Color_2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(25)))), ((int)(((byte)(33)))));
-            this.BTN_Color_2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.BTN_Color_2.ForeColor = System.Drawing.Color.White;
-            this.BTN_Color_2.HoverState.Parent = this.BTN_Color_2;
-            this.BTN_Color_2.Location = new System.Drawing.Point(206, 8);
-            this.BTN_Color_2.Name = "BTN_Color_2";
-            this.BTN_Color_2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.BTN_Color_2.ShadowDecoration.Parent = this.BTN_Color_2;
-            this.BTN_Color_2.Size = new System.Drawing.Size(25, 25);
-            this.BTN_Color_2.TabIndex = 0;
-            this.BTN_Color_2.Tile = false;
-            this.BTN_Color_2.Click += new System.EventHandler(this.BTN_Color_Click);
-            // 
-            // BTN_Color_1
-            // 
-            this.BTN_Color_1.BorderThickness = 1;
-            this.BTN_Color_1.CheckedState.Parent = this.BTN_Color_1;
-            this.BTN_Color_1.CustomImages.Parent = this.BTN_Color_1;
-            this.BTN_Color_1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(196)))), ((int)(((byte)(236)))));
-            this.BTN_Color_1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.BTN_Color_1.ForeColor = System.Drawing.Color.White;
-            this.BTN_Color_1.HoverState.Parent = this.BTN_Color_1;
-            this.BTN_Color_1.Location = new System.Drawing.Point(239, 8);
-            this.BTN_Color_1.Name = "BTN_Color_1";
-            this.BTN_Color_1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.BTN_Color_1.ShadowDecoration.Parent = this.BTN_Color_1;
-            this.BTN_Color_1.Size = new System.Drawing.Size(25, 25);
-            this.BTN_Color_1.TabIndex = 0;
-            this.BTN_Color_1.Tile = false;
-            this.BTN_Color_1.Click += new System.EventHandler(this.BTN_Color_Click);
-            // 
-            // Panel_History_Colors
-            // 
-            this.Panel_History_Colors.AutoScroll = true;
-            this.Panel_History_Colors.Dock = System.Windows.Forms.DockStyle.Left;
-            this.Panel_History_Colors.FlowDirection = System.Windows.Forms.FlowDirection.BottomUp;
-            this.Panel_History_Colors.Location = new System.Drawing.Point(0, 0);
-            this.Panel_History_Colors.Name = "Panel_History_Colors";
-            this.Panel_History_Colors.Size = new System.Drawing.Size(51, 234);
-            this.Panel_History_Colors.TabIndex = 18;
-            this.Panel_History_Colors.WrapContents = false;
-            // 
-            // BTN_Color_3
-            // 
-            this.BTN_Color_3.BorderThickness = 1;
-            this.BTN_Color_3.CheckedState.Parent = this.BTN_Color_3;
-            this.BTN_Color_3.CustomImages.Parent = this.BTN_Color_3;
-            this.BTN_Color_3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(142)))), ((int)(((byte)(71)))));
-            this.BTN_Color_3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.BTN_Color_3.ForeColor = System.Drawing.Color.White;
-            this.BTN_Color_3.HoverState.Parent = this.BTN_Color_3;
-            this.BTN_Color_3.Location = new System.Drawing.Point(173, 8);
-            this.BTN_Color_3.Name = "BTN_Color_3";
-            this.BTN_Color_3.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.BTN_Color_3.ShadowDecoration.Parent = this.BTN_Color_3;
-            this.BTN_Color_3.Size = new System.Drawing.Size(25, 25);
-            this.BTN_Color_3.TabIndex = 0;
-            this.BTN_Color_3.Tile = false;
-            this.BTN_Color_3.Click += new System.EventHandler(this.BTN_Color_Click);
-            // 
-            // BTN_Color_4
-            // 
-            this.BTN_Color_4.BorderThickness = 1;
-            this.BTN_Color_4.CheckedState.Parent = this.BTN_Color_4;
-            this.BTN_Color_4.CustomImages.Parent = this.BTN_Color_4;
-            this.BTN_Color_4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(82)))), ((int)(((byte)(202)))));
-            this.BTN_Color_4.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.BTN_Color_4.ForeColor = System.Drawing.Color.White;
-            this.BTN_Color_4.HoverState.Parent = this.BTN_Color_4;
-            this.BTN_Color_4.Location = new System.Drawing.Point(140, 8);
-            this.BTN_Color_4.Name = "BTN_Color_4";
-            this.BTN_Color_4.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.BTN_Color_4.ShadowDecoration.Parent = this.BTN_Color_4;
-            this.BTN_Color_4.Size = new System.Drawing.Size(25, 25);
-            this.BTN_Color_4.TabIndex = 0;
-            this.BTN_Color_4.Tile = false;
-            this.BTN_Color_4.Click += new System.EventHandler(this.BTN_Color_Click);
-            // 
-            // BTN_Color_5
-            // 
-            this.BTN_Color_5.BorderThickness = 1;
-            this.BTN_Color_5.CheckedState.Parent = this.BTN_Color_5;
-            this.BTN_Color_5.CustomImages.Parent = this.BTN_Color_5;
-            this.BTN_Color_5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(62)))), ((int)(((byte)(18)))));
-            this.BTN_Color_5.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.BTN_Color_5.ForeColor = System.Drawing.Color.White;
-            this.BTN_Color_5.HoverState.Parent = this.BTN_Color_5;
-            this.BTN_Color_5.Location = new System.Drawing.Point(107, 8);
-            this.BTN_Color_5.Name = "BTN_Color_5";
-            this.BTN_Color_5.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.BTN_Color_5.ShadowDecoration.Parent = this.BTN_Color_5;
-            this.BTN_Color_5.Size = new System.Drawing.Size(25, 25);
-            this.BTN_Color_5.TabIndex = 0;
-            this.BTN_Color_5.Tile = false;
-            this.BTN_Color_5.Click += new System.EventHandler(this.BTN_Color_Click);
-            // 
-            // BTN_Color_6
-            // 
-            this.BTN_Color_6.BorderThickness = 1;
-            this.BTN_Color_6.CheckedState.Parent = this.BTN_Color_6;
-            this.BTN_Color_6.CustomImages.Parent = this.BTN_Color_6;
-            this.BTN_Color_6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(212)))), ((int)(((byte)(113)))));
-            this.BTN_Color_6.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.BTN_Color_6.ForeColor = System.Drawing.Color.White;
-            this.BTN_Color_6.HoverState.Parent = this.BTN_Color_6;
-            this.BTN_Color_6.Location = new System.Drawing.Point(74, 8);
-            this.BTN_Color_6.Name = "BTN_Color_6";
-            this.BTN_Color_6.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.BTN_Color_6.ShadowDecoration.Parent = this.BTN_Color_6;
-            this.BTN_Color_6.Size = new System.Drawing.Size(25, 25);
-            this.BTN_Color_6.TabIndex = 0;
-            this.BTN_Color_6.Tile = false;
-            this.BTN_Color_6.Click += new System.EventHandler(this.BTN_Color_Click);
-            // 
-            // BTN_Color_7
-            // 
-            this.BTN_Color_7.BorderThickness = 1;
-            this.BTN_Color_7.CheckedState.Parent = this.BTN_Color_7;
-            this.BTN_Color_7.CustomImages.Parent = this.BTN_Color_7;
-            this.BTN_Color_7.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(138)))), ((int)(((byte)(129)))));
-            this.BTN_Color_7.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.BTN_Color_7.ForeColor = System.Drawing.Color.White;
-            this.BTN_Color_7.HoverState.Parent = this.BTN_Color_7;
-            this.BTN_Color_7.Location = new System.Drawing.Point(41, 8);
-            this.BTN_Color_7.Name = "BTN_Color_7";
-            this.BTN_Color_7.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.BTN_Color_7.ShadowDecoration.Parent = this.BTN_Color_7;
-            this.BTN_Color_7.Size = new System.Drawing.Size(25, 25);
-            this.BTN_Color_7.TabIndex = 0;
-            this.BTN_Color_7.Tile = false;
-            this.BTN_Color_7.Click += new System.EventHandler(this.BTN_Color_Click);
-            // 
-            // BTN_Color_8
-            // 
-            this.BTN_Color_8.BorderThickness = 1;
-            this.BTN_Color_8.CheckedState.Parent = this.BTN_Color_8;
-            this.BTN_Color_8.CustomImages.Parent = this.BTN_Color_8;
-            this.BTN_Color_8.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(27)))), ((int)(((byte)(45)))));
-            this.BTN_Color_8.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.BTN_Color_8.ForeColor = System.Drawing.Color.White;
-            this.BTN_Color_8.HoverState.Parent = this.BTN_Color_8;
-            this.BTN_Color_8.Location = new System.Drawing.Point(8, 8);
-            this.BTN_Color_8.Name = "BTN_Color_8";
-            this.BTN_Color_8.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.BTN_Color_8.ShadowDecoration.Parent = this.BTN_Color_8;
-            this.BTN_Color_8.Size = new System.Drawing.Size(25, 25);
-            this.BTN_Color_8.TabIndex = 0;
-            this.BTN_Color_8.Tile = false;
-            this.BTN_Color_8.Click += new System.EventHandler(this.BTN_Color_Click);
+            this.Automatic_BTN.CheckedState.Parent = this.Automatic_BTN;
+            this.Automatic_BTN.CustomImages.Parent = this.Automatic_BTN;
+            this.Automatic_BTN.Dock = System.Windows.Forms.DockStyle.Right;
+            this.Automatic_BTN.FillColor = System.Drawing.Color.Empty;
+            this.Automatic_BTN.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.Automatic_BTN.ForeColor = System.Drawing.Color.White;
+            this.Automatic_BTN.HoverState.Parent = this.Automatic_BTN;
+            this.Automatic_BTN.Image = global::Number.Properties.Resources.wallpaper;
+            this.Automatic_BTN.ImageSize = new System.Drawing.Size(32, 32);
+            this.Automatic_BTN.Location = new System.Drawing.Point(259, 0);
+            this.Automatic_BTN.Name = "Automatic_BTN";
+            this.Automatic_BTN.ShadowDecoration.Parent = this.Automatic_BTN;
+            this.Automatic_BTN.Size = new System.Drawing.Size(48, 48);
+            this.Automatic_BTN.TabIndex = 20;
+            this.Optionbtn_toolTip.SetToolTip(this.Automatic_BTN, "انتخاب به صورت خودکار از پس زمینه");
+            this.Automatic_BTN.Click += new System.EventHandler(this.Automatic_BTN_Click);
             // 
             // ColorPick
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(10)))), ((int)(((byte)(27)))));
-            this.ClientSize = new System.Drawing.Size(388, 333);
+            this.ClientSize = new System.Drawing.Size(406, 353);
+            this.Controls.Add(this.panel_ColorBox);
+            this.Controls.Add(this.Panel_Options);
             this.Controls.Add(this.Panel_History_Colors);
-            this.Controls.Add(this.Panel_color);
-            this.Controls.Add(this.BC);
-            this.Controls.Add(this.GC);
-            this.Controls.Add(this.RC);
-            this.Controls.Add(this.BT);
-            this.Controls.Add(this.GT);
-            this.Controls.Add(this.RT);
-            this.Controls.Add(this.CancelBTN);
+            this.Controls.Add(this.Panel_Exit);
             this.Font = new System.Drawing.Font("Vazir", 12F);
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -354,33 +312,35 @@ namespace Number
             this.Name = "ColorPick";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.ShowInTaskbar = false;
-            this.Text = "انتخاب رنگ";
+            this.Text = " ";
             this.Load += new System.EventHandler(this.ColorPick_Load);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.NumberForm_MouseMove);
-            this.Panel_color.ResumeLayout(false);
+            this.Panel_Exit.ResumeLayout(false);
+            this.panel_ColorBox.ResumeLayout(false);
+            this.panel_ColorBox.PerformLayout();
+            this.Panel_Options.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.Label BT;
-        private System.Windows.Forms.Label GT;
-        private System.Windows.Forms.Label RT;
-        private Guna.UI2.WinForms.Guna2TrackBar RC;
-        private Guna.UI2.WinForms.Guna2TrackBar BC;
-        private Guna.UI2.WinForms.Guna2TrackBar GC;
-        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
-        private Guna.UI2.WinForms.Guna2Button CancelBTN;
-        private System.Windows.Forms.Panel Panel_color;
-        private Guna.UI2.WinForms.Guna2CircleButton BTN_Color_2;
-        private Guna.UI2.WinForms.Guna2CircleButton BTN_Color_1;
-        private System.Windows.Forms.Label label_SColor;
+        private Guna.UI2.WinForms.Guna2Elipse Border_radius;
         private System.Windows.Forms.FlowLayoutPanel Panel_History_Colors;
-        private Guna.UI2.WinForms.Guna2CircleButton BTN_Color_8;
-        private Guna.UI2.WinForms.Guna2CircleButton BTN_Color_7;
-        private Guna.UI2.WinForms.Guna2CircleButton BTN_Color_6;
-        private Guna.UI2.WinForms.Guna2CircleButton BTN_Color_5;
-        private Guna.UI2.WinForms.Guna2CircleButton BTN_Color_4;
-        private Guna.UI2.WinForms.Guna2CircleButton BTN_Color_3;
+        private Guna.UI2.WinForms.Guna2Button BTN_ColorPicker;
+        private System.Windows.Forms.Label label_Sharp;
+        private Guna.UI2.WinForms.Guna2TextBox TextBox_ColorHex;
+        private System.Windows.Forms.Panel Panel_Exit;
+        private Guna.UI2.WinForms.Guna2Button Save_BTN;
+        private Guna.UI2.WinForms.Guna2Button Cancel_BTN;
+        private System.Windows.Forms.Panel panel_ColorBox;
+        private System.Windows.Forms.Label RT;
+        private System.Windows.Forms.Label GT;
+        private System.Windows.Forms.Label BT;
+        private Guna.UI2.WinForms.Guna2TrackBar RC;
+        private Guna.UI2.WinForms.Guna2TrackBar GC;
+        private Guna.UI2.WinForms.Guna2TrackBar BC;
+        private System.Windows.Forms.Panel Panel_Options;
+        private Guna.UI2.WinForms.Guna2Button Automatic_BTN;
+        private System.Windows.Forms.ToolTip Optionbtn_toolTip;
     }
 }

@@ -10,6 +10,34 @@ namespace Number
 {
     public partial class SettingPage : Form
     {
+        static SettingPage _obj;
+        public static SettingPage Instans
+        {
+            get
+            {
+                if (_obj == null)
+                {
+                    _obj = new SettingPage();
+                }
+                return _obj;
+            }
+        }
+        /*------------------ Move Form Start ------------------*/
+        public const int WM_NCLBUTTONDOWN = 0xA1;
+        public const int HT_CAPTION = 0x2;
+        [System.Runtime.InteropServices.DllImport("user32.dll")]
+        public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
+        [System.Runtime.InteropServices.DllImport("user32.dll")]
+        public static extern bool ReleaseCapture();
+        private void NumberForm_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                ReleaseCapture();
+                SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
+            }
+        }
+        /*------------------ Move Form End ------------------*/
         /*------------------ Func Start ------------------*/
         public SettingPage()
         {InitializeComponent();}
@@ -69,6 +97,8 @@ namespace Number
         /*------------------ Func End ------------------*/
         private void SettingPage_Load(object sender, EventArgs e)
         {
+            this.Location = NumberForm.Instans.Location;
+            NumberForm.Instans.Visible = false;
             if (Settings.Default.DefaultColor == false)
             {
                 this.BackColor = Settings.Default.Theme;
@@ -137,22 +167,6 @@ namespace Number
             }
             else FontCBTN.Visible = true;
         }
-        /*------------------ Move Form Start ------------------*/
-        public const int WM_NCLBUTTONDOWN = 0xA1;
-        public const int HT_CAPTION = 0x2;
-        [System.Runtime.InteropServices.DllImport("user32.dll")]
-        public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
-        [System.Runtime.InteropServices.DllImport("user32.dll")]
-        public static extern bool ReleaseCapture();
-        private void NumberForm_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Left)
-            {
-                ReleaseCapture();
-                SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
-            }
-        }
-        /*------------------ Move Form End ------------------*/
         /*------------------ BTN Start ------------------*/
         /*--------- Font Start ---------*/
         private void FontBTN_Click(object sender, EventArgs e)
@@ -181,15 +195,7 @@ namespace Number
         }
         /*--------- CancelBTN ---------*/
         private void CancelBTN_Click(object sender, EventArgs e)
-        {this.Close();}
-        private void CancelBTN_MouseEnter(object sender, EventArgs e)
-        {
-            CancelBTN.FillColor = Color.FromArgb(249, 75, 66);
-        }
-        private void CancelBTN_MouseLeave(object sender, EventArgs e)
-        {
-            CancelBTN.FillColor = Color.Empty;
-        }
+        { this.Close();}
         /*--------- Background ---------*/
         private void BackgroundMode_CheckedChanged(object sender, EventArgs e)
         {

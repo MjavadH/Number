@@ -1,12 +1,9 @@
-﻿using System;
+﻿using Microsoft.WindowsAPICodePack.Taskbar;
+using Number.Properties;
+using System;
 using System.Drawing;
 using System.Windows.Forms;
 using System.Xml;
-using Number.Properties;
-using Microsoft.WindowsAPICodePack.Taskbar;
-using System.IO;
-using Microsoft.WindowsAPICodePack.Shell;
-using static Number.Cdata;
 
 /*------------------------------ Number Aplication ------------------------------
  *                                                                              *
@@ -45,6 +42,18 @@ namespace Number
 {
     public partial class NumberForm : Form
     {
+        static NumberForm _obj;
+        public static NumberForm Instans
+        {
+            get
+            {
+                if (_obj == null)
+                {
+                    _obj = new NumberForm();
+                }
+                return _obj;
+            }
+        }
         /*--------- Create var XmlDoc ---------*/
         XmlDocument DataXML = new XmlDocument();
         public NumberForm()
@@ -113,7 +122,7 @@ namespace Number
                 NumberT.Font = new Font(Settings.Default.AppFont.Name, 35);
             }
         }
-        private void AddT() 
+        private void AddT()
         {
             try
             {
@@ -150,7 +159,7 @@ namespace Number
                 try
                 {
                     DataXML.Load("Data.xml");
-                    using (var NumberUNodes = DataXML.SelectNodes("//Numbers/Number")) 
+                    using (var NumberUNodes = DataXML.SelectNodes("//Numbers/Number"))
                     {
                         foreach (XmlNode NumberNode in NumberUNodes)
                         {
@@ -176,7 +185,7 @@ namespace Number
                         new ResetBox().ShowDialog();
                     }
                     catch (Exception)
-                    {}
+                    { }
                 }
             }
         }
@@ -246,36 +255,36 @@ namespace Number
         /*------------------ Button Start ------------------*/
         /*--------- Exit app ---------*/
         private void exit_Click(object sender, EventArgs e)
-        {this.Close();}
+        { this.Close(); }
         /*--------- Menu Show&Hide ---------*/
         private void Menu_Click(object sender, EventArgs e)
         {
             if (MenuBar.Visible == false)
             {
-                AnimationMenu.AddToQueue(MenuBar, Guna.UI2.AnimatorNS.AnimateMode.Show);
+                AnimationMenu.Show(MenuBar);
             }
             else
             {
-                AnimationMenu.AddToQueue(MenuBar, Guna.UI2.AnimatorNS.AnimateMode.Hide);
+                AnimationMenu.Hide(MenuBar);
             }
         }
         /*--------- Minimize app ---------*/
         private void min_Click(object sender, EventArgs e)
-        {this.WindowState = FormWindowState.Minimized;}
+        { this.WindowState = FormWindowState.Minimized; }
         /*--------- Clear Number ---------*/
         private void Clear_Click(object sender, EventArgs e)
         {
             Check_DropDown();
             NumberT.Text = Cdata.Clear(DropDown.Text);
         }
-        /*--------- ShowDialog Start ---------*/
+        /*--------- Show Pages Start ---------*/
         private void add_Click(object sender, EventArgs e)
-        {new DataBase().ShowDialog();}
+        { new DataBase().ShowDialog(); }
         private void Help_Click(object sender, EventArgs e)
-        {new HelpPage().ShowDialog();}
+        { new HelpPage().ShowDialog(); }
         private void Setting_Click(object sender, EventArgs e)
-        {new SettingPage().ShowDialog();}
-        /*--------- ShowDialog End ---------*/
+        { new SettingPage().ShowDialog(); }
+        /*--------- Show Pages End ---------*/
         /*--------- Compress Start ---------*/
         private void Compressbtn_Click(object sender, EventArgs e)
         {
@@ -427,7 +436,7 @@ namespace Number
 
                 }
             }
-            catch (Exception){ new ResetBox().ShowDialog(); }
+            catch (Exception) { new ResetBox().ShowDialog(); }
         }
         private void DropDown_Click(object sender, EventArgs e)
         {
@@ -452,7 +461,7 @@ namespace Number
             else if (e.KeyData == Settings.Default.ShortKey_LoadData)
             {
                 DataBase frm = new DataBase();
-                frm.ReturnBTN_Click(sender,EventArgs.Empty);
+                frm.ReturnBTN_Click(sender, EventArgs.Empty);
             }
             else if (e.KeyData == Settings.Default.ShortKey_Compress)
             {

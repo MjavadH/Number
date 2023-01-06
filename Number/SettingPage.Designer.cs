@@ -96,7 +96,6 @@ namespace Number
             this.label2.Size = new System.Drawing.Size(116, 26);
             this.label2.TabIndex = 2;
             this.label2.Text = "همیشه بالا بودن";
-            this.label2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.NumberForm_MouseMove);
             // 
             // label3
             // 
@@ -108,7 +107,6 @@ namespace Number
             this.label3.TabIndex = 2;
             this.label3.Text = "پس زمینه پیش فرض";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label3.MouseMove += new System.Windows.Forms.MouseEventHandler(this.NumberForm_MouseMove);
             // 
             // fontDialog1
             // 
@@ -288,6 +286,7 @@ namespace Number
             this.CancelBTN.FillColor = System.Drawing.Color.Empty;
             this.CancelBTN.Font = new System.Drawing.Font("Vazir", 12F);
             this.CancelBTN.ForeColor = System.Drawing.Color.White;
+            this.CancelBTN.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(75)))), ((int)(((byte)(66)))));
             this.CancelBTN.HoverState.Parent = this.CancelBTN;
             this.CancelBTN.Image = global::Number.Properties.Resources.cancel;
             this.CancelBTN.Location = new System.Drawing.Point(-1, 0);
@@ -299,8 +298,6 @@ namespace Number
             this.CancelBTN.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAliasGridFit;
             this.CancelBTN.UseTransparentBackground = true;
             this.CancelBTN.Click += new System.EventHandler(this.CancelBTN_Click);
-            this.CancelBTN.MouseEnter += new System.EventHandler(this.CancelBTN_MouseEnter);
-            this.CancelBTN.MouseLeave += new System.EventHandler(this.CancelBTN_MouseLeave);
             // 
             // Save_BTN
             // 
