@@ -92,3 +92,4 @@ E:\Program\C# Code\Number\Number\obj\Release\Number.csproj.CopyComplete
 E:\Program\C# Code\Number\Number\obj\Release\Number.exe
 E:\Program\C# Code\Number\Number\obj\Release\Number.pdb
 E:\Program\C# Code\Number\Number\obj\Release\Number.ColorPickerBox.resources
+E:\Program\C# Code\Number\Number\obj\Release\Number.ColorPicker.ColorPicker.resources

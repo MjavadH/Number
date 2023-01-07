@@ -231,6 +231,10 @@ namespace Number
         {
             Alert("در دست ساخت!");
         }
+        private string wallpaper = "";
+        private string path_wallpaper = "";
+        private bool Repetitious = false;
+        private Color SlectedBackColor = Color.FromArgb(11, 10, 27);
         private void Automatic_BTN_Click(object sender, EventArgs e)
         {
             panel_ColorBox.Enabled = false;
@@ -239,21 +243,24 @@ namespace Number
             Panel_Exit.Enabled = false;
             try
             {
-                string path_wallpaper = "";
                 using (var regKey = Microsoft.Win32.Registry.CurrentUser.OpenSubKey("Control Panel\\Desktop",false))
                 {
                     if (regKey != null)
                     {
                         path_wallpaper = regKey.GetValue("WallPaper").ToString();
+                        Repetitious = wallpaper == path_wallpaper;
+                        wallpaper = path_wallpaper;
                         regKey.Close();
                     }
                 }
-                if (System.IO.File.Exists(path_wallpaper))
+                if (Repetitious)
+                {
+                    Refresh_Color(SlectedBackColor);
+                }
+                else if (System.IO.File.Exists(path_wallpaper))
                 {
                     using (var image = new Bitmap(path_wallpaper))
                     {
-                        List<Color> all_Pixel_color = new List<Color>() { };
-
                         var dict = new Dictionary<Color, int>();
                         for (int i = 0; i < image.Width; i++)
                         {
@@ -266,7 +273,9 @@ namespace Number
                         }
                         image.Dispose();
                         dict = dict.OrderBy(x => x.Value).ToDictionary(x => x.Key, x => x.Value);
-                        Refresh_Color(dict.Last().Key);
+                        SlectedBackColor = dict.Last().Key;
+                        dict.Clear();
+                        Refresh_Color(SlectedBackColor);
                     }
                 }
                 else

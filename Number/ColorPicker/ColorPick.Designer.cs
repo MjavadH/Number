@@ -312,7 +312,7 @@ namespace Number
             this.Name = "ColorPick";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.ShowInTaskbar = false;
-            this.Text = " ";
+            this.Text = " انتخاب رنگ";
             this.Load += new System.EventHandler(this.ColorPick_Load);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.NumberForm_MouseMove);
             this.Panel_Exit.ResumeLayout(false);

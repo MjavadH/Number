@@ -110,10 +110,10 @@
       <DependentUpon>AlertBox.cs</DependentUpon>
     </Compile>
     <Compile Include="Cdata.cs" />
-    <Compile Include="ColorPick.cs">
+    <Compile Include="ColorPicker\ColorPick.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ColorPick.Designer.cs">
+    <Compile Include="ColorPicker\ColorPick.Designer.cs">
       <DependentUpon>ColorPick.cs</DependentUpon>
     </Compile>
     <Compile Include="ColorPicker\ColorPickerBox.cs">
@@ -180,7 +180,7 @@
     <EmbeddedResource Include="AlertBox.resx">
       <DependentUpon>AlertBox.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ColorPick.resx">
+    <EmbeddedResource Include="ColorPicker\ColorPick.resx">
       <DependentUpon>ColorPick.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ColorPicker\ColorPickerBox.resx">
