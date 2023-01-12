@@ -247,6 +247,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icons8_numbers.ico" />
+    <None Include="Resources\dice_black.png" />
+    <None Include="Resources\dice.png" />
     <None Include="Resources\wallpaper_black.png" />
     <None Include="Resources\wallpaper.png" />
     <None Include="Resources\color dropper.png" />

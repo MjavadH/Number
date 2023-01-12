@@ -48,6 +48,7 @@ namespace Number
             this.BC = new Guna.UI2.WinForms.Guna2TrackBar();
             this.Panel_Options = new System.Windows.Forms.Panel();
             this.Automatic_BTN = new Guna.UI2.WinForms.Guna2Button();
+            this.random_BTN = new Guna.UI2.WinForms.Guna2Button();
             this.Optionbtn_toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.Panel_Exit.SuspendLayout();
             this.panel_ColorBox.SuspendLayout();
@@ -80,7 +81,7 @@ namespace Number
             this.BTN_ColorPicker.HoverState.Parent = this.BTN_ColorPicker;
             this.BTN_ColorPicker.Image = global::Number.Properties.Resources.color_dropper;
             this.BTN_ColorPicker.ImageSize = new System.Drawing.Size(32, 32);
-            this.BTN_ColorPicker.Location = new System.Drawing.Point(307, 0);
+            this.BTN_ColorPicker.Location = new System.Drawing.Point(259, 0);
             this.BTN_ColorPicker.Name = "BTN_ColorPicker";
             this.BTN_ColorPicker.ShadowDecoration.Parent = this.BTN_ColorPicker;
             this.BTN_ColorPicker.Size = new System.Drawing.Size(48, 48);
@@ -270,6 +271,7 @@ namespace Number
             // 
             this.Panel_Options.Controls.Add(this.Automatic_BTN);
             this.Panel_Options.Controls.Add(this.BTN_ColorPicker);
+            this.Panel_Options.Controls.Add(this.random_BTN);
             this.Panel_Options.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.Panel_Options.Location = new System.Drawing.Point(51, 250);
             this.Panel_Options.Name = "Panel_Options";
@@ -287,13 +289,32 @@ namespace Number
             this.Automatic_BTN.HoverState.Parent = this.Automatic_BTN;
             this.Automatic_BTN.Image = global::Number.Properties.Resources.wallpaper;
             this.Automatic_BTN.ImageSize = new System.Drawing.Size(32, 32);
-            this.Automatic_BTN.Location = new System.Drawing.Point(259, 0);
+            this.Automatic_BTN.Location = new System.Drawing.Point(211, 0);
             this.Automatic_BTN.Name = "Automatic_BTN";
             this.Automatic_BTN.ShadowDecoration.Parent = this.Automatic_BTN;
             this.Automatic_BTN.Size = new System.Drawing.Size(48, 48);
             this.Automatic_BTN.TabIndex = 20;
             this.Optionbtn_toolTip.SetToolTip(this.Automatic_BTN, "انتخاب به صورت خودکار از پس زمینه");
             this.Automatic_BTN.Click += new System.EventHandler(this.Automatic_BTN_Click);
+            // 
+            // random_BTN
+            // 
+            this.random_BTN.CheckedState.Parent = this.random_BTN;
+            this.random_BTN.CustomImages.Parent = this.random_BTN;
+            this.random_BTN.Dock = System.Windows.Forms.DockStyle.Right;
+            this.random_BTN.FillColor = System.Drawing.Color.Empty;
+            this.random_BTN.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.random_BTN.ForeColor = System.Drawing.Color.White;
+            this.random_BTN.HoverState.Parent = this.random_BTN;
+            this.random_BTN.Image = global::Number.Properties.Resources.dice;
+            this.random_BTN.ImageSize = new System.Drawing.Size(32, 32);
+            this.random_BTN.Location = new System.Drawing.Point(307, 0);
+            this.random_BTN.Name = "random_BTN";
+            this.random_BTN.ShadowDecoration.Parent = this.random_BTN;
+            this.random_BTN.Size = new System.Drawing.Size(48, 48);
+            this.random_BTN.TabIndex = 21;
+            this.Optionbtn_toolTip.SetToolTip(this.random_BTN, "رنگ تصادفی");
+            this.random_BTN.Click += new System.EventHandler(this.random_BTN_Click);
             // 
             // ColorPick
             // 
@@ -342,5 +363,6 @@ namespace Number
         private System.Windows.Forms.Panel Panel_Options;
         private Guna.UI2.WinForms.Guna2Button Automatic_BTN;
         private System.Windows.Forms.ToolTip Optionbtn_toolTip;
+        private Guna.UI2.WinForms.Guna2Button random_BTN;
     }
 }

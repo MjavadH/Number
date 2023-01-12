@@ -10,6 +10,13 @@ namespace Number
 {
     public partial class ColorPick : Form
     {
+        /*------------------ Variable Start ------------------*/
+        private string wallpaper = "";
+        private string path_wallpaper = "";
+        private bool Repetitious = false;
+        private Color SlectedBackColor = Color.FromArgb(11, 10, 27);
+        private Random random = new Random();
+        /*------------------ Variable Start ------------------*/
         public ColorPick()
         { InitializeComponent(); }
         public void Alert(string msg)
@@ -46,6 +53,7 @@ namespace Number
                 Cancel_BTN.Image = Resources.cancel_black;
                 BTN_ColorPicker.Image = Resources.color_dropper_black;
                 Automatic_BTN.Image = Resources.wallpaper_black;
+                random_BTN.Image = Resources.dice_black;
                 TextBox_ColorHex.ForeColor = Color.Black;
             }
             else
@@ -57,6 +65,7 @@ namespace Number
                 Cancel_BTN.Image = Resources.cancel;
                 BTN_ColorPicker.Image = Resources.color_dropper;
                 Automatic_BTN.Image = Resources.wallpaper;
+                random_BTN.Image = Resources.dice;
                 TextBox_ColorHex.ForeColor = Color.White;
             }
         }
@@ -96,7 +105,7 @@ namespace Number
                     try
                     {
                         Guna2Button ColorButton = new Guna2Button();
-                        ColorButton.Name = "BTN_" + new Random().Next();
+                        ColorButton.Name = "BTN_" + random.Next();
                         ColorButton.Size = new Size(25, 25);
                         ColorButton.FillColor = Color.FromArgb(int.Parse(Color_History[i].Split(',')[0]), int.Parse(Color_History[i].Split(',')[1]), int.Parse(Color_History[i].Split(',')[2]));
                         ColorButton.Text = "";
@@ -231,10 +240,6 @@ namespace Number
         {
             Alert("در دست ساخت!");
         }
-        private string wallpaper = "";
-        private string path_wallpaper = "";
-        private bool Repetitious = false;
-        private Color SlectedBackColor = Color.FromArgb(11, 10, 27);
         private void Automatic_BTN_Click(object sender, EventArgs e)
         {
             panel_ColorBox.Enabled = false;
@@ -292,6 +297,11 @@ namespace Number
             Panel_History_Colors.Enabled = true;
             Panel_Exit.Enabled = true;
         }
+
+        private void random_BTN_Click(object sender, EventArgs e)
+        {
+            Refresh_Color(Color.FromArgb(random.Next(0, 255), random.Next(0, 255), random.Next(0, 255)));
+        }
         /*------------------ Option BTNs End ------------------*/
         /*--------- Exit Start ---------*/
         private void Save_BTN_Click(object sender, EventArgs e)
@@ -319,6 +329,7 @@ namespace Number
         }
         private void Cancel_BTN_Click(object sender, EventArgs e)
         { this.Close(); }
+
         /*--------- Exit End ---------*/
     }
 }
