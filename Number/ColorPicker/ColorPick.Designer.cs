@@ -48,7 +48,9 @@ namespace Number
             this.BC = new Guna.UI2.WinForms.Guna2TrackBar();
             this.Panel_Options = new System.Windows.Forms.Panel();
             this.Automatic_BTN = new Guna.UI2.WinForms.Guna2Button();
+            this.favorite_BTN = new Guna.UI2.WinForms.Guna2Button();
             this.random_BTN = new Guna.UI2.WinForms.Guna2Button();
+            this.colorWheel_BTN = new Guna.UI2.WinForms.Guna2Button();
             this.Optionbtn_toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.Panel_Exit.SuspendLayout();
             this.panel_ColorBox.SuspendLayout();
@@ -66,7 +68,7 @@ namespace Number
             this.Panel_History_Colors.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.Panel_History_Colors.Location = new System.Drawing.Point(0, 0);
             this.Panel_History_Colors.Name = "Panel_History_Colors";
-            this.Panel_History_Colors.Size = new System.Drawing.Size(51, 298);
+            this.Panel_History_Colors.Size = new System.Drawing.Size(50, 298);
             this.Panel_History_Colors.TabIndex = 18;
             this.Panel_History_Colors.WrapContents = false;
             // 
@@ -81,7 +83,7 @@ namespace Number
             this.BTN_ColorPicker.HoverState.Parent = this.BTN_ColorPicker;
             this.BTN_ColorPicker.Image = global::Number.Properties.Resources.color_dropper;
             this.BTN_ColorPicker.ImageSize = new System.Drawing.Size(32, 32);
-            this.BTN_ColorPicker.Location = new System.Drawing.Point(259, 0);
+            this.BTN_ColorPicker.Location = new System.Drawing.Point(116, 0);
             this.BTN_ColorPicker.Name = "BTN_ColorPicker";
             this.BTN_ColorPicker.ShadowDecoration.Parent = this.BTN_ColorPicker;
             this.BTN_ColorPicker.Size = new System.Drawing.Size(48, 48);
@@ -192,9 +194,9 @@ namespace Number
             this.panel_ColorBox.Controls.Add(this.GC);
             this.panel_ColorBox.Controls.Add(this.BC);
             this.panel_ColorBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_ColorBox.Location = new System.Drawing.Point(51, 0);
+            this.panel_ColorBox.Location = new System.Drawing.Point(50, 0);
             this.panel_ColorBox.Name = "panel_ColorBox";
-            this.panel_ColorBox.Size = new System.Drawing.Size(355, 250);
+            this.panel_ColorBox.Size = new System.Drawing.Size(356, 250);
             this.panel_ColorBox.TabIndex = 25;
             this.panel_ColorBox.MouseMove += new System.Windows.Forms.MouseEventHandler(this.NumberForm_MouseMove);
             // 
@@ -269,13 +271,15 @@ namespace Number
             // 
             // Panel_Options
             // 
-            this.Panel_Options.Controls.Add(this.Automatic_BTN);
             this.Panel_Options.Controls.Add(this.BTN_ColorPicker);
+            this.Panel_Options.Controls.Add(this.Automatic_BTN);
+            this.Panel_Options.Controls.Add(this.favorite_BTN);
             this.Panel_Options.Controls.Add(this.random_BTN);
+            this.Panel_Options.Controls.Add(this.colorWheel_BTN);
             this.Panel_Options.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.Panel_Options.Location = new System.Drawing.Point(51, 250);
+            this.Panel_Options.Location = new System.Drawing.Point(50, 250);
             this.Panel_Options.Name = "Panel_Options";
-            this.Panel_Options.Size = new System.Drawing.Size(355, 48);
+            this.Panel_Options.Size = new System.Drawing.Size(356, 48);
             this.Panel_Options.TabIndex = 26;
             // 
             // Automatic_BTN
@@ -289,13 +293,31 @@ namespace Number
             this.Automatic_BTN.HoverState.Parent = this.Automatic_BTN;
             this.Automatic_BTN.Image = global::Number.Properties.Resources.wallpaper;
             this.Automatic_BTN.ImageSize = new System.Drawing.Size(32, 32);
-            this.Automatic_BTN.Location = new System.Drawing.Point(211, 0);
+            this.Automatic_BTN.Location = new System.Drawing.Point(164, 0);
             this.Automatic_BTN.Name = "Automatic_BTN";
             this.Automatic_BTN.ShadowDecoration.Parent = this.Automatic_BTN;
             this.Automatic_BTN.Size = new System.Drawing.Size(48, 48);
             this.Automatic_BTN.TabIndex = 20;
             this.Optionbtn_toolTip.SetToolTip(this.Automatic_BTN, "انتخاب به صورت خودکار از پس زمینه");
             this.Automatic_BTN.Click += new System.EventHandler(this.Automatic_BTN_Click);
+            // 
+            // favorite_BTN
+            // 
+            this.favorite_BTN.CheckedState.Parent = this.favorite_BTN;
+            this.favorite_BTN.CustomImages.Parent = this.favorite_BTN;
+            this.favorite_BTN.Dock = System.Windows.Forms.DockStyle.Right;
+            this.favorite_BTN.FillColor = System.Drawing.Color.Empty;
+            this.favorite_BTN.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.favorite_BTN.ForeColor = System.Drawing.Color.White;
+            this.favorite_BTN.HoverState.Parent = this.favorite_BTN;
+            this.favorite_BTN.Image = global::Number.Properties.Resources.favorite;
+            this.favorite_BTN.ImageSize = new System.Drawing.Size(32, 32);
+            this.favorite_BTN.Location = new System.Drawing.Point(212, 0);
+            this.favorite_BTN.Name = "favorite_BTN";
+            this.favorite_BTN.ShadowDecoration.Parent = this.favorite_BTN;
+            this.favorite_BTN.Size = new System.Drawing.Size(48, 48);
+            this.favorite_BTN.TabIndex = 22;
+            this.Optionbtn_toolTip.SetToolTip(this.favorite_BTN, "لیست مورد علاقه ها");
             // 
             // random_BTN
             // 
@@ -308,13 +330,32 @@ namespace Number
             this.random_BTN.HoverState.Parent = this.random_BTN;
             this.random_BTN.Image = global::Number.Properties.Resources.dice;
             this.random_BTN.ImageSize = new System.Drawing.Size(32, 32);
-            this.random_BTN.Location = new System.Drawing.Point(307, 0);
+            this.random_BTN.Location = new System.Drawing.Point(260, 0);
             this.random_BTN.Name = "random_BTN";
             this.random_BTN.ShadowDecoration.Parent = this.random_BTN;
             this.random_BTN.Size = new System.Drawing.Size(48, 48);
             this.random_BTN.TabIndex = 21;
             this.Optionbtn_toolTip.SetToolTip(this.random_BTN, "رنگ تصادفی");
             this.random_BTN.Click += new System.EventHandler(this.random_BTN_Click);
+            // 
+            // colorWheel_BTN
+            // 
+            this.colorWheel_BTN.CheckedState.Parent = this.colorWheel_BTN;
+            this.colorWheel_BTN.CustomImages.Parent = this.colorWheel_BTN;
+            this.colorWheel_BTN.Dock = System.Windows.Forms.DockStyle.Right;
+            this.colorWheel_BTN.FillColor = System.Drawing.Color.Empty;
+            this.colorWheel_BTN.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.colorWheel_BTN.ForeColor = System.Drawing.Color.White;
+            this.colorWheel_BTN.HoverState.Parent = this.colorWheel_BTN;
+            this.colorWheel_BTN.Image = global::Number.Properties.Resources.color_wheel;
+            this.colorWheel_BTN.ImageSize = new System.Drawing.Size(32, 32);
+            this.colorWheel_BTN.Location = new System.Drawing.Point(308, 0);
+            this.colorWheel_BTN.Name = "colorWheel_BTN";
+            this.colorWheel_BTN.ShadowDecoration.Parent = this.colorWheel_BTN;
+            this.colorWheel_BTN.Size = new System.Drawing.Size(48, 48);
+            this.colorWheel_BTN.TabIndex = 23;
+            this.Optionbtn_toolTip.SetToolTip(this.colorWheel_BTN, "چرخه رنگ");
+            this.colorWheel_BTN.Click += new System.EventHandler(this.colorWheel_BTN_Click);
             // 
             // ColorPick
             // 
@@ -364,5 +405,7 @@ namespace Number
         private Guna.UI2.WinForms.Guna2Button Automatic_BTN;
         private System.Windows.Forms.ToolTip Optionbtn_toolTip;
         private Guna.UI2.WinForms.Guna2Button random_BTN;
+        private Guna.UI2.WinForms.Guna2Button favorite_BTN;
+        private Guna.UI2.WinForms.Guna2Button colorWheel_BTN;
     }
 }

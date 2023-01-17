@@ -247,6 +247,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icons8_numbers.ico" />
+    <None Include="Resources\color wheel_black.png" />
+    <None Include="Resources\color wheel.png" />
+    <None Include="Resources\favorite_black.png" />
+    <None Include="Resources\favorite.png" />
     <None Include="Resources\dice_black.png" />
     <None Include="Resources\dice.png" />
     <None Include="Resources\wallpaper_black.png" />

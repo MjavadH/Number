@@ -54,6 +54,8 @@ namespace Number
                 BTN_ColorPicker.Image = Resources.color_dropper_black;
                 Automatic_BTN.Image = Resources.wallpaper_black;
                 random_BTN.Image = Resources.dice_black;
+                favorite_BTN.Image = Resources.favorite_black;
+                colorWheel_BTN.Image = Resources.color_wheel_black;
                 TextBox_ColorHex.ForeColor = Color.Black;
             }
             else
@@ -66,6 +68,8 @@ namespace Number
                 BTN_ColorPicker.Image = Resources.color_dropper;
                 Automatic_BTN.Image = Resources.wallpaper;
                 random_BTN.Image = Resources.dice;
+                favorite_BTN.Image = Resources.favorite;
+                colorWheel_BTN.Image = Resources.color_wheel;
                 TextBox_ColorHex.ForeColor = Color.White;
             }
         }
@@ -236,6 +240,14 @@ namespace Number
         }
         /*------------------ Hex Color End ------------------*/
         /*------------------ Option BTNs Start ------------------*/
+        private void colorWheel_BTN_Click(object sender, EventArgs e)
+        {
+            ColorDialog cd = new ColorDialog();
+            if (cd.ShowDialog() == DialogResult.OK)
+            {
+                Refresh_Color(cd.Color);
+            }
+        }
         private void BTN_ColorPicker_Click(object sender, EventArgs e)
         {
             Alert("در دست ساخت!");
@@ -329,6 +341,7 @@ namespace Number
         }
         private void Cancel_BTN_Click(object sender, EventArgs e)
         { this.Close(); }
+
 
         /*--------- Exit End ---------*/
     }
