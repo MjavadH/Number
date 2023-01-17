@@ -42,18 +42,6 @@ namespace Number
 {
     public partial class NumberForm : Form
     {
-        static NumberForm _obj;
-        public static NumberForm Instans
-        {
-            get
-            {
-                if (_obj == null)
-                {
-                    _obj = new NumberForm();
-                }
-                return _obj;
-            }
-        }
         /*--------- Create var XmlDoc ---------*/
         XmlDocument DataXML = new XmlDocument();
         public NumberForm()

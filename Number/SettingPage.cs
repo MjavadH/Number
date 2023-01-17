@@ -10,18 +10,6 @@ namespace Number
 {
     public partial class SettingPage : Form
     {
-        static SettingPage _obj;
-        public static SettingPage Instans
-        {
-            get
-            {
-                if (_obj == null)
-                {
-                    _obj = new SettingPage();
-                }
-                return _obj;
-            }
-        }
         /*------------------ Move Form Start ------------------*/
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HT_CAPTION = 0x2;
@@ -97,8 +85,6 @@ namespace Number
         /*------------------ Func End ------------------*/
         private void SettingPage_Load(object sender, EventArgs e)
         {
-            this.Location = NumberForm.Instans.Location;
-            NumberForm.Instans.Visible = false;
             if (Settings.Default.DefaultColor == false)
             {
                 this.BackColor = Settings.Default.Theme;
@@ -112,7 +98,6 @@ namespace Number
                 CancelBTN.Image = Resources.cancel_black;
                 Save_BTN.ForeColor = Color.Black;
                 Save_BTN.Image = Resources.save_black;
-
                 ColorCh.ForeColor = Color.Black;
                 ColorCh.BorderColor = Color.Black;
                 ColorCh.Image = Resources.paint_palette_black;
@@ -160,8 +145,14 @@ namespace Number
                 case 3:
                     Sound3.Checked = true;
                     break;
+                case 4:
+                    Sound4.Checked = true;
+                    break;
+                case 5:
+                    Sound5.Checked = true;
+                    break;
             }
-            if (this.Font == Settings.Default.DFont)
+            if (Settings.Default.AppFont == Settings.Default.DFont)
             {
                 FontCBTN.Visible = false;
             }
@@ -230,13 +221,14 @@ namespace Number
             ResetNAni.AddToQueue(Reset_YN_Panel, Guna.UI2.AnimatorNS.AnimateMode.Show);
             
         }
-
+        /*----- Yes Reset -----*/
         private void Yes_Reset_Click(object sender, EventArgs e)
         {
             Cdata.Delete();
             Alert("شمارنده ها بازنشانی شدند");
             ResetNAni.AddToQueue(Reset_YN_Panel, Guna.UI2.AnimatorNS.AnimateMode.Hide);
         }
+        /*----- Np Reset -----*/
         private void No_Reset_Click(object sender, EventArgs e)
         {
             ResetNAni.AddToQueue(Reset_YN_Panel, Guna.UI2.AnimatorNS.AnimateMode.Hide);

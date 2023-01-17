@@ -75,21 +75,9 @@ namespace Number
         }
         private void ColorPick_Load(object sender, EventArgs e)
         {
-            if (Settings.Default.DefaultColor == false)
-            {
-                this.BackColor = Settings.Default.Theme;
-            }
-            else this.BackColor = Color.FromArgb(11, 10, 27);
+            Refresh_Color(Settings.Default.Theme);
             this.TopMost = Settings.Default.AlwaysOT;
             this.Font = Settings.Default.AppFont;
-            RC.Value = Settings.Default.Theme.R;
-            GC.Value = Settings.Default.Theme.G;
-            BC.Value = Settings.Default.Theme.B;
-            RT.Text = "مقدار رنگ قرمز: " + RC.Value;
-            GT.Text = "مقدار رنگ سبز: " + GC.Value;
-            BT.Text = "مقدار رنگ آبی: " + BC.Value;
-            TextBox_ColorHex.Text = string.Format("{0:X2}{1:X2}{2:X2}", RC.Value, GC.Value, BC.Value);
-            TextBox_ColorHex.FillColor = this.BackColor;
             TextBox_ColorHex.Focus();
 
             if (!string.IsNullOrEmpty(Settings.Default.Color_History))
@@ -202,6 +190,17 @@ namespace Number
                     g = 0;
                     b = 0;
                 }
+                else if (TextBox_ColorHex.Text.Length == 3)
+                {
+                    string c1, c2, c3;
+                    c1 = TextBox_ColorHex.Text.Substring(0, 1);
+                    c2 = TextBox_ColorHex.Text.Substring(1, 1);
+                    c3 = TextBox_ColorHex.Text.Substring(2, 1);
+                    r = Convert.ToInt32(c1 + c1, 16);
+                    g = Convert.ToInt32(c2 + c2, 16);
+                    b = Convert.ToInt32(c3 + c3, 16);
+
+                }
                 else if (TextBox_ColorHex.Text.Length == 4)
                 {
                     r = Convert.ToInt32(TextBox_ColorHex.Text.Substring(0, 2), 16);
@@ -212,8 +211,8 @@ namespace Number
                 else if (TextBox_ColorHex.Text.Length == 6 || TextBox_ColorHex.Text.Length == 8)
                 {
                     r = Convert.ToInt32(TextBox_ColorHex.Text.Substring(0, 2), 16);
-                    b = Convert.ToInt32(TextBox_ColorHex.Text.Substring(4, 2), 16);
                     g = Convert.ToInt32(TextBox_ColorHex.Text.Substring(2, 2), 16);
+                    b = Convert.ToInt32(TextBox_ColorHex.Text.Substring(4, 2), 16);
                 }
                 else
                 {
