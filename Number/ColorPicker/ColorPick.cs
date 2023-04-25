@@ -107,7 +107,7 @@ namespace Number
                 }
                 else ColorButton.BorderColor = Color.White;
             }
-            
+
             ColorButton.ContextMenuStrip = contextMenu_ColorBTNs;
             if (ColorButton.ContextMenuStrip.Visible)
             {
@@ -127,7 +127,7 @@ namespace Number
                     try
                     {
                         Color cl = Color.FromArgb(int.Parse(text.Split(',')[0]), int.Parse(text.Split(',')[1]), int.Parse(text.Split(',')[2]));
-                        flp_ColorFavorite.Controls.Add(CreateColorBTN(cl,true));
+                        flp_ColorFavorite.Controls.Add(CreateColorBTN(cl, true));
                     }
                     catch (Exception) { }
                 }
@@ -333,21 +333,21 @@ namespace Number
                 {
                     using (var image = new Bitmap(path_wallpaper))
                     {
-                        var dict = new Dictionary<Color, int>();
+                        var dict = new Dictionary<Color, int>() { };
                         for (int i = 0; i < image.Width; i++)
                         {
                             for (int j = 0; j < image.Height; j++)
                             {
                                 Color color = image.GetPixel(i, j);
                                 dict.TryGetValue(color, out int count);
-                                dict[color]++;
+                                dict[color] = count++;
                             }
                         }
-                        image.Dispose();
                         dict = dict.OrderBy(x => x.Value).ToDictionary(x => x.Key, x => x.Value);
                         SlectedBackColor = dict.Last().Key;
-                        dict.Clear();
                         Refresh_Color(SlectedBackColor);
+                        dict.Clear();
+                        image.Dispose();
                     }
                 }
                 else
@@ -426,7 +426,7 @@ namespace Number
             string fileText = btn_color.R + "," + btn_color.G + "," + btn_color.B;
             if (contextMenu_ColorBTNs.Items[0].Tag.ToString() == "AddF")
             {
-                File.AppendAllText(Favorite_File, "\n"+ fileText);
+                File.AppendAllText(Favorite_File, "\n" + fileText);
             }
             else
             {
@@ -441,7 +441,7 @@ namespace Number
                             new_txtColor.Add(old_txtColor[i]);
                         }
                     }
-                    
+
                 }
                 File.WriteAllLines(Favorite_File, new_txtColor);
 
