@@ -3,6 +3,7 @@ using Number.Properties;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -13,6 +14,7 @@ namespace Number
         /*------------------ Variable Start ------------------*/
         private string wallpaper = "";
         private string path_wallpaper = "";
+        private string Favorite_File = "FavoriteColor.txt";
         private bool Repetitious = false;
         private Color SlectedBackColor = Color.FromArgb(11, 10, 27);
         private Random random = new Random();
@@ -38,39 +40,101 @@ namespace Number
             }
         }
 
-        void CkeckSettings()
+        private void CkeckSettings()
         {
 
-            if (RC.Value >= 180 && GC.Value >= 180 && BC.Value >= 180) Settings.Default.LightColor = true;
+            if (red_Bar.Value >= 180 && green_Bar.Value >= 180 && blue_Bar.Value >= 180) Settings.Default.LightColor = true;
             else Settings.Default.LightColor = false;
 
             if (Settings.Default.LightColor)
             {
                 this.ForeColor = Color.Black;
-                Save_BTN.ForeColor = Color.Black;
-                Save_BTN.Image = Resources.exit_black;
-                Cancel_BTN.ForeColor = Color.Black;
-                Cancel_BTN.Image = Resources.cancel_black;
-                BTN_ColorPicker.Image = Resources.color_dropper_black;
-                Automatic_BTN.Image = Resources.wallpaper_black;
+                save_BTN.ForeColor = Color.Black;
+                save_BTN.Image = Resources.exit_black;
+                cancel_BTN.ForeColor = Color.Black;
+                cancel_BTN.Image = Resources.cancel_black;
+                colorpicker_BTN.Image = Resources.color_dropper_black;
+                automatic_BTN.Image = Resources.wallpaper_black;
                 random_BTN.Image = Resources.dice_black;
-                favorite_BTN.Image = Resources.favorite_black;
+                if (flp_ColorFavorite.Visible)
+                {
+                    favorite_BTN.Image = Resources.delete_black;
+                }
+                else
+                {
+                    favorite_BTN.Image = Resources.favorite_black;
+                }
                 colorWheel_BTN.Image = Resources.color_wheel_black;
-                TextBox_ColorHex.ForeColor = Color.Black;
+                hex_TextBox.ForeColor = Color.Black;
             }
             else
             {
                 this.ForeColor = Color.White;
-                Save_BTN.ForeColor = Color.White;
-                Save_BTN.Image = Resources.exit;
-                Cancel_BTN.ForeColor = Color.White;
-                Cancel_BTN.Image = Resources.cancel;
-                BTN_ColorPicker.Image = Resources.color_dropper;
-                Automatic_BTN.Image = Resources.wallpaper;
+                save_BTN.ForeColor = Color.White;
+                save_BTN.Image = Resources.exit;
+                cancel_BTN.ForeColor = Color.White;
+                cancel_BTN.Image = Resources.cancel;
+                colorpicker_BTN.Image = Resources.color_dropper;
+                automatic_BTN.Image = Resources.wallpaper;
                 random_BTN.Image = Resources.dice;
-                favorite_BTN.Image = Resources.favorite;
+                if (flp_ColorFavorite.Visible)
+                {
+                    favorite_BTN.Image = Resources.delete;
+                }
+                else
+                {
+                    favorite_BTN.Image = Resources.favorite;
+                }
                 colorWheel_BTN.Image = Resources.color_wheel;
-                TextBox_ColorHex.ForeColor = Color.White;
+                hex_TextBox.ForeColor = Color.White;
+            }
+        }
+
+        private Guna2Button CreateColorBTN(Color color, bool border = false)
+        {
+
+            Guna2Button ColorButton = new Guna2Button();
+            ColorButton.Name = "BTN_" + random.Next();
+            ColorButton.Size = new Size(25, 25);
+            ColorButton.FillColor = color;
+            ColorButton.BorderRadius = 3;
+            if (border)
+            {
+                ColorButton.BorderThickness = 1;
+                if (Settings.Default.LightColor)
+                {
+                    ColorButton.BorderColor = Color.Black;
+                }
+                else ColorButton.BorderColor = Color.White;
+            }
+            
+            ColorButton.ContextMenuStrip = contextMenu_ColorBTNs;
+            if (ColorButton.ContextMenuStrip.Visible)
+            {
+                ColorButton.ContextMenuStrip.Items[0].Enabled = false;
+            }
+            ColorButton.Click += BTN_Color_Click;
+
+            return ColorButton;
+        }
+        private void CreateFavoriteColor()
+        {
+            if (File.Exists(Favorite_File))
+            {
+                flp_ColorFavorite.Controls.Clear();
+                foreach (var text in File.ReadAllLines(Favorite_File))
+                {
+                    try
+                    {
+                        Color cl = Color.FromArgb(int.Parse(text.Split(',')[0]), int.Parse(text.Split(',')[1]), int.Parse(text.Split(',')[2]));
+                        flp_ColorFavorite.Controls.Add(CreateColorBTN(cl,true));
+                    }
+                    catch (Exception) { }
+                }
+            }
+            else
+            {
+                File.Create(Favorite_File);
             }
         }
         private void ColorPick_Load(object sender, EventArgs e)
@@ -78,7 +142,7 @@ namespace Number
             Refresh_Color(Settings.Default.Theme);
             this.TopMost = Settings.Default.AlwaysOT;
             this.Font = Settings.Default.AppFont;
-            TextBox_ColorHex.Focus();
+            hex_TextBox.Focus();
 
             if (!string.IsNullOrEmpty(Settings.Default.Color_History))
             {
@@ -91,45 +155,34 @@ namespace Number
                 }
 
                 Color_History = Color_History.Distinct(StringComparer.InvariantCultureIgnoreCase).Reverse().ToList();
-                
+
                 for (int i = 0; i < 9; i++)
                 {
-                    try
-                    {
-                        Guna2Button ColorButton = new Guna2Button();
-                        ColorButton.Name = "BTN_" + random.Next();
-                        ColorButton.Size = new Size(25, 25);
-                        ColorButton.FillColor = Color.FromArgb(int.Parse(Color_History[i].Split(',')[0]), int.Parse(Color_History[i].Split(',')[1]), int.Parse(Color_History[i].Split(',')[2]));
-                        ColorButton.Text = "";
-                        ColorButton.BorderRadius = 3;
-                        ColorButton.Click += BTN_Color_Click;
-                        Panel_History_Colors.Controls.Add(ColorButton);
-                    }
-                    catch (Exception) { }
-
+                    panel_History_Colors.Controls.Add(CreateColorBTN(Color.FromArgb(int.Parse(Color_History[i].Split(',')[0]), int.Parse(Color_History[i].Split(',')[1]), int.Parse(Color_History[i].Split(',')[2]))));
                 }
             }
 
             CkeckSettings();
+            CreateFavoriteColor();
         }
         private void Refresh_Color(Color color)
         {
             if (color == Color.Empty)
             {
-                this.BackColor = Color.FromArgb(RC.Value, GC.Value, BC.Value);
+                this.BackColor = Color.FromArgb(red_Bar.Value, green_Bar.Value, blue_Bar.Value);
             }
             else
             {
                 this.BackColor = color;
-                RC.Value = color.R;
-                GC.Value = color.G;
-                BC.Value = color.B;
+                red_Bar.Value = color.R;
+                green_Bar.Value = color.G;
+                blue_Bar.Value = color.B;
             }
-            RT.Text = "مقدار رنگ قرمز: " + RC.Value;
-            GT.Text = "مقدار رنگ سبز: " + GC.Value;
-            BT.Text = "مقدار رنگ آبی: " + BC.Value;
-            TextBox_ColorHex.FillColor = this.BackColor;
-            TextBox_ColorHex.Text = string.Format("{0:X2}{1:X2}{2:X2}", RC.Value, GC.Value, BC.Value);
+            red_Text.Text = "مقدار رنگ قرمز: " + red_Bar.Value;
+            green_Text.Text = "مقدار رنگ سبز: " + green_Bar.Value;
+            blue_Text.Text = "مقدار رنگ آبی: " + blue_Bar.Value;
+            hex_TextBox.FillColor = this.BackColor;
+            hex_TextBox.Text = string.Format("{0:X2}{1:X2}{2:X2}", red_Bar.Value, green_Bar.Value, blue_Bar.Value);
             CkeckSettings();
         }
 
@@ -153,22 +206,22 @@ namespace Number
         private void RC_Scroll(object sender, ScrollEventArgs e)
         {
             Refresh_Color(Color.Empty);
-            if (RC.Value >= 180 && GC.Value >= 180 && BC.Value >= 180)
+            if (red_Bar.Value >= 180 && green_Bar.Value >= 180 && blue_Bar.Value >= 180)
             {
                 Settings.Default.LightColor = true;
                 CkeckSettings();
             }
-            else if (RC.Value == 160 && GC.Value == 113 && BC.Value == 255)
+            else if (red_Bar.Value == 160 && green_Bar.Value == 113 && blue_Bar.Value == 255)
             {
-                RC.ThumbColor = Color.FromArgb(112, 79, 178);
-                GC.ThumbColor = Color.FromArgb(112, 79, 178);
-                BC.ThumbColor = Color.FromArgb(112, 79, 178);
+                red_Bar.ThumbColor = Color.FromArgb(112, 79, 178);
+                green_Bar.ThumbColor = Color.FromArgb(112, 79, 178);
+                blue_Bar.ThumbColor = Color.FromArgb(112, 79, 178);
             }
-            else if (RC.Value == 112 && GC.Value == 79 && BC.Value == 178)
+            else if (red_Bar.Value == 112 && green_Bar.Value == 79 && blue_Bar.Value == 178)
             {
-                RC.ThumbColor = Color.FromArgb(160, 113, 255);
-                GC.ThumbColor = Color.FromArgb(160, 113, 255);
-                BC.ThumbColor = Color.FromArgb(160, 113, 255);
+                red_Bar.ThumbColor = Color.FromArgb(160, 113, 255);
+                green_Bar.ThumbColor = Color.FromArgb(160, 113, 255);
+                blue_Bar.ThumbColor = Color.FromArgb(160, 113, 255);
             }
             else Settings.Default.LightColor = false; CkeckSettings();
         }
@@ -184,35 +237,35 @@ namespace Number
             try
             {
                 int r, g, b;
-                if (TextBox_ColorHex.Text.Length == 2)
+                if (hex_TextBox.Text.Length == 2)
                 {
-                    r = Convert.ToInt32(TextBox_ColorHex.Text.Substring(0, 2), 16);
+                    r = Convert.ToInt32(hex_TextBox.Text.Substring(0, 2), 16);
                     g = 0;
                     b = 0;
                 }
-                else if (TextBox_ColorHex.Text.Length == 3)
+                else if (hex_TextBox.Text.Length == 3)
                 {
                     string c1, c2, c3;
-                    c1 = TextBox_ColorHex.Text.Substring(0, 1);
-                    c2 = TextBox_ColorHex.Text.Substring(1, 1);
-                    c3 = TextBox_ColorHex.Text.Substring(2, 1);
+                    c1 = hex_TextBox.Text.Substring(0, 1);
+                    c2 = hex_TextBox.Text.Substring(1, 1);
+                    c3 = hex_TextBox.Text.Substring(2, 1);
                     r = Convert.ToInt32(c1 + c1, 16);
                     g = Convert.ToInt32(c2 + c2, 16);
                     b = Convert.ToInt32(c3 + c3, 16);
 
                 }
-                else if (TextBox_ColorHex.Text.Length == 4)
+                else if (hex_TextBox.Text.Length == 4)
                 {
-                    r = Convert.ToInt32(TextBox_ColorHex.Text.Substring(0, 2), 16);
-                    g = Convert.ToInt32(TextBox_ColorHex.Text.Substring(2, 2), 16);
+                    r = Convert.ToInt32(hex_TextBox.Text.Substring(0, 2), 16);
+                    g = Convert.ToInt32(hex_TextBox.Text.Substring(2, 2), 16);
                     b = 0;
 
                 }
-                else if (TextBox_ColorHex.Text.Length == 6 || TextBox_ColorHex.Text.Length == 8)
+                else if (hex_TextBox.Text.Length == 6 || hex_TextBox.Text.Length == 8)
                 {
-                    r = Convert.ToInt32(TextBox_ColorHex.Text.Substring(0, 2), 16);
-                    g = Convert.ToInt32(TextBox_ColorHex.Text.Substring(2, 2), 16);
-                    b = Convert.ToInt32(TextBox_ColorHex.Text.Substring(4, 2), 16);
+                    r = Convert.ToInt32(hex_TextBox.Text.Substring(0, 2), 16);
+                    g = Convert.ToInt32(hex_TextBox.Text.Substring(2, 2), 16);
+                    b = Convert.ToInt32(hex_TextBox.Text.Substring(4, 2), 16);
                 }
                 else
                 {
@@ -220,25 +273,26 @@ namespace Number
                     g = 0;
                     b = 0;
                 }
-                RC.Value = r;
-                GC.Value = g;
-                BC.Value = b;
+                red_Bar.Value = r;
+                green_Bar.Value = g;
+                blue_Bar.Value = b;
                 Refresh_Color(Color.Empty);
                 CkeckSettings();
             }
             catch (Exception)
             {
-                Alert("ساختار وارد شده صحیح نمیباشد"); TextBox_ColorHex.Select();
+                Alert("ساختار وارد شده صحیح نمیباشد"); hex_TextBox.Select();
             }
-            
+
         }
 
         private void Enter_Hex_ChengeColor(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter) { Hex_ChengeColor(TextBox_ColorHex, EventArgs.Empty); }
+            if (e.KeyCode == Keys.Enter) { Hex_ChengeColor(hex_TextBox, EventArgs.Empty); }
         }
         /*------------------ Hex Color End ------------------*/
         /*------------------ Option BTNs Start ------------------*/
+        /*------ ColorWheel ------*/
         private void colorWheel_BTN_Click(object sender, EventArgs e)
         {
             ColorDialog cd = new ColorDialog();
@@ -247,19 +301,21 @@ namespace Number
                 Refresh_Color(cd.Color);
             }
         }
+        /*------ ColorPicker ------*/
         private void BTN_ColorPicker_Click(object sender, EventArgs e)
         {
             Alert("در دست ساخت!");
         }
+        /*------ Automatic with Wallpaper ------*/
         private void Automatic_BTN_Click(object sender, EventArgs e)
         {
             panel_ColorBox.Enabled = false;
-            Panel_Options.Enabled = false;
-            Panel_History_Colors.Enabled = false;
-            Panel_Exit.Enabled = false;
+            panel_Options.Enabled = false;
+            panel_History_Colors.Enabled = false;
+            panel_Exit.Enabled = false;
             try
             {
-                using (var regKey = Microsoft.Win32.Registry.CurrentUser.OpenSubKey("Control Panel\\Desktop",false))
+                using (var regKey = Microsoft.Win32.Registry.CurrentUser.OpenSubKey("Control Panel\\Desktop", false))
                 {
                     if (regKey != null)
                     {
@@ -273,7 +329,7 @@ namespace Number
                 {
                     Refresh_Color(SlectedBackColor);
                 }
-                else if (System.IO.File.Exists(path_wallpaper))
+                else if (File.Exists(path_wallpaper))
                 {
                     using (var image = new Bitmap(path_wallpaper))
                     {
@@ -284,7 +340,7 @@ namespace Number
                             {
                                 Color color = image.GetPixel(i, j);
                                 dict.TryGetValue(color, out int count);
-                                dict[color] = count + 1;
+                                dict[color]++;
                             }
                         }
                         image.Dispose();
@@ -304,16 +360,95 @@ namespace Number
                 Alert(ex.Message);
             }
             panel_ColorBox.Enabled = true;
-            Panel_Options.Enabled = true;
-            Panel_History_Colors.Enabled = true;
-            Panel_Exit.Enabled = true;
+            panel_Options.Enabled = true;
+            panel_History_Colors.Enabled = true;
+            panel_Exit.Enabled = true;
         }
-
+        /*------ RandomColor ------*/
         private void random_BTN_Click(object sender, EventArgs e)
         {
             Refresh_Color(Color.FromArgb(random.Next(0, 255), random.Next(0, 255), random.Next(0, 255)));
         }
+        /*------ FavoriteColor ------*/
+        private void favorite_BTN_Click(object sender, EventArgs e)
+        {
+            if (flp_ColorFavorite.Visible)
+            {
+                flp_ColorFavorite.Visible = false;
+                if (Settings.Default.LightColor)
+                {
+                    favorite_BTN.Image = Resources.favorite_black;
+                }
+                else favorite_BTN.Image = Resources.favorite;
+            }
+            else
+            {
+                flp_ColorFavorite.Visible = true;
+                if (Settings.Default.LightColor)
+                {
+                    favorite_BTN.Image = Resources.delete_black;
+                }
+                else favorite_BTN.Image = Resources.delete;
+            }
+        }
         /*------------------ Option BTNs End ------------------*/
+        /*------------------ ContextMenu Start ------------------*/
+        private void contextMenu_ColorBTNs_Opening(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            Guna2Button btn = contextMenu_ColorBTNs.SourceControl as Guna2Button;
+            if (File.Exists(Favorite_File))
+            {
+                foreach (var text in File.ReadAllLines(Favorite_File))
+                {
+                    try
+                    {
+                        Color cl = Color.FromArgb(int.Parse(text.Split(',')[0]), int.Parse(text.Split(',')[1]), int.Parse(text.Split(',')[2]));
+                        if (btn.FillColor == cl)
+                        {
+                            contextMenu_ColorBTNs.Items[0].Text = "حذف از مورد علاقه‌ها";
+                            contextMenu_ColorBTNs.Items[0].Tag = "DelF";
+                            break;
+                        }
+                        else
+                        {
+                            contextMenu_ColorBTNs.Items[0].Text = "افزودن به مورد علاقه ها";
+                            contextMenu_ColorBTNs.Items[0].Tag = "AddF";
+                        }
+                    }
+                    catch (Exception) { }
+                }
+            }
+        }
+        private void tsmi_AddToFavorite_Click(object sender, EventArgs e)
+        {
+            Guna2Button btn = contextMenu_ColorBTNs.SourceControl as Guna2Button;
+            Color btn_color = btn.FillColor;
+            string fileText = btn_color.R + "," + btn_color.G + "," + btn_color.B;
+            if (contextMenu_ColorBTNs.Items[0].Tag.ToString() == "AddF")
+            {
+                File.AppendAllText(Favorite_File, "\n"+ fileText);
+            }
+            else
+            {
+                string[] old_txtColor = File.ReadAllLines(Favorite_File);
+                List<string> new_txtColor = new List<string> { };
+                for (int i = 0; i < old_txtColor.Length; i++)
+                {
+                    if (!string.IsNullOrEmpty(old_txtColor[i]))
+                    {
+                        if (old_txtColor[i] != fileText)
+                        {
+                            new_txtColor.Add(old_txtColor[i]);
+                        }
+                    }
+                    
+                }
+                File.WriteAllLines(Favorite_File, new_txtColor);
+
+            }
+            CreateFavoriteColor();
+        }
+        /*------------------ ContextMenu End ------------------*/
         /*--------- Exit Start ---------*/
         private void Save_BTN_Click(object sender, EventArgs e)
         {
@@ -340,7 +475,6 @@ namespace Number
         }
         private void Cancel_BTN_Click(object sender, EventArgs e)
         { this.Close(); }
-
 
         /*--------- Exit End ---------*/
     }
