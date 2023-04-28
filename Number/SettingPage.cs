@@ -67,7 +67,7 @@ namespace Number
 
         void Fill_ComboBox()
         {
-            ComboBox_DefaultNum.Items.Clear();
+            defaultNum_ComboBox.Items.Clear();
             try
             {
                 DataXML.Load("Data.xml");
@@ -76,7 +76,7 @@ namespace Number
                     foreach (XmlNode NumberNode in NumberNodes)
                     {
                         string Name = NumberNode.Attributes["Name"].Value;
-                        ComboBox_DefaultNum.Items.Add(Name);
+                        defaultNum_ComboBox.Items.Add(Name);
                     }
                 }
             }
@@ -88,75 +88,75 @@ namespace Number
             if (Settings.Default.DefaultColor == false)
             {
                 this.BackColor = Settings.Default.Theme;
-                ColorCh.Visible = true;
+                colorPicker_BTN.Visible = true;
             }
             else this.BackColor = Color.FromArgb(11, 10, 27);
             if (Settings.Default.LightColor)
             {
                 this.ForeColor = Color.Black;
-                CancelBTN.ForeColor = Color.Black;
-                CancelBTN.Image = Resources.cancel_black;
-                Save_BTN.ForeColor = Color.Black;
-                Save_BTN.Image = Resources.save_black;
-                ColorCh.ForeColor = Color.Black;
-                ColorCh.BorderColor = Color.Black;
-                ColorCh.Image = Resources.paint_palette_black;
-                SoundSetting_BTN.ForeColor = Color.Black;
-                SoundSetting_BTN.BorderColor = Color.Black;
-                SoundSetting_BTN.Image = Resources.music_black;
-                ShortKeyBTN.ForeColor = Color.Black;
-                ShortKeyBTN.BorderColor = Color.Black;
-                ShortKeyBTN.Image = Resources.keyboard_black;
-                FontCBTN.ForeColor = Color.Black;
-                FontCBTN.BorderColor = Color.Black;
-                FontCBTN.Image = Resources.clear_formatting_black;
-                FontBTN.ForeColor = Color.Black;
-                FontBTN.BorderColor = Color.Black;
-                FontBTN.Image = Resources.font_style_formatting_black;
-                No_Reset.ForeColor = Color.Black;
-                No_Reset.BorderColor = Color.Black;
-                No_Reset.Image = Resources.delete_black;
-                ResetBTN.ForeColor = Color.Black;
-                ResetBTN.Image = Resources.reset_black;
-                Yes_Reset.ForeColor = Color.Black;
-                Yes_Reset.Image = Resources.checkmark_black;
+                cancel_BTN.ForeColor = Color.Black;
+                cancel_BTN.Image = Resources.cancel_black;
+                save_BTN.ForeColor = Color.Black;
+                save_BTN.Image = Resources.save_black;
+                colorPicker_BTN.ForeColor = Color.Black;
+                colorPicker_BTN.BorderColor = Color.Black;
+                colorPicker_BTN.Image = Resources.paint_palette_black;
+                soundSetting_BTN.ForeColor = Color.Black;
+                soundSetting_BTN.BorderColor = Color.Black;
+                soundSetting_BTN.Image = Resources.music_black;
+                shortKey_BTN.ForeColor = Color.Black;
+                shortKey_BTN.BorderColor = Color.Black;
+                shortKey_BTN.Image = Resources.keyboard_black;
+                fontClear_BTN.ForeColor = Color.Black;
+                fontClear_BTN.BorderColor = Color.Black;
+                fontClear_BTN.Image = Resources.clear_formatting_black;
+                font_BTN.ForeColor = Color.Black;
+                font_BTN.BorderColor = Color.Black;
+                font_BTN.Image = Resources.font_style_formatting_black;
+                noReset_BTN.ForeColor = Color.Black;
+                noReset_BTN.BorderColor = Color.Black;
+                noReset_BTN.Image = Resources.delete_black;
+                reset_BTN.ForeColor = Color.Black;
+                reset_BTN.Image = Resources.reset_black;
+                yesReset_BTN.ForeColor = Color.Black;
+                yesReset_BTN.Image = Resources.checkmark_black;
             }
             this.TopMost = Settings.Default.AlwaysOT;
             this.Font = Settings.Default.AppFont;
             Counter_Value.Value = Convert.ToDecimal(Settings.Default.Counter);
-            OnTopBTN.Checked = Settings.Default.AlwaysOT;
-            DarkMode.Checked = Settings.Default.DefaultColor;
+            onTop_Toggle.Checked = Settings.Default.AlwaysOT;
+            theme_Toggle.Checked = Settings.Default.DefaultColor;
             fontDialog1.Font = Settings.Default.AppFont;
-            SoundPlay.Checked = Settings.Default.Sound_EFX;
+            soundPlay_Toggle.Checked = Settings.Default.Sound_EFX;
             Fill_ComboBox();
-            ComboBox_DefaultNum.Text = Settings.Default.DefaultNumber;
+            defaultNum_ComboBox.Text = Settings.Default.DefaultNumber;
             if (Settings.Default.Sound_EFX)
             {
-                SoundSetting_BTN.Visible = true;
+                soundSetting_BTN.Visible = true;
             }
             switch (Settings.Default.Sound_Num)
             {
                 case 1:
-                    Sound1.Checked = true;
+                    sound1_RBTN.Checked = true;
                     break;
                 case 2:
-                    Sound2.Checked = true;
+                    sound2_RBTN.Checked = true;
                     break;
                 case 3:
-                    Sound3.Checked = true;
+                    sound3_RBTN.Checked = true;
                     break;
                 case 4:
-                    Sound4.Checked = true;
+                    sound4_RBTN.Checked = true;
                     break;
                 case 5:
-                    Sound5.Checked = true;
+                    sound5_RBTN.Checked = true;
                     break;
             }
             if (Settings.Default.AppFont == Settings.Default.DFont)
             {
-                FontCBTN.Visible = false;
+                fontClear_BTN.Visible = false;
             }
-            else FontCBTN.Visible = true;
+            else fontClear_BTN.Visible = true;
         }
         /*------------------ BTN Start ------------------*/
         /*--------- Font Start ---------*/
@@ -175,12 +175,12 @@ namespace Number
         /*--------- SaveBTN ---------*/
         private void Save_Click(object sender, EventArgs e)
         {
-            Settings.Default.AlwaysOT = OnTopBTN.Checked;
-            Settings.Default.DefaultColor = DarkMode.Checked;
+            Settings.Default.AlwaysOT = onTop_Toggle.Checked;
+            Settings.Default.DefaultColor = theme_Toggle.Checked;
             Settings.Default.AppFont = fontDialog1.Font;
             Settings.Default.Counter = Counter_Value.Value.ToString();
-            Settings.Default.Sound_EFX = SoundPlay.Checked;
-            Settings.Default.DefaultNumber = ComboBox_DefaultNum.Text;
+            Settings.Default.Sound_EFX = soundPlay_Toggle.Checked;
+            Settings.Default.DefaultNumber = defaultNum_ComboBox.Text;
             Settings.Default.Save();
             this.Close();
         }
@@ -190,9 +190,9 @@ namespace Number
         /*--------- Background ---------*/
         private void BackgroundMode_CheckedChanged(object sender, EventArgs e)
         {
-            if (DarkMode.Checked == false)
+            if (theme_Toggle.Checked == false)
             {
-                ColorCh.Visible = true;
+                colorPicker_BTN.Visible = true;
                 if (Settings.Default.Theme.R >= 180 && Settings.Default.Theme.G >= 180 && Settings.Default.Theme.B >= 180)
                 {
                     Settings.Default.LightColor = true;
@@ -201,7 +201,7 @@ namespace Number
             }
             else 
             { 
-                ColorCh.Visible = false;
+                colorPicker_BTN.Visible = false;
                 Settings.Default.LightColor = false;
             }
         }
@@ -217,8 +217,8 @@ namespace Number
         /*--------- Reset Start ---------*/
         private void ResetBTN_Click(object sender, EventArgs e)
         {
-            Reset_YN_Panel.BringToFront();
-            ResetNAni.AddToQueue(Reset_YN_Panel, Guna.UI2.AnimatorNS.AnimateMode.Show);
+            reset_YN_Panel.BringToFront();
+            resetPanel_Animation.AddToQueue(reset_YN_Panel, Guna.UI2.AnimatorNS.AnimateMode.Show);
             
         }
         /*----- Yes Reset -----*/
@@ -226,27 +226,27 @@ namespace Number
         {
             Cdata.Delete();
             Alert("شمارنده ها بازنشانی شدند");
-            ResetNAni.AddToQueue(Reset_YN_Panel, Guna.UI2.AnimatorNS.AnimateMode.Hide);
+            resetPanel_Animation.AddToQueue(reset_YN_Panel, Guna.UI2.AnimatorNS.AnimateMode.Hide);
         }
         /*----- Np Reset -----*/
         private void No_Reset_Click(object sender, EventArgs e)
         {
-            ResetNAni.AddToQueue(Reset_YN_Panel, Guna.UI2.AnimatorNS.AnimateMode.Hide);
+            resetPanel_Animation.AddToQueue(reset_YN_Panel, Guna.UI2.AnimatorNS.AnimateMode.Hide);
         }
         /*--------- Reset End ---------*/
         /*--------- Sound Start ---------*/
         private void SoundPlay_CheckedChanged(object sender, EventArgs e)
         {
-            if (SoundPlay.Checked)
+            if (soundPlay_Toggle.Checked)
             {
-                SoundSetting_BTN.Visible = true;
+                soundSetting_BTN.Visible = true;
             }
-            else SoundSetting_BTN.Visible = false;
+            else soundSetting_BTN.Visible = false;
         }
         private void SoundSetting_BTN_Click(object sender, EventArgs e)
         {
-            Reset_YN_Panel.BringToFront();
-            ResetNAni.AddToQueue(panelSound, Guna.UI2.AnimatorNS.AnimateMode.Show);
+            reset_YN_Panel.BringToFront();
+            resetPanel_Animation.AddToQueue(panelSound, Guna.UI2.AnimatorNS.AnimateMode.Show);
         }
 
         private void Sounds(object sender, EventArgs e)
