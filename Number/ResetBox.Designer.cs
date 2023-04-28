@@ -32,17 +32,17 @@ namespace Number
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ResetBox));
             this.label_Alert = new System.Windows.Forms.Label();
-            this.BTN_DefultN = new Guna.UI2.WinForms.Guna2Button();
-            this.BTN_SaveN = new Guna.UI2.WinForms.Guna2Button();
+            this.defult_BTN = new Guna.UI2.WinForms.Guna2Button();
+            this.save_BTN = new Guna.UI2.WinForms.Guna2Button();
             this.panel_down = new System.Windows.Forms.Panel();
-            this.panel_top = new System.Windows.Forms.Panel();
-            this.BTN_exit = new Guna.UI2.WinForms.Guna2Button();
-            this.panel_left = new System.Windows.Forms.Panel();
-            this.panel_right = new System.Windows.Forms.Panel();
-            this.panel_bottom = new System.Windows.Forms.Panel();
-            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.borderTop_panel = new System.Windows.Forms.Panel();
+            this.exit_BTN = new Guna.UI2.WinForms.Guna2Button();
+            this.borderLeft_panel = new System.Windows.Forms.Panel();
+            this.borderRight_panel = new System.Windows.Forms.Panel();
+            this.borderBottom_panel = new System.Windows.Forms.Panel();
+            this.borderRadius = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.panel_down.SuspendLayout();
-            this.panel_top.SuspendLayout();
+            this.borderTop_panel.SuspendLayout();
             this.SuspendLayout();
             // 
             // label_Alert
@@ -56,54 +56,52 @@ namespace Number
             this.label_Alert.Text = "به دلیل مشکلاتی که برای فایل شمارنده ها پیش آمده امکان بارگذاری وجود ندارد آیا ما" +
     "یلید شمارنده ها بازنشانی شوند؟";
             // 
-            // BTN_DefultN
+            // defult_BTN
             // 
-            this.BTN_DefultN.AutoRoundedCorners = true;
-            this.BTN_DefultN.BorderColor = System.Drawing.Color.White;
-            this.BTN_DefultN.BorderRadius = 19;
-            this.BTN_DefultN.BorderThickness = 1;
-            this.BTN_DefultN.CheckedState.Parent = this.BTN_DefultN;
-            this.BTN_DefultN.CustomImages.Parent = this.BTN_DefultN;
-            this.BTN_DefultN.Dock = System.Windows.Forms.DockStyle.Left;
-            this.BTN_DefultN.FillColor = System.Drawing.Color.Transparent;
-            this.BTN_DefultN.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.BTN_DefultN.ForeColor = System.Drawing.Color.White;
-            this.BTN_DefultN.HoverState.Parent = this.BTN_DefultN;
-            this.BTN_DefultN.Image = global::Number.Properties.Resources._return;
-            this.BTN_DefultN.Location = new System.Drawing.Point(5, 5);
-            this.BTN_DefultN.Name = "BTN_DefultN";
-            this.BTN_DefultN.ShadowDecoration.Parent = this.BTN_DefultN;
-            this.BTN_DefultN.Size = new System.Drawing.Size(210, 40);
-            this.BTN_DefultN.TabIndex = 0;
-            this.BTN_DefultN.Text = "بازنشانی به حالت پیشفرض";
-            this.BTN_DefultN.Click += new System.EventHandler(this.BTN_DefultN_Click);
+            this.defult_BTN.BorderColor = System.Drawing.Color.White;
+            this.defult_BTN.BorderRadius = 7;
+            this.defult_BTN.BorderThickness = 1;
+            this.defult_BTN.CheckedState.Parent = this.defult_BTN;
+            this.defult_BTN.CustomImages.Parent = this.defult_BTN;
+            this.defult_BTN.Dock = System.Windows.Forms.DockStyle.Left;
+            this.defult_BTN.FillColor = System.Drawing.Color.Transparent;
+            this.defult_BTN.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.defult_BTN.ForeColor = System.Drawing.Color.White;
+            this.defult_BTN.HoverState.Parent = this.defult_BTN;
+            this.defult_BTN.Image = global::Number.Properties.Resources._return;
+            this.defult_BTN.Location = new System.Drawing.Point(5, 5);
+            this.defult_BTN.Name = "defult_BTN";
+            this.defult_BTN.ShadowDecoration.Parent = this.defult_BTN;
+            this.defult_BTN.Size = new System.Drawing.Size(210, 40);
+            this.defult_BTN.TabIndex = 0;
+            this.defult_BTN.Text = "بازنشانی به حالت پیشفرض";
+            this.defult_BTN.Click += new System.EventHandler(this.BTN_DefultN_Click);
             // 
-            // BTN_SaveN
+            // save_BTN
             // 
-            this.BTN_SaveN.AutoRoundedCorners = true;
-            this.BTN_SaveN.BorderColor = System.Drawing.Color.White;
-            this.BTN_SaveN.BorderRadius = 19;
-            this.BTN_SaveN.BorderThickness = 1;
-            this.BTN_SaveN.CheckedState.Parent = this.BTN_SaveN;
-            this.BTN_SaveN.CustomImages.Parent = this.BTN_SaveN;
-            this.BTN_SaveN.Dock = System.Windows.Forms.DockStyle.Right;
-            this.BTN_SaveN.FillColor = System.Drawing.Color.Transparent;
-            this.BTN_SaveN.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.BTN_SaveN.ForeColor = System.Drawing.Color.White;
-            this.BTN_SaveN.HoverState.Parent = this.BTN_SaveN;
-            this.BTN_SaveN.Image = global::Number.Properties.Resources.save;
-            this.BTN_SaveN.Location = new System.Drawing.Point(237, 5);
-            this.BTN_SaveN.Name = "BTN_SaveN";
-            this.BTN_SaveN.ShadowDecoration.Parent = this.BTN_SaveN;
-            this.BTN_SaveN.Size = new System.Drawing.Size(210, 40);
-            this.BTN_SaveN.TabIndex = 1;
-            this.BTN_SaveN.Text = "بازنشانی شمارنده های ذخیره شده";
-            this.BTN_SaveN.Click += new System.EventHandler(this.BTN_SaveN_Click);
+            this.save_BTN.BorderColor = System.Drawing.Color.White;
+            this.save_BTN.BorderRadius = 7;
+            this.save_BTN.BorderThickness = 1;
+            this.save_BTN.CheckedState.Parent = this.save_BTN;
+            this.save_BTN.CustomImages.Parent = this.save_BTN;
+            this.save_BTN.Dock = System.Windows.Forms.DockStyle.Right;
+            this.save_BTN.FillColor = System.Drawing.Color.Transparent;
+            this.save_BTN.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.save_BTN.ForeColor = System.Drawing.Color.White;
+            this.save_BTN.HoverState.Parent = this.save_BTN;
+            this.save_BTN.Image = global::Number.Properties.Resources.save;
+            this.save_BTN.Location = new System.Drawing.Point(237, 5);
+            this.save_BTN.Name = "save_BTN";
+            this.save_BTN.ShadowDecoration.Parent = this.save_BTN;
+            this.save_BTN.Size = new System.Drawing.Size(210, 40);
+            this.save_BTN.TabIndex = 1;
+            this.save_BTN.Text = "بازنشانی شمارنده های ذخیره شده";
+            this.save_BTN.Click += new System.EventHandler(this.BTN_SaveN_Click);
             // 
             // panel_down
             // 
-            this.panel_down.Controls.Add(this.BTN_DefultN);
-            this.panel_down.Controls.Add(this.BTN_SaveN);
+            this.panel_down.Controls.Add(this.defult_BTN);
+            this.panel_down.Controls.Add(this.save_BTN);
             this.panel_down.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel_down.Location = new System.Drawing.Point(3, 125);
             this.panel_down.Name = "panel_down";
@@ -111,61 +109,61 @@ namespace Number
             this.panel_down.Size = new System.Drawing.Size(452, 50);
             this.panel_down.TabIndex = 3;
             // 
-            // panel_top
+            // borderTop_panel
             // 
-            this.panel_top.Controls.Add(this.BTN_exit);
-            this.panel_top.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel_top.Location = new System.Drawing.Point(0, 0);
-            this.panel_top.Name = "panel_top";
-            this.panel_top.Size = new System.Drawing.Size(458, 25);
-            this.panel_top.TabIndex = 4;
-            this.panel_top.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form_MouseMove);
+            this.borderTop_panel.Controls.Add(this.exit_BTN);
+            this.borderTop_panel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.borderTop_panel.Location = new System.Drawing.Point(0, 0);
+            this.borderTop_panel.Name = "borderTop_panel";
+            this.borderTop_panel.Size = new System.Drawing.Size(458, 25);
+            this.borderTop_panel.TabIndex = 4;
+            this.borderTop_panel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form_MouseMove);
             // 
-            // BTN_exit
+            // exit_BTN
             // 
-            this.BTN_exit.CheckedState.Parent = this.BTN_exit;
-            this.BTN_exit.CustomImages.Parent = this.BTN_exit;
-            this.BTN_exit.Dock = System.Windows.Forms.DockStyle.Right;
-            this.BTN_exit.FillColor = System.Drawing.Color.Transparent;
-            this.BTN_exit.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.BTN_exit.ForeColor = System.Drawing.Color.White;
-            this.BTN_exit.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(75)))), ((int)(((byte)(66)))));
-            this.BTN_exit.HoverState.Parent = this.BTN_exit;
-            this.BTN_exit.Image = global::Number.Properties.Resources.delete;
-            this.BTN_exit.Location = new System.Drawing.Point(422, 0);
-            this.BTN_exit.Name = "BTN_exit";
-            this.BTN_exit.ShadowDecoration.Parent = this.BTN_exit;
-            this.BTN_exit.Size = new System.Drawing.Size(36, 25);
-            this.BTN_exit.TabIndex = 0;
-            this.BTN_exit.Click += new System.EventHandler(this.BTN_exit_Click);
+            this.exit_BTN.CheckedState.Parent = this.exit_BTN;
+            this.exit_BTN.CustomImages.Parent = this.exit_BTN;
+            this.exit_BTN.Dock = System.Windows.Forms.DockStyle.Right;
+            this.exit_BTN.FillColor = System.Drawing.Color.Transparent;
+            this.exit_BTN.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.exit_BTN.ForeColor = System.Drawing.Color.White;
+            this.exit_BTN.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(75)))), ((int)(((byte)(66)))));
+            this.exit_BTN.HoverState.Parent = this.exit_BTN;
+            this.exit_BTN.Image = global::Number.Properties.Resources.delete;
+            this.exit_BTN.Location = new System.Drawing.Point(422, 0);
+            this.exit_BTN.Name = "exit_BTN";
+            this.exit_BTN.ShadowDecoration.Parent = this.exit_BTN;
+            this.exit_BTN.Size = new System.Drawing.Size(36, 25);
+            this.exit_BTN.TabIndex = 0;
+            this.exit_BTN.Click += new System.EventHandler(this.BTN_exit_Click);
             // 
-            // panel_left
+            // borderLeft_panel
             // 
-            this.panel_left.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel_left.Location = new System.Drawing.Point(0, 25);
-            this.panel_left.Name = "panel_left";
-            this.panel_left.Size = new System.Drawing.Size(3, 150);
-            this.panel_left.TabIndex = 5;
+            this.borderLeft_panel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.borderLeft_panel.Location = new System.Drawing.Point(0, 25);
+            this.borderLeft_panel.Name = "borderLeft_panel";
+            this.borderLeft_panel.Size = new System.Drawing.Size(3, 150);
+            this.borderLeft_panel.TabIndex = 5;
             // 
-            // panel_right
+            // borderRight_panel
             // 
-            this.panel_right.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel_right.Location = new System.Drawing.Point(455, 25);
-            this.panel_right.Name = "panel_right";
-            this.panel_right.Size = new System.Drawing.Size(3, 150);
-            this.panel_right.TabIndex = 6;
+            this.borderRight_panel.Dock = System.Windows.Forms.DockStyle.Right;
+            this.borderRight_panel.Location = new System.Drawing.Point(455, 25);
+            this.borderRight_panel.Name = "borderRight_panel";
+            this.borderRight_panel.Size = new System.Drawing.Size(3, 150);
+            this.borderRight_panel.TabIndex = 6;
             // 
-            // panel_bottom
+            // borderBottom_panel
             // 
-            this.panel_bottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel_bottom.Location = new System.Drawing.Point(0, 175);
-            this.panel_bottom.Name = "panel_bottom";
-            this.panel_bottom.Size = new System.Drawing.Size(458, 3);
-            this.panel_bottom.TabIndex = 7;
+            this.borderBottom_panel.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.borderBottom_panel.Location = new System.Drawing.Point(0, 175);
+            this.borderBottom_panel.Name = "borderBottom_panel";
+            this.borderBottom_panel.Size = new System.Drawing.Size(458, 3);
+            this.borderBottom_panel.TabIndex = 7;
             // 
-            // guna2Elipse1
+            // borderRadius
             // 
-            this.guna2Elipse1.TargetControl = this;
+            this.borderRadius.TargetControl = this;
             // 
             // ResetBox
             // 
@@ -174,10 +172,10 @@ namespace Number
             this.ClientSize = new System.Drawing.Size(458, 178);
             this.Controls.Add(this.label_Alert);
             this.Controls.Add(this.panel_down);
-            this.Controls.Add(this.panel_left);
-            this.Controls.Add(this.panel_right);
-            this.Controls.Add(this.panel_bottom);
-            this.Controls.Add(this.panel_top);
+            this.Controls.Add(this.borderLeft_panel);
+            this.Controls.Add(this.borderRight_panel);
+            this.Controls.Add(this.borderBottom_panel);
+            this.Controls.Add(this.borderTop_panel);
             this.Font = new System.Drawing.Font("Vazir", 12F);
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -191,7 +189,7 @@ namespace Number
             this.TopMost = true;
             this.Load += new System.EventHandler(this.ResetBox_Load);
             this.panel_down.ResumeLayout(false);
-            this.panel_top.ResumeLayout(false);
+            this.borderTop_panel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -199,14 +197,14 @@ namespace Number
         #endregion
 
         private System.Windows.Forms.Label label_Alert;
-        private Guna.UI2.WinForms.Guna2Button BTN_DefultN;
-        private Guna.UI2.WinForms.Guna2Button BTN_SaveN;
+        private Guna.UI2.WinForms.Guna2Button defult_BTN;
+        private Guna.UI2.WinForms.Guna2Button save_BTN;
         private System.Windows.Forms.Panel panel_down;
-        private System.Windows.Forms.Panel panel_top;
-        private Guna.UI2.WinForms.Guna2Button BTN_exit;
-        private System.Windows.Forms.Panel panel_left;
-        private System.Windows.Forms.Panel panel_right;
-        private System.Windows.Forms.Panel panel_bottom;
-        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
+        private System.Windows.Forms.Panel borderTop_panel;
+        private Guna.UI2.WinForms.Guna2Button exit_BTN;
+        private System.Windows.Forms.Panel borderLeft_panel;
+        private System.Windows.Forms.Panel borderRight_panel;
+        private System.Windows.Forms.Panel borderBottom_panel;
+        private Guna.UI2.WinForms.Guna2Elipse borderRadius;
     }
 }

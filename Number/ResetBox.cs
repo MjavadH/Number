@@ -33,24 +33,24 @@ namespace Number
             if (Settings.Default.LightColor)
             {
                 this.ForeColor = Color.Black;
-                BTN_DefultN.ForeColor = Color.Black;
-                BTN_DefultN.BorderColor = Color.Black;
-                BTN_DefultN.Image = Resources.save_black;
-                BTN_SaveN.ForeColor = Color.Black;
-                BTN_SaveN.BorderColor = Color.Black;
-                BTN_SaveN.Image = Resources.reset_black;
-                BTN_exit.Image = Resources.delete_black;
-                panel_top.BackColor = Color.FromArgb(BackColor.R - 10, BackColor.G - 10, BackColor.B - 10);
-                panel_right.BackColor = Color.FromArgb(BackColor.R - 10, BackColor.G - 10, BackColor.B - 10);
-                panel_left.BackColor = Color.FromArgb(BackColor.R - 10, BackColor.G - 10, BackColor.B - 10);
-                panel_bottom.BackColor = Color.FromArgb(BackColor.R - 10, BackColor.G - 10, BackColor.B - 10);
+                defult_BTN.ForeColor = Color.Black;
+                defult_BTN.BorderColor = Color.Black;
+                defult_BTN.Image = Resources.save_black;
+                save_BTN.ForeColor = Color.Black;
+                save_BTN.BorderColor = Color.Black;
+                save_BTN.Image = Resources.reset_black;
+                exit_BTN.Image = Resources.delete_black;
+                borderTop_panel.BackColor = Color.FromArgb(BackColor.R - 10, BackColor.G - 10, BackColor.B - 10);
+                borderRight_panel.BackColor = Color.FromArgb(BackColor.R - 10, BackColor.G - 10, BackColor.B - 10);
+                borderLeft_panel.BackColor = Color.FromArgb(BackColor.R - 10, BackColor.G - 10, BackColor.B - 10);
+                borderBottom_panel.BackColor = Color.FromArgb(BackColor.R - 10, BackColor.G - 10, BackColor.B - 10);
             }
             else
             {
-                panel_top.BackColor = Color.FromArgb(BackColor.R + 10, BackColor.G + 10, BackColor.B + 10);
-                panel_right.BackColor = Color.FromArgb(BackColor.R + 10, BackColor.G + 10, BackColor.B + 10);
-                panel_left.BackColor = Color.FromArgb(BackColor.R + 10, BackColor.G + 10, BackColor.B + 10);
-                panel_bottom.BackColor = Color.FromArgb(BackColor.R + 10, BackColor.G + 10, BackColor.B + 10);
+                borderTop_panel.BackColor = Color.FromArgb(BackColor.R + 10, BackColor.G + 10, BackColor.B + 10);
+                borderRight_panel.BackColor = Color.FromArgb(BackColor.R + 10, BackColor.G + 10, BackColor.B + 10);
+                borderLeft_panel.BackColor = Color.FromArgb(BackColor.R + 10, BackColor.G + 10, BackColor.B + 10);
+                borderBottom_panel.BackColor = Color.FromArgb(BackColor.R + 10, BackColor.G + 10, BackColor.B + 10);
             }
             this.Font = Settings.Default.AppFont;
         }
