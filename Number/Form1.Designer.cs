@@ -54,7 +54,6 @@ namespace Number
             this.counter_Timer = new System.Windows.Forms.Timer(this.components);
             this.AnimationMenu = new Guna.UI2.WinForms.Guna2Transition();
             this.Show_Text_BTN = new Guna.UI2.WinForms.Guna2TileButton();
-            this.splashScreen1 = new Number.SplashScreen();
             this.MenuBar.SuspendLayout();
             this.MenuListP.SuspendLayout();
             this.SuspendLayout();
@@ -340,22 +339,12 @@ namespace Number
             this.Show_Text_BTN.ShadowDecoration.Parent = this.Show_Text_BTN;
             this.Show_Text_BTN.Click += new System.EventHandler(this.Show_Text_BTN_Click);
             // 
-            // splashScreen1
-            // 
-            this.splashScreen1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(10)))), ((int)(((byte)(27)))));
-            this.AnimationMenu.SetDecoration(this.splashScreen1, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.splashScreen1.ForeColor = System.Drawing.Color.White;
-            resources.ApplyResources(this.splashScreen1, "splashScreen1");
-            this.splashScreen1.Name = "splashScreen1";
-            this.splashScreen1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.NumberForm_MouseMove);
-            // 
             // NumberForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             resources.ApplyResources(this, "$this");
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(10)))), ((int)(((byte)(27)))));
             this.ControlBox = false;
-            this.Controls.Add(this.splashScreen1);
             this.Controls.Add(this.DropDown);
             this.Controls.Add(this.TextLen);
             this.Controls.Add(this.NumberT);
@@ -408,7 +397,6 @@ namespace Number
         private Guna.UI2.WinForms.Guna2Button exit;
         private Guna.UI2.WinForms.Guna2Transition AnimationMenu;
         private Guna.UI2.WinForms.Guna2TileButton Show_Text_BTN;
-        private SplashScreen splashScreen1;
     }
 }
 

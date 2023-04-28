@@ -47,7 +47,7 @@ namespace Number.ColorPicker
             {
                 this.Location = new Point(MousePosition.X + 10, MousePosition.Y + 20);
             }
-            Color_Hex.Text = MousePosition.X + "," + MousePosition.Y;
+            hexColor_Text.Text = MousePosition.X + "," + MousePosition.Y;
         }
 
     }

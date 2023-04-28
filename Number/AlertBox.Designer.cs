@@ -33,7 +33,7 @@ namespace Number
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AlertBox));
             this.alertText = new System.Windows.Forms.Label();
             this.close_BTN = new System.Windows.Forms.Button();
-            this.Show_Timer = new System.Windows.Forms.Timer(this.components);
+            this.show_Timer = new System.Windows.Forms.Timer(this.components);
             this.borderRadius = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.SuspendLayout();
             // 
@@ -60,9 +60,9 @@ namespace Number
             this.close_BTN.UseVisualStyleBackColor = false;
             this.close_BTN.Click += new System.EventHandler(this.closebtn_Click);
             // 
-            // Show_Timer
+            // show_Timer
             // 
-            this.Show_Timer.Tick += new System.EventHandler(this.timer1_Tick);
+            this.show_Timer.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // borderRadius
             // 
@@ -94,7 +94,7 @@ namespace Number
 
         private System.Windows.Forms.Label alertText;
         private System.Windows.Forms.Button close_BTN;
-        private System.Windows.Forms.Timer Show_Timer;
+        private System.Windows.Forms.Timer show_Timer;
         private Guna.UI2.WinForms.Guna2Elipse borderRadius;
     }
 }

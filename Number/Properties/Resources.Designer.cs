@@ -476,7 +476,7 @@ namespace Number.Properties {
         ///        آیدی تلگرام:
         ///        &lt;a href=&quot;https://t.me/rvyrbyhrc&quot;&gt;https://t.me/rvyrbyhrc&lt;/a&gt;
         ///        &lt;br&gt;
-        ///        شما هم اکنون در حال استفاده از نسخه 3.0.0 نرم افزار هستید
+        ///        شما هم اکنون در حال استفاده از نسخه 3.5.0 نرم افزار هستید
         ///        &lt;br&gt;
         ///        در ادامه شما را با ویژگی های این نرم افز [rest of string was truncated]&quot;;.
         /// </summary>

@@ -116,12 +116,6 @@
     <Compile Include="ColorPicker\ColorPick.Designer.cs">
       <DependentUpon>ColorPick.cs</DependentUpon>
     </Compile>
-    <Compile Include="ColorPicker\ColorPickerBox.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ColorPicker\ColorPickerBox.Designer.cs">
-      <DependentUpon>ColorPickerBox.cs</DependentUpon>
-    </Compile>
     <Compile Include="ColorPicker\ColorPicker.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -182,9 +176,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ColorPicker\ColorPick.resx">
       <DependentUpon>ColorPick.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ColorPicker\ColorPickerBox.resx">
-      <DependentUpon>ColorPickerBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ColorPicker\ColorPicker.resx">
       <DependentUpon>ColorPicker.cs</DependentUpon>

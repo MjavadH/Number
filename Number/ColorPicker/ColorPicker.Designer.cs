@@ -32,11 +32,11 @@ namespace Number.ColorPicker
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ColorPicker));
             this.border_radius = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.Timer_color = new System.Windows.Forms.Timer(this.components);
-            this.TableLayout = new System.Windows.Forms.TableLayoutPanel();
-            this.Color_preview = new Guna.UI2.WinForms.Guna2Panel();
-            this.Color_Hex = new System.Windows.Forms.Label();
-            this.TableLayout.SuspendLayout();
+            this.color_Timer = new System.Windows.Forms.Timer(this.components);
+            this.tableLayout = new System.Windows.Forms.TableLayoutPanel();
+            this.color_preview = new Guna.UI2.WinForms.Guna2Panel();
+            this.hexColor_Text = new System.Windows.Forms.Label();
+            this.tableLayout.SuspendLayout();
             this.SuspendLayout();
             // 
             // border_radius
@@ -44,55 +44,55 @@ namespace Number.ColorPicker
             this.border_radius.BorderRadius = 8;
             this.border_radius.TargetControl = this;
             // 
-            // Timer_color
+            // color_Timer
             // 
-            this.Timer_color.Enabled = true;
-            this.Timer_color.Interval = 1;
-            this.Timer_color.Tick += new System.EventHandler(this.Timer_color_Tick);
+            this.color_Timer.Enabled = true;
+            this.color_Timer.Interval = 1;
+            this.color_Timer.Tick += new System.EventHandler(this.Timer_color_Tick);
             // 
-            // TableLayout
+            // tableLayout
             // 
-            this.TableLayout.ColumnCount = 2;
-            this.TableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.TableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.TableLayout.Controls.Add(this.Color_preview, 0, 0);
-            this.TableLayout.Controls.Add(this.Color_Hex, 1, 0);
-            this.TableLayout.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TableLayout.Location = new System.Drawing.Point(0, 0);
-            this.TableLayout.Name = "TableLayout";
-            this.TableLayout.RowCount = 1;
-            this.TableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.TableLayout.Size = new System.Drawing.Size(150, 50);
-            this.TableLayout.TabIndex = 2;
+            this.tableLayout.ColumnCount = 2;
+            this.tableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayout.Controls.Add(this.color_preview, 0, 0);
+            this.tableLayout.Controls.Add(this.hexColor_Text, 1, 0);
+            this.tableLayout.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayout.Location = new System.Drawing.Point(0, 0);
+            this.tableLayout.Name = "tableLayout";
+            this.tableLayout.RowCount = 1;
+            this.tableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayout.Size = new System.Drawing.Size(150, 50);
+            this.tableLayout.TabIndex = 2;
             // 
-            // Color_preview
+            // color_preview
             // 
-            this.Color_preview.BorderRadius = 5;
-            this.Color_preview.FillColor = System.Drawing.Color.DarkSlateGray;
-            this.Color_preview.Location = new System.Drawing.Point(3, 3);
-            this.Color_preview.Name = "Color_preview";
-            this.Color_preview.ShadowDecoration.Parent = this.Color_preview;
-            this.Color_preview.Size = new System.Drawing.Size(44, 44);
-            this.Color_preview.TabIndex = 0;
+            this.color_preview.BorderRadius = 5;
+            this.color_preview.FillColor = System.Drawing.Color.DarkSlateGray;
+            this.color_preview.Location = new System.Drawing.Point(3, 3);
+            this.color_preview.Name = "color_preview";
+            this.color_preview.ShadowDecoration.Parent = this.color_preview;
+            this.color_preview.Size = new System.Drawing.Size(44, 44);
+            this.color_preview.TabIndex = 0;
             // 
-            // Color_Hex
+            // hexColor_Text
             // 
-            this.Color_Hex.AutoSize = true;
-            this.Color_Hex.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Color_Hex.Font = new System.Drawing.Font("Vazir", 9.25F, System.Drawing.FontStyle.Bold);
-            this.Color_Hex.Location = new System.Drawing.Point(53, 0);
-            this.Color_Hex.Name = "Color_Hex";
-            this.Color_Hex.Size = new System.Drawing.Size(94, 50);
-            this.Color_Hex.TabIndex = 1;
-            this.Color_Hex.Text = "#000000";
-            this.Color_Hex.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.hexColor_Text.AutoSize = true;
+            this.hexColor_Text.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.hexColor_Text.Font = new System.Drawing.Font("Vazir", 9.25F, System.Drawing.FontStyle.Bold);
+            this.hexColor_Text.Location = new System.Drawing.Point(53, 0);
+            this.hexColor_Text.Name = "hexColor_Text";
+            this.hexColor_Text.Size = new System.Drawing.Size(94, 50);
+            this.hexColor_Text.TabIndex = 1;
+            this.hexColor_Text.Text = "#000000";
+            this.hexColor_Text.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ColorPicker
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(150, 50);
-            this.Controls.Add(this.TableLayout);
+            this.Controls.Add(this.tableLayout);
             this.Font = new System.Drawing.Font("Vazir", 9.25F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -100,8 +100,8 @@ namespace Number.ColorPicker
             this.ShowInTaskbar = false;
             this.Text = "ColorPicker";
             this.TopMost = true;
-            this.TableLayout.ResumeLayout(false);
-            this.TableLayout.PerformLayout();
+            this.tableLayout.ResumeLayout(false);
+            this.tableLayout.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -109,9 +109,9 @@ namespace Number.ColorPicker
         #endregion
 
         private Guna.UI2.WinForms.Guna2Elipse border_radius;
-        private System.Windows.Forms.Timer Timer_color;
-        private System.Windows.Forms.TableLayoutPanel TableLayout;
-        private Guna.UI2.WinForms.Guna2Panel Color_preview;
-        private System.Windows.Forms.Label Color_Hex;
+        private System.Windows.Forms.Timer color_Timer;
+        private System.Windows.Forms.TableLayoutPanel tableLayout;
+        private Guna.UI2.WinForms.Guna2Panel color_preview;
+        private System.Windows.Forms.Label hexColor_Text;
     }
 }
