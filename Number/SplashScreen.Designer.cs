@@ -30,172 +30,160 @@ namespace Number
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.borderRadius = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.logo_Image = new Guna.UI2.WinForms.Guna2PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.RText = new System.Windows.Forms.Label();
-            this.EText = new System.Windows.Forms.Label();
-            this.BText = new System.Windows.Forms.Label();
-            this.MText = new System.Windows.Forms.Label();
-            this.UText = new System.Windows.Forms.Label();
-            this.NText = new System.Windows.Forms.Label();
-            this.Main = new System.Windows.Forms.Timer(this.components);
-            this.TextTimer = new System.Windows.Forms.Timer(this.components);
-            this.StartApp = new System.Windows.Forms.Timer(this.components);
-            this.fakeText = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            this.r_Text = new System.Windows.Forms.Label();
+            this.e_Text = new System.Windows.Forms.Label();
+            this.b_Text = new System.Windows.Forms.Label();
+            this.m_Text = new System.Windows.Forms.Label();
+            this.u_Text = new System.Windows.Forms.Label();
+            this.n_Text = new System.Windows.Forms.Label();
+            this.main_Timer = new System.Windows.Forms.Timer(this.components);
+            this.text_Timer = new System.Windows.Forms.Timer(this.components);
+            this.startApp_Timer = new System.Windows.Forms.Timer(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.logo_Image)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // guna2Elipse1
+            // borderRadius
             // 
-            this.guna2Elipse1.BorderRadius = 20;
-            this.guna2Elipse1.TargetControl = this;
+            this.borderRadius.BorderRadius = 20;
+            this.borderRadius.TargetControl = this;
             // 
-            // guna2PictureBox1
+            // logo_Image
             // 
-            this.guna2PictureBox1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.guna2PictureBox1.Image = global::Number.Properties.Resources.numbers;
-            this.guna2PictureBox1.InitialImage = null;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(70, 18);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
-            this.guna2PictureBox1.Size = new System.Drawing.Size(256, 194);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox1.TabIndex = 0;
-            this.guna2PictureBox1.TabStop = false;
-            this.guna2PictureBox1.WaitOnLoad = true;
+            this.logo_Image.Cursor = System.Windows.Forms.Cursors.Default;
+            this.logo_Image.Image = global::Number.Properties.Resources.numbers;
+            this.logo_Image.InitialImage = null;
+            this.logo_Image.Location = new System.Drawing.Point(70, 18);
+            this.logo_Image.Name = "logo_Image";
+            this.logo_Image.ShadowDecoration.Parent = this.logo_Image;
+            this.logo_Image.Size = new System.Drawing.Size(256, 194);
+            this.logo_Image.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.logo_Image.TabIndex = 0;
+            this.logo_Image.TabStop = false;
+            this.logo_Image.WaitOnLoad = true;
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.RText);
-            this.panel1.Controls.Add(this.EText);
-            this.panel1.Controls.Add(this.BText);
-            this.panel1.Controls.Add(this.MText);
-            this.panel1.Controls.Add(this.UText);
-            this.panel1.Controls.Add(this.NText);
+            this.panel1.Controls.Add(this.r_Text);
+            this.panel1.Controls.Add(this.e_Text);
+            this.panel1.Controls.Add(this.b_Text);
+            this.panel1.Controls.Add(this.m_Text);
+            this.panel1.Controls.Add(this.u_Text);
+            this.panel1.Controls.Add(this.n_Text);
             this.panel1.Location = new System.Drawing.Point(45, 192);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(323, 56);
             this.panel1.TabIndex = 1;
             // 
-            // RText
+            // r_Text
             // 
-            this.RText.AutoSize = true;
-            this.RText.Font = new System.Drawing.Font("Bauhaus 93", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RText.Location = new System.Drawing.Point(218, 49);
-            this.RText.Name = "RText";
-            this.RText.Size = new System.Drawing.Size(34, 36);
-            this.RText.TabIndex = 7;
-            this.RText.Text = "R";
+            this.r_Text.AutoSize = true;
+            this.r_Text.Font = new System.Drawing.Font("Bauhaus 93", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.r_Text.Location = new System.Drawing.Point(218, 49);
+            this.r_Text.Name = "r_Text";
+            this.r_Text.Size = new System.Drawing.Size(34, 36);
+            this.r_Text.TabIndex = 7;
+            this.r_Text.Text = "R";
             // 
-            // EText
+            // e_Text
             // 
-            this.EText.AutoSize = true;
-            this.EText.Font = new System.Drawing.Font("Bauhaus 93", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EText.Location = new System.Drawing.Point(192, 49);
-            this.EText.Name = "EText";
-            this.EText.Size = new System.Drawing.Size(30, 36);
-            this.EText.TabIndex = 6;
-            this.EText.Text = "E";
+            this.e_Text.AutoSize = true;
+            this.e_Text.Font = new System.Drawing.Font("Bauhaus 93", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.e_Text.Location = new System.Drawing.Point(192, 49);
+            this.e_Text.Name = "e_Text";
+            this.e_Text.Size = new System.Drawing.Size(30, 36);
+            this.e_Text.TabIndex = 6;
+            this.e_Text.Text = "E";
             // 
-            // BText
+            // b_Text
             // 
-            this.BText.AutoSize = true;
-            this.BText.Font = new System.Drawing.Font("Bauhaus 93", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BText.Location = new System.Drawing.Point(164, 49);
-            this.BText.Name = "BText";
-            this.BText.Size = new System.Drawing.Size(33, 36);
-            this.BText.TabIndex = 5;
-            this.BText.Text = "B";
+            this.b_Text.AutoSize = true;
+            this.b_Text.Font = new System.Drawing.Font("Bauhaus 93", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.b_Text.Location = new System.Drawing.Point(164, 49);
+            this.b_Text.Name = "b_Text";
+            this.b_Text.Size = new System.Drawing.Size(33, 36);
+            this.b_Text.TabIndex = 5;
+            this.b_Text.Text = "B";
             // 
-            // MText
+            // m_Text
             // 
-            this.MText.AutoSize = true;
-            this.MText.Font = new System.Drawing.Font("Bauhaus 93", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MText.Location = new System.Drawing.Point(126, 49);
-            this.MText.Name = "MText";
-            this.MText.Size = new System.Drawing.Size(41, 36);
-            this.MText.TabIndex = 4;
-            this.MText.Text = "M";
+            this.m_Text.AutoSize = true;
+            this.m_Text.Font = new System.Drawing.Font("Bauhaus 93", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.m_Text.Location = new System.Drawing.Point(126, 49);
+            this.m_Text.Name = "m_Text";
+            this.m_Text.Size = new System.Drawing.Size(41, 36);
+            this.m_Text.TabIndex = 4;
+            this.m_Text.Text = "M";
             // 
-            // UText
+            // u_Text
             // 
-            this.UText.AutoSize = true;
-            this.UText.Font = new System.Drawing.Font("Bauhaus 93", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UText.Location = new System.Drawing.Point(96, 49);
-            this.UText.Name = "UText";
-            this.UText.Size = new System.Drawing.Size(34, 36);
-            this.UText.TabIndex = 3;
-            this.UText.Text = "U";
+            this.u_Text.AutoSize = true;
+            this.u_Text.Font = new System.Drawing.Font("Bauhaus 93", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.u_Text.Location = new System.Drawing.Point(96, 49);
+            this.u_Text.Name = "u_Text";
+            this.u_Text.Size = new System.Drawing.Size(34, 36);
+            this.u_Text.TabIndex = 3;
+            this.u_Text.Text = "U";
             // 
-            // NText
+            // n_Text
             // 
-            this.NText.AutoSize = true;
-            this.NText.Font = new System.Drawing.Font("Bauhaus 93", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NText.Location = new System.Drawing.Point(64, 49);
-            this.NText.Name = "NText";
-            this.NText.Size = new System.Drawing.Size(34, 36);
-            this.NText.TabIndex = 2;
-            this.NText.Text = "N";
+            this.n_Text.AutoSize = true;
+            this.n_Text.Font = new System.Drawing.Font("Bauhaus 93", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.n_Text.Location = new System.Drawing.Point(64, 49);
+            this.n_Text.Name = "n_Text";
+            this.n_Text.Size = new System.Drawing.Size(34, 36);
+            this.n_Text.TabIndex = 2;
+            this.n_Text.Text = "N";
             // 
-            // Main
+            // main_Timer
             // 
-            this.Main.Enabled = true;
-            this.Main.Interval = 1;
-            this.Main.Tick += new System.EventHandler(this.Main_Tick);
+            this.main_Timer.Enabled = true;
+            this.main_Timer.Interval = 1;
+            this.main_Timer.Tick += new System.EventHandler(this.Main_Tick);
             // 
-            // TextTimer
+            // text_Timer
             // 
-            this.TextTimer.Interval = 1;
-            this.TextTimer.Tick += new System.EventHandler(this.Text_Tick);
+            this.text_Timer.Interval = 1;
+            this.text_Timer.Tick += new System.EventHandler(this.Text_Tick);
             // 
-            // StartApp
+            // startApp_Timer
             // 
-            this.StartApp.Interval = 1200;
-            this.StartApp.Tick += new System.EventHandler(this.StartApp_Tick);
-            // 
-            // fakeText
-            // 
-            this.fakeText.AutoSize = true;
-            this.fakeText.Location = new System.Drawing.Point(14, 301);
-            this.fakeText.Name = "fakeText";
-            this.fakeText.Size = new System.Drawing.Size(0, 13);
-            this.fakeText.TabIndex = 3;
+            this.startApp_Timer.Interval = 1200;
+            this.startApp_Timer.Tick += new System.EventHandler(this.StartApp_Tick);
             // 
             // SplashScreen
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(10)))), ((int)(((byte)(27)))));
-            this.Controls.Add(this.fakeText);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.guna2PictureBox1);
+            this.Controls.Add(this.logo_Image);
             this.ForeColor = System.Drawing.Color.White;
             this.Name = "SplashScreen";
             this.Size = new System.Drawing.Size(409, 339);
             this.Load += new System.EventHandler(this.SplashScreen_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logo_Image)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private Guna.UI2.WinForms.Guna2Elipse borderRadius;
+        private Guna.UI2.WinForms.Guna2PictureBox logo_Image;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label RText;
-        private System.Windows.Forms.Label EText;
-        private System.Windows.Forms.Label BText;
-        private System.Windows.Forms.Label MText;
-        private System.Windows.Forms.Label UText;
-        private System.Windows.Forms.Timer Main;
-        private System.Windows.Forms.Timer TextTimer;
-        private System.Windows.Forms.Label NText;
-        private System.Windows.Forms.Timer StartApp;
-        private System.Windows.Forms.Label fakeText;
+        private System.Windows.Forms.Label r_Text;
+        private System.Windows.Forms.Label e_Text;
+        private System.Windows.Forms.Label b_Text;
+        private System.Windows.Forms.Label m_Text;
+        private System.Windows.Forms.Label u_Text;
+        private System.Windows.Forms.Timer main_Timer;
+        private System.Windows.Forms.Timer text_Timer;
+        private System.Windows.Forms.Label n_Text;
+        private System.Windows.Forms.Timer startApp_Timer;
     }
 }

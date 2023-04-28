@@ -41,35 +41,38 @@ namespace Number
         /*--------- Start ---------*/
         private void Main_Tick(object sender, EventArgs e)
         {
-            Label[] CharT = { NText, UText, MText, BText, EText, RText, fakeText };
+            Label[] CharT = { n_Text, u_Text, m_Text, b_Text, e_Text, r_Text };
             TextChar = CharT[CharL];
-            if (CharL > 5)
+            if (CharL >= 5)
             {
-                StartApp.Start();
-                Main.Stop();
+                startApp_Timer.Start();
+                main_Timer.Stop();
             }
             else
             {
                 CharL++;
-                TextTimer.Start();
-                Main.Stop();
+                text_Timer.Start();
+                main_Timer.Stop();
             }
         }
 
         private void Text_Tick(object sender, EventArgs e)
         {
-            TextChar.Location = new Point(TextChar.Location.X, TextChar.Location.Y -5);
             if (TextChar.Location.Y < 2)
             {
-                Main.Start();
+                main_Timer.Start();
+            }
+            else
+            {
+                TextChar.Location = new Point(TextChar.Location.X, TextChar.Location.Y - 5);
             }
         }
-
 
         private void StartApp_Tick(object sender, EventArgs e)
         {
             this.Hide();
-            StartApp.Stop();
+            this.Dispose();
+            startApp_Timer.Stop();
         }
         /*------------------ Animation End ------------------*/
 
