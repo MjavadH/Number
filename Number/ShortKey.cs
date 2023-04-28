@@ -37,12 +37,12 @@ namespace Number
         /*--------- Change Keys ---------*/
         private void Short_key_set()
         {
-            Add_Key.Text = Settings.Default.ShortKey_Add.ToString();
-            Clear_Key.Text = Settings.Default.ShortKey_Clear.ToString();
-            Compress_Key.Text = Settings.Default.ShortKey_Compress.ToString();
-            AutoCounter_Key.Text = Settings.Default.ShortKey_Counter.ToString();
-            AddPage_Key.Text = Settings.Default.ShortKey_LoadData.ToString();
-            SettingPage_Key.Text = Settings.Default.ShortKey_SaveData.ToString();
+            add_Key.Text = Settings.Default.ShortKey_Add.ToString();
+            clear_Key.Text = Settings.Default.ShortKey_Clear.ToString();
+            compress_Key.Text = Settings.Default.ShortKey_Compress.ToString();
+            autoCounter_Key.Text = Settings.Default.ShortKey_Counter.ToString();
+            loadData_Key.Text = Settings.Default.ShortKey_LoadData.ToString();
+            saveData_Key.Text = Settings.Default.ShortKey_SaveData.ToString();
         }
         /*------------------ func End ------------------*/
         /*------------------ Move Form Start ------------------*/
@@ -72,19 +72,19 @@ namespace Number
             if (Settings.Default.LightColor)
             {
                 this.ForeColor = Color.Black;
-                Cancel_BTN.ForeColor = Color.Black;
-                Cancel_BTN.Image = Resources.cancel_black;
-                Default_BTN.ForeColor = Color.Black;
-                Default_BTN.Image = Resources.undo_black;
-                Save_BTN.ForeColor = Color.Black;
-                Save_BTN.Image = Resources.save_black;
+                cancel_BTN.ForeColor = Color.Black;
+                cancel_BTN.Image = Resources.cancel_black;
+                default_BTN.ForeColor = Color.Black;
+                default_BTN.Image = Resources.undo_black;
+                save_BTN.ForeColor = Color.Black;
+                save_BTN.Image = Resources.save_black;
 
-                Add_Key.ForeColor = Color.Black;
-                Clear_Key.ForeColor = Color.Black;
-                Compress_Key.ForeColor = Color.Black;
-                AutoCounter_Key.ForeColor = Color.Black;
-                SettingPage_Key.ForeColor = Color.Black;
-                AddPage_Key.ForeColor = Color.Black;
+                add_Key.ForeColor = Color.Black;
+                clear_Key.ForeColor = Color.Black;
+                compress_Key.ForeColor = Color.Black;
+                autoCounter_Key.ForeColor = Color.Black;
+                saveData_Key.ForeColor = Color.Black;
+                loadData_Key.ForeColor = Color.Black;
             }
             this.TopMost = Settings.Default.AlwaysOT;
             this.Font = Settings.Default.AppFont;
@@ -100,10 +100,10 @@ namespace Number
         /*------------------ Button Start ------------------*/
         /*--------- Cancel ---------*/
         private void Cancel_BTN_MouseEnter(object sender, EventArgs e)
-        { Cancel_BTN.FillColor = Color.FromArgb(249, 75, 66); }
+        { cancel_BTN.FillColor = Color.FromArgb(249, 75, 66); }
 
         private void Cancel_BTN_MouseLeave(object sender, EventArgs e)
-        { Cancel_BTN.FillColor = Color.Empty; }
+        { cancel_BTN.FillColor = Color.Empty; }
         private void Cancel_BTN_Click(object sender, EventArgs e)
         {this.Close();}
         /*--------- Defult ---------*/
@@ -112,8 +112,8 @@ namespace Number
         /*--------- Save ---------*/
         private void Save_BTN_Click(object sender, EventArgs e)
         {
-            IList<string> list = new List<string> {Add_Key.Text, Clear_Key.Text, Compress_Key.Text,
-                AutoCounter_Key.Text,SettingPage_Key.Text, AddPage_Key.Text };
+            IList<string> list = new List<string> {add_Key.Text, clear_Key.Text, compress_Key.Text,
+                autoCounter_Key.Text,saveData_Key.Text, loadData_Key.Text };
             list = list.Distinct(StringComparer.InvariantCultureIgnoreCase).ToList();
             if (list.Count != 6)
             {
@@ -121,12 +121,12 @@ namespace Number
             }
             else
             {
-                Settings.Default.ShortKey_Add = (Keys)Enum.Parse(typeof(Keys), Add_Key.Text);
-                Settings.Default.ShortKey_Clear = (Keys)Enum.Parse(typeof(Keys), Clear_Key.Text);
-                Settings.Default.ShortKey_Compress = (Keys)Enum.Parse(typeof(Keys), Compress_Key.Text);
-                Settings.Default.ShortKey_Counter = (Keys)Enum.Parse(typeof(Keys), AutoCounter_Key.Text);
-                Settings.Default.ShortKey_SaveData = (Keys)Enum.Parse(typeof(Keys), SettingPage_Key.Text);
-                Settings.Default.ShortKey_LoadData = (Keys)Enum.Parse(typeof(Keys), AddPage_Key.Text);
+                Settings.Default.ShortKey_Add = (Keys)Enum.Parse(typeof(Keys), add_Key.Text);
+                Settings.Default.ShortKey_Clear = (Keys)Enum.Parse(typeof(Keys), clear_Key.Text);
+                Settings.Default.ShortKey_Compress = (Keys)Enum.Parse(typeof(Keys), compress_Key.Text);
+                Settings.Default.ShortKey_Counter = (Keys)Enum.Parse(typeof(Keys), autoCounter_Key.Text);
+                Settings.Default.ShortKey_SaveData = (Keys)Enum.Parse(typeof(Keys), saveData_Key.Text);
+                Settings.Default.ShortKey_LoadData = (Keys)Enum.Parse(typeof(Keys), loadData_Key.Text);
                 Settings.Default.Save();
                 this.Close();
             }
