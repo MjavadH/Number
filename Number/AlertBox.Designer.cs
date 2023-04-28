@@ -31,45 +31,50 @@ namespace Number
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AlertBox));
-            this.AlertText = new System.Windows.Forms.Label();
-            this.closebtn = new System.Windows.Forms.Button();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.alertText = new System.Windows.Forms.Label();
+            this.close_BTN = new System.Windows.Forms.Button();
+            this.Show_Timer = new System.Windows.Forms.Timer(this.components);
+            this.borderRadius = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.SuspendLayout();
             // 
-            // AlertText
+            // alertText
             // 
-            this.AlertText.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.AlertText.Location = new System.Drawing.Point(0, 0);
-            this.AlertText.Name = "AlertText";
-            this.AlertText.Size = new System.Drawing.Size(386, 98);
-            this.AlertText.TabIndex = 0;
-            this.AlertText.Text = "شمارنده $ به پایان رسید";
-            this.AlertText.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.alertText.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.alertText.Location = new System.Drawing.Point(0, 0);
+            this.alertText.Name = "alertText";
+            this.alertText.Size = new System.Drawing.Size(386, 98);
+            this.alertText.TabIndex = 0;
+            this.alertText.Text = "شمارنده $ به پایان رسید";
+            this.alertText.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // closebtn
+            // close_BTN
             // 
-            this.closebtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.closebtn.FlatAppearance.BorderSize = 0;
-            this.closebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.closebtn.Image = global::Number.Properties.Resources.delete;
-            this.closebtn.Location = new System.Drawing.Point(351, 0);
-            this.closebtn.Name = "closebtn";
-            this.closebtn.Size = new System.Drawing.Size(33, 35);
-            this.closebtn.TabIndex = 1;
-            this.closebtn.UseVisualStyleBackColor = false;
-            this.closebtn.Click += new System.EventHandler(this.closebtn_Click);
+            this.close_BTN.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.close_BTN.FlatAppearance.BorderSize = 0;
+            this.close_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.close_BTN.Image = global::Number.Properties.Resources.delete;
+            this.close_BTN.Location = new System.Drawing.Point(351, 0);
+            this.close_BTN.Name = "close_BTN";
+            this.close_BTN.Size = new System.Drawing.Size(33, 35);
+            this.close_BTN.TabIndex = 1;
+            this.close_BTN.UseVisualStyleBackColor = false;
+            this.close_BTN.Click += new System.EventHandler(this.closebtn_Click);
             // 
-            // timer1
+            // Show_Timer
             // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            this.Show_Timer.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // borderRadius
+            // 
+            this.borderRadius.TargetControl = this;
             // 
             // AlertBox
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(10)))), ((int)(((byte)(27)))));
             this.ClientSize = new System.Drawing.Size(386, 98);
-            this.Controls.Add(this.closebtn);
-            this.Controls.Add(this.AlertText);
+            this.Controls.Add(this.close_BTN);
+            this.Controls.Add(this.alertText);
             this.Font = new System.Drawing.Font("Vazir", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -87,8 +92,9 @@ namespace Number
 
         #endregion
 
-        private System.Windows.Forms.Label AlertText;
-        private System.Windows.Forms.Button closebtn;
-        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label alertText;
+        private System.Windows.Forms.Button close_BTN;
+        private System.Windows.Forms.Timer Show_Timer;
+        private Guna.UI2.WinForms.Guna2Elipse borderRadius;
     }
 }

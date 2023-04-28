@@ -39,7 +39,7 @@ namespace Number
         /*--------- Close  ---------*/
         private void closebtn_Click(object sender, EventArgs e)
         {
-            timer1.Interval = 1;
+            Show_Timer.Interval = 1;
             action = enmAction.close;
         }
         /*--------- Start Timer  ---------*/
@@ -48,11 +48,11 @@ namespace Number
             switch (this.action)
             {
                 case enmAction.wait:
-                    timer1.Interval = 3000;
+                    Show_Timer.Interval = 3000;
                     action = enmAction.close;
                     break;
                 case enmAction.start:
-                    timer1.Interval = 1;
+                    Show_Timer.Interval = 1;
                     this.Opacity += 0.1;
                     if (this.x < this.Location.X)
                     {
@@ -67,7 +67,7 @@ namespace Number
                     }
                     break;
                 case enmAction.close:
-                    timer1.Interval = 1;
+                    Show_Timer.Interval = 1;
                     this.Opacity -= 0.1;
 
                     this.Left -= 3;
@@ -89,7 +89,7 @@ namespace Number
             if (Settings.Default.LightColor)
             {
                 this.ForeColor = Color.Black;
-                closebtn.Image = Resources.delete_black;
+                close_BTN.Image = Resources.delete_black;
             }
             this.Font = Settings.Default.AppFont;
         }
@@ -119,12 +119,12 @@ namespace Number
             this.x = Screen.PrimaryScreen.WorkingArea.Width - base.Width - 5;
 
 
-            this.AlertText.Text = msg;
+            this.alertText.Text = msg;
             /*----- Start Show -----*/
             this.Show();
             this.action = enmAction.start;
-            this.timer1.Interval = 1;
-            timer1.Start();
+            this.Show_Timer.Interval = 1;
+            Show_Timer.Start();
             /*----- Sound -----*/
             if (Settings.Default.Sound_EFX)
             {
