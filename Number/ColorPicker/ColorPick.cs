@@ -471,10 +471,11 @@ namespace Number
                 }
             }
             Settings.Default.Save();
+            this.Dispose();
             this.Close();
         }
         private void Cancel_BTN_Click(object sender, EventArgs e)
-        { this.Close(); }
+        { this.Dispose(); this.Close(); }
 
         /*--------- Exit End ---------*/
     }
