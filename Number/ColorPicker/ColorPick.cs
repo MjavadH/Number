@@ -146,19 +146,16 @@ namespace Number
 
             if (!string.IsNullOrEmpty(Settings.Default.Color_History))
             {
-                IList<string> Color_History = new List<string> { };
-                string[] Colors = Settings.Default.Color_History.Split('\n');
-
-                for (int i = 0; i < Colors.Length - 1; i++)
-                {
-                    Color_History.Add(Colors[i]);
-                }
+                IList<string> Color_History = Settings.Default.Color_History.Split('\n');
 
                 Color_History = Color_History.Distinct(StringComparer.InvariantCultureIgnoreCase).Reverse().ToList();
 
-                for (int i = 0; i < 9; i++)
+                for (int i = 0; i < Color_History.Count && i < 9; i++)
                 {
-                    panel_History_Colors.Controls.Add(CreateColorBTN(Color.FromArgb(int.Parse(Color_History[i].Split(',')[0]), int.Parse(Color_History[i].Split(',')[1]), int.Parse(Color_History[i].Split(',')[2]))));
+                    if (!string.IsNullOrEmpty(Color_History[i]))
+                    {
+                        panel_History_Colors.Controls.Add(CreateColorBTN(Color.FromArgb(int.Parse(Color_History[i].Split(',')[0]), int.Parse(Color_History[i].Split(',')[1]), int.Parse(Color_History[i].Split(',')[2]))));
+                    }
                 }
             }
 
@@ -471,11 +468,10 @@ namespace Number
                 }
             }
             Settings.Default.Save();
-            this.Dispose();
             this.Close();
         }
         private void Cancel_BTN_Click(object sender, EventArgs e)
-        { this.Dispose(); this.Close(); }
+        { this.Close(); }
 
         /*--------- Exit End ---------*/
     }
