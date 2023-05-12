@@ -142,7 +142,6 @@ namespace Number
             Refresh_Color(Settings.Default.Theme);
             this.TopMost = Settings.Default.AlwaysOT;
             this.Font = Settings.Default.AppFont;
-            hex_TextBox.Focus();
 
             if (!string.IsNullOrEmpty(Settings.Default.Color_History))
             {
