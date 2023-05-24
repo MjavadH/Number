@@ -30,7 +30,7 @@ namespace Number
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Guna.UI2.AnimatorNS.Animation animation1 = new Guna.UI2.AnimatorNS.Animation();
+            Guna.UI2.AnimatorNS.Animation animation2 = new Guna.UI2.AnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NumberForm));
             this.NumberT = new System.Windows.Forms.Label();
             this.MenuBar = new System.Windows.Forms.Panel();
@@ -54,6 +54,7 @@ namespace Number
             this.counter_Timer = new System.Windows.Forms.Timer(this.components);
             this.AnimationMenu = new Guna.UI2.WinForms.Guna2Transition();
             this.Show_Text_BTN = new Guna.UI2.WinForms.Guna2TileButton();
+            this.splashScreen1 = new Number.SplashScreen();
             this.MenuBar.SuspendLayout();
             this.MenuListP.SuspendLayout();
             this.SuspendLayout();
@@ -306,22 +307,22 @@ namespace Number
             // 
             this.AnimationMenu.AnimationType = Guna.UI2.AnimatorNS.AnimationType.HorizSlide;
             this.AnimationMenu.Cursor = null;
-            animation1.AnimateOnlyDifferences = true;
-            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
-            animation1.LeafCoeff = 0F;
-            animation1.MaxTime = 1F;
-            animation1.MinTime = 0F;
-            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
-            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
-            animation1.MosaicSize = 0;
-            animation1.Padding = new System.Windows.Forms.Padding(0);
-            animation1.RotateCoeff = 0F;
-            animation1.RotateLimit = 0F;
-            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
-            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
-            animation1.TimeCoeff = 0F;
-            animation1.TransparencyCoeff = 0F;
-            this.AnimationMenu.DefaultAnimation = animation1;
+            animation2.AnimateOnlyDifferences = true;
+            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
+            animation2.LeafCoeff = 0F;
+            animation2.MaxTime = 1F;
+            animation2.MinTime = 0F;
+            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
+            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
+            animation2.MosaicSize = 0;
+            animation2.Padding = new System.Windows.Forms.Padding(0);
+            animation2.RotateCoeff = 0F;
+            animation2.RotateLimit = 0F;
+            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
+            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
+            animation2.TimeCoeff = 0F;
+            animation2.TransparencyCoeff = 0F;
+            this.AnimationMenu.DefaultAnimation = animation2;
             this.AnimationMenu.MaxAnimationTime = 1000;
             // 
             // Show_Text_BTN
@@ -339,12 +340,21 @@ namespace Number
             this.Show_Text_BTN.ShadowDecoration.Parent = this.Show_Text_BTN;
             this.Show_Text_BTN.Click += new System.EventHandler(this.Show_Text_BTN_Click);
             // 
+            // splashScreen1
+            // 
+            this.splashScreen1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(10)))), ((int)(((byte)(27)))));
+            this.AnimationMenu.SetDecoration(this.splashScreen1, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.splashScreen1.ForeColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.splashScreen1, "splashScreen1");
+            this.splashScreen1.Name = "splashScreen1";
+            // 
             // NumberForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             resources.ApplyResources(this, "$this");
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(10)))), ((int)(((byte)(27)))));
             this.ControlBox = false;
+            this.Controls.Add(this.splashScreen1);
             this.Controls.Add(this.DropDown);
             this.Controls.Add(this.TextLen);
             this.Controls.Add(this.NumberT);
@@ -397,6 +407,7 @@ namespace Number
         private Guna.UI2.WinForms.Guna2Button exit;
         private Guna.UI2.WinForms.Guna2Transition AnimationMenu;
         private Guna.UI2.WinForms.Guna2TileButton Show_Text_BTN;
+        private SplashScreen splashScreen1;
     }
 }
 

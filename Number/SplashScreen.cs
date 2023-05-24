@@ -19,7 +19,8 @@ namespace Number
         }
         private void SplashScreen_Load(object sender, EventArgs e)
         {
-            if (Settings.Default.DefaultColor == false)
+            this.Visible = true;
+            if (!Settings.Default.DefaultColor)
             {
                 this.BackColor = Settings.Default.Theme;
             }
@@ -71,7 +72,6 @@ namespace Number
         private void StartApp_Tick(object sender, EventArgs e)
         {
             this.Hide();
-            this.Dispose();
             startApp_Timer.Stop();
         }
         /*------------------ Animation End ------------------*/
