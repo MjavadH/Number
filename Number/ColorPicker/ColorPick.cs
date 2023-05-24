@@ -16,8 +16,10 @@ namespace Number
         private string path_wallpaper = "";
         private string Favorite_File = "FavoriteColor.txt";
         private bool Repetitious = false;
+        private bool LightColor = false;
         private Color SlectedBackColor = Color.FromArgb(11, 10, 27);
         private Random random = new Random();
+        public Color SelectedColorPicker = Color.Empty;
         /*------------------ Variable Start ------------------*/
         public ColorPick()
         { InitializeComponent(); }
@@ -38,15 +40,15 @@ namespace Number
                 }
                 return _CP;
             }
+            private set => _CP = value;
         }
-
         private void CkeckSettings()
         {
 
-            if (red_Bar.Value >= 180 && green_Bar.Value >= 180 && blue_Bar.Value >= 180) Settings.Default.LightColor = true;
-            else Settings.Default.LightColor = false;
+            if (red_Bar.Value >= 180 && green_Bar.Value >= 180 && blue_Bar.Value >= 180) LightColor = true;
+            else LightColor = false;
 
-            if (Settings.Default.LightColor)
+            if (LightColor)
             {
                 this.ForeColor = Color.Black;
                 save_BTN.ForeColor = Color.Black;
@@ -101,7 +103,7 @@ namespace Number
             if (border)
             {
                 ColorButton.BorderThickness = 1;
-                if (Settings.Default.LightColor)
+                if (LightColor)
                 {
                     ColorButton.BorderColor = Color.Black;
                 }
@@ -139,6 +141,7 @@ namespace Number
         }
         private void ColorPick_Load(object sender, EventArgs e)
         {
+            Instans = this;
             Refresh_Color(Settings.Default.Theme);
             this.TopMost = Settings.Default.AlwaysOT;
             this.Font = Settings.Default.AppFont;
@@ -161,7 +164,7 @@ namespace Number
             CkeckSettings();
             CreateFavoriteColor();
         }
-        private void Refresh_Color(Color color)
+        public void Refresh_Color(Color color)
         {
             if (color == Color.Empty)
             {
@@ -204,7 +207,6 @@ namespace Number
             Refresh_Color(Color.Empty);
             if (red_Bar.Value >= 180 && green_Bar.Value >= 180 && blue_Bar.Value >= 180)
             {
-                Settings.Default.LightColor = true;
                 CkeckSettings();
             }
             else if (red_Bar.Value == 160 && green_Bar.Value == 113 && blue_Bar.Value == 255)
@@ -219,7 +221,7 @@ namespace Number
                 green_Bar.ThumbColor = Color.FromArgb(160, 113, 255);
                 blue_Bar.ThumbColor = Color.FromArgb(160, 113, 255);
             }
-            else Settings.Default.LightColor = false; CkeckSettings();
+            else CkeckSettings();
         }
 
         private void BTN_Color_Click(object sender, EventArgs e)
@@ -300,7 +302,11 @@ namespace Number
         /*------ ColorPicker ------*/
         private void BTN_ColorPicker_Click(object sender, EventArgs e)
         {
-            Alert("در دست ساخت!");
+            if (ColorPicker.ColorPicker.Instans.Visible)
+            {
+                new ColorPicker.ColorPicker().Show();
+            }
+            else ColorPicker.ColorPicker.Instans.ReLoad();
         }
         /*------ Automatic with Wallpaper ------*/
         private void Automatic_BTN_Click(object sender, EventArgs e)
@@ -371,7 +377,7 @@ namespace Number
             if (flp_ColorFavorite.Visible)
             {
                 flp_ColorFavorite.Visible = false;
-                if (Settings.Default.LightColor)
+                if (LightColor)
                 {
                     favorite_BTN.Image = Resources.favorite_black;
                 }
@@ -380,7 +386,7 @@ namespace Number
             else
             {
                 flp_ColorFavorite.Visible = true;
-                if (Settings.Default.LightColor)
+                if (LightColor)
                 {
                     favorite_BTN.Image = Resources.delete_black;
                 }
@@ -450,6 +456,7 @@ namespace Number
         {
             Settings.Default.Theme = this.BackColor;
             Settings.Default.Color_History += this.BackColor.R + "," + this.BackColor.G + "," + this.BackColor.B + "\n";
+            Settings.Default.LightColor = LightColor;
             if (!string.IsNullOrEmpty(Settings.Default.Color_History))
             {
                 IList<string> Color_History = new List<string> { };
@@ -472,6 +479,15 @@ namespace Number
         private void Cancel_BTN_Click(object sender, EventArgs e)
         { this.Close(); }
 
+        private void ColorPick_Activated(object sender, EventArgs e)
+        {
+            if (!SelectedColorPicker.IsEmpty)
+            {
+                Refresh_Color(SelectedColorPicker);
+            }
+        }
+
         /*--------- Exit End ---------*/
+
     }
 }

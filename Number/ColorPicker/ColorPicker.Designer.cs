@@ -47,7 +47,7 @@ namespace Number.ColorPicker
             // color_Timer
             // 
             this.color_Timer.Enabled = true;
-            this.color_Timer.Interval = 1;
+            this.color_Timer.Interval = 50;
             this.color_Timer.Tick += new System.EventHandler(this.Timer_color_Tick);
             // 
             // tableLayout

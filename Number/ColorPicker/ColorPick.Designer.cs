@@ -368,7 +368,7 @@ namespace Number
             this.tsmi_AddToFavorite});
             this.contextMenu_ColorBTNs.Name = "contextMenu_ColorBTNs";
             this.contextMenu_ColorBTNs.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.contextMenu_ColorBTNs.Size = new System.Drawing.Size(185, 50);
+            this.contextMenu_ColorBTNs.Size = new System.Drawing.Size(185, 28);
             this.contextMenu_ColorBTNs.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenu_ColorBTNs_Opening);
             // 
             // tsmi_AddToFavorite
@@ -413,6 +413,7 @@ namespace Number
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.ShowInTaskbar = false;
             this.Text = " انتخاب رنگ";
+            this.Activated += new System.EventHandler(this.ColorPick_Activated);
             this.Load += new System.EventHandler(this.ColorPick_Load);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.NumberForm_MouseMove);
             this.panel_Exit.ResumeLayout(false);
