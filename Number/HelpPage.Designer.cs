@@ -95,7 +95,7 @@ namespace Number
             this.HelpText.IsSelectionEnabled = false;
             this.HelpText.Location = new System.Drawing.Point(0, 0);
             this.HelpText.Name = "HelpText";
-            this.HelpText.Size = new System.Drawing.Size(483, 153);
+            this.HelpText.Size = new System.Drawing.Size(483, 284);
             this.HelpText.TabIndex = 15;
             this.HelpText.Text = resources.GetString("HelpText.Text");
             this.HelpText.TextAlignment = System.Drawing.ContentAlignment.TopRight;

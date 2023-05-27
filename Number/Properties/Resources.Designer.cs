@@ -467,18 +467,21 @@ namespace Number.Properties {
         ///    &lt;title&gt;HelpPage&lt;/title&gt;
         ///&lt;/head&gt;
         ///&lt;body dir=&quot;rtl&quot; style=&quot;width: 480px;&quot;&gt;
-        ///    &lt;h3&gt;
-        ///        نرم افزار شمارنده کامل ترین نرم افزار شمارش در ویندوز
-        ///    &lt;/h3&gt;
-        ///    &lt;p&gt;
-        ///        این نرم افزار توسط MjavadH طراحی شده است
-        ///        &lt;br&gt;
-        ///        آیدی تلگرام:
-        ///        &lt;a href=&quot;https://t.me/rvyrbyhrc&quot;&gt;https://t.me/rvyrbyhrc&lt;/a&gt;
-        ///        &lt;br&gt;
-        ///        شما هم اکنون در حال استفاده از نسخه 3.5.0 نرم افزار هستید
-        ///        &lt;br&gt;
-        ///        در ادامه شما را با ویژگی های این نرم افز [rest of string was truncated]&quot;;.
+        ///&lt;h3&gt;
+        ///    نرم افزار شمارنده کامل ترین نرم افزار شمارش در ویندوز
+        ///&lt;/h3&gt;
+        ///&lt;p&gt;
+        ///    این نرم افزار توسط MjavadH طراحی شده است
+        ///    &lt;br&gt;
+        ///    آیدی تلگرام:
+        ///    &lt;a href=&quot;https://t.me/rvyrbyhrc&quot;&gt;https://t.me/rvyrbyhrc&lt;/a&gt;
+        ///    &lt;br&gt;
+        ///    شما هم اکنون در حال استفاده از نسخه 4.0.0 نرم افزار هستید
+        ///    &lt;br&gt;
+        ///    در ادامه شما را با ویژگی های این نرم افزار آشنا میکنیم
+        ///&lt;/p&gt;
+        ///&lt;hr&gt;
+        ///&lt;h4&gt;لیست ویژگی ها&lt;/h [rest of string was truncated]&quot;;.
         /// </summary>
         public static string HelpText {
             get {
