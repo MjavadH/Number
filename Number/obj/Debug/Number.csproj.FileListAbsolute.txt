@@ -76,7 +76,6 @@ E:\Program\C# Code\Number\Number\bin\Debug\Microsoft.WindowsAPICodePack.dll
 E:\Program\C# Code\Number\Number\bin\Debug\Microsoft.WindowsAPICodePack.Shell.dll
 E:\Program\C# Code\Number\Number\bin\Debug\Microsoft.WindowsAPICodePack.xml
 E:\Program\C# Code\Number\Number\bin\Debug\Microsoft.WindowsAPICodePack.Shell.xml
-E:\Program\C# Code\Number\Number\obj\Debug\Number.csproj.AssemblyReference.cache
 E:\Program\C# Code\Number\Number\obj\Debug\Number.AlertBox.resources
 E:\Program\C# Code\Number\Number\obj\Debug\Number.ColorPick.resources
 E:\Program\C# Code\Number\Number\obj\Debug\Number.DataBase.resources
@@ -93,3 +92,4 @@ E:\Program\C# Code\Number\Number\obj\Debug\Number.csproj.CopyComplete
 E:\Program\C# Code\Number\Number\obj\Debug\Number.exe
 E:\Program\C# Code\Number\Number\obj\Debug\Number.pdb
 E:\Program\C# Code\Number\Number\obj\Debug\Number.ColorPicker.ColorPicker.resources
+E:\Program\C# Code\Number\Number\obj\Debug\Number.csproj.AssemblyReference.cache
