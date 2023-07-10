@@ -53,7 +53,7 @@ namespace Number
             this.close_BTN.FlatAppearance.BorderSize = 0;
             this.close_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.close_BTN.Image = global::Number.Properties.Resources.delete;
-            this.close_BTN.Location = new System.Drawing.Point(351, 0);
+            this.close_BTN.Location = new System.Drawing.Point(347, 3);
             this.close_BTN.Name = "close_BTN";
             this.close_BTN.Size = new System.Drawing.Size(33, 35);
             this.close_BTN.TabIndex = 1;

@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Drawing;
 using Number.Properties;
-using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
 namespace Number
@@ -9,24 +8,13 @@ namespace Number
     public partial class AlertBox : Form
     {
         /*------------------ Rounding form Start ------------------*/
-        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
-        private static extern IntPtr CreateRoundRectRgn
-            (
-            int nLeftRect,
-            int nTopRect,
-            int nRightRect,
-            int nBottomRect,
-            int nWidthEllipse,
-            int nHeightEllipse
-            );
         public AlertBox()
         {
             InitializeComponent();
-            this.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 10, 10));
         }
         /*------------------ Rounding form End ------------------*/
         /*------------------ Enum & Var Start  ------------------*/
-        public enum enmAction
+        private enum enmAction ///AlertBox Action
         {
             wait,
             start,
@@ -51,7 +39,7 @@ namespace Number
                     show_Timer.Interval = 3000;
                     action = enmAction.close;
                     break;
-                case enmAction.start:
+                case enmAction.start: // Show Alert
                     show_Timer.Interval = 1;
                     this.Opacity += 0.1;
                     if (this.x < this.Location.X)
@@ -102,7 +90,7 @@ namespace Number
             this.StartPosition = FormStartPosition.Manual;
             string fname;
 
-            for (int i = 0; i < 10; i++)
+            for (int i = 1; i < 10; i++)
             {
                 fname = "alert" + i.ToString();
                 AlertBox frm = (AlertBox)Application.OpenForms[fname];
@@ -112,7 +100,7 @@ namespace Number
                     this.Name = fname;
                     this.x = Screen.PrimaryScreen.WorkingArea.Width - this.Width + 15;
                     this.y = Screen.PrimaryScreen.WorkingArea.Height - this.Height * i;
-                    this.Location = new Point(this.x, 1);
+                    this.Location = new Point(this.x, this.y);
                     break;
                 }
             }
