@@ -29,11 +29,13 @@ namespace Number
         /*------------------ Func Start ------------------*/
         public SettingPage()
         {InitializeComponent();}
+        /*--------- AlertBox ---------*/
         public void Alert(string msg)
         {
             AlertBox frm = new AlertBox();
             frm.showAlert(msg);
         }
+        /*--------- PlaySound ---------*/
         int SN;
         void Soundplay(int numberS)
         {
@@ -62,9 +64,8 @@ namespace Number
                 Settings.Default.Save();
                 player.Play();
             }
-
         }
-
+        /*--------- Fill defaultNum_ComboBox with All Number ---------*/
         void Fill_ComboBox()
         {
             defaultNum_ComboBox.Items.Clear();
@@ -85,7 +86,7 @@ namespace Number
         /*------------------ Func End ------------------*/
         private void SettingPage_Load(object sender, EventArgs e)
         {
-            if (Settings.Default.DefaultColor == false)
+            if (!Settings.Default.DefaultColor)
             {
                 this.BackColor = Settings.Default.Theme;
                 colorPicker_BTN.Visible = true;
@@ -152,7 +153,7 @@ namespace Number
                     sound5_RBTN.Checked = true;
                     break;
             }
-            if (Settings.Default.AppFont == Settings.Default.DFont)
+            if (Settings.Default.AppFont.Name == Settings.Default.DFont.Name)
             {
                 fontClear_BTN.Visible = false;
             }
@@ -190,7 +191,7 @@ namespace Number
         /*--------- Background ---------*/
         private void BackgroundMode_CheckedChanged(object sender, EventArgs e)
         {
-            if (theme_Toggle.Checked == false)
+            if (!theme_Toggle.Checked)
             {
                 colorPicker_BTN.Visible = true;
                 if (Settings.Default.Theme.R >= 180 && Settings.Default.Theme.G >= 180 && Settings.Default.Theme.B >= 180)
@@ -205,6 +206,7 @@ namespace Number
                 Settings.Default.LightColor = false;
             }
         }
+        /*--------- ColorPickerBTN ---------*/
         private void ColorCh_Click(object sender, EventArgs e)
         {
             new ColorPick().ShowDialog();
@@ -218,20 +220,20 @@ namespace Number
         private void ResetBTN_Click(object sender, EventArgs e)
         {
             reset_YN_Panel.BringToFront();
-            resetPanel_Animation.AddToQueue(reset_YN_Panel, Guna.UI2.AnimatorNS.AnimateMode.Show);
+            resetPanel_Animation.Show(reset_YN_Panel);
             
         }
-        /*----- Yes Reset -----*/
+        /*----- Reset YesBTN -----*/
         private void Yes_Reset_Click(object sender, EventArgs e)
         {
             Cdata.Delete();
             Alert("شمارنده ها بازنشانی شدند");
-            resetPanel_Animation.AddToQueue(reset_YN_Panel, Guna.UI2.AnimatorNS.AnimateMode.Hide);
+            resetPanel_Animation.Hide(reset_YN_Panel);
         }
-        /*----- Np Reset -----*/
+        /*----- Reset NoBTN -----*/
         private void No_Reset_Click(object sender, EventArgs e)
         {
-            resetPanel_Animation.AddToQueue(reset_YN_Panel, Guna.UI2.AnimatorNS.AnimateMode.Hide);
+            resetPanel_Animation.Hide(reset_YN_Panel);
         }
         /*--------- Reset End ---------*/
         /*--------- Sound Start ---------*/
@@ -246,7 +248,7 @@ namespace Number
         private void SoundSetting_BTN_Click(object sender, EventArgs e)
         {
             reset_YN_Panel.BringToFront();
-            resetPanel_Animation.AddToQueue(panelSound, Guna.UI2.AnimatorNS.AnimateMode.Show);
+            resetPanel_Animation.Show(panelSound);
         }
 
         private void Sounds(object sender, EventArgs e)
