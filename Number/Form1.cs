@@ -11,11 +11,11 @@ using System.Xml;
  *      |  |\ \          / /|  |                       |  |          |  |       *
  *      |  | \ \        / / |  |                       |  |          |  |       *
  *      |  |  \ \      / /  |  |                       |  |__________|  |       *
- *      |  |   \ \    / /   |  |                       |  |__________|  |       *
- *      |  |    \ \  / /    |  |                       |  |          |  |       *
+ *      |  |   \ \    / /   |  |                       |  |          |  |       *
+ *      |  |    \ \  / /    |  |                       |  |――――――――――|  |       *
  *      |  |     \ \/ /     |  |                       |  |          |  |       *
- *      |  |      \  /      |  |                       |__|          |__|       *
- *      |__|       \/       |__|                                                *
+ *      |  |      \  /      |  |                       |  |          |  |       *
+ *      |__|       \/       |__|                       |__|          |__|       *
  *                                                                              *
  *             ________________________________________________                 *
  *            |                                                |                *
@@ -110,6 +110,7 @@ namespace Number
                 NumberT.Font = new Font(Settings.Default.AppFont.Name, 35);
             }
         }
+        /*--------- Add one to the selected number ---------*/
         private void AddT()
         {
             try
@@ -121,7 +122,7 @@ namespace Number
                     {
                         if (NumberNode.Attributes["Name"].Value == DropDown.Text)
                         {
-                            NumberNode.InnerText = (int.Parse(NumberNode.InnerText) + 1).ToString();
+                            NumberNode.InnerText = (int.Parse(NumberNode.InnerText) + 1).ToString(); // Add one
 
                             NumberLeftP.Maximum = int.Parse(NumberNode.Attributes["Len"].Value) + 1;
                             NumberLeftP.Value = int.Parse(NumberNode.InnerText);
@@ -131,6 +132,7 @@ namespace Number
                             this.Text = "باقیمانده: " + Leftnum.ToString() + " | شمارنده";
                             DataXML.Save("Data.xml");
                             NumberT.Text = NumberNode.InnerText;
+                            /*---- if Complete ----*/
                             if (int.Parse(NumberT.Text) > int.Parse(NumberNode.Attributes["Len"].Value))
                             {
                                 NumberNode.InnerText = "0";
@@ -138,6 +140,7 @@ namespace Number
                                 NumberT.Text = NumberNode.InnerText;
                                 this.Alert("شمارش " + DropDown.Text + " " + "به پایان رسید");
                             }
+                            break;
                         }
                     }
                 }
@@ -154,10 +157,11 @@ namespace Number
                             if (NumberNode.Attributes["Name"].Value == DropDown.Text)
                             {
                                 NumberLeftP.Value = 0;
-                                NumberNode.InnerText = (UInt64.Parse(NumberNode.InnerText) + 1).ToString();
+                                NumberNode.InnerText = (ulong.Parse(NumberNode.InnerText) + 1).ToString();
                                 this.Text = "باقی مانده: بدون محدودیت | شمارنده";
                                 DataXML.Save("Data.xml");
                                 NumberT.Text = NumberNode.InnerText;
+                                break;
                             }
                         }
                     }
@@ -168,12 +172,7 @@ namespace Number
                     {
                         counter_Timer.Stop();
                     }
-                    try
-                    {
-                        new ResetBox().ShowDialog();
-                    }
-                    catch (Exception)
-                    { }
+                    new ResetBox().ShowDialog();
                 }
             }
         }
@@ -293,7 +292,7 @@ namespace Number
                 exit.Visible = false;
                 TextLen.Visible = false;
                 Compressbtn.Visible = false;
-                ToolTips.SetToolTip(NumberT, "برای بزرگ نمایی از کلید میانبر" + " ( " + Settings.Default.ShortKey_Compress.ToString() + " ) " + "استفاده کنید");
+                ToolTips.SetToolTip(NumberT, string.Format("برای بزرگ نمایی از کلید میانبر ({0}) استفاده کنید", Settings.Default.ShortKey_Compress));
                 CH_Size();
             }
             else NumberT_DoubleClick(NumberT, EventArgs.Empty);
@@ -409,7 +408,6 @@ namespace Number
                 DataXML.Load("Data.xml");
                 using (var NumberNodes = DataXML.SelectNodes("//Numbers/Number"))
                 {
-
                     foreach (XmlNode NumberNode in NumberNodes)
                     {
                         if (NumberNode.Attributes["Name"].Value == DropDown.Text)
@@ -419,9 +417,9 @@ namespace Number
                             TextBox.Text = XMLText;
                             TextLen.Text = "تعداد: " + XMLLen;
                             NumberT.Text = NumberNode.InnerText;
+                            break;
                         }
                     }
-
                 }
             }
             catch (Exception) { new ResetBox().ShowDialog(); }
@@ -442,14 +440,11 @@ namespace Number
             }
             else if (e.KeyData == Settings.Default.ShortKey_SaveData)
             {
-                DataBase frm = new DataBase();
-                frm.SaveData_Click("Save", EventArgs.Empty);
-
+                new DataBase().SaveData_Click("Save", EventArgs.Empty);
             }
             else if (e.KeyData == Settings.Default.ShortKey_LoadData)
             {
-                DataBase frm = new DataBase();
-                frm.ReturnBTN_Click(sender, EventArgs.Empty);
+                new DataBase().ReturnBTN_Click(sender, EventArgs.Empty);
             }
             else if (e.KeyData == Settings.Default.ShortKey_Compress)
             {
