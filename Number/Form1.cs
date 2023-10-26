@@ -181,7 +181,7 @@ namespace Number
             AlertBox frm = new AlertBox();
             frm.showAlert(msg);
         }
-        private void CH_Size()
+        private void Change_Size()
         {
             this.Size = new Size(NumberT.Size.Width, NumberT.Size.Height + Show_Text_BTN.Height);
         }
@@ -293,7 +293,7 @@ namespace Number
                 TextLen.Visible = false;
                 Compressbtn.Visible = false;
                 ToolTips.SetToolTip(NumberT, string.Format("برای بزرگ نمایی از کلید میانبر ({0}) استفاده کنید", Settings.Default.ShortKey_Compress));
-                CH_Size();
+                Change_Size();
             }
             else NumberT_DoubleClick(NumberT, EventArgs.Empty);
         }
@@ -327,7 +327,7 @@ namespace Number
         /*----- Fix Size -----*/
         private void NumberT_SizeChanged(object sender, EventArgs e)
         {
-            if (NumberT.Dock == DockStyle.Fill) CH_Size();
+            if (NumberT.Dock == DockStyle.Fill) Change_Size();
         }
         /*----- Show text box text btn -----*/
         private void Show_Text_BTN_Click(object sender, EventArgs e)
@@ -364,7 +364,7 @@ namespace Number
                     }
                     Show_Text_BTN.Text = "";
                     Show_Text_BTN.Height = 20;
-                    CH_Size();
+                    Change_Size();
                 }
             }
         }
