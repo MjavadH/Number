@@ -2,6 +2,7 @@
 using Number.Properties;
 using System;
 using System.Drawing;
+using System.IO;
 using System.Windows.Forms;
 using System.Xml;
 
@@ -62,7 +63,7 @@ namespace Number
             {
                 TextBox.ForeColor = Color.Empty;
                 TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Normal);
-                AddT();
+                Add();
             }
         }
         private void setting_check()
@@ -111,56 +112,37 @@ namespace Number
             }
         }
         /*--------- Add one to the selected number ---------*/
-        private void AddT()
+        private void Add()
         {
-            try
-            {
-                DataXML.Load("Data.xml");
-                using (var NumberNodes = DataXML.SelectNodes("//Numbers/Number"))
-                {
-                    foreach (XmlNode NumberNode in NumberNodes)
-                    {
-                        if (NumberNode.Attributes["Name"].Value == DropDown.Text)
-                        {
-                            NumberNode.InnerText = (int.Parse(NumberNode.InnerText) + 1).ToString(); // Add one
-
-                            NumberLeftP.Maximum = int.Parse(NumberNode.Attributes["Len"].Value) + 1;
-                            NumberLeftP.Value = int.Parse(NumberNode.InnerText);
-                            TaskbarManager.Instance.SetProgressValue(NumberLeftP.Value, NumberLeftP.Maximum);
-
-                            int Leftnum = int.Parse(NumberNode.Attributes["Len"].Value) - int.Parse(NumberNode.InnerText);
-                            this.Text = "باقیمانده: " + Leftnum.ToString() + " | شمارنده";
-                            DataXML.Save("Data.xml");
-                            NumberT.Text = NumberNode.InnerText;
-                            /*---- if Complete ----*/
-                            if (int.Parse(NumberT.Text) > int.Parse(NumberNode.Attributes["Len"].Value))
-                            {
-                                NumberNode.InnerText = "0";
-                                DataXML.Save("Data.xml");
-                                NumberT.Text = NumberNode.InnerText;
-                                this.Alert("شمارش " + DropDown.Text + " " + "به پایان رسید");
-                            }
-                            break;
-                        }
-                    }
-                }
-            }
-            catch (Exception)
+            if (File.Exists("Data.xml"))
             {
                 try
                 {
                     DataXML.Load("Data.xml");
-                    using (var NumberUNodes = DataXML.SelectNodes("//Numbers/Number"))
+                    using (var NumberNodes = DataXML.SelectNodes("//Numbers/Number"))
                     {
-                        foreach (XmlNode NumberNode in NumberUNodes)
+                        foreach (XmlNode NumberNode in NumberNodes)
                         {
                             if (NumberNode.Attributes["Name"].Value == DropDown.Text)
                             {
-                                NumberLeftP.Value = 0;
-                                NumberNode.InnerText = (ulong.Parse(NumberNode.InnerText) + 1).ToString();
-                                this.Text = "باقی مانده: بدون محدودیت | شمارنده";
+                                NumberNode.InnerText = (int.Parse(NumberNode.InnerText) + 1).ToString(); // Add one
+
+                                NumberLeftP.Maximum = int.Parse(NumberNode.Attributes["Len"].Value) + 1;
+                                NumberLeftP.Value = int.Parse(NumberNode.InnerText);
+                                TaskbarManager.Instance.SetProgressValue(NumberLeftP.Value, NumberLeftP.Maximum);
+
+                                int Leftnum = int.Parse(NumberNode.Attributes["Len"].Value) - int.Parse(NumberNode.InnerText);
+                                this.Text = "باقیمانده: " + Leftnum.ToString() + " | شمارنده";
                                 DataXML.Save("Data.xml");
                                 NumberT.Text = NumberNode.InnerText;
+                                /*---- if Complete ----*/
+                                if (int.Parse(NumberT.Text) > int.Parse(NumberNode.Attributes["Len"].Value))
+                                {
+                                    NumberNode.InnerText = "0";
+                                    DataXML.Save("Data.xml");
+                                    NumberT.Text = NumberNode.InnerText;
+                                    this.Alert("شمارش " + DropDown.Text + " " + "به پایان رسید");
+                                }
                                 break;
                             }
                         }
@@ -168,12 +150,42 @@ namespace Number
                 }
                 catch (Exception)
                 {
-                    if (counter_Timer.Enabled)
+                    try
                     {
-                        counter_Timer.Stop();
+                        DataXML.Load("Data.xml");
+                        using (var NumberUNodes = DataXML.SelectNodes("//Numbers/Number"))
+                        {
+                            foreach (XmlNode NumberNode in NumberUNodes)
+                            {
+                                if (NumberNode.Attributes["Name"].Value == DropDown.Text)
+                                {
+                                    NumberLeftP.Value = 0;
+                                    NumberNode.InnerText = (ulong.Parse(NumberNode.InnerText) + 1).ToString();
+                                    this.Text = "باقی مانده: بدون محدودیت | شمارنده";
+                                    DataXML.Save("Data.xml");
+                                    NumberT.Text = NumberNode.InnerText;
+                                    break;
+                                }
+                            }
+                        }
                     }
-                    new ResetBox().ShowDialog();
+                    catch (Exception)
+                    {
+                        if (counter_Timer.Enabled)
+                        {
+                            counter_Timer.Stop();
+                        }
+                        new ResetBox().ShowDialog();
+                    }
                 }
+            }
+            else
+            {
+                if (counter_Timer.Enabled)
+                {
+                    counter_Timer.Stop();
+                }
+                new ResetBox().ShowDialog();
             }
         }
         public void Alert(string msg)
